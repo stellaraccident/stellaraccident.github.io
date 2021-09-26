@@ -69,6 +69,28 @@
 <p>Documentation for the Python API is built with Sphinx under this directory.
 When new versions are released, the documentation is generated and published
 to the website.</p>
+<div class="section" id="building-docs">
+<h2>Building Docs<a class="headerlink" href="#building-docs" title="Permalink to this headline"></a></h2>
+<div class="section" id="install-iree-binaries">
+<h3>Install IREE binaries<a class="headerlink" href="#install-iree-binaries" title="Permalink to this headline"></a></h3>
+<p>Either install python packages or, from the build directory:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PWD</span>/bindings/python:<span class="nv">$PWD</span>/compiler-api/python_package
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-dependencies">
+<h3>Install dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline"></a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python -m pip install -r requirements.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-docs">
+<h3>Build docs<a class="headerlink" href="#build-docs" title="Permalink to this headline"></a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sphinx-build -b html . _build
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
 
