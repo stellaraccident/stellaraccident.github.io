@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Embedded MLIR API &mdash; IREE Python API snapshot documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="MLIR Core Dialects" href="mlir_dialects.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> IREE Python API
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">API Docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../runtime.html">Runtime API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Compiler API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="api.html">In-Process Compiler API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html">Invoking Command Line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iree_dialect.html">IREE Dialect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iree_pydm_dialect.html">IREE Python DataModel Dialect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlir_dialects.html">MLIR Core Dialects</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Embedded MLIR API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-iree.compiler.ir"><cite>iree.compiler.ir</cite> module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-iree.compiler.passmanager"><cite>iree.compiler.passmanager</cite> module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IREE Python API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Compiler API</a> &raquo;</li>
+      <li>Embedded MLIR API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/compiler/mlir.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="embedded-mlir-api">
+<h1>Embedded MLIR API<a class="headerlink" href="#embedded-mlir-api" title="Permalink to this headline"></a></h1>
+<div class="section" id="module-iree.compiler.ir">
+<span id="iree-compiler-ir-module"></span><h2><cite>iree.compiler.ir</cite> module<a class="headerlink" href="#module-iree.compiler.ir" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineAddExpr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineAddExpr</span></span><a class="headerlink" href="#iree.compiler.ir.AffineAddExpr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineAddExpr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineAddExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineAddExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineAddExpr</span></a><a class="headerlink" href="#iree.compiler.ir.AffineAddExpr.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineBinaryExpr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineBinaryExpr</span></span><a class="headerlink" href="#iree.compiler.ir.AffineBinaryExpr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineBinaryExpr.lhs">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">lhs</span></span><a class="headerlink" href="#iree.compiler.ir.AffineBinaryExpr.lhs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineBinaryExpr.rhs">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">rhs</span></span><a class="headerlink" href="#iree.compiler.ir.AffineBinaryExpr.rhs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineCeilDivExpr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineCeilDivExpr</span></span><a class="headerlink" href="#iree.compiler.ir.AffineCeilDivExpr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineCeilDivExpr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineCeilDivExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineCeilDivExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineCeilDivExpr</span></a><a class="headerlink" href="#iree.compiler.ir.AffineCeilDivExpr.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineConstantExpr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineConstantExpr</span></span><a class="headerlink" href="#iree.compiler.ir.AffineConstantExpr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineConstantExpr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineConstantExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineConstantExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineConstantExpr</span></a><a class="headerlink" href="#iree.compiler.ir.AffineConstantExpr.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineConstantExpr.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#iree.compiler.ir.AffineConstantExpr.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineDimExpr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineDimExpr</span></span><a class="headerlink" href="#iree.compiler.ir.AffineDimExpr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineDimExpr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">position:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineDimExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineDimExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineDimExpr</span></a><a class="headerlink" href="#iree.compiler.ir.AffineDimExpr.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineDimExpr.position">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#iree.compiler.ir.AffineDimExpr.position" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineExpr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineExpr</span></span><a class="headerlink" href="#iree.compiler.ir.AffineExpr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineExpr.context">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">context</span></span><a class="headerlink" href="#iree.compiler.ir.AffineExpr.context" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineExpr.dump">
+<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.ir.AffineExpr.dump" title="Permalink to this definition"></a></dt>
+<dd><p>Dumps a debug representation of the object to stderr.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineExpr.get_add">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">(anonymous</span> <span class="pre">namespace)::PyAffineAddExpr</span><a class="headerlink" href="#iree.compiler.ir.AffineExpr.get_add" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an affine expression containing a sum of two expressions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineExpr.get_ceil_div">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_ceil_div</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">(anonymous</span> <span class="pre">namespace)::PyAffineCeilDivExpr</span><a class="headerlink" href="#iree.compiler.ir.AffineExpr.get_ceil_div" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an affine expression containing the rounded-up result of dividing one expression by another.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineExpr.get_constant">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_constant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">(anonymous</span> <span class="pre">namespace)::PyAffineConstantExpr</span><a class="headerlink" href="#iree.compiler.ir.AffineExpr.get_constant" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a constant affine expression with the given value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineExpr.get_dim">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_dim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">position:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">(anonymous</span> <span class="pre">namespace)::PyAffineDimExpr</span><a class="headerlink" href="#iree.compiler.ir.AffineExpr.get_dim" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an affine expression of a dimension at the given position.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineExpr.get_floor_div">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_floor_div</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">(anonymous</span> <span class="pre">namespace)::PyAffineFloorDivExpr</span><a class="headerlink" href="#iree.compiler.ir.AffineExpr.get_floor_div" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an affine expression containing the rounded-down result of dividing one expression by another.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineExpr.get_mod">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_mod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">(anonymous</span> <span class="pre">namespace)::PyAffineModExpr</span><a class="headerlink" href="#iree.compiler.ir.AffineExpr.get_mod" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an affine expression containing the modulo of dividing one expression by another.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineExpr.get_mul">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_mul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">(anonymous</span> <span class="pre">namespace)::PyAffineMulExpr</span><a class="headerlink" href="#iree.compiler.ir.AffineExpr.get_mul" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an affine expression containing a product of two expressions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineExpr.get_symbol">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_symbol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">position:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">(anonymous</span> <span class="pre">namespace)::PyAffineSymbolExpr</span><a class="headerlink" href="#iree.compiler.ir.AffineExpr.get_symbol" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an affine expression of a symbol at the given position.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineExprList">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineExprList</span></span><a class="headerlink" href="#iree.compiler.ir.AffineExprList" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineFloorDivExpr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineFloorDivExpr</span></span><a class="headerlink" href="#iree.compiler.ir.AffineFloorDivExpr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineFloorDivExpr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineFloorDivExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineFloorDivExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineFloorDivExpr</span></a><a class="headerlink" href="#iree.compiler.ir.AffineFloorDivExpr.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineMap</span></span><a class="headerlink" href="#iree.compiler.ir.AffineMap" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.compress_unused_symbols">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">compress_unused_symbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">arg0:</span> <span class="pre">list</span></em>, <em class="sig-param"><span class="pre">arg1:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#iree.compiler.ir.AffineMap.compress_unused_symbols" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.context">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">context</span></span><a class="headerlink" href="#iree.compiler.ir.AffineMap.context" title="Permalink to this definition"></a></dt>
+<dd><p>Context that owns the Affine Map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.dump">
+<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMap.dump" title="Permalink to this definition"></a></dt>
+<dd><p>Dumps a debug representation of the object to stderr.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">dim_count:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">symbol_count:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">exprs:</span> <span class="pre">list</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMap.get" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a map with the given expressions as results.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.get_constant">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_constant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMap.get_constant" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an affine map with a single constant result</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.get_empty">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMap.get_empty" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an empty affine map.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.get_identity">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_identity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">n_dims:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMap.get_identity" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an identity map with the given number of dimensions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.get_major_submap">
+<span class="sig-name descname"><span class="pre">get_major_submap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMap.get_major_submap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.get_minor_identity">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_minor_identity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">n_dims:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">n_results:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMap.get_minor_identity" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a minor identity map with the given number of dimensions and results.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.get_minor_submap">
+<span class="sig-name descname"><span class="pre">get_minor_submap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMap.get_minor_submap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.get_permutation">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_permutation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">permutation:</span> <span class="pre">List[int],</span> <span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMap.get_permutation" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an affine map that permutes its inputs.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.get_submap">
+<span class="sig-name descname"><span class="pre">get_submap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMap.get_submap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.is_permutation">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_permutation</span></span><a class="headerlink" href="#iree.compiler.ir.AffineMap.is_permutation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.is_projected_permutation">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_projected_permutation</span></span><a class="headerlink" href="#iree.compiler.ir.AffineMap.is_projected_permutation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.n_dims">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_dims</span></span><a class="headerlink" href="#iree.compiler.ir.AffineMap.n_dims" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.n_inputs">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_inputs</span></span><a class="headerlink" href="#iree.compiler.ir.AffineMap.n_inputs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.n_symbols">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_symbols</span></span><a class="headerlink" href="#iree.compiler.ir.AffineMap.n_symbols" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.replace">
+<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMap.replace" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMap.results">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">results</span></span><a class="headerlink" href="#iree.compiler.ir.AffineMap.results" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMapAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineMapAttr</span></span><a class="headerlink" href="#iree.compiler.ir.AffineMapAttr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMapAttr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">affine_map</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineMap" title="iree.compiler._mlir_libs._mlir.ir.AffineMap"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMap</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineMapAttr" title="iree.compiler._mlir_libs._mlir.ir.AffineMapAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMapAttr</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMapAttr.get" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an attribute wrapping an AffineMap.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineModExpr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineModExpr</span></span><a class="headerlink" href="#iree.compiler.ir.AffineModExpr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineModExpr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineModExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineModExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineModExpr</span></a><a class="headerlink" href="#iree.compiler.ir.AffineModExpr.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMulExpr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineMulExpr</span></span><a class="headerlink" href="#iree.compiler.ir.AffineMulExpr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineMulExpr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.AffineExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineExpr</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineMulExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineMulExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineMulExpr</span></a><a class="headerlink" href="#iree.compiler.ir.AffineMulExpr.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineSymbolExpr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">AffineSymbolExpr</span></span><a class="headerlink" href="#iree.compiler.ir.AffineSymbolExpr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineSymbolExpr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">position:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.AffineSymbolExpr" title="iree.compiler._mlir_libs._mlir.ir.AffineSymbolExpr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.AffineSymbolExpr</span></a><a class="headerlink" href="#iree.compiler.ir.AffineSymbolExpr.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.AffineSymbolExpr.position">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#iree.compiler.ir.AffineSymbolExpr.position" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.ArrayAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">ArrayAttr</span></span><a class="headerlink" href="#iree.compiler.ir.ArrayAttr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.ArrayAttr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">attributes:</span> <span class="pre">list</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.ArrayAttr" title="iree.compiler._mlir_libs._mlir.ir.ArrayAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.ArrayAttr</span></a><a class="headerlink" href="#iree.compiler.ir.ArrayAttr.get" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a uniqued Array attribute</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.ArrayAttributeIterator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">ArrayAttributeIterator</span></span><a class="headerlink" href="#iree.compiler.ir.ArrayAttributeIterator" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.Attribute">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">Attribute</span></span><a class="headerlink" href="#iree.compiler.ir.Attribute" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Attribute.context">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">context</span></span><a class="headerlink" href="#iree.compiler.ir.Attribute.context" title="Permalink to this definition"></a></dt>
+<dd><p>Context that owns the Attribute</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Attribute.dump">
+<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Attribute" title="iree.compiler._mlir_libs._mlir.ir.Attribute"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Attribute</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.ir.Attribute.dump" title="Permalink to this definition"></a></dt>
+<dd><p>Dumps a debug representation of the object to stderr.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Attribute.get_named">
+<span class="sig-name descname"><span class="pre">get_named</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Attribute" title="iree.compiler._mlir_libs._mlir.ir.Attribute"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Attribute</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">mlir::python::PyNamedAttribute</span><a class="headerlink" href="#iree.compiler.ir.Attribute.get_named" title="Permalink to this definition"></a></dt>
+<dd><p>Binds a name to the attribute</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Attribute.parse">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">asm:</span> <span class="pre">str</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.Attribute" title="iree.compiler._mlir_libs._mlir.ir.Attribute"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Attribute</span></a><a class="headerlink" href="#iree.compiler.ir.Attribute.parse" title="Permalink to this definition"></a></dt>
+<dd><p>Parses an attribute from an assembly form</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Attribute.type">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#iree.compiler.ir.Attribute.type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.BF16Type">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">BF16Type</span></span><a class="headerlink" href="#iree.compiler.ir.BF16Type" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.BF16Type.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.BF16Type" title="iree.compiler._mlir_libs._mlir.ir.BF16Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.BF16Type</span></a><a class="headerlink" href="#iree.compiler.ir.BF16Type.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a bf16 type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.BF16Type.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.BF16Type.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.Block">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">Block</span></span><a class="headerlink" href="#iree.compiler.ir.Block" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Block.arguments">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">arguments</span></span><a class="headerlink" href="#iree.compiler.ir.Block.arguments" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of block arguments.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Block.create_after">
+<span class="sig-name descname"><span class="pre">create_after</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Block" title="iree.compiler._mlir_libs._mlir.ir.Block"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Block</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.Block" title="iree.compiler._mlir_libs._mlir.ir.Block"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Block</span></a><a class="headerlink" href="#iree.compiler.ir.Block.create_after" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and returns a new Block after this block (with given argument types).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Block.create_before">
+<span class="sig-name descname"><span class="pre">create_before</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Block" title="iree.compiler._mlir_libs._mlir.ir.Block"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Block</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.Block" title="iree.compiler._mlir_libs._mlir.ir.Block"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Block</span></a><a class="headerlink" href="#iree.compiler.ir.Block.create_before" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and returns a new Block before this block (with given argument types).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Block.operations">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">operations</span></span><a class="headerlink" href="#iree.compiler.ir.Block.operations" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a forward-optimized sequence of operations.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Block.owner">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">owner</span></span><a class="headerlink" href="#iree.compiler.ir.Block.owner" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the owning operation of this block.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Block.region">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">region</span></span><a class="headerlink" href="#iree.compiler.ir.Block.region" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the owning region of this block.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.BlockArgument">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">BlockArgument</span></span><a class="headerlink" href="#iree.compiler.ir.BlockArgument" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.BlockArgument.arg_number">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">arg_number</span></span><a class="headerlink" href="#iree.compiler.ir.BlockArgument.arg_number" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.BlockArgument.owner">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">owner</span></span><a class="headerlink" href="#iree.compiler.ir.BlockArgument.owner" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.BlockArgument.set_type">
+<span class="sig-name descname"><span class="pre">set_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.BlockArgument" title="iree.compiler._mlir_libs._mlir.ir.BlockArgument"><span class="pre">iree.compiler._mlir_libs._mlir.ir.BlockArgument</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.ir.BlockArgument.set_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.BlockArgumentList">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">BlockArgumentList</span></span><a class="headerlink" href="#iree.compiler.ir.BlockArgumentList" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.BlockIterator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">BlockIterator</span></span><a class="headerlink" href="#iree.compiler.ir.BlockIterator" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.BlockList">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">BlockList</span></span><a class="headerlink" href="#iree.compiler.ir.BlockList" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.BlockList.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.BlockList" title="iree.compiler._mlir_libs._mlir.ir.BlockList"><span class="pre">iree.compiler._mlir_libs._mlir.ir.BlockList</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.Block" title="iree.compiler._mlir_libs._mlir.ir.Block"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Block</span></a><a class="headerlink" href="#iree.compiler.ir.BlockList.append" title="Permalink to this definition"></a></dt>
+<dd><p>Appends a new block, with argument types as positional args.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The created block.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.BoolAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">BoolAttr</span></span><a class="headerlink" href="#iree.compiler.ir.BoolAttr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.BoolAttr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value:</span> <span class="pre">bool</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.BoolAttr" title="iree.compiler._mlir_libs._mlir.ir.BoolAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.BoolAttr</span></a><a class="headerlink" href="#iree.compiler.ir.BoolAttr.get" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an uniqued bool attribute</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.BoolAttr.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#iree.compiler.ir.BoolAttr.value" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the value of the bool attribute</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.ComplexType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">ComplexType</span></span><a class="headerlink" href="#iree.compiler.ir.ComplexType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.ComplexType.element_type">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">element_type</span></span><a class="headerlink" href="#iree.compiler.ir.ComplexType.element_type" title="Permalink to this definition"></a></dt>
+<dd><p>Returns element type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.ComplexType.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.ComplexType" title="iree.compiler._mlir_libs._mlir.ir.ComplexType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.ComplexType</span></a><a class="headerlink" href="#iree.compiler.ir.ComplexType.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a complex type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.ComplexType.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.ComplexType.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.Context">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">Context</span></span><a class="headerlink" href="#iree.compiler.ir.Context" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Context.allow_unregistered_dialects">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">allow_unregistered_dialects</span></span><a class="headerlink" href="#iree.compiler.ir.Context.allow_unregistered_dialects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Context.current">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">current</span></span><a class="headerlink" href="#iree.compiler.ir.Context.current" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Context.d">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">d</span></span><a class="headerlink" href="#iree.compiler.ir.Context.d" title="Permalink to this definition"></a></dt>
+<dd><p>Alias for ‘dialect’</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Context.dialects">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dialects</span></span><a class="headerlink" href="#iree.compiler.ir.Context.dialects" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a container for accessing dialects by name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Context.enable_multithreading">
+<span class="sig-name descname"><span class="pre">enable_multithreading</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Context" title="iree.compiler._mlir_libs._mlir.ir.Context"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.ir.Context.enable_multithreading" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Context.get_dialect_descriptor">
+<span class="sig-name descname"><span class="pre">get_dialect_descriptor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Context" title="iree.compiler._mlir_libs._mlir.ir.Context"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">mlir::python::PyDialectDescriptor</span><a class="headerlink" href="#iree.compiler.ir.Context.get_dialect_descriptor" title="Permalink to this definition"></a></dt>
+<dd><p>Gets or loads a dialect by name, returning its descriptor object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Context.is_registered_operation">
+<span class="sig-name descname"><span class="pre">is_registered_operation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Context" title="iree.compiler._mlir_libs._mlir.ir.Context"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.Context.is_registered_operation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.DenseElementsAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">DenseElementsAttr</span></span><a class="headerlink" href="#iree.compiler.ir.DenseElementsAttr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.DenseElementsAttr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">array:</span> <span class="pre">buffer</span></em>, <em class="sig-param"><span class="pre">signless:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.DenseElementsAttr" title="iree.compiler._mlir_libs._mlir.ir.DenseElementsAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.DenseElementsAttr</span></a><a class="headerlink" href="#iree.compiler.ir.DenseElementsAttr.get" title="Permalink to this definition"></a></dt>
+<dd><p>Gets from a buffer or ndarray</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.DenseElementsAttr.get_splat">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_splat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shaped_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_attr</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Attribute" title="iree.compiler._mlir_libs._mlir.ir.Attribute"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Attribute</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.DenseElementsAttr" title="iree.compiler._mlir_libs._mlir.ir.DenseElementsAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.DenseElementsAttr</span></a><a class="headerlink" href="#iree.compiler.ir.DenseElementsAttr.get_splat" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a DenseElementsAttr where all values are the same</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.DenseElementsAttr.is_splat">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_splat</span></span><a class="headerlink" href="#iree.compiler.ir.DenseElementsAttr.is_splat" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.DenseFPElementsAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">DenseFPElementsAttr</span></span><a class="headerlink" href="#iree.compiler.ir.DenseFPElementsAttr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.DenseIntElementsAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">DenseIntElementsAttr</span></span><a class="headerlink" href="#iree.compiler.ir.DenseIntElementsAttr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.Dialect">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">Dialect</span></span><a class="headerlink" href="#iree.compiler.ir.Dialect" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Dialect.descriptor">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">descriptor</span></span><a class="headerlink" href="#iree.compiler.ir.Dialect.descriptor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.DialectDescriptor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">DialectDescriptor</span></span><a class="headerlink" href="#iree.compiler.ir.DialectDescriptor" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.DialectDescriptor.namespace">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">namespace</span></span><a class="headerlink" href="#iree.compiler.ir.DialectDescriptor.namespace" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.Dialects">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">Dialects</span></span><a class="headerlink" href="#iree.compiler.ir.Dialects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.DictAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">DictAttr</span></span><a class="headerlink" href="#iree.compiler.ir.DictAttr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.DictAttr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value:</span> <span class="pre">dict</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.DictAttr" title="iree.compiler._mlir_libs._mlir.ir.DictAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.DictAttr</span></a><a class="headerlink" href="#iree.compiler.ir.DictAttr.get" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an uniqued dict attribute</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.F16Type">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">F16Type</span></span><a class="headerlink" href="#iree.compiler.ir.F16Type" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.F16Type.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.F16Type" title="iree.compiler._mlir_libs._mlir.ir.F16Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.F16Type</span></a><a class="headerlink" href="#iree.compiler.ir.F16Type.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a f16 type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.F16Type.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.F16Type.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.F32Type">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">F32Type</span></span><a class="headerlink" href="#iree.compiler.ir.F32Type" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.F32Type.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.F32Type" title="iree.compiler._mlir_libs._mlir.ir.F32Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.F32Type</span></a><a class="headerlink" href="#iree.compiler.ir.F32Type.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a f32 type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.F32Type.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.F32Type.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.F64Type">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">F64Type</span></span><a class="headerlink" href="#iree.compiler.ir.F64Type" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.F64Type.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.F64Type" title="iree.compiler._mlir_libs._mlir.ir.F64Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.F64Type</span></a><a class="headerlink" href="#iree.compiler.ir.F64Type.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a f64 type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.F64Type.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.F64Type.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.FlatSymbolRefAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">FlatSymbolRefAttr</span></span><a class="headerlink" href="#iree.compiler.ir.FlatSymbolRefAttr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.FlatSymbolRefAttr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value:</span> <span class="pre">str</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.FlatSymbolRefAttr" title="iree.compiler._mlir_libs._mlir.ir.FlatSymbolRefAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.FlatSymbolRefAttr</span></a><a class="headerlink" href="#iree.compiler.ir.FlatSymbolRefAttr.get" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a uniqued FlatSymbolRef attribute</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.FlatSymbolRefAttr.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#iree.compiler.ir.FlatSymbolRefAttr.value" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the value of the FlatSymbolRef attribute as a string</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.FloatAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">FloatAttr</span></span><a class="headerlink" href="#iree.compiler.ir.FloatAttr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.FloatAttr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">type:</span> <span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></em>, <em class="sig-param"><span class="pre">value:</span> <span class="pre">float</span></em>, <em class="sig-param"><span class="pre">loc:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Location</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.FloatAttr" title="iree.compiler._mlir_libs._mlir.ir.FloatAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.FloatAttr</span></a><a class="headerlink" href="#iree.compiler.ir.FloatAttr.get" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an uniqued float point attribute associated to a type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.FloatAttr.get_f32">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_f32</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value:</span> <span class="pre">float</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.FloatAttr" title="iree.compiler._mlir_libs._mlir.ir.FloatAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.FloatAttr</span></a><a class="headerlink" href="#iree.compiler.ir.FloatAttr.get_f32" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an uniqued float point attribute associated to a f32 type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.FloatAttr.get_f64">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_f64</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value:</span> <span class="pre">float</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.FloatAttr" title="iree.compiler._mlir_libs._mlir.ir.FloatAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.FloatAttr</span></a><a class="headerlink" href="#iree.compiler.ir.FloatAttr.get_f64" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an uniqued float point attribute associated to a f64 type</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.FloatAttr.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#iree.compiler.ir.FloatAttr.value" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the value of the float point attribute</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.FunctionType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">FunctionType</span></span><a class="headerlink" href="#iree.compiler.ir.FunctionType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.FunctionType.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">inputs:</span> <span class="pre">List[iree.compiler._mlir_libs._mlir.ir.Type],</span> <span class="pre">results:</span> <span class="pre">List[iree.compiler._mlir_libs._mlir.ir.Type],</span> <span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.FunctionType" title="iree.compiler._mlir_libs._mlir.ir.FunctionType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.FunctionType</span></a><a class="headerlink" href="#iree.compiler.ir.FunctionType.get" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a FunctionType from a list of input and result types</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.FunctionType.inputs">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">inputs</span></span><a class="headerlink" href="#iree.compiler.ir.FunctionType.inputs" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the list of input types in the FunctionType.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.FunctionType.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.FunctionType.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.FunctionType.results">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">results</span></span><a class="headerlink" href="#iree.compiler.ir.FunctionType.results" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the list of result types in the FunctionType.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.IndexType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">IndexType</span></span><a class="headerlink" href="#iree.compiler.ir.IndexType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.IndexType.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.IndexType" title="iree.compiler._mlir_libs._mlir.ir.IndexType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.IndexType</span></a><a class="headerlink" href="#iree.compiler.ir.IndexType.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a index type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.IndexType.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.IndexType.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.InsertionPoint">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">InsertionPoint</span></span><a class="headerlink" href="#iree.compiler.ir.InsertionPoint" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.InsertionPoint.at_block_begin">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">at_block_begin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Block" title="iree.compiler._mlir_libs._mlir.ir.Block"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Block</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.InsertionPoint" title="iree.compiler._mlir_libs._mlir.ir.InsertionPoint"><span class="pre">iree.compiler._mlir_libs._mlir.ir.InsertionPoint</span></a><a class="headerlink" href="#iree.compiler.ir.InsertionPoint.at_block_begin" title="Permalink to this definition"></a></dt>
+<dd><p>Inserts at the beginning of the block.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.InsertionPoint.at_block_terminator">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">at_block_terminator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Block" title="iree.compiler._mlir_libs._mlir.ir.Block"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Block</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.InsertionPoint" title="iree.compiler._mlir_libs._mlir.ir.InsertionPoint"><span class="pre">iree.compiler._mlir_libs._mlir.ir.InsertionPoint</span></a><a class="headerlink" href="#iree.compiler.ir.InsertionPoint.at_block_terminator" title="Permalink to this definition"></a></dt>
+<dd><p>Inserts before the block terminator.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.InsertionPoint.block">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">block</span></span><a class="headerlink" href="#iree.compiler.ir.InsertionPoint.block" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the block that this InsertionPoint points to.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.InsertionPoint.current">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">current</span></span><a class="headerlink" href="#iree.compiler.ir.InsertionPoint.current" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.InsertionPoint.insert">
+<span class="sig-name descname"><span class="pre">insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.InsertionPoint" title="iree.compiler._mlir_libs._mlir.ir.InsertionPoint"><span class="pre">iree.compiler._mlir_libs._mlir.ir.InsertionPoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">iree.compiler._mlir_libs._mlir.ir._OperationBase</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.ir.InsertionPoint.insert" title="Permalink to this definition"></a></dt>
+<dd><p>Inserts an operation.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">IntegerAttr</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerAttr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerAttr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.IntegerAttr" title="iree.compiler._mlir_libs._mlir.ir.IntegerAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.IntegerAttr</span></a><a class="headerlink" href="#iree.compiler.ir.IntegerAttr.get" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an uniqued integer attribute associated to a type</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerAttr.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerAttr.value" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the value of the integer attribute</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">IntegerSet</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSet" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet.constraints">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">constraints</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSet.constraints" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet.context">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">context</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSet.context" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet.dump">
+<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.IntegerSet" title="iree.compiler._mlir_libs._mlir.ir.IntegerSet"><span class="pre">iree.compiler._mlir_libs._mlir.ir.IntegerSet</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.ir.IntegerSet.dump" title="Permalink to this definition"></a></dt>
+<dd><p>Dumps a debug representation of the object to stderr.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">num_dims:</span> <span class="pre">int,</span> <span class="pre">num_symbols:</span> <span class="pre">int,</span> <span class="pre">exprs:</span> <span class="pre">list,</span> <span class="pre">eq_flags:</span> <span class="pre">List[bool],</span> <span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.IntegerSet" title="iree.compiler._mlir_libs._mlir.ir.IntegerSet"><span class="pre">iree.compiler._mlir_libs._mlir.ir.IntegerSet</span></a><a class="headerlink" href="#iree.compiler.ir.IntegerSet.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet.get_empty">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">num_dims:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">num_symbols:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.IntegerSet" title="iree.compiler._mlir_libs._mlir.ir.IntegerSet"><span class="pre">iree.compiler._mlir_libs._mlir.ir.IntegerSet</span></a><a class="headerlink" href="#iree.compiler.ir.IntegerSet.get_empty" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet.get_replaced">
+<span class="sig-name descname"><span class="pre">get_replaced</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.IntegerSet" title="iree.compiler._mlir_libs._mlir.ir.IntegerSet"><span class="pre">iree.compiler._mlir_libs._mlir.ir.IntegerSet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><span class="pre">list</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><span class="pre">list</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.IntegerSet" title="iree.compiler._mlir_libs._mlir.ir.IntegerSet"><span class="pre">iree.compiler._mlir_libs._mlir.ir.IntegerSet</span></a><a class="headerlink" href="#iree.compiler.ir.IntegerSet.get_replaced" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet.is_canonical_empty">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_canonical_empty</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSet.is_canonical_empty" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet.n_dims">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_dims</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSet.n_dims" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet.n_equalities">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_equalities</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSet.n_equalities" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet.n_inequalities">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_inequalities</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSet.n_inequalities" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet.n_inputs">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_inputs</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSet.n_inputs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSet.n_symbols">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_symbols</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSet.n_symbols" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSetConstraint">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">IntegerSetConstraint</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSetConstraint" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSetConstraint.expr">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">expr</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSetConstraint.expr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSetConstraint.is_eq">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_eq</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSetConstraint.is_eq" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerSetConstraintList">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">IntegerSetConstraintList</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerSetConstraintList" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">IntegerType</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerType.get_signed">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_signed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">width:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.IntegerType" title="iree.compiler._mlir_libs._mlir.ir.IntegerType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.IntegerType</span></a><a class="headerlink" href="#iree.compiler.ir.IntegerType.get_signed" title="Permalink to this definition"></a></dt>
+<dd><p>Create a signed integer type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerType.get_signless">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_signless</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">width:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.IntegerType" title="iree.compiler._mlir_libs._mlir.ir.IntegerType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.IntegerType</span></a><a class="headerlink" href="#iree.compiler.ir.IntegerType.get_signless" title="Permalink to this definition"></a></dt>
+<dd><p>Create a signless integer type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerType.get_unsigned">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_unsigned</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">width:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.IntegerType" title="iree.compiler._mlir_libs._mlir.ir.IntegerType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.IntegerType</span></a><a class="headerlink" href="#iree.compiler.ir.IntegerType.get_unsigned" title="Permalink to this definition"></a></dt>
+<dd><p>Create an unsigned integer type</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerType.is_signed">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_signed</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerType.is_signed" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether this is a signed integer</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerType.is_signless">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_signless</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerType.is_signless" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether this is a signless integer</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerType.is_unsigned">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_unsigned</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerType.is_unsigned" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether this is an unsigned integer</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerType.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.IntegerType.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.IntegerType.width">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">width</span></span><a class="headerlink" href="#iree.compiler.ir.IntegerType.width" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the width of the integer type</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.Location">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">Location</span></span><a class="headerlink" href="#iree.compiler.ir.Location" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Location.context">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">context</span></span><a class="headerlink" href="#iree.compiler.ir.Location.context" title="Permalink to this definition"></a></dt>
+<dd><p>Context that owns the Location</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Location.current">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">current</span></span><a class="headerlink" href="#iree.compiler.ir.Location.current" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Location.file">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">filename:</span> <span class="pre">str</span></em>, <em class="sig-param"><span class="pre">line:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">col:</span> <span class="pre">int</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.Location" title="iree.compiler._mlir_libs._mlir.ir.Location"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Location</span></a><a class="headerlink" href="#iree.compiler.ir.Location.file" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a Location representing a file, line and column</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Location.unknown">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">unknown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.Location" title="iree.compiler._mlir_libs._mlir.ir.Location"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Location</span></a><a class="headerlink" href="#iree.compiler.ir.Location.unknown" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a Location representing an unknown location</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.MemRefLayoutMapList">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">MemRefLayoutMapList</span></span><a class="headerlink" href="#iree.compiler.ir.MemRefLayoutMapList" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.MemRefType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">MemRefType</span></span><a class="headerlink" href="#iree.compiler.ir.MemRefType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.MemRefType.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">shape:</span> <span class="pre">List[int],</span> <span class="pre">element_type:</span> <span class="pre">iree.compiler._mlir_libs._mlir.ir.Type,</span> <span class="pre">layout:</span> <span class="pre">List[iree.compiler._mlir_libs._mlir.ir.AffineMap]</span> <span class="pre">=</span> <span class="pre">[],</span> <span class="pre">memory_space:</span> <span class="pre">iree.compiler._mlir_libs._mlir.ir.Attribute</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">loc:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Location</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.MemRefType" title="iree.compiler._mlir_libs._mlir.ir.MemRefType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.MemRefType</span></a><a class="headerlink" href="#iree.compiler.ir.MemRefType.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a memref type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.MemRefType.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.MemRefType.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.MemRefType.layout">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">layout</span></span><a class="headerlink" href="#iree.compiler.ir.MemRefType.layout" title="Permalink to this definition"></a></dt>
+<dd><p>The list of layout maps of the MemRef type.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.MemRefType.memory_space">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">memory_space</span></span><a class="headerlink" href="#iree.compiler.ir.MemRefType.memory_space" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the memory space of the given MemRef type.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.Module">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">Module</span></span><a class="headerlink" href="#iree.compiler.ir.Module" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Module.body">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">body</span></span><a class="headerlink" href="#iree.compiler.ir.Module.body" title="Permalink to this definition"></a></dt>
+<dd><p>Return the block for this module</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Module.context">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">context</span></span><a class="headerlink" href="#iree.compiler.ir.Module.context" title="Permalink to this definition"></a></dt>
+<dd><p>Context that created the Module</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Module.create">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">loc:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Location</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><span class="pre">object</span></a><a class="headerlink" href="#iree.compiler.ir.Module.create" title="Permalink to this definition"></a></dt>
+<dd><p>Creates an empty module</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Module.dump">
+<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Module" title="iree.compiler._mlir_libs._mlir.ir.Module"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Module</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.ir.Module.dump" title="Permalink to this definition"></a></dt>
+<dd><p>Dumps a debug representation of the object to stderr.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Module.operation">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">operation</span></span><a class="headerlink" href="#iree.compiler.ir.Module.operation" title="Permalink to this definition"></a></dt>
+<dd><p>Accesses the module as an operation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Module.parse">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">asm:</span> <span class="pre">str</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><span class="pre">object</span></a><a class="headerlink" href="#iree.compiler.ir.Module.parse" title="Permalink to this definition"></a></dt>
+<dd><p>Parses a module’s assembly format from a string.</p>
+<p>Returns a new MlirModule or raises a ValueError if the parsing fails.</p>
+<p>See also: <a class="reference external" href="https://mlir.llvm.org/docs/LangRef/">https://mlir.llvm.org/docs/LangRef/</a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.NamedAttribute">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">NamedAttribute</span></span><a class="headerlink" href="#iree.compiler.ir.NamedAttribute" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.NamedAttribute.attr">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">attr</span></span><a class="headerlink" href="#iree.compiler.ir.NamedAttribute.attr" title="Permalink to this definition"></a></dt>
+<dd><p>The underlying generic attribute of the NamedAttribute binding</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.NamedAttribute.name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#iree.compiler.ir.NamedAttribute.name" title="Permalink to this definition"></a></dt>
+<dd><p>The name of the NamedAttribute binding</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.NoneType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">NoneType</span></span><a class="headerlink" href="#iree.compiler.ir.NoneType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.NoneType.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.NoneType" title="iree.compiler._mlir_libs._mlir.ir.NoneType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.NoneType</span></a><a class="headerlink" href="#iree.compiler.ir.NoneType.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a none type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.NoneType.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.NoneType.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.OpAttributeMap">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">OpAttributeMap</span></span><a class="headerlink" href="#iree.compiler.ir.OpAttributeMap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.OpOperandList">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">OpOperandList</span></span><a class="headerlink" href="#iree.compiler.ir.OpOperandList" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.OpResult">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">OpResult</span></span><a class="headerlink" href="#iree.compiler.ir.OpResult" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.OpResult.owner">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">owner</span></span><a class="headerlink" href="#iree.compiler.ir.OpResult.owner" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.OpResult.result_number">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">result_number</span></span><a class="headerlink" href="#iree.compiler.ir.OpResult.result_number" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.OpResultList">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">OpResultList</span></span><a class="headerlink" href="#iree.compiler.ir.OpResultList" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.OpView">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">OpView</span></span><a class="headerlink" href="#iree.compiler.ir.OpView" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.OpView.build_generic">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">build_generic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iree.compiler.ir.OpView.build_generic" title="Permalink to this definition"></a></dt>
+<dd><p>(cls: object, results: list = None, operands: list = None, attributes: Optional[dict] = None, successors: Optional[List[mlir::python::PyBlock]] = None, regions: Optional[int] = None, loc: [ThreadContextAware] mlir.ir.Location = None, ip: object = None) -&gt; object</p>
+<p>Builds a specific, generated OpView based on class level attributes.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.OpView.context">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">context</span></span><a class="headerlink" href="#iree.compiler.ir.OpView.context" title="Permalink to this definition"></a></dt>
+<dd><p>Context that owns the Operation</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.OpView.operation">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">operation</span></span><a class="headerlink" href="#iree.compiler.ir.OpView.operation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.Operation">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">Operation</span></span><a class="headerlink" href="#iree.compiler.ir.Operation" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Operation.context">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">context</span></span><a class="headerlink" href="#iree.compiler.ir.Operation.context" title="Permalink to this definition"></a></dt>
+<dd><p>Context that owns the Operation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Operation.create">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">name:</span> <span class="pre">str</span></em>, <em class="sig-param"><span class="pre">results:</span> <span class="pre">Optional[List[mlir::python::PyType]]</span> <span class="pre">=</span> <span class="pre">None</span></em>, <em class="sig-param"><span class="pre">operands:</span> <span class="pre">Optional[List[mlir::python::PyValue]]</span> <span class="pre">=</span> <span class="pre">None</span></em>, <em class="sig-param"><span class="pre">attributes:</span> <span class="pre">Optional[dict]</span> <span class="pre">=</span> <span class="pre">None</span></em>, <em class="sig-param"><span class="pre">successors:</span> <span class="pre">Optional[List[mlir::python::PyBlock]]</span> <span class="pre">=</span> <span class="pre">None</span></em>, <em class="sig-param"><span class="pre">regions:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></em>, <em class="sig-param"><span class="pre">loc:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Location</span> <span class="pre">=</span> <span class="pre">None</span></em>, <em class="sig-param"><span class="pre">ip:</span> <span class="pre">object</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><span class="pre">object</span></a><a class="headerlink" href="#iree.compiler.ir.Operation.create" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Operation name (e.g. “dialect.operation”).</p></li>
+<li><p><strong>results</strong> – Sequence of Type representing op result types.</p></li>
+<li><p><strong>attributes</strong> – Dict of str:Attribute.</p></li>
+<li><p><strong>successors</strong> – List of Block for the operation’s successors.</p></li>
+<li><p><strong>regions</strong> – Number of regions to create.</p></li>
+<li><p><strong>location</strong> – A Location object (defaults to resolve from context manager).</p></li>
+<li><p><strong>ip</strong> – An InsertionPoint (defaults to resolve from context manager or set to
+False to disable insertion, even with an insertion point set in the
+context manager).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new “detached” Operation object. Detached operations can be added
+to blocks, which causes them to become “attached.”</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Operation.erase">
+<span class="sig-name descname"><span class="pre">erase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Operation" title="iree.compiler._mlir_libs._mlir.ir.Operation"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Operation</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.ir.Operation.erase" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Operation.name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#iree.compiler.ir.Operation.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Operation.opview">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">opview</span></span><a class="headerlink" href="#iree.compiler.ir.Operation.opview" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Operation.parent">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#iree.compiler.ir.Operation.parent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.OperationIterator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">OperationIterator</span></span><a class="headerlink" href="#iree.compiler.ir.OperationIterator" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.OperationList">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">OperationList</span></span><a class="headerlink" href="#iree.compiler.ir.OperationList" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.RankedTensorType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">RankedTensorType</span></span><a class="headerlink" href="#iree.compiler.ir.RankedTensorType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.RankedTensorType.encoding">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">encoding</span></span><a class="headerlink" href="#iree.compiler.ir.RankedTensorType.encoding" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.RankedTensorType.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">shape:</span> <span class="pre">List[int],</span> <span class="pre">element_type:</span> <span class="pre">iree.compiler._mlir_libs._mlir.ir.Type,</span> <span class="pre">encoding:</span> <span class="pre">Optional[iree.compiler._mlir_libs._mlir.ir.Attribute]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">loc:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Location</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.RankedTensorType" title="iree.compiler._mlir_libs._mlir.ir.RankedTensorType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.RankedTensorType</span></a><a class="headerlink" href="#iree.compiler.ir.RankedTensorType.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a ranked tensor type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.RankedTensorType.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.RankedTensorType.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.Region">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">Region</span></span><a class="headerlink" href="#iree.compiler.ir.Region" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Region.blocks">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">blocks</span></span><a class="headerlink" href="#iree.compiler.ir.Region.blocks" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a forward-optimized sequence of blocks.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.RegionIterator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">RegionIterator</span></span><a class="headerlink" href="#iree.compiler.ir.RegionIterator" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.RegionSequence">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">RegionSequence</span></span><a class="headerlink" href="#iree.compiler.ir.RegionSequence" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.ShapedType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">ShapedType</span></span><a class="headerlink" href="#iree.compiler.ir.ShapedType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.ShapedType.element_type">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">element_type</span></span><a class="headerlink" href="#iree.compiler.ir.ShapedType.element_type" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the element type of the shaped type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.ShapedType.get_dim_size">
+<span class="sig-name descname"><span class="pre">get_dim_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.ShapedType" title="iree.compiler._mlir_libs._mlir.ir.ShapedType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.ShapedType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#iree.compiler.ir.ShapedType.get_dim_size" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the dim-th dimension of the given ranked shaped type.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.ShapedType.has_rank">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">has_rank</span></span><a class="headerlink" href="#iree.compiler.ir.ShapedType.has_rank" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether the given shaped type is ranked.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.ShapedType.has_static_shape">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">has_static_shape</span></span><a class="headerlink" href="#iree.compiler.ir.ShapedType.has_static_shape" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether the given shaped type has a static shape.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.ShapedType.is_dynamic_dim">
+<span class="sig-name descname"><span class="pre">is_dynamic_dim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.ShapedType" title="iree.compiler._mlir_libs._mlir.ir.ShapedType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.ShapedType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.ShapedType.is_dynamic_dim" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether the dim-th dimension of the given shaped type is dynamic.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.ShapedType.is_dynamic_size">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">is_dynamic_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.ShapedType.is_dynamic_size" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether the given dimension size indicates a dynamic dimension.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.ShapedType.is_dynamic_stride_or_offset">
+<span class="sig-name descname"><span class="pre">is_dynamic_stride_or_offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.ShapedType" title="iree.compiler._mlir_libs._mlir.ir.ShapedType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.ShapedType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.ShapedType.is_dynamic_stride_or_offset" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether the given value is used as a placeholder for dynamic strides and offsets in shaped types.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.ShapedType.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.ShapedType.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.ShapedType.rank">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">rank</span></span><a class="headerlink" href="#iree.compiler.ir.ShapedType.rank" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the rank of the given ranked shaped type.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.StringAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">StringAttr</span></span><a class="headerlink" href="#iree.compiler.ir.StringAttr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.StringAttr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value:</span> <span class="pre">str</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.StringAttr" title="iree.compiler._mlir_libs._mlir.ir.StringAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.StringAttr</span></a><a class="headerlink" href="#iree.compiler.ir.StringAttr.get" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a uniqued string attribute</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.StringAttr.get_typed">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_typed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.StringAttr" title="iree.compiler._mlir_libs._mlir.ir.StringAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.StringAttr</span></a><a class="headerlink" href="#iree.compiler.ir.StringAttr.get_typed" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a uniqued string attribute associated to a type</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.StringAttr.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#iree.compiler.ir.StringAttr.value" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the value of the string attribute</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.TupleType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">TupleType</span></span><a class="headerlink" href="#iree.compiler.ir.TupleType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.TupleType.get_tuple">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_tuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">elements:</span> <span class="pre">list</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.TupleType" title="iree.compiler._mlir_libs._mlir.ir.TupleType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.TupleType</span></a><a class="headerlink" href="#iree.compiler.ir.TupleType.get_tuple" title="Permalink to this definition"></a></dt>
+<dd><p>Create a tuple type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.TupleType.get_type">
+<span class="sig-name descname"><span class="pre">get_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.TupleType" title="iree.compiler._mlir_libs._mlir.ir.TupleType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.TupleType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a><a class="headerlink" href="#iree.compiler.ir.TupleType.get_type" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the pos-th type in the tuple type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.TupleType.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.TupleType.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.TupleType.num_types">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">num_types</span></span><a class="headerlink" href="#iree.compiler.ir.TupleType.num_types" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of types contained in a tuple.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.Type">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#iree.compiler.ir.Type" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Type.context">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">context</span></span><a class="headerlink" href="#iree.compiler.ir.Type.context" title="Permalink to this definition"></a></dt>
+<dd><p>Context that owns the Type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Type.dump">
+<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.ir.Type.dump" title="Permalink to this definition"></a></dt>
+<dd><p>Dumps a debug representation of the object to stderr.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Type.parse">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">asm:</span> <span class="pre">str</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a><a class="headerlink" href="#iree.compiler.ir.Type.parse" title="Permalink to this definition"></a></dt>
+<dd><p>Parses the assembly form of a type.</p>
+<p>Returns a Type object or raises a ValueError if the type cannot be parsed.</p>
+<p>See also: <a class="reference external" href="https://mlir.llvm.org/docs/LangRef/#type-system">https://mlir.llvm.org/docs/LangRef/#type-system</a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.TypeAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">TypeAttr</span></span><a class="headerlink" href="#iree.compiler.ir.TypeAttr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.TypeAttr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value:</span> <span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.TypeAttr" title="iree.compiler._mlir_libs._mlir.ir.TypeAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.TypeAttr</span></a><a class="headerlink" href="#iree.compiler.ir.TypeAttr.get" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a uniqued Type attribute</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.TypeAttr.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#iree.compiler.ir.TypeAttr.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.UnitAttr">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">UnitAttr</span></span><a class="headerlink" href="#iree.compiler.ir.UnitAttr" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.UnitAttr.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.UnitAttr" title="iree.compiler._mlir_libs._mlir.ir.UnitAttr"><span class="pre">iree.compiler._mlir_libs._mlir.ir.UnitAttr</span></a><a class="headerlink" href="#iree.compiler.ir.UnitAttr.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a Unit attribute.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.UnrankedMemRefType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">UnrankedMemRefType</span></span><a class="headerlink" href="#iree.compiler.ir.UnrankedMemRefType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.UnrankedMemRefType.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">element_type:</span> <span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></em>, <em class="sig-param"><span class="pre">memory_space:</span> <span class="pre">iree.compiler._mlir_libs._mlir.ir.Attribute</span></em>, <em class="sig-param"><span class="pre">loc:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Location</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.UnrankedMemRefType" title="iree.compiler._mlir_libs._mlir.ir.UnrankedMemRefType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.UnrankedMemRefType</span></a><a class="headerlink" href="#iree.compiler.ir.UnrankedMemRefType.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a unranked memref type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.UnrankedMemRefType.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.UnrankedMemRefType.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.UnrankedMemRefType.memory_space">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">memory_space</span></span><a class="headerlink" href="#iree.compiler.ir.UnrankedMemRefType.memory_space" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the memory space of the given Unranked MemRef type.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.UnrankedTensorType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">UnrankedTensorType</span></span><a class="headerlink" href="#iree.compiler.ir.UnrankedTensorType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.UnrankedTensorType.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">element_type:</span> <span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></em>, <em class="sig-param"><span class="pre">loc:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Location</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.UnrankedTensorType" title="iree.compiler._mlir_libs._mlir.ir.UnrankedTensorType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.UnrankedTensorType</span></a><a class="headerlink" href="#iree.compiler.ir.UnrankedTensorType.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a unranked tensor type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.UnrankedTensorType.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.UnrankedTensorType.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.Value">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">Value</span></span><a class="headerlink" href="#iree.compiler.ir.Value" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Value.context">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">context</span></span><a class="headerlink" href="#iree.compiler.ir.Value.context" title="Permalink to this definition"></a></dt>
+<dd><p>Context in which the value lives.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.Value.dump">
+<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Value" title="iree.compiler._mlir_libs._mlir.ir.Value"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Value</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.ir.Value.dump" title="Permalink to this definition"></a></dt>
+<dd><p>Dumps a debug representation of the object to stderr.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Value.owner">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">owner</span></span><a class="headerlink" href="#iree.compiler.ir.Value.owner" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="iree.compiler.ir.Value.type">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#iree.compiler.ir.Value.type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.ir.VectorType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.ir.</span></span><span class="sig-name descname"><span class="pre">VectorType</span></span><a class="headerlink" href="#iree.compiler.ir.VectorType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.VectorType.get">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">shape:</span> <span class="pre">List[int],</span> <span class="pre">elementType:</span> <span class="pre">iree.compiler._mlir_libs._mlir.ir.Type,</span> <span class="pre">loc:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Location</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.ir.VectorType" title="iree.compiler._mlir_libs._mlir.ir.VectorType"><span class="pre">iree.compiler._mlir_libs._mlir.ir.VectorType</span></a><a class="headerlink" href="#iree.compiler.ir.VectorType.get" title="Permalink to this definition"></a></dt>
+<dd><p>Create a vector type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.ir.VectorType.isinstance">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Type" title="iree.compiler._mlir_libs._mlir.ir.Type"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Type</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#iree.compiler.ir.VectorType.isinstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-iree.compiler.passmanager">
+<span id="iree-compiler-passmanager-module"></span><h2><cite>iree.compiler.passmanager</cite> module<a class="headerlink" href="#module-iree.compiler.passmanager" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="iree.compiler.passmanager.PassManager">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iree.compiler.passmanager.</span></span><span class="sig-name descname"><span class="pre">PassManager</span></span><a class="headerlink" href="#iree.compiler.passmanager.PassManager" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.passmanager.PassManager.enable_ir_printing">
+<span class="sig-name descname"><span class="pre">enable_ir_printing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.passmanager.PassManager" title="iree.compiler._mlir_libs._mlir.passmanager.PassManager"><span class="pre">iree.compiler._mlir_libs._mlir.passmanager.PassManager</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.passmanager.PassManager.enable_ir_printing" title="Permalink to this definition"></a></dt>
+<dd><p>Enable print-ir-after-all.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.passmanager.PassManager.enable_verifier">
+<span class="sig-name descname"><span class="pre">enable_verifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.passmanager.PassManager" title="iree.compiler._mlir_libs._mlir.passmanager.PassManager"><span class="pre">iree.compiler._mlir_libs._mlir.passmanager.PassManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.passmanager.PassManager.enable_verifier" title="Permalink to this definition"></a></dt>
+<dd><p>Enable / disable verify-each.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.passmanager.PassManager.parse">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">pipeline:</span> <span class="pre">str</span></em>, <em class="sig-param"><span class="pre">context:</span> <span class="pre">[ThreadContextAware]</span> <span class="pre">mlir.ir.Context</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#iree.compiler.passmanager.PassManager" title="iree.compiler._mlir_libs._mlir.passmanager.PassManager"><span class="pre">iree.compiler._mlir_libs._mlir.passmanager.PassManager</span></a><a class="headerlink" href="#iree.compiler.passmanager.PassManager.parse" title="Permalink to this definition"></a></dt>
+<dd><p>Parse a textual pass-pipeline and return a top-level PassManager that can be applied on a Module. Throw a ValueError if the pipeline can’t be parsed</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iree.compiler.passmanager.PassManager.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.passmanager.PassManager" title="iree.compiler._mlir_libs._mlir.passmanager.PassManager"><span class="pre">iree.compiler._mlir_libs._mlir.passmanager.PassManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#iree.compiler.ir.Module" title="iree.compiler._mlir_libs._mlir.ir.Module"><span class="pre">iree.compiler._mlir_libs._mlir.ir.Module</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#iree.compiler.passmanager.PassManager.run" title="Permalink to this definition"></a></dt>
+<dd><p>Run the pass manager on the provided module, throw a RuntimeError on failure.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlir_dialects.html" class="btn btn-neutral float-left" title="MLIR Core Dialects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, IREE Authors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
