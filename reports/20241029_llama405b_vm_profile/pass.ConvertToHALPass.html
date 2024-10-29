@@ -1,0 +1,219 @@
+<html>
+<head><title>Series report: pass.ConvertToHALPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::CmdDispatchOpPattern</td>
+<td>6.680589999999922 SECONDS</td>
+<td>78730</td>
+<td>84.85443922265874 MICROS</td>
+<td>6.0</td>
+<td>2052.0</td>
+<td>12.55640689718885</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ContextResolveOpPattern</td>
+<td>0.29067999999992483 SECONDS</td>
+<td>17801</td>
+<td>16.3294196955185 MICROS</td>
+<td>13.0</td>
+<td>775.0</td>
+<td>6.280542619923257</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ResourceAllocaOpPattern</td>
+<td>0.24175799999999684 SECONDS</td>
+<td>8881</td>
+<td>27.221934466838963 MICROS</td>
+<td>23.0</td>
+<td>241.0</td>
+<td>3.528441666362009</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::CmdCopyOpPattern</td>
+<td>0.2335830000001449 SECONDS</td>
+<td>42296</td>
+<td>5.522578967281655 MICROS</td>
+<td>3.0</td>
+<td>234.0</td>
+<td>2.0993980166835726</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::CmdExecuteOpPattern</td>
+<td>0.19341000000000688 SECONDS</td>
+<td>4451</td>
+<td>43.453156594025366 MICROS</td>
+<td>27.0</td>
+<td>3828.0</td>
+<td>71.8928703601116</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::CmdFlushOpPattern</td>
+<td>0.18411600000010023 SECONDS</td>
+<td>37248</td>
+<td>4.942976804126402 MICROS</td>
+<td>3.0</td>
+<td>262.0</td>
+<td>2.242056440776632</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::CmdConcurrentOpPattern</td>
+<td>0.1657060000000797 SECONDS</td>
+<td>29761</td>
+<td>5.567890863884941 MICROS</td>
+<td>4.0</td>
+<td>2843.0</td>
+<td>16.708391895980622</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ElideYieldOpPattern</td>
+<td>0.16037200000007726 SECONDS</td>
+<td>34212</td>
+<td>4.6875949959101275 MICROS</td>
+<td>3.0</td>
+<td>1429.0</td>
+<td>7.836945793912275</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::CmdInvalidateOpPattern</td>
+<td>0.13708300000005547 SECONDS</td>
+<td>27162</td>
+<td>5.046866946471374 MICROS</td>
+<td>3.0</td>
+<td>1000.9999999999999</td>
+<td>6.394042844956203</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ResourceDeallocaOpPattern</td>
+<td>0.12263999999999917 SECONDS</td>
+<td>4436</td>
+<td>27.64652840396735 MICROS</td>
+<td>23.0</td>
+<td>246.00000000000003</td>
+<td>4.199267737960138</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertDeviceResolveAffinityOp</td>
+<td>97.95600000001558 MILLIS</td>
+<td>17801</td>
+<td>5.502836919275073 MICROS</td>
+<td>4.0</td>
+<td>39.0</td>
+<td>1.6160969587595486</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GenericConvertTypesPattern<mlir::iree_compiler::IREE::Util::GlobalLoadOp></td>
+<td>93.2380000000141 MILLIS</td>
+<td>17202</td>
+<td>5.420183699570638 MICROS</td>
+<td>4.0</td>
+<td>1827.0</td>
+<td>14.119198147209103</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::TimepointJoinOpPattern</td>
+<td>53.562999999996435 MILLIS</td>
+<td>8828</td>
+<td>6.067399184412826 MICROS</td>
+<td>4.0</td>
+<td>272.0</td>
+<td>3.5524884461590522</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GenericConvertTypesPattern<mlir::iree_compiler::IREE::Util::GlobalStoreOp></td>
+<td>49.7049999999953 MILLIS</td>
+<td>9105</td>
+<td>5.459088412959396 MICROS</td>
+<td>4.0</td>
+<td>62.0</td>
+<td>1.5526990347691743</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::GlobalConversionPattern</td>
+<td>47.81299999999681 MILLIS</td>
+<td>9105</td>
+<td>5.251290499725075 MICROS</td>
+<td>3.0</td>
+<td>235.0</td>
+<td>2.680149481858015</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::GlobalTimepointConversionPattern</td>
+<td>42.08199999999831 MILLIS</td>
+<td>9105</td>
+<td>4.62185612300915 MICROS</td>
+<td>3.0</td>
+<td>49.0</td>
+<td>1.3493973528890586</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ParameterLoadOpPattern</td>
+<td>1.086 MILLIS</td>
+<td>8</td>
+<td>135.75000000000003 MICROS</td>
+<td>121.0</td>
+<td>158.0</td>
+<td>13.78178145233743</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::TensorImportBufferViewOpPattern</td>
+<td>629.0 MICROS</td>
+<td>23</td>
+<td>27.34782608695652 MICROS</td>
+<td>24.0</td>
+<td>37.0</td>
+<td>3.5214707358811888</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::TimepointImportOpPattern</td>
+<td>80.0 MICROS</td>
+<td>16</td>
+<td>5.0 MICROS</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>0.7071067811865578</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::TimepointChainExternalOpPattern</td>
+<td>54.0 MICROS</td>
+<td>2</td>
+<td>27.0 MICROS</td>
+<td>26.0</td>
+<td>28.0</td>
+<td>0.9999999999999982</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::CmdFillOpPattern</td>
+<td>50.0 MICROS</td>
+<td>9</td>
+<td>5.555555555555556 MICROS</td>
+<td>4.0</td>
+<td>10.0</td>
+<td>1.8324913891634034</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::TensorExportBufferViewOpPattern</td>
+<td>31.0 MICROS</td>
+<td>2</td>
+<td>15.5 MICROS</td>
+<td>14.0</td>
+<td>17.0</td>
+<td>1.499999999999989</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<html>
+<head><title>Series report: pass.OptimizeVectorTransferPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>1.7792920000000008 SECONDS</td>
+<td>439</td>
+<td>4.053056947608202 MILLIS</td>
+<td>0.011</td>
+<td>79.393</td>
+<td>6.568929399597296</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CastAwayElementwiseLeadingOneDim</td>
+<td>0.9432629999999074 SECONDS</td>
+<td>11124</td>
+<td>84.79530744335737 MICROS</td>
+<td>3.0</td>
+<td>4704.0</td>
+<td>231.7850637897805</td>
+</tr>
+<tr>
+<td>pattern.</td>
+<td>63.57799999999965 MILLIS</td>
+<td>763</td>
+<td>83.32634338138878 MICROS</td>
+<td>3.0</td>
+<td>2560.0</td>
+<td>255.3098180614202</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractOpFromCreateMask</td>
+<td>29.935000000000038 MILLIS</td>
+<td>410</td>
+<td>73.01219512195131 MICROS</td>
+<td>3.0</td>
+<td>2243.0</td>
+<td>237.95826104092336</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CastAwayTransferReadLeadingOneDim</td>
+<td>29.412999999999997 MILLIS</td>
+<td>369</td>
+<td>79.71002710027099 MICROS</td>
+<td>5.0</td>
+<td>3557.0</td>
+<td>287.3271554091267</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractOpFromBroadcast</td>
+<td>24.76900000000003 MILLIS</td>
+<td>420</td>
+<td>58.9738095238096 MICROS</td>
+<td>4.0</td>
+<td>1399.0</td>
+<td>155.4636131972519</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractOpSplatConstantFolder</td>
+<td>23.974000000000014 MILLIS</td>
+<td>443</td>
+<td>54.117381489842025 MICROS</td>
+<td>4.0</td>
+<td>2470.0</td>
+<td>217.02999291410006</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractOpNonSplatConstantFolder</td>
+<td>23.840000000000032 MILLIS</td>
+<td>420</td>
+<td>56.76190476190484 MICROS</td>
+<td>4.0</td>
+<td>1835.0</td>
+<td>187.81905039587937</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DropInnerMostUnitDimsTransferRead</td>
+<td>16.400000000000016 MILLIS</td>
+<td>261</td>
+<td>62.83524904214565 MICROS</td>
+<td>4.0</td>
+<td>1607.0</td>
+<td>221.06409253964952</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CastAwayTransferWriteLeadingOneDim</td>
+<td>9.951000000000015 MILLIS</td>
+<td>217</td>
+<td>45.85714285714293 MICROS</td>
+<td>5.0</td>
+<td>2878.0</td>
+<td>220.7612778632575</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::BubbleDownVectorBitCastForExtract</td>
+<td>6.817 MILLIS</td>
+<td>54</td>
+<td>126.24074074074076 MICROS</td>
+<td>5.0</td>
+<td>2655.0</td>
+<td>401.5941352302139</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DropInnerMostUnitDimsTransferWrite</td>
+<td>5.782999999999994 MILLIS</td>
+<td>163</td>
+<td>35.478527607361926 MICROS</td>
+<td>4.0</td>
+<td>1652.0</td>
+<td>176.89847829991635</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ShapeCastOpFolder</td>
+<td>1.039 MILLIS</td>
+<td>9</td>
+<td>115.44444444444444 MICROS</td>
+<td>5.0</td>
+<td>608.0</td>
+<td>192.1978789980733</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::TransposeUnitDimToShapeCast</td>
+<td>225.00000000000003 MICROS</td>
+<td>4</td>
+<td>56.25000000000001 MICROS</td>
+<td>6.0</td>
+<td>204.0</td>
+<td>85.30643293445108</td>
+</tr>
+</table>
+</body>
+</html>

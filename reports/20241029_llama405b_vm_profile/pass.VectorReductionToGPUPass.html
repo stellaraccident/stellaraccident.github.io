@@ -1,0 +1,330 @@
+<html>
+<head><title>Series report: pass.VectorReductionToGPUPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>1.3177009999999998 SECONDS</td>
+<td>166</td>
+<td>7.937957831325299 MILLIS</td>
+<td>0.023</td>
+<td>144.067</td>
+<td>18.300758572187632</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpTransferWrite</td>
+<td>0.11109600000000064 SECONDS</td>
+<td>1383</td>
+<td>80.32971800433886 MICROS</td>
+<td>3.0</td>
+<td>3365.0</td>
+<td>232.18388137683996</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpElementwise</td>
+<td>0.10073200000000021 SECONDS</td>
+<td>1343</td>
+<td>75.00521221146701 MICROS</td>
+<td>3.0</td>
+<td>1938.0</td>
+<td>224.39551124742357</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpDeadResult</td>
+<td>60.500999999999976 MILLIS</td>
+<td>1178</td>
+<td>51.35908319185058 MICROS</td>
+<td>4.0</td>
+<td>1886.0</td>
+<td>185.42290740539744</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::WarpOpBarrier</td>
+<td>50.05499999999956 MILLIS</td>
+<td>1389</td>
+<td>36.03671706263467 MICROS</td>
+<td>3.0</td>
+<td>2528.0</td>
+<td>160.30533125199267</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpExtract</td>
+<td>41.34099999999988 MILLIS</td>
+<td>608</td>
+<td>67.99506578947349 MICROS</td>
+<td>4.0</td>
+<td>1808.0</td>
+<td>211.37041486046448</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpShapeCast</td>
+<td>35.623999999999924 MILLIS</td>
+<td>610</td>
+<td>58.39999999999988 MICROS</td>
+<td>4.0</td>
+<td>2615.0</td>
+<td>220.38781168881164</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpForwardOperand</td>
+<td>34.82999999999993 MILLIS</td>
+<td>608</td>
+<td>57.2861842105262 MICROS</td>
+<td>4.0</td>
+<td>2097.0</td>
+<td>195.27644963693905</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpBroadcast</td>
+<td>31.512000000000054 MILLIS</td>
+<td>648</td>
+<td>48.62962962962972 MICROS</td>
+<td>3.0</td>
+<td>3465.0</td>
+<td>211.6574768751307</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ElideSingleElementReduction</td>
+<td>27.244000000000007 MILLIS</td>
+<td>185</td>
+<td>147.2648648648649 MICROS</td>
+<td>4.0</td>
+<td>3397.0</td>
+<td>349.9325650991535</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpConstant</td>
+<td>19.747999999999994 MILLIS</td>
+<td>281</td>
+<td>70.27758007117436 MICROS</td>
+<td>4.0</td>
+<td>2189.0</td>
+<td>236.85559025730592</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpInsertElement</td>
+<td>17.595000000000013 MILLIS</td>
+<td>245</td>
+<td>71.8163265306123 MICROS</td>
+<td>4.0</td>
+<td>1750.0</td>
+<td>214.83758207590208</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpInsert</td>
+<td>15.198000000000004 MILLIS</td>
+<td>245</td>
+<td>62.0326530612245 MICROS</td>
+<td>4.0</td>
+<td>2033.9999999999998</td>
+<td>204.74981985265822</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpCreateMask</td>
+<td>14.426000000000043 MILLIS</td>
+<td>245</td>
+<td>58.8816326530614 MICROS</td>
+<td>4.0</td>
+<td>1743.0</td>
+<td>209.93501003441727</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpTransferRead</td>
+<td>11.996000000000006 MILLIS</td>
+<td>153</td>
+<td>78.40522875816997 MICROS</td>
+<td>3.0</td>
+<td>1232.0</td>
+<td>194.55803569553692</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpScfForOp</td>
+<td>10.039000000000003 MILLIS</td>
+<td>215</td>
+<td>46.69302325581396 MICROS</td>
+<td>4.0</td>
+<td>994.0000000000001</td>
+<td>138.60349570300343</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpReduction</td>
+<td>8.792999999999997 MILLIS</td>
+<td>185</td>
+<td>47.52972972972971 MICROS</td>
+<td>4.0</td>
+<td>1203.0</td>
+<td>138.6215163379007</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractOpSplatConstantFolder</td>
+<td>7.422000000000003 MILLIS</td>
+<td>64</td>
+<td>115.96875000000006 MICROS</td>
+<td>5.0</td>
+<td>1389.0</td>
+<td>261.5295136756796</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::InnerOuterDimReductionConversion</td>
+<td>6.643000000000001 MILLIS</td>
+<td>59</td>
+<td>112.59322033898306 MICROS</td>
+<td>5.0</td>
+<td>883.0</td>
+<td>214.79482670947831</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::BroadcastFolder</td>
+<td>5.148999999999998 MILLIS</td>
+<td>82</td>
+<td>62.792682926829244 MICROS</td>
+<td>5.0</td>
+<td>927.0</td>
+<td>162.98628835077784</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ReduceMultiDimReductionRank</td>
+<td>4.5520000000000005 MILLIS</td>
+<td>59</td>
+<td>77.15254237288136 MICROS</td>
+<td>5.0</td>
+<td>1303.0</td>
+<td>219.60602732916743</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpExtractElement</td>
+<td>4.410999999999994 MILLIS</td>
+<td>215</td>
+<td>20.516279069767414 MICROS</td>
+<td>4.0</td>
+<td>614.0</td>
+<td>67.97221364657136</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractOpFromCreateMask</td>
+<td>4.27 MILLIS</td>
+<td>29</td>
+<td>147.24137931034483 MICROS</td>
+<td>4.0</td>
+<td>1526.0</td>
+<td>312.34437837352823</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractOpFromBroadcast</td>
+<td>3.982 MILLIS</td>
+<td>34</td>
+<td>117.11764705882354 MICROS</td>
+<td>4.0</td>
+<td>1794.0</td>
+<td>314.5285701701631</td>
+</tr>
+<tr>
+<td>pattern.</td>
+<td>3.9759999999999986 MILLIS</td>
+<td>58</td>
+<td>68.55172413793102 MICROS</td>
+<td>4.0</td>
+<td>786.0</td>
+<td>144.84785982895073</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ShapeCastBroadcastFolder</td>
+<td>3.0069999999999997 MILLIS</td>
+<td>19</td>
+<td>158.26315789473682 MICROS</td>
+<td>4.0</td>
+<td>1675.0</td>
+<td>425.5790905658663</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ShapeCastConstantFolder</td>
+<td>2.591 MILLIS</td>
+<td>19</td>
+<td>136.3684210526316 MICROS</td>
+<td>5.0</td>
+<td>1717.0</td>
+<td>388.6124047274267</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::WarpOpToScfIfPattern</td>
+<td>2.251000000000001 MILLIS</td>
+<td>24</td>
+<td>93.7916666666667 MICROS</td>
+<td>10.0</td>
+<td>729.0</td>
+<td>180.43049889238662</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractOpNonSplatConstantFolder</td>
+<td>1.6670000000000003 MILLIS</td>
+<td>34</td>
+<td>49.02941176470589 MICROS</td>
+<td>5.0</td>
+<td>950.0</td>
+<td>161.6895146104042</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TwoDimMultiReductionToReduction</td>
+<td>1.6409999999999998 MILLIS</td>
+<td>30</td>
+<td>54.699999999999996 MICROS</td>
+<td>9.0</td>
+<td>377.0</td>
+<td>103.28476815742647</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::OneDimMultiReductionToTwoDim</td>
+<td>1.3899999999999997 MILLIS</td>
+<td>30</td>
+<td>46.33333333333333 MICROS</td>
+<td>4.0</td>
+<td>642.0</td>
+<td>148.99828485217168</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::InsertElementToBroadcast</td>
+<td>1.1930000000000003 MILLIS</td>
+<td>30</td>
+<td>39.76666666666667 MICROS</td>
+<td>5.0</td>
+<td>513.0</td>
+<td>109.5133731052463</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ShapeCastCreateMaskFolderTrailingOneDim</td>
+<td>0.9330000000000002 MILLIS</td>
+<td>19</td>
+<td>49.10526315789475 MICROS</td>
+<td>5.0</td>
+<td>442.0</td>
+<td>100.65255231780584</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head><title>Series report: pass.TypePropagationPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::GenericOpTypePropagation</td>
+<td>84.00000000000001 MICROS</td>
+<td>2</td>
+<td>42.00000000000001 MICROS</td>
+<td>36.0</td>
+<td>48.0</td>
+<td>5.99999999999999</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ForwardSourceType<mlir::arith::TruncIOp></td>
+<td>46.0 MICROS</td>
+<td>1</td>
+<td>46.0 MICROS</td>
+<td>46.0</td>
+<td>46.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::LegalizeResultElementType</td>
+<td>18.0 MICROS</td>
+<td>1</td>
+<td>18.0 MICROS</td>
+<td>18.0</td>
+<td>18.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ForwardSourceType<mlir::arith::ExtUIOp></td>
+<td>7.0 MICROS</td>
+<td>1</td>
+<td>7.0 MICROS</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>0.0</td>
+</tr>
+</table>
+</body>
+</html>

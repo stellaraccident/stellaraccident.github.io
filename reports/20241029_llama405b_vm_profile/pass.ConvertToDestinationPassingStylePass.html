@@ -1,0 +1,78 @@
+<html>
+<head><title>Series report: pass.ConvertToDestinationPassingStylePass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>0.3912350000000002 SECONDS</td>
+<td>864</td>
+<td>452.8182870370373 MICROS</td>
+<td>8.0</td>
+<td>5541.0</td>
+<td>521.2454619118828</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DeduplicateAndRemoveDeadOperandsAndResults</td>
+<td>33.99400000000001 MILLIS</td>
+<td>454</td>
+<td>74.87665198237886 MICROS</td>
+<td>4.0</td>
+<td>2050.0</td>
+<td>216.90729202016692</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::RemoveCstOutsDependency</td>
+<td>16.86300000000002 MILLIS</td>
+<td>272</td>
+<td>61.996323529411846 MICROS</td>
+<td>5.0</td>
+<td>2323.0</td>
+<td>202.90606523712646</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveUnusedCycleInGenericOp</td>
+<td>10.304999999999986 MILLIS</td>
+<td>452</td>
+<td>22.79867256637165 MICROS</td>
+<td>3.0</td>
+<td>1668.0</td>
+<td>122.1805630951091</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::SwitchStoreOfIfResultValue</td>
+<td>5.195999999999993 MILLIS</td>
+<td>201</td>
+<td>25.85074626865668 MICROS</td>
+<td>4.0</td>
+<td>1035.0</td>
+<td>92.51477016373143</td>
+</tr>
+</table>
+</body>
+</html>

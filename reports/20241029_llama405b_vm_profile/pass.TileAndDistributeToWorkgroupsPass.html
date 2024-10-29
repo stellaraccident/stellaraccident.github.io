@@ -1,0 +1,321 @@
+<html>
+<head><title>Series report: pass.TileAndDistributeToWorkgroupsPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>1.3967319999999988 SECONDS</td>
+<td>1679</td>
+<td>831.8832638475276 MICROS</td>
+<td>6.0</td>
+<td>14519.0</td>
+<td>1381.0602980410806</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::SwapExtractSliceWithDispatchTensorLoad</td>
+<td>76.29800000000003 MILLIS</td>
+<td>493</td>
+<td>154.7626774847871 MICROS</td>
+<td>4.0</td>
+<td>2266.0</td>
+<td>304.5211758117661</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfReifyRankedShapedTypeOpInterface<mlir::tensor::DimOp></td>
+<td>61.0420000000001 MILLIS</td>
+<td>317</td>
+<td>192.56151419558392 MICROS</td>
+<td>6.0</td>
+<td>2632.0</td>
+<td>365.0739091605392</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::InferStaticShapeOfOperands</td>
+<td>34.081 MILLIS</td>
+<td>512</td>
+<td>66.564453125 MICROS</td>
+<td>4.0</td>
+<td>1783.0</td>
+<td>156.50670084151258</td>
+</tr>
+<tr>
+<td>pattern.FoldTensorCastProducerOp</td>
+<td>24.030000000000065 MILLIS</td>
+<td>493</td>
+<td>48.74239350912792 MICROS</td>
+<td>4.0</td>
+<td>1646.0</td>
+<td>150.30987791740432</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyAffineOp<mlir::affine::AffineApplyOp></td>
+<td>19.75099999999998 MILLIS</td>
+<td>522</td>
+<td>37.83716475095781 MICROS</td>
+<td>5.0</td>
+<td>2255.0</td>
+<td>152.87502194687184</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ReplaceEmptyTensorStaticShapeDims</td>
+<td>19.106000000000048 MILLIS</td>
+<td>392</td>
+<td>48.73979591836746 MICROS</td>
+<td>4.0</td>
+<td>3014.0</td>
+<td>187.29303856213133</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::EraseDeadLinalgOp</td>
+<td>17.396000000000026 MILLIS</td>
+<td>512</td>
+<td>33.97656250000005 MICROS</td>
+<td>4.0</td>
+<td>1062.0</td>
+<td>107.36715737102115</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::FoldAffineMinOverWorkgroupIDs</td>
+<td>16.502999999999997 MILLIS</td>
+<td>163</td>
+<td>101.24539877300612 MICROS</td>
+<td>15.0</td>
+<td>2215.0</td>
+<td>285.1022654112597</td>
+</tr>
+<tr>
+<td>pattern.DeduplicateAffineMinMaxExpressions<mlir::affine::AffineMinOp></td>
+<td>15.966000000000019 MILLIS</td>
+<td>190</td>
+<td>84.03157894736852 MICROS</td>
+<td>4.0</td>
+<td>2025.0</td>
+<td>240.78542326187804</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldEmptyTensorWithCastOp</td>
+<td>14.997000000000016 MILLIS</td>
+<td>196</td>
+<td>76.51530612244905 MICROS</td>
+<td>4.0</td>
+<td>1343.0</td>
+<td>196.54070765549474</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldTensorCastConsumerOp</td>
+<td>14.806000000000013 MILLIS</td>
+<td>196</td>
+<td>75.54081632653067 MICROS</td>
+<td>4.0</td>
+<td>1233.0</td>
+<td>185.0721684038445</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::EraseIdentityLinalgOp<mlir::linalg::GenericOp></td>
+<td>14.773000000000037 MILLIS</td>
+<td>449</td>
+<td>32.902004454343064 MICROS</td>
+<td>3.0</td>
+<td>1644.0</td>
+<td>111.55415244149293</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::SwapExtractSliceWithTensorEmpty</td>
+<td>13.754000000000001 MILLIS</td>
+<td>228</td>
+<td>60.32456140350878 MICROS</td>
+<td>5.0</td>
+<td>1127.0</td>
+<td>155.3156941050516</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::FoldCollapseShapeIntoInterfaceTensorStore</td>
+<td>12.449000000000003 MILLIS</td>
+<td>201</td>
+<td>61.93532338308459 MICROS</td>
+<td>6.0</td>
+<td>1303.0</td>
+<td>183.93693705169736</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TensorCastExtractSlice</td>
+<td>11.605000000000013 MILLIS</td>
+<td>196</td>
+<td>59.209183673469454 MICROS</td>
+<td>3.0</td>
+<td>1143.0</td>
+<td>163.9256990639947</td>
+</tr>
+<tr>
+<td>pattern.mlir::OpWithOffsetSizesAndStridesConstantArgumentFolder<mlir::memref::SubViewOp, SubViewReturnTypeCanonicalizer, SubViewCanonicalizer></td>
+<td>11.508000000000008 MILLIS</td>
+<td>216</td>
+<td>53.277777777777814 MICROS</td>
+<td>4.0</td>
+<td>1018.9999999999999</td>
+<td>120.94219872360004</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TrivialSubViewOpFolder</td>
+<td>11.401999999999992 MILLIS</td>
+<td>172</td>
+<td>66.29069767441855 MICROS</td>
+<td>4.0</td>
+<td>989.0000000000001</td>
+<td>133.65056540994127</td>
+</tr>
+<tr>
+<td>pattern.MergeAffineMinMaxOp<mlir::affine::AffineMinOp></td>
+<td>11.020000000000007 MILLIS</td>
+<td>190</td>
+<td>58.00000000000004 MICROS</td>
+<td>4.0</td>
+<td>1195.0</td>
+<td>149.43838723349288</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ChainedTensorCast</td>
+<td>10.679000000000014 MILLIS</td>
+<td>198</td>
+<td>53.9343434343435 MICROS</td>
+<td>4.0</td>
+<td>2150.0</td>
+<td>209.43213440525</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::FoldAffineMinOverDistributedLoopInductionVariable</td>
+<td>8.728000000000003 MILLIS</td>
+<td>163</td>
+<td>53.54601226993867 MICROS</td>
+<td>16.0</td>
+<td>1163.0</td>
+<td>121.39224070643856</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldEmptyTensorWithDimOp</td>
+<td>8.278000000000002 MILLIS</td>
+<td>148</td>
+<td>55.93243243243245 MICROS</td>
+<td>4.0</td>
+<td>2498.0</td>
+<td>250.96337791846366</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyAffineOp<mlir::affine::AffineMinOp></td>
+<td>7.068000000000015 MILLIS</td>
+<td>190</td>
+<td>37.20000000000008 MICROS</td>
+<td>6.0</td>
+<td>941.0</td>
+<td>91.57195617597525</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldFillWithTensorExtract</td>
+<td>6.832000000000001 MILLIS</td>
+<td>30</td>
+<td>227.73333333333335 MICROS</td>
+<td>4.0</td>
+<td>2208.0</td>
+<td>537.6558957383637</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubViewOpMemRefCastFolder</td>
+<td>5.247999999999992 MILLIS</td>
+<td>172</td>
+<td>30.5116279069767 MICROS</td>
+<td>3.0</td>
+<td>435.0</td>
+<td>68.712367152322</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::FoldExpandShapeIntoInterfaceTensorStore</td>
+<td>2.578999999999998 MILLIS</td>
+<td>201</td>
+<td>12.830845771144268 MICROS</td>
+<td>4.0</td>
+<td>463.0</td>
+<td>43.06446912797972</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::FoldCollapseShapeIntoInterfaceTensorStoreFullSlice</td>
+<td>2.3480000000000008 MILLIS</td>
+<td>201</td>
+<td>11.681592039800998 MICROS</td>
+<td>5.0</td>
+<td>466.0</td>
+<td>40.552872059710815</td>
+</tr>
+<tr>
+<td>pattern.CanonicalizeSingleResultAffineMinMaxOp<mlir::affine::AffineMinOp></td>
+<td>2.0799999999999996 MILLIS</td>
+<td>190</td>
+<td>10.947368421052632 MICROS</td>
+<td>4.0</td>
+<td>255.00000000000003</td>
+<td>26.895262122792914</td>
+</tr>
+<tr>
+<td>pattern.CanonicalizeAffineMinMaxOpExprAndTermOrder<mlir::affine::AffineMinOp></td>
+<td>2.066999999999999 MILLIS</td>
+<td>189</td>
+<td>10.936507936507931 MICROS</td>
+<td>4.0</td>
+<td>280.0</td>
+<td>26.26233528215184</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ForOpIterArgsFolder</td>
+<td>0.955 MILLIS</td>
+<td>24</td>
+<td>39.791666666666664 MICROS</td>
+<td>5.0</td>
+<td>612.0</td>
+<td>125.35183124798068</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfReifyRankedShapedTypeOpInterface<mlir::memref::DimOp></td>
+<td>807.0 MICROS</td>
+<td>10</td>
+<td>80.7 MICROS</td>
+<td>6.0</td>
+<td>606.0</td>
+<td>179.8716486831652</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyTrivialLoops</td>
+<td>505.0 MICROS</td>
+<td>24</td>
+<td>21.041666666666668 MICROS</td>
+<td>6.0</td>
+<td>134.0</td>
+<td>31.356125354103018</td>
+</tr>
+</table>
+</body>
+</html>

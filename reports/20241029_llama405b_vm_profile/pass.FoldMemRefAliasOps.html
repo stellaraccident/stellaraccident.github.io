@@ -1,0 +1,231 @@
+<html>
+<head><title>Series report: pass.FoldMemRefAliasOps</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>1.5834220000000003 SECONDS</td>
+<td>1055</td>
+<td>1.5008739336492893 MILLIS</td>
+<td>0.026</td>
+<td>15.378</td>
+<td>1.4673134596420128</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubViewOfSubViewFolder</td>
+<td>0.11051899999999987 SECONDS</td>
+<td>944</td>
+<td>117.07521186440664 MICROS</td>
+<td>4.0</td>
+<td>1832.0</td>
+<td>253.4129945883327</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LoadOpOfSubViewOpFolder<mlir::memref::LoadOp></td>
+<td>99.40599999999992 MILLIS</td>
+<td>1011</td>
+<td>98.32443125618192 MICROS</td>
+<td>4.0</td>
+<td>2736.0</td>
+<td>244.4379563953876</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::StoreOpOfSubViewOpFolder<mlir::memref::StoreOp></td>
+<td>81.37100000000017 MILLIS</td>
+<td>978</td>
+<td>83.20143149284272 MICROS</td>
+<td>4.0</td>
+<td>4467.0</td>
+<td>271.69236956332077</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LoadOpOfCollapseShapeOpFolder<mlir::memref::LoadOp></td>
+<td>68.27799999999975 MILLIS</td>
+<td>764</td>
+<td>89.36910994764366 MICROS</td>
+<td>3.0</td>
+<td>2060.0</td>
+<td>235.2767444529091</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LoadOpOfExpandShapeOpFolder<mlir::memref::LoadOp></td>
+<td>61.281999999999655 MILLIS</td>
+<td>764</td>
+<td>80.2120418848163 MICROS</td>
+<td>3.0</td>
+<td>1986.0</td>
+<td>207.43720316793292</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::StoreOpOfCollapseShapeOpFolder<mlir::memref::StoreOp></td>
+<td>60.66899999999968 MILLIS</td>
+<td>742</td>
+<td>81.76415094339579 MICROS</td>
+<td>3.0</td>
+<td>2434.0</td>
+<td>218.52015063847247</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::StoreOpOfExpandShapeOpFolder<mlir::memref::StoreOp></td>
+<td>51.95999999999971 MILLIS</td>
+<td>742</td>
+<td>70.02695417789718 MICROS</td>
+<td>3.0</td>
+<td>2372.0</td>
+<td>203.37407098880846</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LoadOpOfSubViewOpFolder<mlir::vector::TransferReadOp></td>
+<td>50.90699999999991 MILLIS</td>
+<td>433</td>
+<td>117.56812933025384 MICROS</td>
+<td>5.0</td>
+<td>3277.0</td>
+<td>336.29853201169516</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LoadOpOfSubViewOpFolder<mlir::vector::LoadOp></td>
+<td>34.860999999999976 MILLIS</td>
+<td>182</td>
+<td>191.54395604395592 MICROS</td>
+<td>5.0</td>
+<td>1857.0</td>
+<td>326.2582334302887</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::StoreOpOfSubViewOpFolder<mlir::vector::TransferWriteOp></td>
+<td>17.824000000000012 MILLIS</td>
+<td>173</td>
+<td>103.02890173410412 MICROS</td>
+<td>4.0</td>
+<td>1427.0</td>
+<td>237.01304634088842</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LoadOpOfExpandShapeOpFolder<mlir::vector::LoadOp></td>
+<td>16.978000000000026 MILLIS</td>
+<td>182</td>
+<td>93.28571428571443 MICROS</td>
+<td>4.0</td>
+<td>2718.0</td>
+<td>304.4303917520256</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LoadOpOfCollapseShapeOpFolder<mlir::vector::LoadOp></td>
+<td>14.453000000000035 MILLIS</td>
+<td>182</td>
+<td>79.41208791208811 MICROS</td>
+<td>4.0</td>
+<td>1431.0</td>
+<td>205.79615025135456</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LoadOpOfSubViewOpFolder<mlir::vector::MaskedLoadOp></td>
+<td>3.094 MILLIS</td>
+<td>60</td>
+<td>51.56666666666667 MICROS</td>
+<td>3.0</td>
+<td>671.0</td>
+<td>107.70288864381594</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LoadOpOfExpandShapeOpFolder<mlir::vector::MaskedLoadOp></td>
+<td>2.9729999999999994 MILLIS</td>
+<td>60</td>
+<td>49.54999999999999 MICROS</td>
+<td>3.0</td>
+<td>556.0</td>
+<td>101.28728531591054</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LoadOpOfCollapseShapeOpFolder<mlir::vector::MaskedLoadOp></td>
+<td>2.431999999999999 MILLIS</td>
+<td>60</td>
+<td>40.53333333333332 MICROS</td>
+<td>3.0</td>
+<td>885.0</td>
+<td>119.01561055405948</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::StoreOpOfCollapseShapeOpFolder<mlir::vector::MaskedStoreOp></td>
+<td>1.399 MILLIS</td>
+<td>24</td>
+<td>58.29166666666667 MICROS</td>
+<td>4.0</td>
+<td>392.0</td>
+<td>101.35066155295787</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::StoreOpOfCollapseShapeOpFolder<mlir::vector::StoreOp></td>
+<td>1.2499999999999998 MILLIS</td>
+<td>19</td>
+<td>65.7894736842105 MICROS</td>
+<td>6.0</td>
+<td>819.0</td>
+<td>184.2971225029867</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::StoreOpOfExpandShapeOpFolder<mlir::vector::MaskedStoreOp></td>
+<td>1.241 MILLIS</td>
+<td>24</td>
+<td>51.70833333333334 MICROS</td>
+<td>4.0</td>
+<td>339.0</td>
+<td>90.6773029147255</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::StoreOpOfSubViewOpFolder<mlir::vector::StoreOp></td>
+<td>0.908 MILLIS</td>
+<td>19</td>
+<td>47.78947368421053 MICROS</td>
+<td>5.0</td>
+<td>232.0</td>
+<td>68.34785558363103</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::StoreOpOfExpandShapeOpFolder<mlir::vector::StoreOp></td>
+<td>883.0000000000001 MICROS</td>
+<td>19</td>
+<td>46.47368421052632 MICROS</td>
+<td>5.0</td>
+<td>467.0</td>
+<td>119.6637255070059</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::StoreOpOfSubViewOpFolder<mlir::vector::MaskedStoreOp></td>
+<td>701.9999999999999 MICROS</td>
+<td>24</td>
+<td>29.249999999999996 MICROS</td>
+<td>5.0</td>
+<td>339.0</td>
+<td>69.15275964606667</td>
+</tr>
+</table>
+</body>
+</html>

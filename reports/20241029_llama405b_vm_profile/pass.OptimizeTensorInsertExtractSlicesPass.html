@@ -1,0 +1,114 @@
+<html>
+<head><title>Series report: pass.OptimizeTensorInsertExtractSlicesPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>0.3183739999999999 SECONDS</td>
+<td>440</td>
+<td>723.5772727272725 MICROS</td>
+<td>13.0</td>
+<td>6635.0</td>
+<td>914.3850359826146</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldExtractSliceIntoTransferRead</td>
+<td>56.407999999999866 MILLIS</td>
+<td>604</td>
+<td>93.39072847682098 MICROS</td>
+<td>5.0</td>
+<td>3709.0</td>
+<td>283.8136799859221</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldExtractSliceIntoTransferWrite</td>
+<td>46.949999999999925 MILLIS</td>
+<td>743</td>
+<td>63.18977119784646 MICROS</td>
+<td>4.0</td>
+<td>2046.0</td>
+<td>197.67416887917872</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldWaw</td>
+<td>14.438000000000022 MILLIS</td>
+<td>206</td>
+<td>70.0873786407768 MICROS</td>
+<td>4.0</td>
+<td>2139.0</td>
+<td>245.17513481979648</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldInsertSliceIntoTransferWrite</td>
+<td>9.084000000000009 MILLIS</td>
+<td>160</td>
+<td>56.775000000000055 MICROS</td>
+<td>5.0</td>
+<td>830.0</td>
+<td>152.8554852630418</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyTrivialLoops</td>
+<td>8.793999999999999 MILLIS</td>
+<td>110</td>
+<td>79.94545454545454 MICROS</td>
+<td>4.0</td>
+<td>1362.0</td>
+<td>217.13095488724758</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SwapExtractSliceOfTransferWrite</td>
+<td>8.201000000000004 MILLIS</td>
+<td>158</td>
+<td>51.905063291139264 MICROS</td>
+<td>3.0</td>
+<td>2206.0</td>
+<td>196.86874082393982</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ForOpTensorCastFolder</td>
+<td>5.221999999999998 MILLIS</td>
+<td>110</td>
+<td>47.472727272727255 MICROS</td>
+<td>4.0</td>
+<td>1048.0</td>
+<td>157.39589396809737</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ForOpIterArgsFolder</td>
+<td>4.9549999999999965 MILLIS</td>
+<td>130</td>
+<td>38.11538461538459 MICROS</td>
+<td>5.0</td>
+<td>1650.0</td>
+<td>184.67041888041368</td>
+</tr>
+</table>
+</body>
+</html>

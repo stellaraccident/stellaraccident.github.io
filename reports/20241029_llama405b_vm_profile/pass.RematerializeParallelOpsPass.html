@@ -1,0 +1,69 @@
+<html>
+<head><title>Series report: pass.RematerializeParallelOpsPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>43.527999999999984 MILLIS</td>
+<td>32</td>
+<td>1.3602499999999995 MILLIS</td>
+<td>0.020999999999999998</td>
+<td>7.407</td>
+<td>1.5396276944443428</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::RematerializeParallelOpsPattern</td>
+<td>7.719999999999998 MILLIS</td>
+<td>78</td>
+<td>98.97435897435895 MICROS</td>
+<td>5.0</td>
+<td>1961.0</td>
+<td>256.54739025198035</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DeduplicateAndRemoveDeadOperandsAndResults</td>
+<td>6.152000000000003 MILLIS</td>
+<td>67</td>
+<td>91.82089552238811 MICROS</td>
+<td>5.0</td>
+<td>1512.0</td>
+<td>253.59180535356742</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveUnusedCycleInGenericOp</td>
+<td>1.757 MILLIS</td>
+<td>61</td>
+<td>28.80327868852459 MICROS</td>
+<td>4.0</td>
+<td>1314.0</td>
+<td>166.16146795172807</td>
+</tr>
+</table>
+</body>
+</html>

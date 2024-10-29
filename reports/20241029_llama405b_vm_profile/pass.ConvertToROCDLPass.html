@@ -1,0 +1,879 @@
+<html>
+<head><title>Series report: pass.ConvertToROCDLPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>0.4576959999999997 SECONDS</td>
+<td>689</td>
+<td>664.2902757619735 MICROS</td>
+<td>11.0</td>
+<td>13364.0</td>
+<td>1120.290585324101</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldI1Select</td>
+<td>98.07600000000009 MILLIS</td>
+<td>478</td>
+<td>205.17991631799183 MICROS</td>
+<td>5.0</td>
+<td>2879.0</td>
+<td>360.9582044651486</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConstantOpLowering</td>
+<td>94.89599999999922 MILLIS</td>
+<td>2127</td>
+<td>44.614950634696385 MICROS</td>
+<td>4.0</td>
+<td>2218.0</td>
+<td>169.1356044045064</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::HALInterfaceWorkgroupOpsConverter<mlir::iree_compiler::IREE::HAL::InterfaceWorkgroupIDOp, mlir::gpu::BlockIdOp></td>
+<td>78.92399999999999 MILLIS</td>
+<td>434</td>
+<td>181.85253456221196 MICROS</td>
+<td>15.0</td>
+<td>2873.0</td>
+<td>344.5760721498002</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::GPUShuffleOpLowering</td>
+<td>74.82999999999997 MILLIS</td>
+<td>233</td>
+<td>321.15879828326166 MICROS</td>
+<td>24.0</td>
+<td>4197.0</td>
+<td>484.6974239758824</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertFunc</td>
+<td>47.149000000000015 MILLIS</td>
+<td>222</td>
+<td>212.38288288288297 MICROS</td>
+<td>21.0</td>
+<td>2649.0</td>
+<td>315.07975863517305</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AssumeAlignmentOpLowering</td>
+<td>31.29100000000003 MILLIS</td>
+<td>516</td>
+<td>60.64147286821711 MICROS</td>
+<td>6.0</td>
+<td>2353.0</td>
+<td>188.3299855939031</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertIREEBindingSubspanOp</td>
+<td>30.15900000000004 MILLIS</td>
+<td>516</td>
+<td>58.44767441860473 MICROS</td>
+<td>10.0</td>
+<td>2247.0</td>
+<td>157.87777130706587</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::ExtUIOp, mlir::LLVM::ZExtOp></td>
+<td>26.573000000000008 MILLIS</td>
+<td>1168</td>
+<td>22.750856164383567 MICROS</td>
+<td>4.0</td>
+<td>1967.0</td>
+<td>95.4228624996301</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::MulIOp, mlir::LLVM::MulOp, mlir::arith::AttrConvertOverflowToLLVM></td>
+<td>23.97900000000001 MILLIS</td>
+<td>464</td>
+<td>51.67887931034485 MICROS</td>
+<td>4.0</td>
+<td>1589.0</td>
+<td>157.4162007023794</td>
+</tr>
+<tr>
+<td>pattern.mlir::gpu::index_lowering::OpLowering<mlir::gpu::BlockIdOp, mlir::ROCDL::BlockIdXOp, mlir::ROCDL::BlockIdYOp, mlir::ROCDL::BlockIdZOp></td>
+<td>23.351000000000006 MILLIS</td>
+<td>434</td>
+<td>53.80414746543781 MICROS</td>
+<td>5.0</td>
+<td>1948.0</td>
+<td>174.01586579854978</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::GpuShuffleRewriter</td>
+<td>20.37600000000001 MILLIS</td>
+<td>233</td>
+<td>87.45064377682407 MICROS</td>
+<td>4.0</td>
+<td>2601.0</td>
+<td>240.95811687421642</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::AddIOp, mlir::LLVM::AddOp, mlir::arith::AttrConvertOverflowToLLVM></td>
+<td>20.307000000000087 MILLIS</td>
+<td>1002</td>
+<td>20.26646706586835 MICROS</td>
+<td>4.0</td>
+<td>1451.0</td>
+<td>96.53994991419114</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertIREEConstantOp</td>
+<td>20.167000000000044 MILLIS</td>
+<td>1202</td>
+<td>16.77787021630619 MICROS</td>
+<td>4.0</td>
+<td>1523.0</td>
+<td>74.33231187361041</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtFOnFloat8RewritePattern</td>
+<td>17.926 MILLIS</td>
+<td>92</td>
+<td>194.8478260869565 MICROS</td>
+<td>4.0</td>
+<td>1771.0</td>
+<td>337.77262530927175</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::ShLIOp, mlir::LLVM::ShlOp, mlir::arith::AttrConvertOverflowToLLVM></td>
+<td>12.62300000000003 MILLIS</td>
+<td>577</td>
+<td>21.876949740034714 MICROS</td>
+<td>5.0</td>
+<td>806.0</td>
+<td>74.06176006577753</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::SelectOp, mlir::LLVM::SelectOp></td>
+<td>11.827000000000046 MILLIS</td>
+<td>419</td>
+<td>28.22673031026264 MICROS</td>
+<td>4.0</td>
+<td>2112.0</td>
+<td>173.63030610919247</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorLoadToMemrefLoadLowering</td>
+<td>10.746000000000032 MILLIS</td>
+<td>163</td>
+<td>65.92638036809835 MICROS</td>
+<td>5.0</td>
+<td>1868.0</td>
+<td>212.70860733727864</td>
+</tr>
+<tr>
+<td>pattern.mlir::gpu::index_lowering::OpLowering<mlir::gpu::ThreadIdOp, mlir::ROCDL::ThreadIdXOp, mlir::ROCDL::ThreadIdYOp, mlir::ROCDL::ThreadIdZOp></td>
+<td>9.592000000000002 MILLIS</td>
+<td>221</td>
+<td>43.402714932126706 MICROS</td>
+<td>5.0</td>
+<td>1618.0</td>
+<td>167.00639647395965</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ReplaceSlowWithFastReductionMinMaxOpPattern<mlir::vector::ReductionOp></td>
+<td>8.069999999999999 MILLIS</td>
+<td>24</td>
+<td>336.24999999999994 MICROS</td>
+<td>7.0</td>
+<td>1371.0</td>
+<td>355.6513098059203</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::OrIOp, mlir::LLVM::OrOp></td>
+<td>7.985000000000001 MILLIS</td>
+<td>601</td>
+<td>13.286189683860234 MICROS</td>
+<td>4.0</td>
+<td>1495.0</td>
+<td>65.94608768902182</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::BFloat16ExtFOpConverter</td>
+<td>7.964000000000004 MILLIS</td>
+<td>92</td>
+<td>86.56521739130439 MICROS</td>
+<td>3.0</td>
+<td>1683.0</td>
+<td>248.6314412393952</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::BranchOpLowering</td>
+<td>7.384999999999998 MILLIS</td>
+<td>442</td>
+<td>16.708144796380086 MICROS</td>
+<td>4.0</td>
+<td>2475.0</td>
+<td>121.99802823381336</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::AddFOp, mlir::LLVM::FAddOp, mlir::arith::AttrConvertFastMathToLLVM></td>
+<td>7.222000000000009 MILLIS</td>
+<td>326</td>
+<td>22.153374233128865 MICROS</td>
+<td>4.0</td>
+<td>1046.0</td>
+<td>92.65792903884655</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ReplaceGPUBarrierWithLDSBarrier</td>
+<td>7.057 MILLIS</td>
+<td>23</td>
+<td>306.8260869565218 MICROS</td>
+<td>6.0</td>
+<td>1702.0</td>
+<td>436.4747766180979</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::SubIOp, mlir::LLVM::SubOp, mlir::arith::AttrConvertOverflowToLLVM></td>
+<td>6.811999999999998 MILLIS</td>
+<td>567</td>
+<td>12.014109347442677 MICROS</td>
+<td>4.0</td>
+<td>868.0</td>
+<td>44.94684077676293</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ReturnOpLowering</td>
+<td>6.679000000000012 MILLIS</td>
+<td>222</td>
+<td>30.08558558558564 MICROS</td>
+<td>5.0</td>
+<td>1213.0</td>
+<td>124.83804596417146</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CondBranchOpLowering</td>
+<td>6.544000000000013 MILLIS</td>
+<td>243</td>
+<td>26.930041152263424 MICROS</td>
+<td>5.0</td>
+<td>1461.0</td>
+<td>136.46172243571365</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CmpFOpLowering</td>
+<td>6.413999999999997 MILLIS</td>
+<td>106</td>
+<td>60.50943396226412 MICROS</td>
+<td>4.0</td>
+<td>2553.0</td>
+<td>284.32350181542415</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IndexCastOpLowering<mlir::arith::IndexCastUIOp, mlir::LLVM::ZExtOp></td>
+<td>6.0029999999999735 MILLIS</td>
+<td>633</td>
+<td>9.48341232227484 MICROS</td>
+<td>4.0</td>
+<td>432.0</td>
+<td>27.206369358951623</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::StoreOpLowering</td>
+<td>5.309999999999992 MILLIS</td>
+<td>236</td>
+<td>22.499999999999964 MICROS</td>
+<td>7.0</td>
+<td>1069.0</td>
+<td>88.047873149223</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TruncFToFloat8RewritePattern</td>
+<td>4.758000000000002 MILLIS</td>
+<td>46</td>
+<td>103.43478260869568 MICROS</td>
+<td>6.0</td>
+<td>890.0</td>
+<td>192.7424111373511</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ScalarizeMathOp<mlir::math::AbsFOp></td>
+<td>4.6949999999999985 MILLIS</td>
+<td>32</td>
+<td>146.71874999999997 MICROS</td>
+<td>4.0</td>
+<td>960.0</td>
+<td>228.10595596879432</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::MinSIOp, mlir::LLVM::SMinOp></td>
+<td>4.555999999999998 MILLIS</td>
+<td>291</td>
+<td>15.656357388316147 MICROS</td>
+<td>5.0</td>
+<td>990.9999999999999</td>
+<td>67.59419126863335</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ScalarizeMathOp<mlir::math::FloorOp></td>
+<td>4.221000000000001 MILLIS</td>
+<td>39</td>
+<td>108.23076923076925 MICROS</td>
+<td>5.0</td>
+<td>846.0</td>
+<td>221.26703457974935</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CmpIOpLowering</td>
+<td>4.124 MILLIS</td>
+<td>406</td>
+<td>10.157635467980295 MICROS</td>
+<td>4.0</td>
+<td>741.0</td>
+<td>38.151497053377994</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LoadOpLowering</td>
+<td>4.062000000000005 MILLIS</td>
+<td>248</td>
+<td>16.379032258064537 MICROS</td>
+<td>6.0</td>
+<td>519.0</td>
+<td>37.806189274384394</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::BFloat16TruncFOpConverter</td>
+<td>3.9569999999999994 MILLIS</td>
+<td>46</td>
+<td>86.02173913043478 MICROS</td>
+<td>4.0</td>
+<td>2164.0</td>
+<td>356.5180335173277</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::GlobalMemrefOpLowering</td>
+<td>3.7100000000000004 MILLIS</td>
+<td>20</td>
+<td>185.5 MICROS</td>
+<td>9.0</td>
+<td>874.0</td>
+<td>217.41630573625338</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::math::AbsFOp, mlir::LLVM::FAbsOp, (anonymous namespace)::ConvertFastMath></td>
+<td>3.2219999999999978 MILLIS</td>
+<td>32</td>
+<td>100.68749999999993 MICROS</td>
+<td>5.0</td>
+<td>1287.0</td>
+<td>298.5569917850695</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::ExtFOp, mlir::LLVM::FPExtOp></td>
+<td>2.9090000000000016 MILLIS</td>
+<td>58</td>
+<td>50.155172413793125 MICROS</td>
+<td>5.0</td>
+<td>880.0</td>
+<td>138.04644417408306</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConstrainedVectorConvertToLLVMPattern<mlir::arith::TruncFOp, mlir::LLVM::FPTruncOp, false></td>
+<td>2.8400000000000007 MILLIS</td>
+<td>32</td>
+<td>88.75000000000003 MICROS</td>
+<td>5.0</td>
+<td>1479.0</td>
+<td>271.3701346869253</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::MaskedStoreFolder</td>
+<td>2.5149999999999997 MILLIS</td>
+<td>30</td>
+<td>83.83333333333333 MICROS</td>
+<td>3.0</td>
+<td>782.0</td>
+<td>190.2389871246749</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorLoadStoreConversion<mlir::vector::LoadOp></td>
+<td>2.2030000000000007 MILLIS</td>
+<td>67</td>
+<td>32.88059701492538 MICROS</td>
+<td>11.0</td>
+<td>479.0</td>
+<td>62.924148222239126</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::MulFOp, mlir::LLVM::FMulOp, mlir::arith::AttrConvertFastMathToLLVM></td>
+<td>1.701999999999999 MILLIS</td>
+<td>110</td>
+<td>15.472727272727264 MICROS</td>
+<td>4.0</td>
+<td>203.0</td>
+<td>32.903359621475836</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::MaxSIOp, mlir::LLVM::SMaxOp></td>
+<td>1.6200000000000003 MILLIS</td>
+<td>149</td>
+<td>10.87248322147651 MICROS</td>
+<td>5.0</td>
+<td>317.0</td>
+<td>29.60688487647162</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::DivSIOp, mlir::LLVM::SDivOp></td>
+<td>1.5549999999999995 MILLIS</td>
+<td>135</td>
+<td>11.518518518518515 MICROS</td>
+<td>5.0</td>
+<td>450.0</td>
+<td>39.6162802022662</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorStoreToMemrefStoreLowering</td>
+<td>1.2360000000000002 MILLIS</td>
+<td>19</td>
+<td>65.05263157894737 MICROS</td>
+<td>6.0</td>
+<td>646.0</td>
+<td>171.34037336747687</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::MaskedLoadFolder</td>
+<td>1.178000000000001 MILLIS</td>
+<td>66</td>
+<td>17.848484848484865 MICROS</td>
+<td>3.0</td>
+<td>373.0</td>
+<td>51.22713604527664</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::BitcastOp, mlir::LLVM::BitcastOp></td>
+<td>1.165 MILLIS</td>
+<td>73</td>
+<td>15.958904109589042 MICROS</td>
+<td>4.0</td>
+<td>458.0</td>
+<td>59.654126005532525</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::AndIOp, mlir::LLVM::AndOp></td>
+<td>1.0779999999999996 MILLIS</td>
+<td>50</td>
+<td>21.55999999999999 MICROS</td>
+<td>4.0</td>
+<td>331.0</td>
+<td>61.00955990662445</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertSharedMemAllocOp</td>
+<td>1.036 MILLIS</td>
+<td>20</td>
+<td>51.8 MICROS</td>
+<td>10.0</td>
+<td>698.0</td>
+<td>149.00758369962247</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::math::FmaOp, mlir::LLVM::FMAOp, (anonymous namespace)::ConvertFastMath></td>
+<td>0.9620000000000001 MILLIS</td>
+<td>121</td>
+<td>7.950413223140496 MICROS</td>
+<td>4.0</td>
+<td>88.0</td>
+<td>7.581895835300383</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IndexCastOpLowering<mlir::arith::IndexCastOp, mlir::LLVM::SExtOp></td>
+<td>0.934 MILLIS</td>
+<td>28</td>
+<td>33.357142857142854 MICROS</td>
+<td>4.0</td>
+<td>343.0</td>
+<td>75.35165856820666</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::BroadcastOpLowering</td>
+<td>0.925 MILLIS</td>
+<td>15</td>
+<td>61.66666666666667 MICROS</td>
+<td>6.0</td>
+<td>471.0</td>
+<td>119.5974730316471</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::RemUIOp, mlir::LLVM::URemOp></td>
+<td>823.9999999999999 MICROS</td>
+<td>13</td>
+<td>63.38461538461538 MICROS</td>
+<td>6.0</td>
+<td>734.0</td>
+<td>193.59177448416804</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::TruncIOp, mlir::LLVM::TruncOp></td>
+<td>815.9999999999999 MICROS</td>
+<td>33</td>
+<td>24.727272727272723 MICROS</td>
+<td>4.0</td>
+<td>537.0</td>
+<td>91.37345040008356</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorReductionOpConversion</td>
+<td>808.9999999999998 MICROS</td>
+<td>24</td>
+<td>33.70833333333332 MICROS</td>
+<td>7.0</td>
+<td>565.0</td>
+<td>110.82962869748421</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::math::CopySignOp, mlir::LLVM::CopySignOp, (anonymous namespace)::ConvertFastMath></td>
+<td>798.0000000000001 MICROS</td>
+<td>48</td>
+<td>16.625 MICROS</td>
+<td>5.0</td>
+<td>320.0</td>
+<td>46.77945818768462</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::GetGlobalMemrefOpLowering</td>
+<td>665.0000000000001 MICROS</td>
+<td>20</td>
+<td>33.25000000000001 MICROS</td>
+<td>11.0</td>
+<td>220.0</td>
+<td>43.34382885717411</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ScalarizeMathOp<mlir::math::RsqrtOp></td>
+<td>634.0 MICROS</td>
+<td>18</td>
+<td>35.22222222222222 MICROS</td>
+<td>5.0</td>
+<td>261.0</td>
+<td>76.5118404457445</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorSplatOpLowering</td>
+<td>589.9999999999999 MICROS</td>
+<td>43</td>
+<td>13.720930232558137 MICROS</td>
+<td>6.0</td>
+<td>168.0</td>
+<td>25.66268269015532</td>
+</tr>
+<tr>
+<td>pattern.mlir::OpToFuncCallLowering<mlir::math::FloorOp></td>
+<td>522.0 MICROS</td>
+<td>17</td>
+<td>30.705882352941178 MICROS</td>
+<td>7.0</td>
+<td>198.0</td>
+<td>54.182442028958555</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorInsertOpConversion</td>
+<td>517.0 MICROS</td>
+<td>38</td>
+<td>13.605263157894736 MICROS</td>
+<td>5.0</td>
+<td>154.0</td>
+<td>26.371375504197346</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorSplatNdOpLowering</td>
+<td>459.99999999999994 MICROS</td>
+<td>44</td>
+<td>10.454545454545453 MICROS</td>
+<td>4.0</td>
+<td>171.0</td>
+<td>24.590699041280708</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorLoadStoreConversion<mlir::vector::MaskedLoadOp></td>
+<td>455.0 MICROS</td>
+<td>20</td>
+<td>22.75 MICROS</td>
+<td>13.0</td>
+<td>112.0</td>
+<td>20.808351688684997</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorCreateMaskOpConversion</td>
+<td>396.00000000000006 MICROS</td>
+<td>8</td>
+<td>49.50000000000001 MICROS</td>
+<td>7.0</td>
+<td>315.0</td>
+<td>100.4016932128139</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::GatherFolder</td>
+<td>372.99999999999994 MICROS</td>
+<td>9</td>
+<td>41.44444444444444 MICROS</td>
+<td>5.0</td>
+<td>247.0</td>
+<td>75.33349721384994</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CreateMaskOpLowering</td>
+<td>365.0 MICROS</td>
+<td>8</td>
+<td>45.625 MICROS</td>
+<td>4.0</td>
+<td>323.0</td>
+<td>104.8426648602562</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorExtractOpConversion</td>
+<td>354.0000000000001 MICROS</td>
+<td>47</td>
+<td>7.5319148936170235 MICROS</td>
+<td>5.0</td>
+<td>13.0</td>
+<td>1.4417935613699995</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::SubFOp, mlir::LLVM::FSubOp, mlir::arith::AttrConvertFastMathToLLVM></td>
+<td>241.00000000000003 MICROS</td>
+<td>19</td>
+<td>12.684210526315791 MICROS</td>
+<td>6.0</td>
+<td>96.0</td>
+<td>19.713881381239293</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConstrainedVectorConvertToLLVMPattern<mlir::arith::TruncFOp, mlir::LLVM::ConstrainedFPTruncIntr, true, mlir::arith::AttrConverterConstrainedFPToLLVM></td>
+<td>229.00000000000006 MICROS</td>
+<td>32</td>
+<td>7.156250000000002 MICROS</td>
+<td>5.0</td>
+<td>15.0</td>
+<td>2.2515185847556247</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LDSBarrierOpLowering</td>
+<td>192.00000000000003 MICROS</td>
+<td>23</td>
+<td>8.347826086956523 MICROS</td>
+<td>6.0</td>
+<td>16.0</td>
+<td>2.333288324347596</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorInsertElementOpConversion</td>
+<td>190.00000000000003 MICROS</td>
+<td>5</td>
+<td>38.00000000000001 MICROS</td>
+<td>5.0</td>
+<td>160.0</td>
+<td>61.01475231450178</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ImOpConversion</td>
+<td>179.0 MICROS</td>
+<td>4</td>
+<td>44.75 MICROS</td>
+<td>6.0</td>
+<td>159.0</td>
+<td>65.96353159132704</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorLoadStoreConversion<mlir::vector::MaskedStoreOp></td>
+<td>157.00000000000003 MICROS</td>
+<td>8</td>
+<td>19.625000000000004 MICROS</td>
+<td>15.0</td>
+<td>27.0</td>
+<td>3.56852560590503</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::DivFOp, mlir::LLVM::FDivOp, mlir::arith::AttrConvertFastMathToLLVM></td>
+<td>144.0 MICROS</td>
+<td>16</td>
+<td>9.0 MICROS</td>
+<td>6.0</td>
+<td>14.0</td>
+<td>2.2912878474779217</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorLoadStoreConversion<mlir::vector::StoreOp></td>
+<td>144.0 MICROS</td>
+<td>8</td>
+<td>18.0 MICROS</td>
+<td>13.0</td>
+<td>30.0</td>
+<td>5.385164807134505</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorGatherOpConversion</td>
+<td>121.00000000000001 MICROS</td>
+<td>3</td>
+<td>40.333333333333336 MICROS</td>
+<td>37.0</td>
+<td>46.0</td>
+<td>4.027681991198175</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::MaxNumFOp, mlir::LLVM::MaxNumOp, mlir::arith::AttrConvertFastMathToLLVM></td>
+<td>116.99999999999997 MICROS</td>
+<td>16</td>
+<td>7.312499999999998 MICROS</td>
+<td>6.0</td>
+<td>9.0</td>
+<td>0.8454843286543134</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::MinUIOp, mlir::LLVM::UMinOp></td>
+<td>105.0 MICROS</td>
+<td>13</td>
+<td>8.076923076923077 MICROS</td>
+<td>6.0</td>
+<td>11.0</td>
+<td>1.071414482860313</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::DivUIOp, mlir::LLVM::UDivOp></td>
+<td>97.99999999999999 MICROS</td>
+<td>13</td>
+<td>7.538461538461537 MICROS</td>
+<td>6.0</td>
+<td>9.0</td>
+<td>0.7457969011409855</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::RemSIOp, mlir::LLVM::SRemOp></td>
+<td>94.0 MICROS</td>
+<td>4</td>
+<td>23.5 MICROS</td>
+<td>7.0</td>
+<td>70.0</td>
+<td>26.85609800399157</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConstantMaskOpLowering</td>
+<td>93.0 MICROS</td>
+<td>2</td>
+<td>46.5 MICROS</td>
+<td>5.0</td>
+<td>88.0</td>
+<td>41.5</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::FPToSIOp, mlir::LLVM::FPToSIOp></td>
+<td>78.99999999999999 MICROS</td>
+<td>11</td>
+<td>7.18181818181818 MICROS</td>
+<td>6.0</td>
+<td>9.0</td>
+<td>0.8331955809010798</td>
+</tr>
+<tr>
+<td>pattern.mlir::OpToFuncCallLowering<mlir::math::RsqrtOp></td>
+<td>66.0 MICROS</td>
+<td>8</td>
+<td>8.25 MICROS</td>
+<td>5.0</td>
+<td>17.0</td>
+<td>3.8971143170299727</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CreateMaskFolder</td>
+<td>49.00000000000001 MICROS</td>
+<td>8</td>
+<td>6.125000000000001 MICROS</td>
+<td>4.0</td>
+<td>9.0</td>
+<td>1.452368754827777</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::SIToFPOp, mlir::LLVM::SIToFPOp></td>
+<td>35.0 MICROS</td>
+<td>5</td>
+<td>6.999999999999999 MICROS</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>1.095445115010341</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ReOpConversion</td>
+<td>34.0 MICROS</td>
+<td>4</td>
+<td>8.5 MICROS</td>
+<td>6.0</td>
+<td>14.0</td>
+<td>3.2015621187164247</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::XOrIOp, mlir::LLVM::XOrOp></td>
+<td>28.0 MICROS</td>
+<td>4</td>
+<td>7.0 MICROS</td>
+<td>6.0</td>
+<td>8.0</td>
+<td>0.7071067811865509</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::VectorExtractElementOpConversion</td>
+<td>22.0 MICROS</td>
+<td>2</td>
+<td>11.0 MICROS</td>
+<td>6.0</td>
+<td>16.0</td>
+<td>5.000000000000002</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::NegFOp, mlir::LLVM::FNegOp, mlir::arith::AttrConvertFastMathToLLVM></td>
+<td>19.0 MICROS</td>
+<td>2</td>
+<td>9.5 MICROS</td>
+<td>8.0</td>
+<td>11.0</td>
+<td>1.4999999999999931</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::ShRUIOp, mlir::LLVM::LShrOp></td>
+<td>15.0 MICROS</td>
+<td>2</td>
+<td>7.5 MICROS</td>
+<td>6.0</td>
+<td>9.0</td>
+<td>1.5000000000000018</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CreateOpConversion</td>
+<td>7.0 MICROS</td>
+<td>1</td>
+<td>7.0 MICROS</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>0.0</td>
+</tr>
+</table>
+</body>
+</html>

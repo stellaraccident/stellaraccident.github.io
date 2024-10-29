@@ -1,0 +1,132 @@
+<html>
+<head><title>Series report: pass.GPUDistributeSharedMemoryCopyPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>11.795 MILLIS</td>
+<td>2</td>
+<td>5.8975 MILLIS</td>
+<td>5.213</td>
+<td>6.582</td>
+<td>0.6844999999999993</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyTrivialLoops</td>
+<td>2.617 MILLIS</td>
+<td>14</td>
+<td>186.92857142857142 MICROS</td>
+<td>5.0</td>
+<td>1999.0</td>
+<td>512.4398869673417</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ForOpIterArgsFolder</td>
+<td>1.017 MILLIS</td>
+<td>14</td>
+<td>72.64285714285714 MICROS</td>
+<td>6.0</td>
+<td>506.00000000000006</td>
+<td>141.17345316153114</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyAffineOp<mlir::affine::AffineApplyOp></td>
+<td>0.9369999999999996 MILLIS</td>
+<td>21</td>
+<td>44.6190476190476 MICROS</td>
+<td>6.0</td>
+<td>775.0</td>
+<td>163.3251143288182</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TrivialSubViewOpFolder</td>
+<td>866.0 MICROS</td>
+<td>15</td>
+<td>57.733333333333334 MICROS</td>
+<td>5.0</td>
+<td>613.0</td>
+<td>150.85245182701613</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubViewOpMemRefCastFolder</td>
+<td>823.0 MICROS</td>
+<td>15</td>
+<td>54.86666666666666 MICROS</td>
+<td>5.0</td>
+<td>631.0</td>
+<td>156.13364645570653</td>
+</tr>
+<tr>
+<td>pattern.mlir::OpWithOffsetSizesAndStridesConstantArgumentFolder<mlir::memref::SubViewOp, SubViewReturnTypeCanonicalizer, SubViewCanonicalizer></td>
+<td>517.9999999999999 MICROS</td>
+<td>15</td>
+<td>34.53333333333333 MICROS</td>
+<td>5.0</td>
+<td>267.0</td>
+<td>74.00888835508582</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::InferStaticShapeOfOperands</td>
+<td>416.00000000000006 MICROS</td>
+<td>4</td>
+<td>104.00000000000001 MICROS</td>
+<td>5.0</td>
+<td>398.0</td>
+<td>169.74245196767956</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ForOpTensorCastFolder</td>
+<td>245.0000000000001 MICROS</td>
+<td>14</td>
+<td>17.500000000000007 MICROS</td>
+<td>6.0</td>
+<td>162.0</td>
+<td>40.07983105182528</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::EraseDeadLinalgOp</td>
+<td>29.0 MICROS</td>
+<td>4</td>
+<td>7.25 MICROS</td>
+<td>6.0</td>
+<td>9.0</td>
+<td>1.0897247358851725</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::EraseIdentityLinalgOp<mlir::linalg::GenericOp></td>
+<td>25.0 MICROS</td>
+<td>4</td>
+<td>6.25 MICROS</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>0.8291561975888524</td>
+</tr>
+</table>
+</body>
+</html>

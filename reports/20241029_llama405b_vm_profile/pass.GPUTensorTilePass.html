@@ -1,0 +1,348 @@
+<html>
+<head><title>Series report: pass.GPUTensorTilePass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>2.745601000000001 SECONDS</td>
+<td>670</td>
+<td>4.097911940298509 MILLIS</td>
+<td>0.026</td>
+<td>55.077</td>
+<td>5.211180078318482</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::OpWithOffsetSizesAndStridesConstantArgumentFolder<mlir::tensor::ExtractSliceOp, SliceReturnTypeCanonicalizer, SliceCanonicalizer></td>
+<td>0.16767400000000168 SECONDS</td>
+<td>2019</td>
+<td>83.04804358593445 MICROS</td>
+<td>4.0</td>
+<td>4666.0</td>
+<td>266.16577742024253</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::TileConsumerAndFuseInputProducer</td>
+<td>92.40099999999981 MILLIS</td>
+<td>501</td>
+<td>184.43313373253454 MICROS</td>
+<td>5.0</td>
+<td>2439.0</td>
+<td>335.845793818397</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::InferStaticShapeOfOperands</td>
+<td>81.27699999999967 MILLIS</td>
+<td>1313</td>
+<td>61.901751713632656 MICROS</td>
+<td>4.0</td>
+<td>2070.0</td>
+<td>185.54251021451375</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyAffineOp<mlir::affine::AffineApplyOp></td>
+<td>64.90599999999999 MILLIS</td>
+<td>1236</td>
+<td>52.51294498381876 MICROS</td>
+<td>6.0</td>
+<td>2528.0</td>
+<td>185.2322839662844</td>
+</tr>
+<tr>
+<td>pattern.DeduplicateAffineMinMaxExpressions<mlir::affine::AffineMinOp></td>
+<td>61.671999999999755 MILLIS</td>
+<td>553</td>
+<td>111.52260397829974 MICROS</td>
+<td>3.0</td>
+<td>2702.0</td>
+<td>267.8897912699117</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractSliceOpCastFolder</td>
+<td>57.10799999999938 MILLIS</td>
+<td>1561</td>
+<td>36.58424087123599 MICROS</td>
+<td>3.0</td>
+<td>2592.0</td>
+<td>148.56048357108884</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::InsertSliceOpConstantArgumentFolder<mlir::tensor::InsertSliceOp></td>
+<td>41.694000000000045 MILLIS</td>
+<td>720</td>
+<td>57.908333333333395 MICROS</td>
+<td>5.0</td>
+<td>2182.0</td>
+<td>177.8702552658354</td>
+</tr>
+<tr>
+<td>pattern.MergeAffineMinMaxOp<mlir::affine::AffineMinOp></td>
+<td>41.3269999999999 MILLIS</td>
+<td>553</td>
+<td>74.73236889692568 MICROS</td>
+<td>4.0</td>
+<td>2219.0</td>
+<td>205.50601065903714</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::EraseDeadLinalgOp</td>
+<td>39.35199999999974 MILLIS</td>
+<td>1313</td>
+<td>29.971058644325772 MICROS</td>
+<td>3.0</td>
+<td>1546.0</td>
+<td>111.17023750172737</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyAffineOp<mlir::affine::AffineMinOp></td>
+<td>37.48200000000005 MILLIS</td>
+<td>553</td>
+<td>67.77938517179032 MICROS</td>
+<td>6.0</td>
+<td>3158.0</td>
+<td>229.0635827180983</td>
+</tr>
+<tr>
+<td>pattern.CanonicalizeSingleResultAffineMinMaxOp<mlir::affine::AffineMinOp></td>
+<td>34.62199999999992 MILLIS</td>
+<td>553</td>
+<td>62.60759493670872 MICROS</td>
+<td>4.0</td>
+<td>2763.0</td>
+<td>214.23664835286772</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AffineOpSCFCanonicalizationPattern<mlir::affine::AffineMinOp></td>
+<td>30.84200000000004 MILLIS</td>
+<td>553</td>
+<td>55.77215189873425 MICROS</td>
+<td>10.0</td>
+<td>1413.0</td>
+<td>148.89038221208517</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::InsertSliceOpSourceCastInserter<mlir::tensor::InsertSliceOp></td>
+<td>29.951000000000022 MILLIS</td>
+<td>503</td>
+<td>59.54473161033802 MICROS</td>
+<td>4.0</td>
+<td>1765.0</td>
+<td>178.3872902845581</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::EraseIdentityLinalgOp<mlir::linalg::GenericOp></td>
+<td>24.515000000000175 MILLIS</td>
+<td>1299</td>
+<td>18.872209391840013 MICROS</td>
+<td>3.0</td>
+<td>3047.0</td>
+<td>111.02666244761367</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ForOpIterArgsFolder</td>
+<td>23.102000000000018 MILLIS</td>
+<td>204</td>
+<td>113.24509803921578 MICROS</td>
+<td>4.0</td>
+<td>2927.0</td>
+<td>334.57784159118137</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TensorCastExtractSlice</td>
+<td>19.434000000000022 MILLIS</td>
+<td>176</td>
+<td>110.42045454545466 MICROS</td>
+<td>4.0</td>
+<td>2951.0</td>
+<td>340.36044468898604</td>
+</tr>
+<tr>
+<td>pattern.CanonicalizeAffineMinMaxOpExprAndTermOrder<mlir::affine::AffineMinOp></td>
+<td>19.269000000000084 MILLIS</td>
+<td>553</td>
+<td>34.844484629294904 MICROS</td>
+<td>4.0</td>
+<td>1554.0</td>
+<td>137.53805737125185</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfLoopResultFolder<mlir::tensor::DimOp></td>
+<td>18.961000000000023 MILLIS</td>
+<td>262</td>
+<td>72.37022900763367 MICROS</td>
+<td>4.0</td>
+<td>1751.0</td>
+<td>213.5705640561108</td>
+</tr>
+<tr>
+<td>pattern.DeduplicateAffineMinMaxExpressions<mlir::affine::AffineMaxOp></td>
+<td>18.884000000000018 MILLIS</td>
+<td>291</td>
+<td>64.89347079037806 MICROS</td>
+<td>4.0</td>
+<td>1668.0</td>
+<td>187.27464530800452</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ChainedTensorCast</td>
+<td>17.698000000000032 MILLIS</td>
+<td>220</td>
+<td>80.4454545454547 MICROS</td>
+<td>4.0</td>
+<td>2050.0</td>
+<td>252.99766748344956</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldEmptyTensorWithDimOp</td>
+<td>17.432000000000034 MILLIS</td>
+<td>262</td>
+<td>66.5343511450383 MICROS</td>
+<td>4.0</td>
+<td>1389.0</td>
+<td>198.82662660205534</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::InsertSliceOpCastFolder<mlir::tensor::InsertSliceOp></td>
+<td>15.264000000000088 MILLIS</td>
+<td>503</td>
+<td>30.345924453280492 MICROS</td>
+<td>3.0</td>
+<td>3174.0</td>
+<td>168.28818774200843</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::AffineMinDistributedSCFCanonicalizationPattern</td>
+<td>14.486000000000065 MILLIS</td>
+<td>553</td>
+<td>26.19529837251368 MICROS</td>
+<td>3.0</td>
+<td>895.0</td>
+<td>83.60233637269044</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldEmptyTensorWithCastOp</td>
+<td>14.267000000000003 MILLIS</td>
+<td>176</td>
+<td>81.06250000000003 MICROS</td>
+<td>4.0</td>
+<td>2165.0</td>
+<td>216.34881232340987</td>
+</tr>
+<tr>
+<td>pattern.MergeAffineMinMaxOp<mlir::affine::AffineMaxOp></td>
+<td>13.951000000000032 MILLIS</td>
+<td>291</td>
+<td>47.941580756013856 MICROS</td>
+<td>4.0</td>
+<td>1142.0</td>
+<td>143.87793135205715</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AffineOpSCFCanonicalizationPattern<mlir::affine::AffineMaxOp></td>
+<td>13.479999999999997 MILLIS</td>
+<td>291</td>
+<td>46.32302405498281 MICROS</td>
+<td>17.0</td>
+<td>1668.0</td>
+<td>124.06662709151637</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyAffineOp<mlir::affine::AffineMaxOp></td>
+<td>12.244000000000009 MILLIS</td>
+<td>291</td>
+<td>42.075601374570475 MICROS</td>
+<td>6.0</td>
+<td>1236.0</td>
+<td>127.45791484889449</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfIterArgFolder<mlir::tensor::DimOp></td>
+<td>11.919000000000011 MILLIS</td>
+<td>262</td>
+<td>45.49236641221378 MICROS</td>
+<td>4.0</td>
+<td>1307.0</td>
+<td>135.8282970430176</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldTensorCastConsumerOp</td>
+<td>10.856000000000005 MILLIS</td>
+<td>176</td>
+<td>61.6818181818182 MICROS</td>
+<td>4.0</td>
+<td>1234.0</td>
+<td>165.07230133920555</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldInsertPadIntoFill</td>
+<td>9.626000000000005 MILLIS</td>
+<td>503</td>
+<td>19.137176938369787 MICROS</td>
+<td>3.0</td>
+<td>2203.0</td>
+<td>104.28285375867976</td>
+</tr>
+<tr>
+<td>pattern.CanonicalizeSingleResultAffineMinMaxOp<mlir::affine::AffineMaxOp></td>
+<td>8.221999999999987 MILLIS</td>
+<td>291</td>
+<td>28.254295532646 MICROS</td>
+<td>4.0</td>
+<td>1232.0</td>
+<td>125.64367854855118</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldFillWithTensorExtract</td>
+<td>7.215999999999997 MILLIS</td>
+<td>83</td>
+<td>86.93975903614454 MICROS</td>
+<td>5.0</td>
+<td>1475.0</td>
+<td>241.85664126759715</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyTrivialLoops</td>
+<td>5.481000000000005 MILLIS</td>
+<td>204</td>
+<td>26.867647058823554 MICROS</td>
+<td>5.0</td>
+<td>476.0</td>
+<td>65.393508195168</td>
+</tr>
+<tr>
+<td>pattern.CanonicalizeAffineMinMaxOpExprAndTermOrder<mlir::affine::AffineMaxOp></td>
+<td>3.782999999999989 MILLIS</td>
+<td>291</td>
+<td>12.999999999999961 MICROS</td>
+<td>4.0</td>
+<td>730.0</td>
+<td>51.18680833065327</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<html>
+<head><title>Series report: pass.BufferizeCopyOnlyDispatchesPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Passes in Execution Order:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td><a href='pass.EliminateEmptyTensorsPass.html'>pass.EliminateEmptyTensorsPass</a></td>
+<td>14.940999999999999 MILLIS</td>
+<td>21</td>
+<td>711.4761904761905 MICROS</td>
+<td>57.0</td>
+<td>2420.0</td>
+<td>684.5900141897665</td>
+</tr>
+<tr>
+<td><a href='pass.EmptyTensorToAllocTensor.html'>pass.EmptyTensorToAllocTensor</a></td>
+<td>10.200999999999999 MILLIS</td>
+<td>21</td>
+<td>485.7619047619047 MICROS</td>
+<td>104.0</td>
+<td>1403.0</td>
+<td>382.8630122743651</td>
+</tr>
+<tr>
+<td><a href='pass.IREEComprehensiveBufferizePass.html'>pass.IREEComprehensiveBufferizePass</a></td>
+<td>28.931 MILLIS</td>
+<td>21</td>
+<td>1.3776666666666668 MILLIS</td>
+<td>0.491</td>
+<td>3.8379999999999996</td>
+<td>0.7971667288910098</td>
+</tr>
+<tr>
+<td><a href='pass.ResolveShapedTypeResultDims.html'>pass.ResolveShapedTypeResultDims</a></td>
+<td>17.623 MILLIS</td>
+<td>21</td>
+<td>839.1904761904763 MICROS</td>
+<td>109.0</td>
+<td>4174.0</td>
+<td>934.062586821554</td>
+</tr>
+<tr>
+<td><a href='pass.Canonicalizer.html'>pass.Canonicalizer</a></td>
+<td>0.115198 SECONDS</td>
+<td>42</td>
+<td>2.7428095238095236 MILLIS</td>
+<td>0.704</td>
+<td>6.675999999999999</td>
+<td>1.1725795178253728</td>
+</tr>
+<tr>
+<td>pass.CSE</td>
+<td>4.563000000000001 MILLIS</td>
+<td>21</td>
+<td>217.2857142857143 MICROS</td>
+<td>14.0</td>
+<td>1071.0</td>
+<td>312.76069398292407</td>
+</tr>
+<tr>
+<td><a href='pass.CleanupBufferAllocViewPass.html'>pass.CleanupBufferAllocViewPass</a></td>
+<td>74.07900000000002 MILLIS</td>
+<td>21</td>
+<td>3.5275714285714295 MILLIS</td>
+<td>1.1219999999999999</td>
+<td>6.021999999999999</td>
+<td>1.5334584494946455</td>
+</tr>
+</table>
+<h1>Passes in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td><a href='pass.Canonicalizer.html'>pass.Canonicalizer</a></td>
+<td>0.115198 SECONDS</td>
+<td>42</td>
+<td>2.7428095238095236 MILLIS</td>
+<td>0.704</td>
+<td>6.675999999999999</td>
+<td>1.1725795178253728</td>
+</tr>
+<tr>
+<td><a href='pass.CleanupBufferAllocViewPass.html'>pass.CleanupBufferAllocViewPass</a></td>
+<td>74.07900000000002 MILLIS</td>
+<td>21</td>
+<td>3.5275714285714295 MILLIS</td>
+<td>1.1219999999999999</td>
+<td>6.021999999999999</td>
+<td>1.5334584494946455</td>
+</tr>
+<tr>
+<td><a href='pass.IREEComprehensiveBufferizePass.html'>pass.IREEComprehensiveBufferizePass</a></td>
+<td>28.931 MILLIS</td>
+<td>21</td>
+<td>1.3776666666666668 MILLIS</td>
+<td>0.491</td>
+<td>3.8379999999999996</td>
+<td>0.7971667288910098</td>
+</tr>
+<tr>
+<td><a href='pass.ResolveShapedTypeResultDims.html'>pass.ResolveShapedTypeResultDims</a></td>
+<td>17.623 MILLIS</td>
+<td>21</td>
+<td>839.1904761904763 MICROS</td>
+<td>109.0</td>
+<td>4174.0</td>
+<td>934.062586821554</td>
+</tr>
+<tr>
+<td><a href='pass.EliminateEmptyTensorsPass.html'>pass.EliminateEmptyTensorsPass</a></td>
+<td>14.940999999999999 MILLIS</td>
+<td>21</td>
+<td>711.4761904761905 MICROS</td>
+<td>57.0</td>
+<td>2420.0</td>
+<td>684.5900141897665</td>
+</tr>
+<tr>
+<td><a href='pass.EmptyTensorToAllocTensor.html'>pass.EmptyTensorToAllocTensor</a></td>
+<td>10.200999999999999 MILLIS</td>
+<td>21</td>
+<td>485.7619047619047 MICROS</td>
+<td>104.0</td>
+<td>1403.0</td>
+<td>382.8630122743651</td>
+</tr>
+<tr>
+<td>pass.CSE</td>
+<td>4.563000000000001 MILLIS</td>
+<td>21</td>
+<td>217.2857142857143 MICROS</td>
+<td>14.0</td>
+<td>1071.0</td>
+<td>312.76069398292407</td>
+</tr>
+</table>
+</body>
+</html>

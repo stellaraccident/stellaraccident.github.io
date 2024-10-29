@@ -1,0 +1,753 @@
+<html>
+<head><title>Series report: __UNNAMED__</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Passes in Execution Order:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pass.AssignTargetDevicesPass</td>
+<td>74.00000000000001 MICROS</td>
+<td>2</td>
+<td>37.00000000000001 MICROS</td>
+<td>33.0</td>
+<td>41.0</td>
+<td>3.9999999999999676</td>
+</tr>
+<tr>
+<td>pass.MaterializeTargetDevicesPass</td>
+<td>41.0 MICROS</td>
+<td>2</td>
+<td>20.5 MICROS</td>
+<td>18.0</td>
+<td>23.0</td>
+<td>2.500000000000001</td>
+</tr>
+<tr>
+<td>pass.ResolveDevicePromisesPass</td>
+<td>0.16783399999999998 SECONDS</td>
+<td>2</td>
+<td>83.91699999999999 MILLIS</td>
+<td>80.873</td>
+<td>86.961</td>
+<td>3.044000000000178</td>
+</tr>
+<tr>
+<td>pass.ResolveDeviceAliasesPass</td>
+<td>301.99999999999994 MICROS</td>
+<td>2</td>
+<td>150.99999999999997 MICROS</td>
+<td>150.0</td>
+<td>152.0</td>
+<td>1.0000000000038758</td>
+</tr>
+<tr>
+<td>pass.VerifyDevicesPass</td>
+<td>22.049179000000002 SECONDS</td>
+<td>3</td>
+<td>7.349726333333334 SECONDS</td>
+<td>7.137228</td>
+<td>7.563589</td>
+<td>0.17406382284345542</td>
+</tr>
+<tr>
+<td>pass.CSE</td>
+<td>5.904252 SECONDS</td>
+<td>10</td>
+<td>0.5904252 SECONDS</td>
+<td>0.043815</td>
+<td>2.563199</td>
+<td>0.8304512268396983</td>
+</tr>
+<tr>
+<td><a href='pass.Canonicalizer.html'>pass.Canonicalizer</a></td>
+<td>295.408792 SECONDS</td>
+<td>8</td>
+<td>36.926099 SECONDS</td>
+<td>2.877498</td>
+<td>118.974909</td>
+<td>39.96557184767401</td>
+</tr>
+<tr>
+<td>pass.SimplifyGlobalAccesses</td>
+<td>4.370331999999997 SECONDS</td>
+<td>390</td>
+<td>11.205979487179478 MILLIS</td>
+<td>0.007</td>
+<td>860.66</td>
+<td>67.09325899051865</td>
+</tr>
+<tr>
+<td><a href='pass.mlir____detail____OpToOpPassAdaptor.html'>pass.mlir::detail::OpToOpPassAdaptor</a></td>
+<td>90.281503 SECONDS</td>
+<td>14</td>
+<td>6.448678785714286 SECONDS</td>
+<td>4.1e-05</td>
+<td>38.747631</td>
+<td>13.260167055791563</td>
+</tr>
+<tr>
+<td><a href='pass.ApplyPatterns.html'>pass.ApplyPatterns</a></td>
+<td>94.931198 SECONDS</td>
+<td>6</td>
+<td>15.821866333333332 SECONDS</td>
+<td>2.775691</td>
+<td>39.685255</td>
+<td>16.831102408251514</td>
+</tr>
+<tr>
+<td><a href='pass.FoldGlobals.html'>pass.FoldGlobals</a></td>
+<td>101.92317200000001 SECONDS</td>
+<td>6</td>
+<td>16.987195333333336 SECONDS</td>
+<td>4.011579</td>
+<td>39.932967</td>
+<td>16.225002212412676</td>
+</tr>
+<tr>
+<td>pass.FuseGlobals</td>
+<td>0.7611239999999999 SECONDS</td>
+<td>6</td>
+<td>0.126854 SECONDS</td>
+<td>0.071962</td>
+<td>0.165501</td>
+<td>0.0387968127900562</td>
+</tr>
+<tr>
+<td><a href='pass.MaterializeInterfacesPass.html'>pass.MaterializeInterfacesPass</a></td>
+<td>13.350614 SECONDS</td>
+<td>1</td>
+<td>13.350614 SECONDS</td>
+<td>13.350614</td>
+<td>13.350614</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.PruneExecutablesPass</td>
+<td>0.20940799999999998 SECONDS</td>
+<td>3</td>
+<td>69.80266666666667 MILLIS</td>
+<td>35.295</td>
+<td>113.606</td>
+<td>32.63903842878271</td>
+</tr>
+<tr>
+<td><a href='pass.ConfigureExecutablesPass.html'>pass.ConfigureExecutablesPass</a></td>
+<td>5.638568000000001 SECONDS</td>
+<td>222</td>
+<td>25.39895495495496 MILLIS</td>
+<td>11.548</td>
+<td>58.846999999999994</td>
+<td>7.655103080242743</td>
+</tr>
+<tr>
+<td><a href='pass.TranslateExecutablesPass.html'>pass.TranslateExecutablesPass</a></td>
+<td>76.56795200000005 SECONDS</td>
+<td>222</td>
+<td>0.3449006846846849 SECONDS</td>
+<td>0.073787</td>
+<td>0.899217</td>
+<td>0.12868644735491128</td>
+</tr>
+<tr>
+<td>pass.ROCDLAnnotateKernelForTranslationPass</td>
+<td>184.0 MICROS</td>
+<td>2</td>
+<td>92.0 MICROS</td>
+<td>63.0</td>
+<td>121.0</td>
+<td>28.999999999999982</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertToHALPass.html'>pass.ConvertToHALPass</a></td>
+<td>10.4743 SECONDS</td>
+<td>1</td>
+<td>10.4743 SECONDS</td>
+<td>10.4743</td>
+<td>10.4743</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.OutlineMemoizeRegionsPass</td>
+<td>15.551418 SECONDS</td>
+<td>1</td>
+<td>15.551418 SECONDS</td>
+<td>15.551418</td>
+<td>15.551418</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.FixupLegacySyncPass</td>
+<td>16.112226 SECONDS</td>
+<td>1</td>
+<td>16.112226 SECONDS</td>
+<td>16.112226</td>
+<td>16.112226</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.LinkExecutablesPass.html'>pass.LinkExecutablesPass</a></td>
+<td>0.385971 SECONDS</td>
+<td>1</td>
+<td>0.385971 SECONDS</td>
+<td>0.385971</td>
+<td>0.385971</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ResolveExportOrdinalsPass</td>
+<td>58.201 MILLIS</td>
+<td>1</td>
+<td>58.201 MILLIS</td>
+<td>58.201</td>
+<td>58.201</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.MaterializeResourceCachesPass</td>
+<td>1.727721 SECONDS</td>
+<td>1</td>
+<td>1.727721 SECONDS</td>
+<td>1.727721</td>
+<td>1.727721</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.MemoizeDeviceQueriesPass</td>
+<td>2.188878 SECONDS</td>
+<td>1</td>
+<td>2.188878 SECONDS</td>
+<td>2.188878</td>
+<td>2.188878</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ElideRedundantCommandsPass</td>
+<td>35.18599999999999 MILLIS</td>
+<td>63</td>
+<td>558.5079365079364 MICROS</td>
+<td>7.0</td>
+<td>13863.0</td>
+<td>1988.088248760011</td>
+</tr>
+<tr>
+<td>pass.InitializeDevicesPass</td>
+<td>457.0 MICROS</td>
+<td>1</td>
+<td>457.0 MICROS</td>
+<td>457.0</td>
+<td>457.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.AffineExpandIndexOps.html'>pass.AffineExpandIndexOps</a></td>
+<td>0.5346690000000001 SECONDS</td>
+<td>6</td>
+<td>89.1115 MILLIS</td>
+<td>0.051</td>
+<td>353.39799999999997</td>
+<td>123.919929378813</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertAffineToStandard.html'>pass.ConvertAffineToStandard</a></td>
+<td>0.201285 SECONDS</td>
+<td>6</td>
+<td>33.5475 MILLIS</td>
+<td>0.038</td>
+<td>114.218</td>
+<td>40.600378757469734</td>
+</tr>
+<tr>
+<td><a href='pass.SCFToControlFlow.html'>pass.SCFToControlFlow</a></td>
+<td>0.28893499999999994 SECONDS</td>
+<td>76</td>
+<td>3.801776315789473 MILLIS</td>
+<td>0.01</td>
+<td>30.157</td>
+<td>8.657659007459177</td>
+</tr>
+<tr>
+<td><a href='pass.SerializeExecutablesPass.html'>pass.SerializeExecutablesPass</a></td>
+<td>5.934896999999999 SECONDS</td>
+<td>222</td>
+<td>26.73377027027027 MILLIS</td>
+<td>20.195</td>
+<td>105.671</td>
+<td>6.686802677724838</td>
+</tr>
+<tr>
+<td>pass.SymbolDCE</td>
+<td>0.35992599999999997 SECONDS</td>
+<td>3</td>
+<td>0.11997533333333332 SECONDS</td>
+<td>0.095297</td>
+<td>0.165952</td>
+<td>0.03253968355032906</td>
+</tr>
+<tr>
+<td><a href='pass.FixedPointIterator.html'>pass.FixedPointIterator</a></td>
+<td>61.264926 SECONDS</td>
+<td>1</td>
+<td>61.264926 SECONDS</td>
+<td>61.264926</td>
+<td>61.264926</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.Inliner.html'>pass.Inliner</a></td>
+<td>43.69164 SECONDS</td>
+<td>2</td>
+<td>21.84582 SECONDS</td>
+<td>3.142019</td>
+<td>40.549621</td>
+<td>18.703801</td>
+</tr>
+<tr>
+<td>pass.CombineInitializers</td>
+<td>2.4090000000000003 MILLIS</td>
+<td>1</td>
+<td>2.4090000000000003 MILLIS</td>
+<td>2.4090000000000003</td>
+<td>2.4090000000000003</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.SCFForLoopCanonicalization.html'>pass.SCFForLoopCanonicalization</a></td>
+<td>0.21123199999999998 SECONDS</td>
+<td>5</td>
+<td>42.246399999999994 MILLIS</td>
+<td>0.36900000000000005</td>
+<td>112.74199999999999</td>
+<td>46.76255798221478</td>
+</tr>
+<tr>
+<td>pass.LoopInvariantCodeMotion</td>
+<td>11.973999999999998 MILLIS</td>
+<td>5</td>
+<td>2.3948 MILLIS</td>
+<td>0.017</td>
+<td>6.931</td>
+<td>2.863567872427682</td>
+</tr>
+<tr>
+<td><a href='pass.ArithUnsignedWhenEquivalent.html'>pass.ArithUnsignedWhenEquivalent</a></td>
+<td>0.37603200000000003 SECONDS</td>
+<td>5</td>
+<td>75.2064 MILLIS</td>
+<td>0.499</td>
+<td>200.922</td>
+<td>86.55633653430577</td>
+</tr>
+<tr>
+<td>pass.PropagateSubranges</td>
+<td>26.708 MILLIS</td>
+<td>1</td>
+<td>26.708 MILLIS</td>
+<td>26.708</td>
+<td>26.708</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.mlir____iree_compiler____IREE____VM____ConversionPass.html'>pass.mlir::iree_compiler::IREE::VM::ConversionPass</a></td>
+<td>11.942153 SECONDS</td>
+<td>1</td>
+<td>11.942153 SECONDS</td>
+<td>11.942153</td>
+<td>11.942153</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.DropCompilerHints</td>
+<td>27.003 MILLIS</td>
+<td>1</td>
+<td>27.003 MILLIS</td>
+<td>27.003</td>
+<td>27.003</td>
+<td>0.0</td>
+</tr>
+</table>
+<h1>Passes in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td><a href='pass.Canonicalizer.html'>pass.Canonicalizer</a></td>
+<td>295.408792 SECONDS</td>
+<td>8</td>
+<td>36.926099 SECONDS</td>
+<td>2.877498</td>
+<td>118.974909</td>
+<td>39.96557184767401</td>
+</tr>
+<tr>
+<td><a href='pass.FoldGlobals.html'>pass.FoldGlobals</a></td>
+<td>101.92317200000001 SECONDS</td>
+<td>6</td>
+<td>16.987195333333336 SECONDS</td>
+<td>4.011579</td>
+<td>39.932967</td>
+<td>16.225002212412676</td>
+</tr>
+<tr>
+<td><a href='pass.ApplyPatterns.html'>pass.ApplyPatterns</a></td>
+<td>94.931198 SECONDS</td>
+<td>6</td>
+<td>15.821866333333332 SECONDS</td>
+<td>2.775691</td>
+<td>39.685255</td>
+<td>16.831102408251514</td>
+</tr>
+<tr>
+<td><a href='pass.mlir____detail____OpToOpPassAdaptor.html'>pass.mlir::detail::OpToOpPassAdaptor</a></td>
+<td>90.281503 SECONDS</td>
+<td>14</td>
+<td>6.448678785714286 SECONDS</td>
+<td>4.1e-05</td>
+<td>38.747631</td>
+<td>13.260167055791563</td>
+</tr>
+<tr>
+<td><a href='pass.TranslateExecutablesPass.html'>pass.TranslateExecutablesPass</a></td>
+<td>76.56795200000005 SECONDS</td>
+<td>222</td>
+<td>0.3449006846846849 SECONDS</td>
+<td>0.073787</td>
+<td>0.899217</td>
+<td>0.12868644735491128</td>
+</tr>
+<tr>
+<td><a href='pass.FixedPointIterator.html'>pass.FixedPointIterator</a></td>
+<td>61.264926 SECONDS</td>
+<td>1</td>
+<td>61.264926 SECONDS</td>
+<td>61.264926</td>
+<td>61.264926</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.Inliner.html'>pass.Inliner</a></td>
+<td>43.69164 SECONDS</td>
+<td>2</td>
+<td>21.84582 SECONDS</td>
+<td>3.142019</td>
+<td>40.549621</td>
+<td>18.703801</td>
+</tr>
+<tr>
+<td>pass.VerifyDevicesPass</td>
+<td>22.049179000000002 SECONDS</td>
+<td>3</td>
+<td>7.349726333333334 SECONDS</td>
+<td>7.137228</td>
+<td>7.563589</td>
+<td>0.17406382284345542</td>
+</tr>
+<tr>
+<td>pass.FixupLegacySyncPass</td>
+<td>16.112226 SECONDS</td>
+<td>1</td>
+<td>16.112226 SECONDS</td>
+<td>16.112226</td>
+<td>16.112226</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.OutlineMemoizeRegionsPass</td>
+<td>15.551418 SECONDS</td>
+<td>1</td>
+<td>15.551418 SECONDS</td>
+<td>15.551418</td>
+<td>15.551418</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.MaterializeInterfacesPass.html'>pass.MaterializeInterfacesPass</a></td>
+<td>13.350614 SECONDS</td>
+<td>1</td>
+<td>13.350614 SECONDS</td>
+<td>13.350614</td>
+<td>13.350614</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.mlir____iree_compiler____IREE____VM____ConversionPass.html'>pass.mlir::iree_compiler::IREE::VM::ConversionPass</a></td>
+<td>11.942153 SECONDS</td>
+<td>1</td>
+<td>11.942153 SECONDS</td>
+<td>11.942153</td>
+<td>11.942153</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertToHALPass.html'>pass.ConvertToHALPass</a></td>
+<td>10.4743 SECONDS</td>
+<td>1</td>
+<td>10.4743 SECONDS</td>
+<td>10.4743</td>
+<td>10.4743</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.SerializeExecutablesPass.html'>pass.SerializeExecutablesPass</a></td>
+<td>5.934896999999999 SECONDS</td>
+<td>222</td>
+<td>26.73377027027027 MILLIS</td>
+<td>20.195</td>
+<td>105.671</td>
+<td>6.686802677724838</td>
+</tr>
+<tr>
+<td>pass.CSE</td>
+<td>5.904252 SECONDS</td>
+<td>10</td>
+<td>0.5904252 SECONDS</td>
+<td>0.043815</td>
+<td>2.563199</td>
+<td>0.8304512268396983</td>
+</tr>
+<tr>
+<td><a href='pass.ConfigureExecutablesPass.html'>pass.ConfigureExecutablesPass</a></td>
+<td>5.638568000000001 SECONDS</td>
+<td>222</td>
+<td>25.39895495495496 MILLIS</td>
+<td>11.548</td>
+<td>58.846999999999994</td>
+<td>7.655103080242743</td>
+</tr>
+<tr>
+<td>pass.SimplifyGlobalAccesses</td>
+<td>4.370331999999997 SECONDS</td>
+<td>390</td>
+<td>11.205979487179478 MILLIS</td>
+<td>0.007</td>
+<td>860.66</td>
+<td>67.09325899051865</td>
+</tr>
+<tr>
+<td>pass.MemoizeDeviceQueriesPass</td>
+<td>2.188878 SECONDS</td>
+<td>1</td>
+<td>2.188878 SECONDS</td>
+<td>2.188878</td>
+<td>2.188878</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.MaterializeResourceCachesPass</td>
+<td>1.727721 SECONDS</td>
+<td>1</td>
+<td>1.727721 SECONDS</td>
+<td>1.727721</td>
+<td>1.727721</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.FuseGlobals</td>
+<td>0.7611239999999999 SECONDS</td>
+<td>6</td>
+<td>0.126854 SECONDS</td>
+<td>0.071962</td>
+<td>0.165501</td>
+<td>0.0387968127900562</td>
+</tr>
+<tr>
+<td><a href='pass.AffineExpandIndexOps.html'>pass.AffineExpandIndexOps</a></td>
+<td>0.5346690000000001 SECONDS</td>
+<td>6</td>
+<td>89.1115 MILLIS</td>
+<td>0.051</td>
+<td>353.39799999999997</td>
+<td>123.919929378813</td>
+</tr>
+<tr>
+<td><a href='pass.LinkExecutablesPass.html'>pass.LinkExecutablesPass</a></td>
+<td>0.385971 SECONDS</td>
+<td>1</td>
+<td>0.385971 SECONDS</td>
+<td>0.385971</td>
+<td>0.385971</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.ArithUnsignedWhenEquivalent.html'>pass.ArithUnsignedWhenEquivalent</a></td>
+<td>0.37603200000000003 SECONDS</td>
+<td>5</td>
+<td>75.2064 MILLIS</td>
+<td>0.499</td>
+<td>200.922</td>
+<td>86.55633653430577</td>
+</tr>
+<tr>
+<td>pass.SymbolDCE</td>
+<td>0.35992599999999997 SECONDS</td>
+<td>3</td>
+<td>0.11997533333333332 SECONDS</td>
+<td>0.095297</td>
+<td>0.165952</td>
+<td>0.03253968355032906</td>
+</tr>
+<tr>
+<td><a href='pass.SCFToControlFlow.html'>pass.SCFToControlFlow</a></td>
+<td>0.28893499999999994 SECONDS</td>
+<td>76</td>
+<td>3.801776315789473 MILLIS</td>
+<td>0.01</td>
+<td>30.157</td>
+<td>8.657659007459177</td>
+</tr>
+<tr>
+<td><a href='pass.SCFForLoopCanonicalization.html'>pass.SCFForLoopCanonicalization</a></td>
+<td>0.21123199999999998 SECONDS</td>
+<td>5</td>
+<td>42.246399999999994 MILLIS</td>
+<td>0.36900000000000005</td>
+<td>112.74199999999999</td>
+<td>46.76255798221478</td>
+</tr>
+<tr>
+<td>pass.PruneExecutablesPass</td>
+<td>0.20940799999999998 SECONDS</td>
+<td>3</td>
+<td>69.80266666666667 MILLIS</td>
+<td>35.295</td>
+<td>113.606</td>
+<td>32.63903842878271</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertAffineToStandard.html'>pass.ConvertAffineToStandard</a></td>
+<td>0.201285 SECONDS</td>
+<td>6</td>
+<td>33.5475 MILLIS</td>
+<td>0.038</td>
+<td>114.218</td>
+<td>40.600378757469734</td>
+</tr>
+<tr>
+<td>pass.ResolveDevicePromisesPass</td>
+<td>0.16783399999999998 SECONDS</td>
+<td>2</td>
+<td>83.91699999999999 MILLIS</td>
+<td>80.873</td>
+<td>86.961</td>
+<td>3.044000000000178</td>
+</tr>
+<tr>
+<td>pass.ResolveExportOrdinalsPass</td>
+<td>58.201 MILLIS</td>
+<td>1</td>
+<td>58.201 MILLIS</td>
+<td>58.201</td>
+<td>58.201</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ElideRedundantCommandsPass</td>
+<td>35.18599999999999 MILLIS</td>
+<td>63</td>
+<td>558.5079365079364 MICROS</td>
+<td>7.0</td>
+<td>13863.0</td>
+<td>1988.088248760011</td>
+</tr>
+<tr>
+<td>pass.DropCompilerHints</td>
+<td>27.003 MILLIS</td>
+<td>1</td>
+<td>27.003 MILLIS</td>
+<td>27.003</td>
+<td>27.003</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.PropagateSubranges</td>
+<td>26.708 MILLIS</td>
+<td>1</td>
+<td>26.708 MILLIS</td>
+<td>26.708</td>
+<td>26.708</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.LoopInvariantCodeMotion</td>
+<td>11.973999999999998 MILLIS</td>
+<td>5</td>
+<td>2.3948 MILLIS</td>
+<td>0.017</td>
+<td>6.931</td>
+<td>2.863567872427682</td>
+</tr>
+<tr>
+<td>pass.CombineInitializers</td>
+<td>2.4090000000000003 MILLIS</td>
+<td>1</td>
+<td>2.4090000000000003 MILLIS</td>
+<td>2.4090000000000003</td>
+<td>2.4090000000000003</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.InitializeDevicesPass</td>
+<td>457.0 MICROS</td>
+<td>1</td>
+<td>457.0 MICROS</td>
+<td>457.0</td>
+<td>457.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ResolveDeviceAliasesPass</td>
+<td>301.99999999999994 MICROS</td>
+<td>2</td>
+<td>150.99999999999997 MICROS</td>
+<td>150.0</td>
+<td>152.0</td>
+<td>1.0000000000038758</td>
+</tr>
+<tr>
+<td>pass.ROCDLAnnotateKernelForTranslationPass</td>
+<td>184.0 MICROS</td>
+<td>2</td>
+<td>92.0 MICROS</td>
+<td>63.0</td>
+<td>121.0</td>
+<td>28.999999999999982</td>
+</tr>
+<tr>
+<td>pass.AssignTargetDevicesPass</td>
+<td>74.00000000000001 MICROS</td>
+<td>2</td>
+<td>37.00000000000001 MICROS</td>
+<td>33.0</td>
+<td>41.0</td>
+<td>3.9999999999999676</td>
+</tr>
+<tr>
+<td>pass.MaterializeTargetDevicesPass</td>
+<td>41.0 MICROS</td>
+<td>2</td>
+<td>20.5 MICROS</td>
+<td>18.0</td>
+<td>23.0</td>
+<td>2.500000000000001</td>
+</tr>
+</table>
+</body>
+</html>

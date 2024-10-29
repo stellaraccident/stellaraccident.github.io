@@ -1,0 +1,60 @@
+<html>
+<head><title>Series report: pass.ExtractAddressComputationGPUPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>0.3907530000000001 SECONDS</td>
+<td>439</td>
+<td>890.097949886105 MICROS</td>
+<td>35.0</td>
+<td>7235.0</td>
+<td>878.0857788694361</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::StoreLoadLikeOpRewriter<mlir::memref::LoadOp, &mlir::iree_compiler::getLoadOpSrcMemRef, &mlir::iree_compiler::rebuildLoadOp, &mlir::iree_compiler::getLoadOpViewSizeForEachDim></td>
+<td>59.18499999999988 MILLIS</td>
+<td>743</td>
+<td>79.6567967698518 MICROS</td>
+<td>4.0</td>
+<td>2359.0</td>
+<td>227.63740465681676</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::StoreLoadLikeOpRewriter<mlir::memref::StoreOp, &mlir::iree_compiler::getStoreOpSrcMemRef, &mlir::iree_compiler::rebuildStoreOp, &mlir::iree_compiler::getStoreOpViewSizeForEachDim></td>
+<td>41.790999999999976 MILLIS</td>
+<td>742</td>
+<td>56.322102425875975 MICROS</td>
+<td>4.0</td>
+<td>2678.0</td>
+<td>191.2290367543735</td>
+</tr>
+</table>
+</body>
+</html>

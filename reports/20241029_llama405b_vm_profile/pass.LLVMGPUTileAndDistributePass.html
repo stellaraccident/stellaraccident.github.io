@@ -1,0 +1,204 @@
+<html>
+<head><title>Series report: pass.LLVMGPUTileAndDistributePass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>0.26647199999999993 SECONDS</td>
+<td>155</td>
+<td>1.7191741935483866 MILLIS</td>
+<td>0.016</td>
+<td>8.229000000000001</td>
+<td>1.7666322550251714</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TrivialSubViewOpFolder</td>
+<td>31.714000000000077 MILLIS</td>
+<td>402</td>
+<td>78.89054726368178 MICROS</td>
+<td>4.0</td>
+<td>2542.0</td>
+<td>203.2857042989918</td>
+</tr>
+<tr>
+<td>pattern.mlir::OpWithOffsetSizesAndStridesConstantArgumentFolder<mlir::memref::SubViewOp, SubViewReturnTypeCanonicalizer, SubViewCanonicalizer></td>
+<td>19.631000000000043 MILLIS</td>
+<td>430</td>
+<td>45.65348837209312 MICROS</td>
+<td>4.0</td>
+<td>1755.0</td>
+<td>139.17620895467044</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::InferStaticShapeOfOperands</td>
+<td>15.62100000000001 MILLIS</td>
+<td>180</td>
+<td>86.78333333333339 MICROS</td>
+<td>3.0</td>
+<td>1678.0</td>
+<td>191.3170804653306</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubViewOpMemRefCastFolder</td>
+<td>13.843000000000018 MILLIS</td>
+<td>402</td>
+<td>34.43532338308462 MICROS</td>
+<td>3.0</td>
+<td>618.0</td>
+<td>89.35324300684734</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyTrivialLoops</td>
+<td>11.524999999999999 MILLIS</td>
+<td>121</td>
+<td>95.24793388429751 MICROS</td>
+<td>3.0</td>
+<td>1550.0</td>
+<td>211.05685579963674</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::EraseIdentityLinalgOp<mlir::linalg::GenericOp></td>
+<td>11.427000000000005 MILLIS</td>
+<td>180</td>
+<td>63.48333333333336 MICROS</td>
+<td>4.0</td>
+<td>654.0</td>
+<td>108.65002300966161</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ForOpIterArgsFolder</td>
+<td>9.288999999999993 MILLIS</td>
+<td>121</td>
+<td>76.76859504132226 MICROS</td>
+<td>3.0</td>
+<td>870.0</td>
+<td>151.27227711529284</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ForOpTensorCastFolder</td>
+<td>6.385999999999994 MILLIS</td>
+<td>90</td>
+<td>70.95555555555549 MICROS</td>
+<td>4.0</td>
+<td>752.0</td>
+<td>128.7774058090688</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::EraseDeadLinalgOp</td>
+<td>5.873999999999991 MILLIS</td>
+<td>180</td>
+<td>32.63333333333328 MICROS</td>
+<td>4.0</td>
+<td>959.0</td>
+<td>98.4680376794645</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyAffineOp<mlir::affine::AffineApplyOp></td>
+<td>4.886000000000004 MILLIS</td>
+<td>92</td>
+<td>53.10869565217396 MICROS</td>
+<td>5.0</td>
+<td>561.0</td>
+<td>111.15230996853892</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::LinalgPromotionPattern<mlir::linalg::GenericOp></td>
+<td>1.7470000000000003 MILLIS</td>
+<td>42</td>
+<td>41.5952380952381 MICROS</td>
+<td>5.0</td>
+<td>506.00000000000006</td>
+<td>97.1665383133538</td>
+</tr>
+<tr>
+<td>pattern.DeduplicateAffineMinMaxExpressions<mlir::affine::AffineMinOp></td>
+<td>878.0000000000001 MICROS</td>
+<td>10</td>
+<td>87.80000000000001 MICROS</td>
+<td>4.0</td>
+<td>637.0</td>
+<td>187.89986695045846</td>
+</tr>
+<tr>
+<td>pattern.MergeAffineMinMaxOp<mlir::affine::AffineMinOp></td>
+<td>568.0000000000001 MICROS</td>
+<td>10</td>
+<td>56.80000000000001 MICROS</td>
+<td>5.0</td>
+<td>373.0</td>
+<td>109.29757545343811</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyAffineOp<mlir::affine::AffineMinOp></td>
+<td>562.9999999999999 MICROS</td>
+<td>10</td>
+<td>56.29999999999999 MICROS</td>
+<td>7.0</td>
+<td>158.0</td>
+<td>61.88222685068792</td>
+</tr>
+<tr>
+<td>pattern.CanonicalizeSingleResultAffineMinMaxOp<mlir::affine::AffineMinOp></td>
+<td>289.0000000000001 MICROS</td>
+<td>10</td>
+<td>28.90000000000001 MICROS</td>
+<td>5.0</td>
+<td>240.0</td>
+<td>70.3682456794256</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::AffineMinDistributedSCFCanonicalizationPattern</td>
+<td>200.00000000000003 MICROS</td>
+<td>8</td>
+<td>25.000000000000004 MICROS</td>
+<td>5.0</td>
+<td>156.0</td>
+<td>49.56309110618505</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AffineOpSCFCanonicalizationPattern<mlir::affine::AffineMinOp></td>
+<td>91.0 MICROS</td>
+<td>4</td>
+<td>22.75 MICROS</td>
+<td>19.0</td>
+<td>27.0</td>
+<td>3.766629793329835</td>
+</tr>
+<tr>
+<td>pattern.CanonicalizeAffineMinMaxOpExprAndTermOrder<mlir::affine::AffineMinOp></td>
+<td>52.00000000000001 MICROS</td>
+<td>10</td>
+<td>5.2 MICROS</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>0.7483314773547921</td>
+</tr>
+</table>
+</body>
+</html>

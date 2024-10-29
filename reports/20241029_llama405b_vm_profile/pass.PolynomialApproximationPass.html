@@ -1,0 +1,123 @@
+<html>
+<head><title>Series report: pass.PolynomialApproximationPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>70.52299999999998 MILLIS</td>
+<td>230</td>
+<td>306.6217391304347 MICROS</td>
+<td>12.0</td>
+<td>2791.0</td>
+<td>462.6400426818107</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ReuseF32Expansion<mlir::math::ExpOp></td>
+<td>1.2670000000000001 MILLIS</td>
+<td>11</td>
+<td>115.18181818181819 MICROS</td>
+<td>6.0</td>
+<td>406.0</td>
+<td>133.0624038028215</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExpApproximation</td>
+<td>580.0 MICROS</td>
+<td>9</td>
+<td>64.44444444444444 MICROS</td>
+<td>18.0</td>
+<td>334.0</td>
+<td>95.44994163447504</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ReuseF32Expansion<mlir::math::LogOp></td>
+<td>509.0 MICROS</td>
+<td>3</td>
+<td>169.66666666666669 MICROS</td>
+<td>7.0</td>
+<td>343.0</td>
+<td>137.37863330550672</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LogApproximation</td>
+<td>505.99999999999994 MICROS</td>
+<td>3</td>
+<td>168.66666666666666 MICROS</td>
+<td>43.0</td>
+<td>276.0</td>
+<td>96.00115740043044</td>
+</tr>
+<tr>
+<td>pattern.</td>
+<td>168.00000000000003 MICROS</td>
+<td>3</td>
+<td>56.00000000000001 MICROS</td>
+<td>24.0</td>
+<td>105.0</td>
+<td>35.18522417151836</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ReuseF32Expansion<mlir::math::CosOp></td>
+<td>154.0 MICROS</td>
+<td>1</td>
+<td>154.0 MICROS</td>
+<td>154.0</td>
+<td>154.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SinAndCosApproximation<true, mlir::math::SinOp></td>
+<td>33.0 MICROS</td>
+<td>1</td>
+<td>33.0 MICROS</td>
+<td>33.0</td>
+<td>33.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SinAndCosApproximation<false, mlir::math::CosOp></td>
+<td>15.0 MICROS</td>
+<td>1</td>
+<td>15.0 MICROS</td>
+<td>15.0</td>
+<td>15.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ReuseF32Expansion<mlir::math::SinOp></td>
+<td>7.0 MICROS</td>
+<td>1</td>
+<td>7.0 MICROS</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>0.0</td>
+</tr>
+</table>
+</body>
+</html>

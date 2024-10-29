@@ -1,0 +1,951 @@
+<html>
+<head><title>Series report: pass.mlir::detail::OpToOpPassAdaptor</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Passes in Execution Order:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pass.GPUGeneralizeNamedOpsPass</td>
+<td>54.61500000000002 MILLIS</td>
+<td>222</td>
+<td>246.01351351351363 MICROS</td>
+<td>7.0</td>
+<td>2396.0</td>
+<td>377.35546698840034</td>
+</tr>
+<tr>
+<td><a href='pass.TypePropagationPass.html'>pass.TypePropagationPass</a></td>
+<td>60.54800000000004 MILLIS</td>
+<td>222</td>
+<td>272.7387387387389 MICROS</td>
+<td>22.0</td>
+<td>3621.0</td>
+<td>422.9172008438299</td>
+</tr>
+<tr>
+<td><a href='pass.BubbleUpOrdinalOpsPass.html'>pass.BubbleUpOrdinalOpsPass</a></td>
+<td>0.24611100000000016 SECONDS</td>
+<td>222</td>
+<td>1.108608108108109 MILLIS</td>
+<td>0.045000000000000005</td>
+<td>4.31</td>
+<td>0.8123676909747589</td>
+</tr>
+<tr>
+<td><a href='pass.BufferizeCopyOnlyDispatchesPass.html'>pass.BufferizeCopyOnlyDispatchesPass</a></td>
+<td>0.39746399999999993 SECONDS</td>
+<td>444</td>
+<td>895.189189189189 MICROS</td>
+<td>6.0</td>
+<td>23546.0</td>
+<td>3095.555308326789</td>
+</tr>
+<tr>
+<td>pass.DecomposeSoftmaxPass</td>
+<td>51.44100000000004 MILLIS</td>
+<td>222</td>
+<td>231.71621621621637 MICROS</td>
+<td>6.0</td>
+<td>2422.0</td>
+<td>351.46001221687334</td>
+</tr>
+<tr>
+<td><a href='pass.MaterializeEncodingIntoNopPass.html'>pass.MaterializeEncodingIntoNopPass</a></td>
+<td>0.19531999999999985 SECONDS</td>
+<td>222</td>
+<td>879.8198198198191 MICROS</td>
+<td>116.0</td>
+<td>4710.0</td>
+<td>745.0170467630502</td>
+</tr>
+<tr>
+<td><a href='pass.Canonicalizer.html'>pass.Canonicalizer</a></td>
+<td>18.462397000000013 SECONDS</td>
+<td>1554</td>
+<td>11.88056435006436 MILLIS</td>
+<td>0.39599999999999996</td>
+<td>156.192</td>
+<td>14.426817962436365</td>
+</tr>
+<tr>
+<td><a href='pass.BlockDynamicDimensionsPass.html'>pass.BlockDynamicDimensionsPass</a></td>
+<td>1.2837129999999997 SECONDS</td>
+<td>222</td>
+<td>5.782490990990989 MILLIS</td>
+<td>1.044</td>
+<td>22.441</td>
+<td>3.0764063856907558</td>
+</tr>
+<tr>
+<td>pass.CSE</td>
+<td>0.45915200000000095 SECONDS</td>
+<td>1554</td>
+<td>295.4646074646081 MICROS</td>
+<td>13.0</td>
+<td>3352.0</td>
+<td>427.91557472807506</td>
+</tr>
+<tr>
+<td><a href='pass.mlir____detail____OpToOpPassAdaptor.html'>pass.mlir::detail::OpToOpPassAdaptor</a></td>
+<td>75.52308999999993 SECONDS</td>
+<td>1110</td>
+<td>68.03881981981975 MILLIS</td>
+<td>0.054</td>
+<td>581.809</td>
+<td>74.10749303962444</td>
+</tr>
+<tr>
+<td>pass.MaterializeUserConfigsPass</td>
+<td>77.53599999999999 MILLIS</td>
+<td>222</td>
+<td>349.2612612612612 MICROS</td>
+<td>8.0</td>
+<td>3314.0</td>
+<td>440.00908491259185</td>
+</tr>
+<tr>
+<td>pass.LLVMGPUSelectLoweringStrategyPass</td>
+<td>65.10399999999996 MILLIS</td>
+<td>222</td>
+<td>293.26126126126104 MICROS</td>
+<td>17.0</td>
+<td>3410.0</td>
+<td>455.65969820841326</td>
+</tr>
+<tr>
+<td><a href='pass.ConfigureTargetExecutableVariantsPass.html'>pass.ConfigureTargetExecutableVariantsPass</a></td>
+<td>5.402718999999998 SECONDS</td>
+<td>222</td>
+<td>24.336572072072062 MILLIS</td>
+<td>10.567</td>
+<td>58.083000000000006</td>
+<td>7.551721483935454</td>
+</tr>
+<tr>
+<td>pass.LowerExecutableUsingTransformDialectPass</td>
+<td>80.46700000000001 MILLIS</td>
+<td>222</td>
+<td>362.46396396396403 MICROS</td>
+<td>8.0</td>
+<td>4032.0</td>
+<td>455.27196708859555</td>
+</tr>
+<tr>
+<td><a href='pass.LLVMGPULowerExecutableTargetPass.html'>pass.LLVMGPULowerExecutableTargetPass</a></td>
+<td>39.44214699999999 SECONDS</td>
+<td>222</td>
+<td>0.1776673288288288 SECONDS</td>
+<td>0.021413</td>
+<td>0.581655</td>
+<td>0.0791500514695103</td>
+</tr>
+<tr>
+<td>pass.ConvertHALDescriptorTypeToGPUAddressSpacePass</td>
+<td>64.808 MILLIS</td>
+<td>222</td>
+<td>291.92792792792795 MICROS</td>
+<td>10.0</td>
+<td>3044.0</td>
+<td>433.33995584083755</td>
+</tr>
+<tr>
+<td>pass.LowerUKernelOpsToCallsPass</td>
+<td>13.34900000000001 MILLIS</td>
+<td>222</td>
+<td>60.13063063063068 MICROS</td>
+<td>6.0</td>
+<td>1509.0</td>
+<td>179.35134891899125</td>
+</tr>
+<tr>
+<td><a href='pass.LinalgExtToLoopsPass.html'>pass.LinalgExtToLoopsPass</a></td>
+<td>1.4742480000000007 SECONDS</td>
+<td>222</td>
+<td>6.64075675675676 MILLIS</td>
+<td>1.361</td>
+<td>28.047</td>
+<td>4.538434918383237</td>
+</tr>
+<tr>
+<td><a href='pass.MemrefCopyToLinalgPass.html'>pass.MemrefCopyToLinalgPass</a></td>
+<td>0.180565 SECONDS</td>
+<td>222</td>
+<td>813.3558558558559 MICROS</td>
+<td>40.0</td>
+<td>3579.0</td>
+<td>717.0882278491001</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertLinalgToLoopsPass.html'>pass.ConvertLinalgToLoopsPass</a></td>
+<td>3.07835 SECONDS</td>
+<td>222</td>
+<td>13.866441441441442 MILLIS</td>
+<td>1.4400000000000002</td>
+<td>85.122</td>
+<td>8.098305992012452</td>
+</tr>
+<tr>
+<td>pass.PadDynamicAllocPass</td>
+<td>15.495000000000001 MILLIS</td>
+<td>222</td>
+<td>69.7972972972973 MICROS</td>
+<td>5.0</td>
+<td>1284.0</td>
+<td>185.8852920338164</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertAffineToStandard.html'>pass.ConvertAffineToStandard</a></td>
+<td>0.5023939999999999 SECONDS</td>
+<td>666</td>
+<td>754.3453453453452 MICROS</td>
+<td>17.0</td>
+<td>12697.0</td>
+<td>1052.590482847168</td>
+</tr>
+<tr>
+<td>pass.OneShotBufferize</td>
+<td>82.36800000000001 MILLIS</td>
+<td>222</td>
+<td>371.02702702702703 MICROS</td>
+<td>9.0</td>
+<td>2198.0</td>
+<td>395.67539383635926</td>
+</tr>
+<tr>
+<td><a href='pass.FoldTensorExtractOpPass.html'>pass.FoldTensorExtractOpPass</a></td>
+<td>0.1797230000000001 SECONDS</td>
+<td>222</td>
+<td>809.5630630630636 MICROS</td>
+<td>36.0</td>
+<td>4332.0</td>
+<td>820.7422772482772</td>
+</tr>
+<tr>
+<td><a href='pass.LLVMGPUVectorLoweringPass.html'>pass.LLVMGPUVectorLoweringPass</a></td>
+<td>1.3198409999999998 SECONDS</td>
+<td>222</td>
+<td>5.9452297297297285 MILLIS</td>
+<td>1.4020000000000001</td>
+<td>31.997999999999998</td>
+<td>4.594629741909819</td>
+</tr>
+<tr>
+<td><a href='pass.ExpandGPUOpsPass.html'>pass.ExpandGPUOpsPass</a></td>
+<td>0.18331399999999995 SECONDS</td>
+<td>222</td>
+<td>825.7387387387384 MICROS</td>
+<td>40.0</td>
+<td>5367.0</td>
+<td>866.1602821910369</td>
+</tr>
+<tr>
+<td><a href='pass.ExtractAddressComputationGPUPass.html'>pass.ExtractAddressComputationGPUPass</a></td>
+<td>0.5801459999999999 SECONDS</td>
+<td>222</td>
+<td>2.61327027027027 MILLIS</td>
+<td>0.281</td>
+<td>13.28</td>
+<td>1.6422839290240157</td>
+</tr>
+<tr>
+<td>pass.ExpandOps</td>
+<td>0.10493800000000005 SECONDS</td>
+<td>444</td>
+<td>236.34684684684694 MICROS</td>
+<td>12.0</td>
+<td>2461.0</td>
+<td>355.4871121496135</td>
+</tr>
+<tr>
+<td><a href='pass.FoldMemRefAliasOps.html'>pass.FoldMemRefAliasOps</a></td>
+<td>1.3439920000000003 SECONDS</td>
+<td>444</td>
+<td>3.02700900900901 MILLIS</td>
+<td>0.114</td>
+<td>17.959</td>
+<td>2.3576479508779893</td>
+</tr>
+<tr>
+<td><a href='pass.ExpandStridedMetadata.html'>pass.ExpandStridedMetadata</a></td>
+<td>0.3257639999999997 SECONDS</td>
+<td>444</td>
+<td>733.702702702702 MICROS</td>
+<td>36.0</td>
+<td>4020.0</td>
+<td>705.3666045039656</td>
+</tr>
+<tr>
+<td>pass.IREELoopInvariantCodeMotionPass</td>
+<td>0.10616099999999994 SECONDS</td>
+<td>444</td>
+<td>239.10135135135118 MICROS</td>
+<td>6.0</td>
+<td>5962.0</td>
+<td>457.87879616788945</td>
+</tr>
+<tr>
+<td>pass.DecomposeAffineOpsPass</td>
+<td>61.74899999999999 MILLIS</td>
+<td>222</td>
+<td>278.1486486486486 MICROS</td>
+<td>6.0</td>
+<td>1763.0</td>
+<td>360.7331379600414</td>
+</tr>
+<tr>
+<td>pass.GPUCheckResourceUsagePass</td>
+<td>72.66299999999994 MILLIS</td>
+<td>222</td>
+<td>327.3108108108105 MICROS</td>
+<td>7.0</td>
+<td>3154.0</td>
+<td>477.01871435729913</td>
+</tr>
+<tr>
+<td><a href='pass.SCFToControlFlow.html'>pass.SCFToControlFlow</a></td>
+<td>0.1577279999999999 SECONDS</td>
+<td>222</td>
+<td>710.486486486486 MICROS</td>
+<td>15.0</td>
+<td>6216.0</td>
+<td>751.055609856331</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertComplexToStandard.html'>pass.ConvertComplexToStandard</a></td>
+<td>24.104000000000006 MILLIS</td>
+<td>222</td>
+<td>108.57657657657661 MICROS</td>
+<td>21.0</td>
+<td>2727.0</td>
+<td>261.96413514065586</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertBf16ArithToF32Pass.html'>pass.ConvertBf16ArithToF32Pass</a></td>
+<td>0.18882700000000002 SECONDS</td>
+<td>222</td>
+<td>850.5720720720722 MICROS</td>
+<td>49.0</td>
+<td>3970.9999999999995</td>
+<td>750.484727284105</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertBf16ToUInt16BuffersPass.html'>pass.ConvertBf16ToUInt16BuffersPass</a></td>
+<td>0.24633600000000005 SECONDS</td>
+<td>222</td>
+<td>1.109621621621622 MILLIS</td>
+<td>0.08</td>
+<td>5.163</td>
+<td>0.9485367636338281</td>
+</tr>
+<tr>
+<td><a href='pass.PolynomialApproximationPass.html'>pass.PolynomialApproximationPass</a></td>
+<td>0.17608800000000005 SECONDS</td>
+<td>222</td>
+<td>793.1891891891894 MICROS</td>
+<td>56.0</td>
+<td>5784.0</td>
+<td>813.4962528473252</td>
+</tr>
+<tr>
+<td><a href='pass.EmulateNarrowTypePass.html'>pass.EmulateNarrowTypePass</a></td>
+<td>3.100321999999998 SECONDS</td>
+<td>222</td>
+<td>13.965414414414406 MILLIS</td>
+<td>1.195</td>
+<td>115.386</td>
+<td>11.03571868363347</td>
+</tr>
+<tr>
+<td><a href='pass.AffineExpandIndexOps.html'>pass.AffineExpandIndexOps</a></td>
+<td>0.20950700000000005 SECONDS</td>
+<td>222</td>
+<td>0.9437252252252255 MILLIS</td>
+<td>0.047</td>
+<td>5.394</td>
+<td>0.8938464261313752</td>
+</tr>
+<tr>
+<td>pass.StripDebugInfo</td>
+<td>74.07799999999997 MILLIS</td>
+<td>222</td>
+<td>333.6846846846846 MICROS</td>
+<td>6.0</td>
+<td>2719.0</td>
+<td>361.95546194539986</td>
+</tr>
+<tr>
+<td>pass.LLVMGPUCastAddressSpaceFunctionPass</td>
+<td>53.74800000000007 MILLIS</td>
+<td>222</td>
+<td>242.10810810810838 MICROS</td>
+<td>7.0</td>
+<td>1857.0</td>
+<td>368.639777574171</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertToROCDLPass.html'>pass.ConvertToROCDLPass</a></td>
+<td>2.2395039999999997 SECONDS</td>
+<td>222</td>
+<td>10.087855855855855 MILLIS</td>
+<td>2.301</td>
+<td>49.794</td>
+<td>6.460083255183875</td>
+</tr>
+<tr>
+<td>pass.ROCDLAnnotateKernelForTranslationPass</td>
+<td>68.83399999999997 MILLIS</td>
+<td>231</td>
+<td>297.98268398268385 MICROS</td>
+<td>6.0</td>
+<td>1921.0</td>
+<td>365.78007687026985</td>
+</tr>
+<tr>
+<td><a href='pass.TranslateTargetExecutableVariantsPass.html'>pass.TranslateTargetExecutableVariantsPass</a></td>
+<td>76.29909300000007 SECONDS</td>
+<td>222</td>
+<td>0.34368960810810845 SECONDS</td>
+<td>0.073451</td>
+<td>0.898242</td>
+<td>0.12862717764533202</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::VM::ReifyRodataTablesPass</td>
+<td>0.1655 SECONDS</td>
+<td>1</td>
+<td>0.1655 SECONDS</td>
+<td>0.1655</td>
+<td>0.1655</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::VM::HoistInlinedRodataPass</td>
+<td>0.127498 SECONDS</td>
+<td>1</td>
+<td>0.127498 SECONDS</td>
+<td>0.127498</td>
+<td>0.127498</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::VM::DeduplicateRodataPass</td>
+<td>0.171029 SECONDS</td>
+<td>1</td>
+<td>0.171029 SECONDS</td>
+<td>0.171029</td>
+<td>0.171029</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::VM::ResolveRodataLoadsPass</td>
+<td>38.57001 SECONDS</td>
+<td>1</td>
+<td>38.57001 SECONDS</td>
+<td>38.57001</td>
+<td>38.57001</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::VM::GlobalInitializationPass</td>
+<td>38.391981 SECONDS</td>
+<td>1</td>
+<td>38.391981 SECONDS</td>
+<td>38.391981</td>
+<td>38.391981</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::VM::DropEmptyModuleInitializersPass</td>
+<td>469.0 MICROS</td>
+<td>1</td>
+<td>469.0 MICROS</td>
+<td>469.0</td>
+<td>469.0</td>
+<td>0.0</td>
+</tr>
+</table>
+<h1>Passes in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td><a href='pass.TranslateTargetExecutableVariantsPass.html'>pass.TranslateTargetExecutableVariantsPass</a></td>
+<td>76.29909300000007 SECONDS</td>
+<td>222</td>
+<td>0.34368960810810845 SECONDS</td>
+<td>0.073451</td>
+<td>0.898242</td>
+<td>0.12862717764533202</td>
+</tr>
+<tr>
+<td><a href='pass.mlir____detail____OpToOpPassAdaptor.html'>pass.mlir::detail::OpToOpPassAdaptor</a></td>
+<td>75.52308999999993 SECONDS</td>
+<td>1110</td>
+<td>68.03881981981975 MILLIS</td>
+<td>0.054</td>
+<td>581.809</td>
+<td>74.10749303962444</td>
+</tr>
+<tr>
+<td><a href='pass.LLVMGPULowerExecutableTargetPass.html'>pass.LLVMGPULowerExecutableTargetPass</a></td>
+<td>39.44214699999999 SECONDS</td>
+<td>222</td>
+<td>0.1776673288288288 SECONDS</td>
+<td>0.021413</td>
+<td>0.581655</td>
+<td>0.0791500514695103</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::VM::ResolveRodataLoadsPass</td>
+<td>38.57001 SECONDS</td>
+<td>1</td>
+<td>38.57001 SECONDS</td>
+<td>38.57001</td>
+<td>38.57001</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::VM::GlobalInitializationPass</td>
+<td>38.391981 SECONDS</td>
+<td>1</td>
+<td>38.391981 SECONDS</td>
+<td>38.391981</td>
+<td>38.391981</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.Canonicalizer.html'>pass.Canonicalizer</a></td>
+<td>18.462397000000013 SECONDS</td>
+<td>1554</td>
+<td>11.88056435006436 MILLIS</td>
+<td>0.39599999999999996</td>
+<td>156.192</td>
+<td>14.426817962436365</td>
+</tr>
+<tr>
+<td><a href='pass.ConfigureTargetExecutableVariantsPass.html'>pass.ConfigureTargetExecutableVariantsPass</a></td>
+<td>5.402718999999998 SECONDS</td>
+<td>222</td>
+<td>24.336572072072062 MILLIS</td>
+<td>10.567</td>
+<td>58.083000000000006</td>
+<td>7.551721483935454</td>
+</tr>
+<tr>
+<td><a href='pass.EmulateNarrowTypePass.html'>pass.EmulateNarrowTypePass</a></td>
+<td>3.100321999999998 SECONDS</td>
+<td>222</td>
+<td>13.965414414414406 MILLIS</td>
+<td>1.195</td>
+<td>115.386</td>
+<td>11.03571868363347</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertLinalgToLoopsPass.html'>pass.ConvertLinalgToLoopsPass</a></td>
+<td>3.07835 SECONDS</td>
+<td>222</td>
+<td>13.866441441441442 MILLIS</td>
+<td>1.4400000000000002</td>
+<td>85.122</td>
+<td>8.098305992012452</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertToROCDLPass.html'>pass.ConvertToROCDLPass</a></td>
+<td>2.2395039999999997 SECONDS</td>
+<td>222</td>
+<td>10.087855855855855 MILLIS</td>
+<td>2.301</td>
+<td>49.794</td>
+<td>6.460083255183875</td>
+</tr>
+<tr>
+<td><a href='pass.LinalgExtToLoopsPass.html'>pass.LinalgExtToLoopsPass</a></td>
+<td>1.4742480000000007 SECONDS</td>
+<td>222</td>
+<td>6.64075675675676 MILLIS</td>
+<td>1.361</td>
+<td>28.047</td>
+<td>4.538434918383237</td>
+</tr>
+<tr>
+<td><a href='pass.FoldMemRefAliasOps.html'>pass.FoldMemRefAliasOps</a></td>
+<td>1.3439920000000003 SECONDS</td>
+<td>444</td>
+<td>3.02700900900901 MILLIS</td>
+<td>0.114</td>
+<td>17.959</td>
+<td>2.3576479508779893</td>
+</tr>
+<tr>
+<td><a href='pass.LLVMGPUVectorLoweringPass.html'>pass.LLVMGPUVectorLoweringPass</a></td>
+<td>1.3198409999999998 SECONDS</td>
+<td>222</td>
+<td>5.9452297297297285 MILLIS</td>
+<td>1.4020000000000001</td>
+<td>31.997999999999998</td>
+<td>4.594629741909819</td>
+</tr>
+<tr>
+<td><a href='pass.BlockDynamicDimensionsPass.html'>pass.BlockDynamicDimensionsPass</a></td>
+<td>1.2837129999999997 SECONDS</td>
+<td>222</td>
+<td>5.782490990990989 MILLIS</td>
+<td>1.044</td>
+<td>22.441</td>
+<td>3.0764063856907558</td>
+</tr>
+<tr>
+<td><a href='pass.ExtractAddressComputationGPUPass.html'>pass.ExtractAddressComputationGPUPass</a></td>
+<td>0.5801459999999999 SECONDS</td>
+<td>222</td>
+<td>2.61327027027027 MILLIS</td>
+<td>0.281</td>
+<td>13.28</td>
+<td>1.6422839290240157</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertAffineToStandard.html'>pass.ConvertAffineToStandard</a></td>
+<td>0.5023939999999999 SECONDS</td>
+<td>666</td>
+<td>754.3453453453452 MICROS</td>
+<td>17.0</td>
+<td>12697.0</td>
+<td>1052.590482847168</td>
+</tr>
+<tr>
+<td>pass.CSE</td>
+<td>0.45915200000000095 SECONDS</td>
+<td>1554</td>
+<td>295.4646074646081 MICROS</td>
+<td>13.0</td>
+<td>3352.0</td>
+<td>427.91557472807506</td>
+</tr>
+<tr>
+<td><a href='pass.BufferizeCopyOnlyDispatchesPass.html'>pass.BufferizeCopyOnlyDispatchesPass</a></td>
+<td>0.39746399999999993 SECONDS</td>
+<td>444</td>
+<td>895.189189189189 MICROS</td>
+<td>6.0</td>
+<td>23546.0</td>
+<td>3095.555308326789</td>
+</tr>
+<tr>
+<td><a href='pass.ExpandStridedMetadata.html'>pass.ExpandStridedMetadata</a></td>
+<td>0.3257639999999997 SECONDS</td>
+<td>444</td>
+<td>733.702702702702 MICROS</td>
+<td>36.0</td>
+<td>4020.0</td>
+<td>705.3666045039656</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertBf16ToUInt16BuffersPass.html'>pass.ConvertBf16ToUInt16BuffersPass</a></td>
+<td>0.24633600000000005 SECONDS</td>
+<td>222</td>
+<td>1.109621621621622 MILLIS</td>
+<td>0.08</td>
+<td>5.163</td>
+<td>0.9485367636338281</td>
+</tr>
+<tr>
+<td><a href='pass.BubbleUpOrdinalOpsPass.html'>pass.BubbleUpOrdinalOpsPass</a></td>
+<td>0.24611100000000016 SECONDS</td>
+<td>222</td>
+<td>1.108608108108109 MILLIS</td>
+<td>0.045000000000000005</td>
+<td>4.31</td>
+<td>0.8123676909747589</td>
+</tr>
+<tr>
+<td><a href='pass.AffineExpandIndexOps.html'>pass.AffineExpandIndexOps</a></td>
+<td>0.20950700000000005 SECONDS</td>
+<td>222</td>
+<td>0.9437252252252255 MILLIS</td>
+<td>0.047</td>
+<td>5.394</td>
+<td>0.8938464261313752</td>
+</tr>
+<tr>
+<td><a href='pass.MaterializeEncodingIntoNopPass.html'>pass.MaterializeEncodingIntoNopPass</a></td>
+<td>0.19531999999999985 SECONDS</td>
+<td>222</td>
+<td>879.8198198198191 MICROS</td>
+<td>116.0</td>
+<td>4710.0</td>
+<td>745.0170467630502</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertBf16ArithToF32Pass.html'>pass.ConvertBf16ArithToF32Pass</a></td>
+<td>0.18882700000000002 SECONDS</td>
+<td>222</td>
+<td>850.5720720720722 MICROS</td>
+<td>49.0</td>
+<td>3970.9999999999995</td>
+<td>750.484727284105</td>
+</tr>
+<tr>
+<td><a href='pass.ExpandGPUOpsPass.html'>pass.ExpandGPUOpsPass</a></td>
+<td>0.18331399999999995 SECONDS</td>
+<td>222</td>
+<td>825.7387387387384 MICROS</td>
+<td>40.0</td>
+<td>5367.0</td>
+<td>866.1602821910369</td>
+</tr>
+<tr>
+<td><a href='pass.MemrefCopyToLinalgPass.html'>pass.MemrefCopyToLinalgPass</a></td>
+<td>0.180565 SECONDS</td>
+<td>222</td>
+<td>813.3558558558559 MICROS</td>
+<td>40.0</td>
+<td>3579.0</td>
+<td>717.0882278491001</td>
+</tr>
+<tr>
+<td><a href='pass.FoldTensorExtractOpPass.html'>pass.FoldTensorExtractOpPass</a></td>
+<td>0.1797230000000001 SECONDS</td>
+<td>222</td>
+<td>809.5630630630636 MICROS</td>
+<td>36.0</td>
+<td>4332.0</td>
+<td>820.7422772482772</td>
+</tr>
+<tr>
+<td><a href='pass.PolynomialApproximationPass.html'>pass.PolynomialApproximationPass</a></td>
+<td>0.17608800000000005 SECONDS</td>
+<td>222</td>
+<td>793.1891891891894 MICROS</td>
+<td>56.0</td>
+<td>5784.0</td>
+<td>813.4962528473252</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::VM::DeduplicateRodataPass</td>
+<td>0.171029 SECONDS</td>
+<td>1</td>
+<td>0.171029 SECONDS</td>
+<td>0.171029</td>
+<td>0.171029</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::VM::ReifyRodataTablesPass</td>
+<td>0.1655 SECONDS</td>
+<td>1</td>
+<td>0.1655 SECONDS</td>
+<td>0.1655</td>
+<td>0.1655</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.SCFToControlFlow.html'>pass.SCFToControlFlow</a></td>
+<td>0.1577279999999999 SECONDS</td>
+<td>222</td>
+<td>710.486486486486 MICROS</td>
+<td>15.0</td>
+<td>6216.0</td>
+<td>751.055609856331</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::VM::HoistInlinedRodataPass</td>
+<td>0.127498 SECONDS</td>
+<td>1</td>
+<td>0.127498 SECONDS</td>
+<td>0.127498</td>
+<td>0.127498</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.IREELoopInvariantCodeMotionPass</td>
+<td>0.10616099999999994 SECONDS</td>
+<td>444</td>
+<td>239.10135135135118 MICROS</td>
+<td>6.0</td>
+<td>5962.0</td>
+<td>457.87879616788945</td>
+</tr>
+<tr>
+<td>pass.ExpandOps</td>
+<td>0.10493800000000005 SECONDS</td>
+<td>444</td>
+<td>236.34684684684694 MICROS</td>
+<td>12.0</td>
+<td>2461.0</td>
+<td>355.4871121496135</td>
+</tr>
+<tr>
+<td>pass.OneShotBufferize</td>
+<td>82.36800000000001 MILLIS</td>
+<td>222</td>
+<td>371.02702702702703 MICROS</td>
+<td>9.0</td>
+<td>2198.0</td>
+<td>395.67539383635926</td>
+</tr>
+<tr>
+<td>pass.LowerExecutableUsingTransformDialectPass</td>
+<td>80.46700000000001 MILLIS</td>
+<td>222</td>
+<td>362.46396396396403 MICROS</td>
+<td>8.0</td>
+<td>4032.0</td>
+<td>455.27196708859555</td>
+</tr>
+<tr>
+<td>pass.MaterializeUserConfigsPass</td>
+<td>77.53599999999999 MILLIS</td>
+<td>222</td>
+<td>349.2612612612612 MICROS</td>
+<td>8.0</td>
+<td>3314.0</td>
+<td>440.00908491259185</td>
+</tr>
+<tr>
+<td>pass.StripDebugInfo</td>
+<td>74.07799999999997 MILLIS</td>
+<td>222</td>
+<td>333.6846846846846 MICROS</td>
+<td>6.0</td>
+<td>2719.0</td>
+<td>361.95546194539986</td>
+</tr>
+<tr>
+<td>pass.GPUCheckResourceUsagePass</td>
+<td>72.66299999999994 MILLIS</td>
+<td>222</td>
+<td>327.3108108108105 MICROS</td>
+<td>7.0</td>
+<td>3154.0</td>
+<td>477.01871435729913</td>
+</tr>
+<tr>
+<td>pass.ROCDLAnnotateKernelForTranslationPass</td>
+<td>68.83399999999997 MILLIS</td>
+<td>231</td>
+<td>297.98268398268385 MICROS</td>
+<td>6.0</td>
+<td>1921.0</td>
+<td>365.78007687026985</td>
+</tr>
+<tr>
+<td>pass.LLVMGPUSelectLoweringStrategyPass</td>
+<td>65.10399999999996 MILLIS</td>
+<td>222</td>
+<td>293.26126126126104 MICROS</td>
+<td>17.0</td>
+<td>3410.0</td>
+<td>455.65969820841326</td>
+</tr>
+<tr>
+<td>pass.ConvertHALDescriptorTypeToGPUAddressSpacePass</td>
+<td>64.808 MILLIS</td>
+<td>222</td>
+<td>291.92792792792795 MICROS</td>
+<td>10.0</td>
+<td>3044.0</td>
+<td>433.33995584083755</td>
+</tr>
+<tr>
+<td>pass.DecomposeAffineOpsPass</td>
+<td>61.74899999999999 MILLIS</td>
+<td>222</td>
+<td>278.1486486486486 MICROS</td>
+<td>6.0</td>
+<td>1763.0</td>
+<td>360.7331379600414</td>
+</tr>
+<tr>
+<td><a href='pass.TypePropagationPass.html'>pass.TypePropagationPass</a></td>
+<td>60.54800000000004 MILLIS</td>
+<td>222</td>
+<td>272.7387387387389 MICROS</td>
+<td>22.0</td>
+<td>3621.0</td>
+<td>422.9172008438299</td>
+</tr>
+<tr>
+<td>pass.GPUGeneralizeNamedOpsPass</td>
+<td>54.61500000000002 MILLIS</td>
+<td>222</td>
+<td>246.01351351351363 MICROS</td>
+<td>7.0</td>
+<td>2396.0</td>
+<td>377.35546698840034</td>
+</tr>
+<tr>
+<td>pass.LLVMGPUCastAddressSpaceFunctionPass</td>
+<td>53.74800000000007 MILLIS</td>
+<td>222</td>
+<td>242.10810810810838 MICROS</td>
+<td>7.0</td>
+<td>1857.0</td>
+<td>368.639777574171</td>
+</tr>
+<tr>
+<td>pass.DecomposeSoftmaxPass</td>
+<td>51.44100000000004 MILLIS</td>
+<td>222</td>
+<td>231.71621621621637 MICROS</td>
+<td>6.0</td>
+<td>2422.0</td>
+<td>351.46001221687334</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertComplexToStandard.html'>pass.ConvertComplexToStandard</a></td>
+<td>24.104000000000006 MILLIS</td>
+<td>222</td>
+<td>108.57657657657661 MICROS</td>
+<td>21.0</td>
+<td>2727.0</td>
+<td>261.96413514065586</td>
+</tr>
+<tr>
+<td>pass.PadDynamicAllocPass</td>
+<td>15.495000000000001 MILLIS</td>
+<td>222</td>
+<td>69.7972972972973 MICROS</td>
+<td>5.0</td>
+<td>1284.0</td>
+<td>185.8852920338164</td>
+</tr>
+<tr>
+<td>pass.LowerUKernelOpsToCallsPass</td>
+<td>13.34900000000001 MILLIS</td>
+<td>222</td>
+<td>60.13063063063068 MICROS</td>
+<td>6.0</td>
+<td>1509.0</td>
+<td>179.35134891899125</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::VM::DropEmptyModuleInitializersPass</td>
+<td>469.0 MICROS</td>
+<td>1</td>
+<td>469.0 MICROS</td>
+<td>469.0</td>
+<td>469.0</td>
+<td>0.0</td>
+</tr>
+</table>
+</body>
+</html>
