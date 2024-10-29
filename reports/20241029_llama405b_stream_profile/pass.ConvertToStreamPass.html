@@ -1,0 +1,156 @@
+<html>
+<head><title>Series report: pass.ConvertToStreamPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertDispatchOp</td>
+<td>7.121407000000044 SECONDS</td>
+<td>77736</td>
+<td>91.61015488319497 MICROS</td>
+<td>5.0</td>
+<td>480.0</td>
+<td>111.4739630445411</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertTensorCastLikeOp<mlir::iree_compiler::IREE::Flow::TensorReshapeOp></td>
+<td>4.722773999998538 SECONDS</td>
+<td>76749</td>
+<td>61.53531642104182 MICROS</td>
+<td>4.0</td>
+<td>1394.0</td>
+<td>84.43295483710973</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertTensorTransferOp</td>
+<td>1.017055999999939 SECONDS</td>
+<td>33368</td>
+<td>30.479980819945425 MICROS</td>
+<td>4.0</td>
+<td>333.0</td>
+<td>40.56980593121146</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertTensorUpdateOp</td>
+<td>0.7640270000000027 SECONDS</td>
+<td>4032</td>
+<td>189.4908234126991 MICROS</td>
+<td>177.0</td>
+<td>212.0</td>
+<td>7.196636885145029</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::GlobalLoadOpExpansion</td>
+<td>0.1179930000000223 SECONDS</td>
+<td>19212</td>
+<td>6.14163023110672 MICROS</td>
+<td>4.0</td>
+<td>679.0</td>
+<td>5.158641037601044</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::GlobalOpExpansion</td>
+<td>96.45599999998878 MILLIS</td>
+<td>10115</td>
+<td>9.53593672763112 MICROS</td>
+<td>6.0</td>
+<td>269.0</td>
+<td>3.5130388719245023</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertTensorSliceOp</td>
+<td>36.33299999999915 MILLIS</td>
+<td>6056</td>
+<td>5.99950462351373 MICROS</td>
+<td>5.0</td>
+<td>23.0</td>
+<td>1.3854903963409775</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertTensorSplatOp</td>
+<td>12.339999999999993 MILLIS</td>
+<td>127</td>
+<td>97.16535433070861 MICROS</td>
+<td>94.0</td>
+<td>109.0</td>
+<td>2.7771956044977273</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::GlobalStoreOpExpansion</td>
+<td>6.434999999999931 MILLIS</td>
+<td>1019</td>
+<td>6.315014720313966 MICROS</td>
+<td>5.0</td>
+<td>100.0</td>
+<td>3.1989755896444763</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertExecutableOp</td>
+<td>2.8840000000000017 MILLIS</td>
+<td>224</td>
+<td>12.875000000000007 MICROS</td>
+<td>9.0</td>
+<td>59.0</td>
+<td>4.807221130757349</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertTensorEmptyOp</td>
+<td>503.0 MICROS</td>
+<td>5</td>
+<td>100.6 MICROS</td>
+<td>95.0</td>
+<td>112.0</td>
+<td>5.953150426455133</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertTensorImportOp</td>
+<td>269.00000000000006 MICROS</td>
+<td>29</td>
+<td>9.27586206896552 MICROS</td>
+<td>6.0</td>
+<td>26.0</td>
+<td>5.111829092470738</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertTensorAliasOp</td>
+<td>131.0 MICROS</td>
+<td>16</td>
+<td>8.1875 MICROS</td>
+<td>7.0</td>
+<td>16.0</td>
+<td>2.788788939665386</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertTensorExportOp</td>
+<td>51.0 MICROS</td>
+<td>8</td>
+<td>6.375 MICROS</td>
+<td>5.0</td>
+<td>9.0</td>
+<td>1.5761900266148134</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertTensorBarrierOp</td>
+<td>44.99999999999999 MICROS</td>
+<td>2</td>
+<td>22.499999999999996 MICROS</td>
+<td>18.0</td>
+<td>27.0</td>
+<td>4.5000000000000115</td>
+</tr>
+</table>
+</body>
+</html>

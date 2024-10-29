@@ -1,0 +1,66 @@
+<html>
+<head><title>Series report: pass.ConvertTorchToArith</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenBinaryOp<mlir::torch::Torch::PrimMaxIntOp, mlir::arith::MaxSIOp></td>
+<td>10.115999999999904 MILLIS</td>
+<td>2016</td>
+<td>5.017857142857095 MICROS</td>
+<td>3.0</td>
+<td>17.0</td>
+<td>1.393963236029666</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertTorchConstantIntOp</td>
+<td>204.0 MICROS</td>
+<td>35</td>
+<td>5.828571428571428 MICROS</td>
+<td>4.0</td>
+<td>34.0</td>
+<td>5.005629483952266</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertTorchTensorLiteralOp</td>
+<td>125.0 MICROS</td>
+<td>8</td>
+<td>15.625 MICROS</td>
+<td>5.0</td>
+<td>45.0</td>
+<td>16.970102386255665</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenBinaryOp<mlir::torch::Torch::AtenMulIntOp, mlir::arith::MulIOp></td>
+<td>72.0 MICROS</td>
+<td>6</td>
+<td>12.0 MICROS</td>
+<td>5.0</td>
+<td>31.0</td>
+<td>9.41629792788369</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertTorchConstantOp<mlir::torch::Torch::ConstantFloatOp></td>
+<td>37.99999999999999 MICROS</td>
+<td>8</td>
+<td>4.749999999999999 MICROS</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>0.8291561975888563</td>
+</tr>
+</table>
+</body>
+</html>

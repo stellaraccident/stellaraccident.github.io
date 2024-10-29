@@ -1,0 +1,114 @@
+<html>
+<head><title>Series report: pass.SetEncodingPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>22.348829 SECONDS</td>
+<td>12</td>
+<td>1.8624024166666666 SECONDS</td>
+<td>7e-06</td>
+<td>9.949416</td>
+<td>3.3304896740121785</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::DispatchCreation::(anonymous namespace)::setContractionOpEncoding</td>
+<td>9.37427000002484 SECONDS</td>
+<td>413234</td>
+<td>22.685137234653588 MICROS</td>
+<td>3.0</td>
+<td>34959.0</td>
+<td>303.36768815570724</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldFillWithTensorReshape<mlir::tensor::CollapseShapeOp></td>
+<td>0.7976029999996618 SECONDS</td>
+<td>115104</td>
+<td>6.929411662493587 MICROS</td>
+<td>3.0</td>
+<td>10301.0</td>
+<td>76.09853810912048</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::DispatchCreation::(anonymous namespace)::FoldFillWithSetEncoding</td>
+<td>0.6057180000002104 SECONDS</td>
+<td>90800</td>
+<td>6.670903083702758 MICROS</td>
+<td>3.0</td>
+<td>17006.0</td>
+<td>87.45040822013564</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldFillWithTensorReshape<mlir::tensor::ExpandShapeOp></td>
+<td>0.3394979999999647 SECONDS</td>
+<td>54538</td>
+<td>6.22498074736816 MICROS</td>
+<td>3.0</td>
+<td>6707.0</td>
+<td>52.87531831092736</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldInsertPadIntoFill</td>
+<td>0.31913400000005976 SECONDS</td>
+<td>42352</td>
+<td>7.53527578390772 MICROS</td>
+<td>3.0</td>
+<td>13540.0</td>
+<td>88.45333207668439</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldFillWithTensorExtract</td>
+<td>0.27544200000000274 SECONDS</td>
+<td>20224</td>
+<td>13.619560917721655 MICROS</td>
+<td>3.0</td>
+<td>24326.0</td>
+<td>268.79785569849423</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfReifyRankedShapedTypeOpInterface<mlir::tensor::DimOp></td>
+<td>0.22803900000010524 SECONDS</td>
+<td>33290</td>
+<td>6.850075097630076 MICROS</td>
+<td>3.0</td>
+<td>1445.0</td>
+<td>8.501774283057632</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IterArgsToInitArgs</td>
+<td>8.0 MICROS</td>
+<td>2</td>
+<td>4.0 MICROS</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>0.0</td>
+</tr>
+</table>
+</body>
+</html>

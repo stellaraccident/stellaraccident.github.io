@@ -1,0 +1,390 @@
+<html>
+<head><title>Series report: pass.mlir::iree_compiler::IREE::VM::ConversionPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::InitializerOpConversion</td>
+<td>1.9449999999999998 MILLIS</td>
+<td>1</td>
+<td>1.9449999999999998 MILLIS</td>
+<td>1.9449999999999998</td>
+<td>1.9449999999999998</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConstantOpConversion</td>
+<td>0.9320000000000019 MILLIS</td>
+<td>163</td>
+<td>5.717791411042956 MICROS</td>
+<td>4.0</td>
+<td>15.0</td>
+<td>1.6147677469951947</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::CommandBufferDispatchOpConversion</td>
+<td>477.0 MICROS</td>
+<td>6</td>
+<td>79.5 MICROS</td>
+<td>74.0</td>
+<td>85.0</td>
+<td>3.6400549446406187</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::VMImportOpConversion<mlir::iree_compiler::IREE::HAL::DeviceQueueAllocaOp></td>
+<td>251.00000000000003 MICROS</td>
+<td>6</td>
+<td>41.833333333333336 MICROS</td>
+<td>39.0</td>
+<td>49.0</td>
+<td>3.484090826727763</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::CommandBufferCreateOpConversion</td>
+<td>248.0 MICROS</td>
+<td>6</td>
+<td>41.333333333333336 MICROS</td>
+<td>38.0</td>
+<td>47.0</td>
+<td>3.2998316455372683</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::VMImportOpConversion<mlir::iree_compiler::IREE::HAL::CommandBufferExecutionBarrierOp></td>
+<td>241.0 MICROS</td>
+<td>6</td>
+<td>40.16666666666667 MICROS</td>
+<td>37.0</td>
+<td>44.0</td>
+<td>3.0230595245361718</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::VMImportOpConversion<mlir::iree_compiler::IREE::HAL::FenceCreateOp></td>
+<td>189.00000000000003 MICROS</td>
+<td>12</td>
+<td>15.750000000000004 MICROS</td>
+<td>15.0</td>
+<td>18.0</td>
+<td>0.8291561975887589</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::VMImportOpConversion<mlir::iree_compiler::IREE::HAL::BufferAssertOp></td>
+<td>181.0 MICROS</td>
+<td>6</td>
+<td>30.166666666666668 MICROS</td>
+<td>27.0</td>
+<td>36.0</td>
+<td>3.0776975521032273</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::DeviceQueryCastOpConversion</td>
+<td>140.00000000000003 MICROS</td>
+<td>3</td>
+<td>46.66666666666667 MICROS</td>
+<td>41.0</td>
+<td>53.0</td>
+<td>4.92160768674441</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::FuncOpConversion</td>
+<td>98.00000000000001 MICROS</td>
+<td>6</td>
+<td>16.333333333333336 MICROS</td>
+<td>13.0</td>
+<td>21.0</td>
+<td>3.091206165165218</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::GlobalLoadOpConversion</td>
+<td>82.0 MICROS</td>
+<td>13</td>
+<td>6.3076923076923075 MICROS</td>
+<td>4.0</td>
+<td>10.0</td>
+<td>1.8138194034694775</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::ElementTypeOpConversion</td>
+<td>70.0 MICROS</td>
+<td>12</td>
+<td>5.833333333333333 MICROS</td>
+<td>4.0</td>
+<td>8.0</td>
+<td>1.1426091000668455</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::GlobalOpConversion</td>
+<td>56.99999999999999 MICROS</td>
+<td>7</td>
+<td>8.142857142857142 MICROS</td>
+<td>6.0</td>
+<td>16.0</td>
+<td>3.2701494692170314</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::VMImportOpConversion<mlir::iree_compiler::IREE::HAL::BufferViewAssertOp></td>
+<td>51.0 MICROS</td>
+<td>6</td>
+<td>8.5 MICROS</td>
+<td>7.0</td>
+<td>13.0</td>
+<td>2.0615528128088267</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::SelectOpConversion</td>
+<td>50.99999999999999 MICROS</td>
+<td>6</td>
+<td>8.499999999999998 MICROS</td>
+<td>5.0</td>
+<td>12.0</td>
+<td>2.8722813232690183</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::DeviceQueueExecuteIndirectOpConversion</td>
+<td>50.99999999999999 MICROS</td>
+<td>6</td>
+<td>8.499999999999998 MICROS</td>
+<td>8.0</td>
+<td>11.0</td>
+<td>1.1180339887499045</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::VMImportOpConversion<mlir::iree_compiler::IREE::HAL::BufferViewCreateOp></td>
+<td>49.99999999999999 MICROS</td>
+<td>6</td>
+<td>8.333333333333332 MICROS</td>
+<td>6.0</td>
+<td>13.0</td>
+<td>2.494438257849297</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::DeviceQueryI64OpConversion</td>
+<td>47.0 MICROS</td>
+<td>6</td>
+<td>7.833333333333333 MICROS</td>
+<td>4.0</td>
+<td>13.0</td>
+<td>2.7938424357066984</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::GlobalStoreOpConversion</td>
+<td>45.99999999999999 MICROS</td>
+<td>7</td>
+<td>6.57142857142857 MICROS</td>
+<td>5.0</td>
+<td>11.0</td>
+<td>1.9166296949998227</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::NullOpConversion</td>
+<td>44.99999999999999 MICROS</td>
+<td>8</td>
+<td>5.624999999999999 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>2.11763429326218</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::StatusCheckOkOpConversion</td>
+<td>43.0 MICROS</td>
+<td>8</td>
+<td>5.375 MICROS</td>
+<td>4.0</td>
+<td>8.0</td>
+<td>1.1110243021644504</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ReturnOpConversion</td>
+<td>41.0 MICROS</td>
+<td>7</td>
+<td>5.857142857142858 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>2.1665358411575872</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::VMImportOpConversion<mlir::iree_compiler::IREE::HAL::FenceAwaitOp></td>
+<td>41.0 MICROS</td>
+<td>6</td>
+<td>6.833333333333334 MICROS</td>
+<td>6.0</td>
+<td>9.0</td>
+<td>1.0671873729054708</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::BranchOpConversion</td>
+<td>37.00000000000001 MICROS</td>
+<td>6</td>
+<td>6.166666666666667 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>2.266911751455905</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::VMImportOpConversion<mlir::iree_compiler::IREE::HAL::CommandBufferFinalizeOp></td>
+<td>37.0 MICROS</td>
+<td>6</td>
+<td>6.166666666666666 MICROS</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>1.067187372905477</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::VMImportOpConversion<mlir::iree_compiler::IREE::HAL::DeviceAllocatorOp></td>
+<td>36.0 MICROS</td>
+<td>6</td>
+<td>6.0 MICROS</td>
+<td>5.0</td>
+<td>9.0</td>
+<td>1.414213562373095</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::EncodingTypeOpConversion</td>
+<td>35.0 MICROS</td>
+<td>6</td>
+<td>5.833333333333333 MICROS</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>0.6871842709362818</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::VMImportOpConversion<mlir::iree_compiler::IREE::HAL::BufferViewBufferOp></td>
+<td>33.0 MICROS</td>
+<td>6</td>
+<td>5.500000000000001 MICROS</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>0.763762615825972</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::VMImportOpConversion<mlir::iree_compiler::IREE::HAL::DevicesGetOp></td>
+<td>31.0 MICROS</td>
+<td>1</td>
+<td>31.0 MICROS</td>
+<td>31.0</td>
+<td>31.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ExternalFuncOpConversion</td>
+<td>28.0 MICROS</td>
+<td>6</td>
+<td>4.666666666666666 MICROS</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>0.7453559924999322</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::VMImportOpConversion<mlir::iree_compiler::IREE::HAL::DevicesCountOp></td>
+<td>25.0 MICROS</td>
+<td>1</td>
+<td>25.0 MICROS</td>
+<td>25.0</td>
+<td>25.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::CondBranchOpConversion</td>
+<td>24.0 MICROS</td>
+<td>4</td>
+<td>6.0 MICROS</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>1.224744871391587</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::CmpI64OpConversion</td>
+<td>22.000000000000004 MICROS</td>
+<td>3</td>
+<td>7.333333333333334 MICROS</td>
+<td>6.0</td>
+<td>10.0</td>
+<td>1.8856180831641258</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ModuleOpConversion</td>
+<td>17.0 MICROS</td>
+<td>1</td>
+<td>17.0 MICROS</td>
+<td>17.0</td>
+<td>17.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::TruncateIOpConversion</td>
+<td>16.0 MICROS</td>
+<td>1</td>
+<td>16.0 MICROS</td>
+<td>16.0</td>
+<td>16.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::BinaryArithmeticOpConversion<mlir::arith::AddIOp, mlir::iree_compiler::IREE::VM::AddI32Op, mlir::iree_compiler::IREE::VM::AddI64Op></td>
+<td>12.0 MICROS</td>
+<td>2</td>
+<td>6.0 MICROS</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ExecutableCreateOpConversion</td>
+<td>12.0 MICROS</td>
+<td>1</td>
+<td>12.0 MICROS</td>
+<td>12.0</td>
+<td>12.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::BinaryArithmeticOpConversion<mlir::arith::AndIOp, mlir::iree_compiler::IREE::VM::AndI32Op, mlir::iree_compiler::IREE::VM::AndI64Op></td>
+<td>11.0 MICROS</td>
+<td>2</td>
+<td>5.5 MICROS</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>0.5000000000000056</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::CmpEQOpConversion</td>
+<td>9.0 MICROS</td>
+<td>1</td>
+<td>9.0 MICROS</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::SignExtendIOpConversion</td>
+<td>7.0 MICROS</td>
+<td>1</td>
+<td>7.0 MICROS</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::RemoveExecutableOpConversion</td>
+<td>5.0 MICROS</td>
+<td>1</td>
+<td>5.0 MICROS</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>0.0</td>
+</tr>
+</table>
+</body>
+</html>

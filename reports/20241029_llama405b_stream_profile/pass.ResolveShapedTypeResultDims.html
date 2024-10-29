@@ -1,0 +1,69 @@
+<html>
+<head><title>Series report: pass.ResolveShapedTypeResultDims</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>6.028842 SECONDS</td>
+<td>6</td>
+<td>1.004807 SECONDS</td>
+<td>2.6e-05</td>
+<td>3.459917</td>
+<td>1.3220874246130623</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfReifyRankedShapedTypeOpInterface<mlir::tensor::DimOp></td>
+<td>2.4896109999996656 SECONDS</td>
+<td>23303</td>
+<td>106.83650173795931 MICROS</td>
+<td>4.0</td>
+<td>7849.0</td>
+<td>322.66474405856263</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfShapedTypeOpInterface<mlir::tensor::DimOp></td>
+<td>0.13697600000004595 SECONDS</td>
+<td>20279</td>
+<td>6.754573696930122 MICROS</td>
+<td>3.0</td>
+<td>2584.0</td>
+<td>25.025211916891433</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IterArgsToInitArgs</td>
+<td>0.13531100000004292 SECONDS</td>
+<td>20279</td>
+<td>6.672469056661716 MICROS</td>
+<td>3.0</td>
+<td>1081.0</td>
+<td>19.193503546903617</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<html>
+<head><title>Series report: pass.RaiseSpecialOpsPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>49.68966099999995 SECONDS</td>
+<td>1044</td>
+<td>47.595460727969304 MILLIS</td>
+<td>0.034999999999999996</td>
+<td>14324.826</td>
+<td>608.4337111435696</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GlobalOptimization::(anonymous namespace)::RaiseSoftmax</td>
+<td>8.472074999987182 SECONDS</td>
+<td>656125</td>
+<td>12.912288054848059 MICROS</td>
+<td>6.0</td>
+<td>22416.0</td>
+<td>107.62179805813095</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GlobalOptimization::(anonymous namespace)::RaiseGenericFill</td>
+<td>3.0711159999827995 SECONDS</td>
+<td>551635</td>
+<td>5.567297216425353 MICROS</td>
+<td>3.0</td>
+<td>1980.0</td>
+<td>5.754658449430142</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GlobalOptimization::(anonymous namespace)::NamedImplicitCastOpConversion<mlir::linalg::ContractionOpInterface></td>
+<td>2.2585869999988932 SECONDS</td>
+<td>85760</td>
+<td>26.336135727599036 MICROS</td>
+<td>3.0</td>
+<td>30606.0</td>
+<td>330.7083205753993</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GlobalOptimization::(anonymous namespace)::InsertSliceNegateAndSlicePattern</td>
+<td>0.415483999999972 SECONDS</td>
+<td>66544</td>
+<td>6.243748497234491 MICROS</td>
+<td>3.0</td>
+<td>7159.0</td>
+<td>40.72839048240377</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GlobalOptimization::(anonymous namespace)::RaiseInsertSliceToPad</td>
+<td>0.39526899999993 SECONDS</td>
+<td>66544</td>
+<td>5.9399645347428764 MICROS</td>
+<td>3.0</td>
+<td>302.0</td>
+<td>2.630785448073082</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GlobalOptimization::(anonymous namespace)::FuseMatmulTranspose</td>
+<td>0.17472900000001734 SECONDS</td>
+<td>13120</td>
+<td>13.317759146342784 MICROS</td>
+<td>8.0</td>
+<td>1334.0</td>
+<td>20.34459286894019</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GlobalOptimization::(anonymous namespace)::FuseBatchMatmulTranspose</td>
+<td>0.11284400000003267 SECONDS</td>
+<td>20160</td>
+<td>5.597420634922256 MICROS</td>
+<td>3.0</td>
+<td>96.0</td>
+<td>2.2084194263608006</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GlobalOptimization::(anonymous namespace)::ConcatenateNegateAndSlicePattern</td>
+<td>49.74899999999697 MILLIS</td>
+<td>8064</td>
+<td>6.169270833332957 MICROS</td>
+<td>3.0</td>
+<td>67.0</td>
+<td>2.0148858636938582</td>
+</tr>
+</table>
+</body>
+</html>

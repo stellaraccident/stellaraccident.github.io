@@ -1,0 +1,75 @@
+<html>
+<head><title>Series report: pass.ScalarizeShapes</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveUnusedPattern<mlir::torch::Torch::PrimListConstructOp></td>
+<td>1.0108770000011258 SECONDS</td>
+<td>133906</td>
+<td>7.549153884076336 MICROS</td>
+<td>3.0</td>
+<td>1062.0</td>
+<td>13.728895970449342</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CanonicalizeAtenViewPattern</td>
+<td>0.7696560000005674 SECONDS</td>
+<td>88233</td>
+<td>8.722994797871175 MICROS</td>
+<td>3.0</td>
+<td>558.0</td>
+<td>14.395302009862565</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveUnusedPattern<mlir::torch::Torch::ConstantIntOp></td>
+<td>0.2651259999999923 SECONDS</td>
+<td>33576</td>
+<td>7.8962949725992475 MICROS</td>
+<td>2.0</td>
+<td>365.0</td>
+<td>13.09449638927804</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveUnusedPattern<mlir::torch::Torch::AtenSizeIntOp></td>
+<td>19.284000000000194 MILLIS</td>
+<td>2024</td>
+<td>9.527667984189819 MICROS</td>
+<td>3.0</td>
+<td>239.0</td>
+<td>16.128443968293464</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveUnusedPattern<mlir::torch::Torch::ConstantBoolOp></td>
+<td>84.0 MICROS</td>
+<td>2</td>
+<td>42.0 MICROS</td>
+<td>5.0</td>
+<td>79.0</td>
+<td>37.0</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveUnusedPattern<mlir::torch::Torch::ConstantNoneOp></td>
+<td>10.0 MICROS</td>
+<td>2</td>
+<td>5.0 MICROS</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>0.0</td>
+</tr>
+</table>
+</body>
+</html>

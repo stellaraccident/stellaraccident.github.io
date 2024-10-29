@@ -1,0 +1,114 @@
+<html>
+<head><title>Series report: pass.MaterializeEncodingIntoNopPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>5.271699 SECONDS</td>
+<td>4</td>
+<td>1.31792475 SECONDS</td>
+<td>2.6e-05</td>
+<td>2.667448</td>
+<td>1.3180810440055222</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.FoldTensorCastProducerOp</td>
+<td>3.443141999992276 SECONDS</td>
+<td>202058</td>
+<td>17.040364647736173 MICROS</td>
+<td>3.0</td>
+<td>2433.0</td>
+<td>87.84748491279933</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::SetEncodingOpToPackOpConversion</td>
+<td>0.3241500000000463 SECONDS</td>
+<td>36320</td>
+<td>8.924834801763389 MICROS</td>
+<td>4.0</td>
+<td>623.0</td>
+<td>16.926843433054845</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::MaterializeContractionOp</td>
+<td>0.27175400000009525 SECONDS</td>
+<td>36320</td>
+<td>7.482213656390288 MICROS</td>
+<td>4.0</td>
+<td>1674.0</td>
+<td>9.84594511399483</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::MaterializeDPSOperation<mlir::linalg::FillOp></td>
+<td>0.13813899999998844 SECONDS</td>
+<td>18160</td>
+<td>7.606773127752667 MICROS</td>
+<td>5.0</td>
+<td>364.0</td>
+<td>6.044907962453978</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::MaterializeOperation<mlir::tensor::EmptyOp></td>
+<td>0.12036000000001702 SECONDS</td>
+<td>18160</td>
+<td>6.6277533039656955 MICROS</td>
+<td>4.0</td>
+<td>193.0</td>
+<td>4.2091886868710855</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::UnsetEncodingOpToUnPackOpConversion</td>
+<td>0.11516700000003119 SECONDS</td>
+<td>18160</td>
+<td>6.341795154186739 MICROS</td>
+<td>4.0</td>
+<td>825.0</td>
+<td>8.131455339630048</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfReifyRankedShapedTypeOpInterface<mlir::tensor::DimOp></td>
+<td>41.0 MICROS</td>
+<td>1</td>
+<td>41.0 MICROS</td>
+<td>41.0</td>
+<td>41.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IterArgsToInitArgs</td>
+<td>6.0 MICROS</td>
+<td>1</td>
+<td>6.0 MICROS</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>0.0</td>
+</tr>
+</table>
+</body>
+</html>

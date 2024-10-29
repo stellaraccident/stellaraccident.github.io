@@ -1,0 +1,39 @@
+<html>
+<head><title>Series report: pass.CollapseDimensionsPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldEmptyTensorWithReshapeOp<mlir::tensor::CollapseShapeOp></td>
+<td>28.81400000000123 MILLIS</td>
+<td>5041</td>
+<td>5.715929379091694 MICROS</td>
+<td>4.0</td>
+<td>16.0</td>
+<td>1.3217850900991834</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldFillWithTensorReshape<mlir::tensor::CollapseShapeOp></td>
+<td>25.797000000002196 MILLIS</td>
+<td>5041</td>
+<td>5.117437016465423 MICROS</td>
+<td>3.0</td>
+<td>22.0</td>
+<td>1.206548067704672</td>
+</tr>
+</table>
+</body>
+</html>

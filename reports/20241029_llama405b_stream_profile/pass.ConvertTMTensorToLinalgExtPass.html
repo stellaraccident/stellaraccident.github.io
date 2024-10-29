@@ -1,0 +1,60 @@
+<html>
+<head><title>Series report: pass.ConvertTMTensorToLinalgExtPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>0.721718 SECONDS</td>
+<td>4</td>
+<td>0.1804295 SECONDS</td>
+<td>0.13483</td>
+<td>0.228905</td>
+<td>0.03406385103375719</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::TorchInput::(anonymous namespace)::ScatterOpConversion</td>
+<td>36.68200000000006 MILLIS</td>
+<td>2016</td>
+<td>18.195436507936538 MICROS</td>
+<td>4.0</td>
+<td>382.0</td>
+<td>22.75977678915156</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::TorchInput::(anonymous namespace)::TMTensorOpConversion<mlir::torch::TMTensor::YieldOp, mlir::iree_compiler::IREE::LinalgExt::YieldOp></td>
+<td>13.02000000000009 MILLIS</td>
+<td>2016</td>
+<td>6.458333333333378 MICROS</td>
+<td>3.0</td>
+<td>111.0</td>
+<td>6.327476144963196</td>
+</tr>
+</table>
+</body>
+</html>

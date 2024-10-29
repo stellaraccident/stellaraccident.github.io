@@ -1,0 +1,96 @@
+<html>
+<head><title>Series report: pass.ElementwiseOpFusionPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>83.951725 SECONDS</td>
+<td>2069</td>
+<td>40.57599081681972 MILLIS</td>
+<td>0.01</td>
+<td>13926.033</td>
+<td>601.0312533729626</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FuseElementwiseOps</td>
+<td>42.104473999991434 SECONDS</td>
+<td>449388</td>
+<td>93.6929201491616 MICROS</td>
+<td>3.0</td>
+<td>98782.0</td>
+<td>884.847203712187</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldFillWithGenericOp</td>
+<td>3.5466939999922973 SECONDS</td>
+<td>368592</td>
+<td>9.622276121001805 MICROS</td>
+<td>3.0</td>
+<td>54255.0</td>
+<td>251.84960924667965</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DeduplicateAndRemoveDeadOperandsAndResults</td>
+<td>2.628857999994522 SECONDS</td>
+<td>368584</td>
+<td>7.132317192266951 MICROS</td>
+<td>3.0</td>
+<td>23011.0</td>
+<td>55.145357937557385</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldScalarOrSplatConstant</td>
+<td>2.5548819999932646 SECONDS</td>
+<td>368592</td>
+<td>6.9314635151963815 MICROS</td>
+<td>3.0</td>
+<td>28962.0</td>
+<td>95.38409038114294</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveOutsDependency</td>
+<td>2.4074909999929774 SECONDS</td>
+<td>368584</td>
+<td>6.5317295378881814 MICROS</td>
+<td>3.0</td>
+<td>11009.0</td>
+<td>35.6335323773568</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveUnusedCycleInGenericOp</td>
+<td>2.2032039999939745 SECONDS</td>
+<td>362534</td>
+<td>6.077234135264484 MICROS</td>
+<td>3.0</td>
+<td>11349.0</td>
+<td>28.772703822985267</td>
+</tr>
+</table>
+</body>
+</html>

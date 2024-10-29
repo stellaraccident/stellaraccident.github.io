@@ -1,0 +1,60 @@
+<html>
+<head><title>Series report: pass.CPUMaterializeHostEncodingPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>247.0 MICROS</td>
+<td>6</td>
+<td>41.166666666666664 MICROS</td>
+<td>27.0</td>
+<td>101.0</td>
+<td>26.940778673890545</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::tensor::(anonymous namespace)::FoldProducerUnPackWithConsumerLinalgTransposeOp</td>
+<td>54.0 MICROS</td>
+<td>6</td>
+<td>9.0 MICROS</td>
+<td>5.0</td>
+<td>27.0</td>
+<td>8.062257748298547</td>
+</tr>
+<tr>
+<td>pattern.mlir::tensor::(anonymous namespace)::FoldProducerPackWithConsumerLinalgTransposeOp</td>
+<td>34.0 MICROS</td>
+<td>6</td>
+<td>5.666666666666667 MICROS</td>
+<td>4.0</td>
+<td>12.0</td>
+<td>2.8674417556808764</td>
+</tr>
+</table>
+</body>
+</html>

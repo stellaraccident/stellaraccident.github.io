@@ -1,0 +1,123 @@
+<html>
+<head><title>Series report: pass.FusionPreprocessingPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>24.197239 SECONDS</td>
+<td>1031</td>
+<td>23.469678952473327 MILLIS</td>
+<td>0.016</td>
+<td>7381.033</td>
+<td>373.3951875333527</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::DispatchCreation::(anonymous namespace)::ElementwiseOpInterchangePattern</td>
+<td>9.398114000017515 SECONDS</td>
+<td>269684</td>
+<td>34.84861541662655 MICROS</td>
+<td>3.0</td>
+<td>14578.0</td>
+<td>225.66177196344876</td>
+</tr>
+<tr>
+<td>pattern.mlir::tensor::(anonymous namespace)::FoldProducerPackWithConsumerLinalgTransposeOp</td>
+<td>2.6435259999903327 SECONDS</td>
+<td>300245</td>
+<td>8.804562940233252 MICROS</td>
+<td>3.0</td>
+<td>7656.0</td>
+<td>63.184905621937666</td>
+</tr>
+<tr>
+<td>pattern.mlir::tensor::(anonymous namespace)::FoldProducerUnPackWithConsumerLinalgTransposeOp</td>
+<td>2.5543549999911503 SECONDS</td>
+<td>300245</td>
+<td>8.507568818768506 MICROS</td>
+<td>3.0</td>
+<td>8346.0</td>
+<td>52.478909136651325</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::DispatchCreation::(anonymous namespace)::GatherFusionPattern</td>
+<td>0.8482389999997706 SECONDS</td>
+<td>20224</td>
+<td>41.94219738922916 MICROS</td>
+<td>3.0</td>
+<td>13117.0</td>
+<td>254.48246352147223</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::DispatchCreation::(anonymous namespace)::FoldSuccessiveTensorInsertSliceOps</td>
+<td>0.5538529999998896 SECONDS</td>
+<td>42352</td>
+<td>13.077375330560294 MICROS</td>
+<td>3.0</td>
+<td>5223.0</td>
+<td>106.05599929663207</td>
+</tr>
+<tr>
+<td>pattern.mlir::tensor::(anonymous namespace)::FoldUnpackWithExtractSliceOp</td>
+<td>0.39975100000003894 SECONDS</td>
+<td>20226</td>
+<td>19.764214377535794 MICROS</td>
+<td>3.0</td>
+<td>5862.0</td>
+<td>137.49934773960626</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfReifyRankedShapedTypeOpInterface<mlir::tensor::DimOp></td>
+<td>1.082 MILLIS</td>
+<td>2</td>
+<td>541.0 MICROS</td>
+<td>494.0</td>
+<td>588.0</td>
+<td>46.99999999999933</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfShapedTypeOpInterface<mlir::tensor::DimOp></td>
+<td>12.0 MICROS</td>
+<td>2</td>
+<td>6.0 MICROS</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IterArgsToInitArgs</td>
+<td>10.0 MICROS</td>
+<td>2</td>
+<td>5.0 MICROS</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>0.0</td>
+</tr>
+</table>
+</body>
+</html>

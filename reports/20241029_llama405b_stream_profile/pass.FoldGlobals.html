@@ -1,0 +1,1887 @@
+<html>
+<head><title>Series report: pass.FoldGlobals</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>139.317948 SECONDS</td>
+<td>48</td>
+<td>2.90245725 SECONDS</td>
+<td>0.000308</td>
+<td>16.492327</td>
+<td>4.463457898403665</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.FoldTensorCastProducerOp</td>
+<td>3.733889999967819 SECONDS</td>
+<td>723972</td>
+<td>5.157506091351348 MICROS</td>
+<td>3.0</td>
+<td>1945.0</td>
+<td>2.6426461919635686</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::InferStaticShapeOfOperands</td>
+<td>3.4176219999734796 SECONDS</td>
+<td>627082</td>
+<td>5.450040026620887 MICROS</td>
+<td>3.0</td>
+<td>1789.0</td>
+<td>2.723980826677887</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::DeduplicateCmdDispatchEntryRefs</td>
+<td>3.298881999976217 SECONDS</td>
+<td>629876</td>
+<td>5.237351478665987 MICROS</td>
+<td>3.0</td>
+<td>207.0</td>
+<td>1.5451611783494066</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::FoldSubviewsIntoDispatchOp<mlir::iree_compiler::IREE::Stream::CmdDispatchOp></td>
+<td>3.1989869999811837 SECONDS</td>
+<td>629876</td>
+<td>5.0787567711441355 MICROS</td>
+<td>3.0</td>
+<td>219.0</td>
+<td>1.554969471620313</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::AsyncDispatchOp></td>
+<td>3.1628009999823843 SECONDS</td>
+<td>623864</td>
+<td>5.069696279930216 MICROS</td>
+<td>3.0</td>
+<td>244.0</td>
+<td>1.5682880139593753</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::DeduplicateAsyncDispatchEntryRefs</td>
+<td>3.1035659999801393 SECONDS</td>
+<td>623864</td>
+<td>4.97474770139027 MICROS</td>
+<td>3.0</td>
+<td>212.0</td>
+<td>1.4947257849088194</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::EraseDeadLinalgOp</td>
+<td>3.0741449999794046 SECONDS</td>
+<td>627082</td>
+<td>4.902301453365596 MICROS</td>
+<td>3.0</td>
+<td>205.0</td>
+<td>1.3947463413840817</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::EraseIdentityLinalgOp<mlir::linalg::GenericOp></td>
+<td>2.7009749999873938 SECONDS</td>
+<td>552946</td>
+<td>4.884699410046178 MICROS</td>
+<td>3.0</td>
+<td>442.0</td>
+<td>1.5490179947639502</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::AsyncTransferOp></td>
+<td>2.226607999993411 SECONDS</td>
+<td>443286</td>
+<td>5.022960346127356 MICROS</td>
+<td>3.0</td>
+<td>217.0</td>
+<td>1.5830917704895588</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::RedundantTransferElision</td>
+<td>2.1578549999939165 SECONDS</td>
+<td>443282</td>
+<td>4.86790575749504 MICROS</td>
+<td>3.0</td>
+<td>215.0</td>
+<td>1.4908853319017428</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::IntermediateTransferElision</td>
+<td>2.137059999992755 SECONDS</td>
+<td>443282</td>
+<td>4.820994310603082 MICROS</td>
+<td>3.0</td>
+<td>250.0</td>
+<td>1.6175895581685307</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::FoldSubviewsIntoCmdCopyOp</td>
+<td>1.7486709999990662 SECONDS</td>
+<td>338368</td>
+<td>5.1679561897078505 MICROS</td>
+<td>3.0</td>
+<td>95.0</td>
+<td>1.4300569966435905</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::FoldSubviewsIntoCmdFlushOp</td>
+<td>1.518718999998566 SECONDS</td>
+<td>297984</td>
+<td>5.09664612864639 MICROS</td>
+<td>3.0</td>
+<td>174.0</td>
+<td>1.5492215944958043</td>
+</tr>
+<tr>
+<td>pattern.CanonicalizeContractAdd<mlir::arith::AddFOp></td>
+<td>1.3026350000002231 SECONDS</td>
+<td>255380</td>
+<td>5.100771399483997 MICROS</td>
+<td>3.0</td>
+<td>209.0</td>
+<td>1.40929814537763</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideEmptyCmdRegionOp<mlir::iree_compiler::IREE::Stream::CmdConcurrentOp></td>
+<td>1.225546999999562 SECONDS</td>
+<td>238088</td>
+<td>5.147453882596191 MICROS</td>
+<td>3.0</td>
+<td>218.0</td>
+<td>1.6675418875224948</td>
+</tr>
+<tr>
+<td>pattern.mlir::ComposeCollapseOfExpandOp<mlir::tensor::CollapseShapeOp, mlir::tensor::ExpandShapeOp, mlir::tensor::CastOp, mlir::tensor::DimOp, mlir::RankedTensorType></td>
+<td>1.1714760000002038 SECONDS</td>
+<td>230208</td>
+<td>5.088771893245256 MICROS</td>
+<td>3.0</td>
+<td>195.0</td>
+<td>1.7669188130612596</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldFillWithTensorReshape<mlir::tensor::CollapseShapeOp></td>
+<td>1.1666400000001738 SECONDS</td>
+<td>230208</td>
+<td>5.067764804004091 MICROS</td>
+<td>3.0</td>
+<td>121.0</td>
+<td>1.4533701671097907</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldReshapeWithConstant<mlir::tensor::CollapseShapeOp></td>
+<td>1.1468620000005758 SECONDS</td>
+<td>230208</td>
+<td>4.981851195443146 MICROS</td>
+<td>3.0</td>
+<td>162.0</td>
+<td>1.4742192086026777</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldReshapeWithFromElements<mlir::tensor::CollapseShapeOp></td>
+<td>1.1400980000005976 SECONDS</td>
+<td>230208</td>
+<td>4.952469071451025 MICROS</td>
+<td>3.0</td>
+<td>244.0</td>
+<td>1.5080377223889945</td>
+</tr>
+<tr>
+<td>pattern.mlir::ComposeReassociativeReshapeOps<mlir::tensor::CollapseShapeOp, mlir::ReshapeOpKind::kCollapse></td>
+<td>1.1388650000008271 SECONDS</td>
+<td>230208</td>
+<td>4.947113045597143 MICROS</td>
+<td>3.0</td>
+<td>176.0</td>
+<td>1.5041284080926325</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldReshapeWithSplat<mlir::tensor::CollapseShapeOp></td>
+<td>1.1350960000005146 SECONDS</td>
+<td>230208</td>
+<td>4.930740895192672 MICROS</td>
+<td>3.0</td>
+<td>120.0</td>
+<td>1.4612704241643066</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldCollapseOfCastOp</td>
+<td>1.1286520000006228 SECONDS</td>
+<td>230208</td>
+<td>4.902748818462533 MICROS</td>
+<td>3.0</td>
+<td>221.0</td>
+<td>1.4863045031722997</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::FoldSubviewsIntoCmdInvalidateOp</td>
+<td>1.1142510000004564 SECONDS</td>
+<td>217296</td>
+<td>5.12780262867451 MICROS</td>
+<td>3.0</td>
+<td>221.0</td>
+<td>1.6162233222707436</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::(anonymous namespace)::EraseUnusedGlobalStoreOp</td>
+<td>0.993672000001084 SECONDS</td>
+<td>200377</td>
+<td>4.959012261891754 MICROS</td>
+<td>3.0</td>
+<td>164.0</td>
+<td>1.4957288215434117</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ElideRedundantTransfer</td>
+<td>0.9847330000008551 SECONDS</td>
+<td>200208</td>
+<td>4.918549708307635 MICROS</td>
+<td>3.0</td>
+<td>191.0</td>
+<td>1.533876482066696</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::DeduplicateDispatchEntryRefs</td>
+<td>0.747995000000387 SECONDS</td>
+<td>155472</td>
+<td>4.811123546364535 MICROS</td>
+<td>3.0</td>
+<td>72.0</td>
+<td>1.3097081787161866</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::ReplaceOpIfTensorOperandZeroElements<mlir::iree_compiler::IREE::Flow::TensorReshapeOp, 0></td>
+<td>0.7390660000003686 SECONDS</td>
+<td>153498</td>
+<td>4.81482494886167 MICROS</td>
+<td>3.0</td>
+<td>75.0</td>
+<td>1.3964647886785566</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::FlattenTensorCastLikeChain<mlir::iree_compiler::IREE::Flow::TensorReshapeOp></td>
+<td>0.7259480000003828 SECONDS</td>
+<td>153498</td>
+<td>4.729364551983628 MICROS</td>
+<td>3.0</td>
+<td>153.0</td>
+<td>1.5358007377574348</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::ReplaceOpIfTensorOperandEmpty<mlir::iree_compiler::IREE::Flow::TensorReshapeOp, 0></td>
+<td>0.712394000000334 SECONDS</td>
+<td>153498</td>
+<td>4.641063727216863 MICROS</td>
+<td>3.0</td>
+<td>120.0</td>
+<td>1.443746970723788</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::ReplaceOpIfTensorResultZeroElements<mlir::iree_compiler::IREE::Flow::TensorReshapeOp, 0></td>
+<td>0.7116430000003052 SECONDS</td>
+<td>153498</td>
+<td>4.636171155326488 MICROS</td>
+<td>3.0</td>
+<td>176.0</td>
+<td>1.5592303975491848</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::MulFOfNegF</td>
+<td>0.6118609999998496 SECONDS</td>
+<td>121770</td>
+<td>5.024726944237903 MICROS</td>
+<td>3.0</td>
+<td>84.0</td>
+<td>1.3016137928594154</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldFillWithTensorReshape<mlir::tensor::ExpandShapeOp></td>
+<td>0.5149189999996938 SECONDS</td>
+<td>101012</td>
+<td>5.097602265074386 MICROS</td>
+<td>3.0</td>
+<td>281.0</td>
+<td>1.645468570516284</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldReshapeWithConstant<mlir::tensor::ExpandShapeOp></td>
+<td>0.5041069999996439 SECONDS</td>
+<td>101012</td>
+<td>4.9905654773655 MICROS</td>
+<td>3.0</td>
+<td>141.0</td>
+<td>1.5090311717372007</td>
+</tr>
+<tr>
+<td>pattern.mlir::ComposeReassociativeReshapeOps<mlir::tensor::ExpandShapeOp, mlir::ReshapeOpKind::kExpand></td>
+<td>0.5013469999995929 SECONDS</td>
+<td>101012</td>
+<td>4.963241991046537 MICROS</td>
+<td>3.0</td>
+<td>78.0</td>
+<td>1.4216371293890788</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldReshapeWithFromElements<mlir::tensor::ExpandShapeOp></td>
+<td>0.5004279999996324 SECONDS</td>
+<td>101012</td>
+<td>4.954144062087994 MICROS</td>
+<td>3.0</td>
+<td>250.0</td>
+<td>1.7218974571047128</td>
+</tr>
+<tr>
+<td>pattern.mlir::ComposeExpandOfCollapseOp<mlir::tensor::ExpandShapeOp, mlir::tensor::CollapseShapeOp></td>
+<td>0.4985389999997059 SECONDS</td>
+<td>101012</td>
+<td>4.935443313662791 MICROS</td>
+<td>3.0</td>
+<td>86.0</td>
+<td>1.505274014248279</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldReshapeWithSplat<mlir::tensor::ExpandShapeOp></td>
+<td>0.4985229999996417 SECONDS</td>
+<td>101012</td>
+<td>4.93528491664002 MICROS</td>
+<td>3.0</td>
+<td>119.0</td>
+<td>1.452204369926243</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::InsertSliceOpConstantArgumentFolder<mlir::tensor::InsertSliceOp></td>
+<td>0.45962599999976883 SECONDS</td>
+<td>84704</td>
+<td>5.426260861349745 MICROS</td>
+<td>3.0</td>
+<td>24.0</td>
+<td>1.369286672851664</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SwapExtractSliceOfTransferWrite</td>
+<td>0.4342759999997062 SECONDS</td>
+<td>84704</td>
+<td>5.126983377404918 MICROS</td>
+<td>3.0</td>
+<td>183.0</td>
+<td>1.5049901521007414</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::InsertSliceOpSourceCastInserter<mlir::tensor::InsertSliceOp></td>
+<td>0.4264669999997698 SECONDS</td>
+<td>84704</td>
+<td>5.034791745369402 MICROS</td>
+<td>3.0</td>
+<td>77.0</td>
+<td>1.4010647696609706</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::FoldDuplicateTimepointJoinOperands</td>
+<td>0.4211369999997421 SECONDS</td>
+<td>79782</td>
+<td>5.278596675938709 MICROS</td>
+<td>3.0</td>
+<td>96.0</td>
+<td>1.5169140377552515</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideImmediateTimepointJoinOperands</td>
+<td>0.41946299999984576 SECONDS</td>
+<td>79782</td>
+<td>5.257614499509235 MICROS</td>
+<td>3.0</td>
+<td>279.0</td>
+<td>1.7473833264529328</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ExpandTimepointJoinOperands</td>
+<td>0.41122599999983794 SECONDS</td>
+<td>79782</td>
+<td>5.1543706600466015 MICROS</td>
+<td>3.0</td>
+<td>136.0</td>
+<td>1.6534538216774335</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::InsertSliceOpCastFolder<mlir::tensor::InsertSliceOp></td>
+<td>0.41121999999986975 SECONDS</td>
+<td>84704</td>
+<td>4.854788439741568 MICROS</td>
+<td>3.0</td>
+<td>85.0</td>
+<td>1.443969496139996</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldInsertPadIntoFill</td>
+<td>0.4047729999998921 SECONDS</td>
+<td>84704</td>
+<td>4.778676331694986 MICROS</td>
+<td>3.0</td>
+<td>125.0</td>
+<td>1.441039319017241</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideImmediateTimepointWait<mlir::iree_compiler::IREE::Stream::ResourceAllocaOp></td>
+<td>0.36984799999990203 SECONDS</td>
+<td>71084</td>
+<td>5.202971132742981 MICROS</td>
+<td>3.0</td>
+<td>82.0</td>
+<td>1.5169105325323946</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::ClosureOptimizationPattern<mlir::iree_compiler::IREE::Stream::AsyncConcurrentOp></td>
+<td>0.35100200000004683 SECONDS</td>
+<td>59522</td>
+<td>5.89701286919201 MICROS</td>
+<td>4.0</td>
+<td>141.0</td>
+<td>1.712937118398938</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::AsyncConcurrentOp></td>
+<td>0.30866300000005414 SECONDS</td>
+<td>59522</td>
+<td>5.185696045160682 MICROS</td>
+<td>3.0</td>
+<td>183.0</td>
+<td>1.799893694488544</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::TieRegionResults<mlir::iree_compiler::IREE::Stream::AsyncConcurrentOp></td>
+<td>0.30139200000008165 SECONDS</td>
+<td>59522</td>
+<td>5.063539531603133 MICROS</td>
+<td>3.0</td>
+<td>134.0</td>
+<td>1.7694646741910112</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ConvertSplatConstantsIntoSplats</td>
+<td>0.27253000000012007 SECONDS</td>
+<td>54576</td>
+<td>4.993586924657727 MICROS</td>
+<td>3.0</td>
+<td>167.0</td>
+<td>1.7393546650447695</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::ClosureOptimizationPattern<mlir::iree_compiler::IREE::Stream::CmdExecuteOp></td>
+<td>0.26382100000010394 SECONDS</td>
+<td>35644</td>
+<td>7.401554258784198 MICROS</td>
+<td>4.0</td>
+<td>330.0</td>
+<td>5.220305223978226</td>
+</tr>
+<tr>
+<td>pattern.mlir::OpWithOffsetSizesAndStridesConstantArgumentFolder<mlir::tensor::ExtractSliceOp, SliceReturnTypeCanonicalizer, SliceCanonicalizer></td>
+<td>0.23111800000014845 SECONDS</td>
+<td>40452</td>
+<td>5.713388707607743 MICROS</td>
+<td>4.0</td>
+<td>121.0</td>
+<td>1.6300918268723894</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractFromShapeOfExtentTensor</td>
+<td>0.21182400000013119 SECONDS</td>
+<td>40682</td>
+<td>5.206823656657273 MICROS</td>
+<td>3.0</td>
+<td>18.0</td>
+<td>1.2746925523355241</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::SinkAllocaLikeOpToConsumers<mlir::iree_compiler::IREE::Stream::AsyncAllocaOp></td>
+<td>0.20410200000011888 SECONDS</td>
+<td>39399</td>
+<td>5.180385288969743 MICROS</td>
+<td>3.0</td>
+<td>1133.0</td>
+<td>9.832650058681747</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractElementFromIndexCast</td>
+<td>0.20282300000012124 SECONDS</td>
+<td>40682</td>
+<td>4.985571014210738 MICROS</td>
+<td>3.0</td>
+<td>2071.0</td>
+<td>10.351851102685234</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractFromTensorCast</td>
+<td>0.19994400000011786 SECONDS</td>
+<td>40682</td>
+<td>4.914802615410203 MICROS</td>
+<td>3.0</td>
+<td>41.0</td>
+<td>1.3265052546233767</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldFillWithTensorExtract</td>
+<td>0.1997230000001175 SECONDS</td>
+<td>40682</td>
+<td>4.9093702374543415 MICROS</td>
+<td>3.0</td>
+<td>35.0</td>
+<td>1.309572746859071</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractFromTensorGenerate</td>
+<td>0.19680800000011392 SECONDS</td>
+<td>40682</td>
+<td>4.837716926407598 MICROS</td>
+<td>3.0</td>
+<td>177.0</td>
+<td>1.6452547406910023</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtractSliceOpCastFolder</td>
+<td>0.195860000000112 SECONDS</td>
+<td>40452</td>
+<td>4.84178779788668 MICROS</td>
+<td>3.0</td>
+<td>80.0</td>
+<td>1.3840305056788178</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::AsyncAllocaOp></td>
+<td>0.19479900000010958 SECONDS</td>
+<td>39399</td>
+<td>4.944262544737419 MICROS</td>
+<td>3.0</td>
+<td>87.0</td>
+<td>1.6105158418536512</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::CmdExecuteOp></td>
+<td>0.19130400000011022 SECONDS</td>
+<td>35644</td>
+<td>5.367074402427063 MICROS</td>
+<td>3.0</td>
+<td>25.0</td>
+<td>1.3683092436326167</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DivFOfNegF</td>
+<td>0.18793400000010793 SECONDS</td>
+<td>36562</td>
+<td>5.140145506266286 MICROS</td>
+<td>3.0</td>
+<td>172.0</td>
+<td>1.5242680170912934</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideImmediateTimepointWait<mlir::iree_compiler::IREE::Stream::ResourceDeallocaOp></td>
+<td>0.18628800000010304 SECONDS</td>
+<td>35488</td>
+<td>5.249323715061514 MICROS</td>
+<td>3.0</td>
+<td>18.0</td>
+<td>1.4913900756517295</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::CloneCapturedCmdExecuteSubviewOps</td>
+<td>0.18449600000010227 SECONDS</td>
+<td>35644</td>
+<td>5.1760745146476905 MICROS</td>
+<td>3.0</td>
+<td>155.0</td>
+<td>1.6337342323451842</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideImmediateTimepointWait<mlir::iree_compiler::IREE::Stream::CmdExecuteOp></td>
+<td>0.1817220000000973 SECONDS</td>
+<td>35644</td>
+<td>5.09824935473284 MICROS</td>
+<td>3.0</td>
+<td>84.0</td>
+<td>1.6233200768804463</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ChainDependentAwaits<mlir::iree_compiler::IREE::Stream::CmdExecuteOp></td>
+<td>0.1787740000000937 SECONDS</td>
+<td>35644</td>
+<td>5.015542587815443 MICROS</td>
+<td>3.0</td>
+<td>18.0</td>
+<td>1.5801749607772833</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideNoOpCmdExecuteOp</td>
+<td>0.17786200000009506 SECONDS</td>
+<td>35644</td>
+<td>4.989956233870919 MICROS</td>
+<td>3.0</td>
+<td>86.0</td>
+<td>1.4869197800640612</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldComponentNeg<mlir::complex::ImOp, 1></td>
+<td>0.1673090000000864 SECONDS</td>
+<td>32328</td>
+<td>5.175358822076416 MICROS</td>
+<td>3.0</td>
+<td>76.0</td>
+<td>1.387928420101277</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldComponentNeg<mlir::complex::ReOp, 0></td>
+<td>0.16391900000008264 SECONDS</td>
+<td>32328</td>
+<td>5.070496164318319 MICROS</td>
+<td>3.0</td>
+<td>19.0</td>
+<td>1.3036357136885866</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::(anonymous namespace)::InlineConstantGlobalInitializer</td>
+<td>0.13020300000003623 SECONDS</td>
+<td>24386</td>
+<td>5.339252029854681 MICROS</td>
+<td>3.0</td>
+<td>1500.0</td>
+<td>21.037231125138014</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::AsyncUpdateOp></td>
+<td>0.12578400000004275 SECONDS</td>
+<td>24320</td>
+<td>5.1720394736859685 MICROS</td>
+<td>3.0</td>
+<td>19.0</td>
+<td>1.4319283735016872</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::CombineSliceUpdateFromToCopy</td>
+<td>0.12000000000003709 SECONDS</td>
+<td>24320</td>
+<td>4.934210526317314 MICROS</td>
+<td>3.0</td>
+<td>148.0</td>
+<td>1.6732799598639898</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideInPlaceUpdate</td>
+<td>0.11975400000003743 SECONDS</td>
+<td>24320</td>
+<td>4.924095394738381 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.3743700724862</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::CombineSplatUpdateFromToFill</td>
+<td>0.11739600000003528 SECONDS</td>
+<td>24320</td>
+<td>4.827138157896187 MICROS</td>
+<td>3.0</td>
+<td>84.0</td>
+<td>1.4955703345665536</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::(anonymous namespace)::DropEmptyInitializerOp</td>
+<td>0.11675800000003457 SECONDS</td>
+<td>24386</td>
+<td>4.787911096532214 MICROS</td>
+<td>3.0</td>
+<td>151.0</td>
+<td>1.6955985324632847</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AddIAddConstant</td>
+<td>0.10836100000003118 SECONDS</td>
+<td>21200</td>
+<td>5.111367924529772 MICROS</td>
+<td>3.0</td>
+<td>74.0</td>
+<td>1.3429069484372895</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AddIMulNegativeOneRhs</td>
+<td>0.1045230000000263 SECONDS</td>
+<td>21200</td>
+<td>4.930330188680486 MICROS</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>1.2839741093980135</td>
+</tr>
+<tr>
+<td>pattern.CanonicalizeContractAdd<mlir::arith::AddIOp></td>
+<td>0.10374600000002561 SECONDS</td>
+<td>21200</td>
+<td>4.893679245284227 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.2939691937845164</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AddIMulNegativeOneLhs</td>
+<td>0.10363700000002514 SECONDS</td>
+<td>21200</td>
+<td>4.888537735850242 MICROS</td>
+<td>3.0</td>
+<td>17.0</td>
+<td>1.3044122270199172</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AddISubConstantRHS</td>
+<td>0.10360600000002558 SECONDS</td>
+<td>21200</td>
+<td>4.88707547169932 MICROS</td>
+<td>3.0</td>
+<td>20.0</td>
+<td>1.2616561943664732</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AddISubConstantLHS</td>
+<td>0.10198200000002325 SECONDS</td>
+<td>21200</td>
+<td>4.810471698114304 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.2871365631543086</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RedundantSelectFalse</td>
+<td>88.45100000001513 MILLIS</td>
+<td>16790</td>
+<td>5.268076235855577 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.2221986082035134</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::TensorConstantToEmpty</td>
+<td>87.570000000011 MILLIS</td>
+<td>18192</td>
+<td>4.81365435356261 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.3119077852801737</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::TensorConstantToSplat</td>
+<td>87.11600000001012 MILLIS</td>
+<td>18192</td>
+<td>4.788698328936352 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.3224134321089973</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CmpIExtSI</td>
+<td>86.42300000001232 MILLIS</td>
+<td>16942</td>
+<td>5.101109668280742 MICROS</td>
+<td>3.0</td>
+<td>17.0</td>
+<td>1.2582814828391748</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::SelectResourceSizeOp</td>
+<td>85.1080000000092 MILLIS</td>
+<td>18192</td>
+<td>4.678320140721702 MICROS</td>
+<td>3.0</td>
+<td>23.0</td>
+<td>1.3859359516775231</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::SinkSubviewAcrossSelectOps</td>
+<td>84.07700000000887 MILLIS</td>
+<td>16790</td>
+<td>5.0075640262066035 MICROS</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>1.3625213850192996</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::(anonymous namespace)::SinkSubspanAcrossSelectOps</td>
+<td>83.91200000000838 MILLIS</td>
+<td>16790</td>
+<td>4.997736748064823 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.3984572882852142</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CmpIExtUI</td>
+<td>82.69200000000762 MILLIS</td>
+<td>16942</td>
+<td>4.880887734624461 MICROS</td>
+<td>3.0</td>
+<td>19.0</td>
+<td>1.2535307577670154</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SelectI1ToNot</td>
+<td>82.60000000000709 MILLIS</td>
+<td>16790</td>
+<td>4.919594997022459 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.297669447277783</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RedundantSelectTrue</td>
+<td>82.31800000000707 MILLIS</td>
+<td>16790</td>
+<td>4.9027992852892845 MICROS</td>
+<td>3.0</td>
+<td>119.0</td>
+<td>1.5378366423740724</td>
+</tr>
+<tr>
+<td>pattern.SelectToExtUI</td>
+<td>81.84300000000655 MILLIS</td>
+<td>16790</td>
+<td>4.874508636093302 MICROS</td>
+<td>3.0</td>
+<td>229.0</td>
+<td>2.4486457427664345</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SelectNotCond</td>
+<td>80.78000000000497 MILLIS</td>
+<td>16790</td>
+<td>4.811197141155746 MICROS</td>
+<td>3.0</td>
+<td>124.0</td>
+<td>1.6032556019428823</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::ClosureOptimizationPattern<mlir::iree_compiler::IREE::Stream::AsyncExecuteOp></td>
+<td>67.91399999999747 MILLIS</td>
+<td>8908</td>
+<td>7.623933542882519 MICROS</td>
+<td>4.0</td>
+<td>213.0</td>
+<td>4.8709453723082055</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::ReplaceOpIfTensorOperandZeroElements<mlir::iree_compiler::IREE::Flow::TensorSliceOp, 0></td>
+<td>59.23799999999214 MILLIS</td>
+<td>12112</td>
+<td>4.8908520475554935 MICROS</td>
+<td>3.0</td>
+<td>107.0</td>
+<td>1.8588240236519693</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::ReplaceOpIfTensorResultZeroElements<mlir::iree_compiler::IREE::Flow::TensorSliceOp, 0></td>
+<td>56.79799999999121 MILLIS</td>
+<td>12112</td>
+<td>4.689398943196104 MICROS</td>
+<td>3.0</td>
+<td>13.0</td>
+<td>1.3604601980563753</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::ReplaceOpIfTensorOperandEmpty<mlir::iree_compiler::IREE::Flow::TensorSliceOp, 0></td>
+<td>55.73199999999253 MILLIS</td>
+<td>12112</td>
+<td>4.601387054160546 MICROS</td>
+<td>3.0</td>
+<td>19.0</td>
+<td>1.4218262502368728</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::AsyncExecuteOp></td>
+<td>47.62899999999738 MILLIS</td>
+<td>8908</td>
+<td>5.346766951054937 MICROS</td>
+<td>3.0</td>
+<td>81.0</td>
+<td>1.588429088734942</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::TieRegionResults<mlir::iree_compiler::IREE::Stream::AsyncExecuteOp></td>
+<td>46.963999999996346 MILLIS</td>
+<td>8908</td>
+<td>5.27211495285096 MICROS</td>
+<td>4.0</td>
+<td>60.0</td>
+<td>2.1979496444839106</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::CloneCapturedAsyncExecuteSubviewOps</td>
+<td>46.20899999999712 MILLIS</td>
+<td>8908</td>
+<td>5.187359676694783 MICROS</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>1.445705619937204</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideImmediateTimepointWait<mlir::iree_compiler::IREE::Stream::AsyncExecuteOp></td>
+<td>45.6499999999974 MILLIS</td>
+<td>8908</td>
+<td>5.124607094746004 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.503016205820706</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ChainDependentAwaits<mlir::iree_compiler::IREE::Stream::AsyncExecuteOp></td>
+<td>44.75699999999703 MILLIS</td>
+<td>8908</td>
+<td>5.0243601257293475 MICROS</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>1.5763645578394738</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideNoOpAsyncExecuteOp</td>
+<td>44.531999999997375 MILLIS</td>
+<td>8908</td>
+<td>4.999101930848381 MICROS</td>
+<td>3.0</td>
+<td>18.0</td>
+<td>1.4944889336555591</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TruncIShrUIMulIToMulSIExtended</td>
+<td>44.347999999997946 MILLIS</td>
+<td>8760</td>
+<td>5.062557077625336 MICROS</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>1.3036530480059916</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IndexCastOfIndexCast</td>
+<td>43.55399999999839 MILLIS</td>
+<td>8564</td>
+<td>5.085707613264642 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.259206665307553</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TruncIExtUIToExtUI</td>
+<td>42.98699999999823 MILLIS</td>
+<td>8760</td>
+<td>4.907191780821717 MICROS</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>1.2657927884583473</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TruncIShrUIMulIToMulUIExtended</td>
+<td>42.966999999998194 MILLIS</td>
+<td>8760</td>
+<td>4.904908675798881 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.3181118417183866</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TruncIShrSIToTrunciShrUI</td>
+<td>42.83499999999814 MILLIS</td>
+<td>8760</td>
+<td>4.889840182648189 MICROS</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>1.2776930452339637</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TruncIExtSIToExtSI</td>
+<td>42.72399999999803 MILLIS</td>
+<td>8760</td>
+<td>4.877168949771464 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.3477460378041222</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IndexCastOfExtSI</td>
+<td>41.66099999999878 MILLIS</td>
+<td>8564</td>
+<td>4.864666043904575 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.2844118026394453</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::FoldTensorUpdateOpWithCasts</td>
+<td>39.02699999999982 MILLIS</td>
+<td>8064</td>
+<td>4.839657738095217 MICROS</td>
+<td>3.0</td>
+<td>19.0</td>
+<td>1.3377752208750306</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::ReplaceOpIfTensorOperandZeroElements<mlir::iree_compiler::IREE::Flow::TensorUpdateOp, 0></td>
+<td>37.957999999999664 MILLIS</td>
+<td>8064</td>
+<td>4.707093253968212 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.3855186708722105</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ReplaceOpIfTensorUpdateOperandZeroElements</td>
+<td>36.99900000000028 MILLIS</td>
+<td>8064</td>
+<td>4.588169642857178 MICROS</td>
+<td>3.0</td>
+<td>26.0</td>
+<td>1.431180527180129</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ReplaceEmptyTensorStaticShapeDims</td>
+<td>32.30000000000222 MILLIS</td>
+<td>6298</td>
+<td>5.128612257859991 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.3780375997799073</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ReuseDispatchTensorLoadShapeDims</td>
+<td>27.65000000000187 MILLIS</td>
+<td>5382</td>
+<td>5.137495354887007 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.3925168590652908</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::DispatchTensorLoadOpWithOffsetSizesAndStridesConstantArgumentFolder</td>
+<td>26.973000000001935 MILLIS</td>
+<td>5382</td>
+<td>5.011705685619089 MICROS</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>1.4996755837580167</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ConvertDispatchInputLoadOfTensorToSubTensor</td>
+<td>26.420000000002084 MILLIS</td>
+<td>5382</td>
+<td>4.908955778521383 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.5178480049833298</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::DispatchTensorStoreOpWithOffsetSizesAndStridesConstantArgumentFolder</td>
+<td>21.921000000000877 MILLIS</td>
+<td>4024</td>
+<td>5.4475646123262615 MICROS</td>
+<td>3.0</td>
+<td>17.0</td>
+<td>1.3471618178665925</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::FoldCastOpIntoDispatchStoreOp</td>
+<td>20.350000000000904 MILLIS</td>
+<td>4024</td>
+<td>5.057157057654301 MICROS</td>
+<td>3.0</td>
+<td>84.0</td>
+<td>1.9423125395200556</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ReuseDispatchTensorStoreShapeDims</td>
+<td>20.131000000000782 MILLIS</td>
+<td>4024</td>
+<td>5.002733598409737 MICROS</td>
+<td>3.0</td>
+<td>18.0</td>
+<td>1.5912417105879006</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::BubbleUpOrdinalOp</td>
+<td>19.224000000000608 MILLIS</td>
+<td>3772</td>
+<td>5.096500530222855 MICROS</td>
+<td>3.0</td>
+<td>73.0</td>
+<td>1.7325767873980416</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::AsyncCloneOp></td>
+<td>15.192999999999962 MILLIS</td>
+<td>3000</td>
+<td>5.0643333333333205 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.4681716142501575</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::PropagateClonableOps<mlir::iree_compiler::IREE::Stream::AsyncCloneOp></td>
+<td>15.028999999999936 MILLIS</td>
+<td>3000</td>
+<td>5.009666666666646 MICROS</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>1.476563540417418</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ResolveShapedDim</td>
+<td>13.686 MILLIS</td>
+<td>4</td>
+<td>3.4215 MILLIS</td>
+<td>0.007</td>
+<td>13.656</td>
+<td>5.908891880039776</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IndexCastUIOfIndexCastUI</td>
+<td>13.639000000000001 MILLIS</td>
+<td>2706</td>
+<td>5.040280857354029 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.322751251958073</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IndexCastUIOfExtUI</td>
+<td>13.231999999999873 MILLIS</td>
+<td>2706</td>
+<td>4.889874353288941 MICROS</td>
+<td>3.0</td>
+<td>38.0</td>
+<td>1.4138454004729848</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::SinkAllocaLikeOpToConsumers<mlir::iree_compiler::IREE::Stream::AsyncSplatOp></td>
+<td>6.792999999999912 MILLIS</td>
+<td>526</td>
+<td>12.914448669201354 MICROS</td>
+<td>4.0</td>
+<td>4094.9999999999995</td>
+<td>178.16311976306105</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::MulIMulIConstant</td>
+<td>6.705999999999867 MILLIS</td>
+<td>1294</td>
+<td>5.182380216383205 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.2589580923571018</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::OrOfExtUI</td>
+<td>6.671999999999837 MILLIS</td>
+<td>1350</td>
+<td>4.942222222222101 MICROS</td>
+<td>3.0</td>
+<td>12.0</td>
+<td>1.2850978730085487</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::OrOfExtSI</td>
+<td>6.634999999999849 MILLIS</td>
+<td>1350</td>
+<td>4.914814814814703 MICROS</td>
+<td>3.0</td>
+<td>13.0</td>
+<td>1.3129564331451637</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::SinkAwaitToFirstConsumer</td>
+<td>5.4529999999999905 MILLIS</td>
+<td>173</td>
+<td>31.52023121387278 MICROS</td>
+<td>4.0</td>
+<td>4554.0</td>
+<td>344.83922013162413</td>
+</tr>
+<tr>
+<td>pattern.</td>
+<td>3.1829999999999776 MILLIS</td>
+<td>607</td>
+<td>5.2438220757825 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.3811596092420517</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::NarrowFillPattern<mlir::iree_compiler::IREE::Stream::AsyncSplatOp></td>
+<td>2.7139999999999933 MILLIS</td>
+<td>526</td>
+<td>5.159695817490482 MICROS</td>
+<td>4.0</td>
+<td>13.0</td>
+<td>1.4172924109708547</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::AsyncSplatOp></td>
+<td>2.634999999999999 MILLIS</td>
+<td>526</td>
+<td>5.009505703422051 MICROS</td>
+<td>3.0</td>
+<td>12.0</td>
+<td>1.4805150626481176</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::FoldParameterLoadTargetSubviews</td>
+<td>1.6060000000000003 MILLIS</td>
+<td>64</td>
+<td>25.093750000000004 MICROS</td>
+<td>18.0</td>
+<td>44.0</td>
+<td>6.793192249414106</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::NarrowFillPattern<mlir::iree_compiler::IREE::Stream::TensorSplatOp></td>
+<td>1.2760000000000027 MILLIS</td>
+<td>254</td>
+<td>5.023622047244104 MICROS</td>
+<td>4.0</td>
+<td>12.0</td>
+<td>1.391563822790625</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::ReplaceOpIfTensorResultZeroElements<mlir::iree_compiler::IREE::Flow::TensorSplatOp, 0></td>
+<td>1.2570000000000028 MILLIS</td>
+<td>254</td>
+<td>4.948818897637806 MICROS</td>
+<td>3.0</td>
+<td>11.0</td>
+<td>1.3780258698262906</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::TensorSplatOp></td>
+<td>1.2400000000000022 MILLIS</td>
+<td>254</td>
+<td>4.881889763779537 MICROS</td>
+<td>3.0</td>
+<td>11.0</td>
+<td>1.3782002027541296</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::FoldSplatReshapeIntoSplat</td>
+<td>1.1700000000000021 MILLIS</td>
+<td>254</td>
+<td>4.606299212598434 MICROS</td>
+<td>3.0</td>
+<td>12.0</td>
+<td>1.3260412952736234</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::TimepointAwaitOp></td>
+<td>0.936000000000001 MILLIS</td>
+<td>173</td>
+<td>5.410404624277463 MICROS</td>
+<td>4.0</td>
+<td>13.0</td>
+<td>1.686157981333076</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::HAL::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::HAL::FenceCreateOp></td>
+<td>0.9050000000000012 MILLIS</td>
+<td>164</td>
+<td>5.5182926829268375 MICROS</td>
+<td>4.0</td>
+<td>14.0</td>
+<td>1.5360408442851499</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::GroupAwaitsByTimepoint</td>
+<td>888.0000000000008 MICROS</td>
+<td>173</td>
+<td>5.132947976878617 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.5983050931233282</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubIRHSAddConstant</td>
+<td>862.0000000000013 MICROS</td>
+<td>160</td>
+<td>5.387500000000007 MICROS</td>
+<td>3.0</td>
+<td>11.0</td>
+<td>1.4141583185767819</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideImmediateHostAwaits</td>
+<td>852.0000000000007 MICROS</td>
+<td>173</td>
+<td>4.924855491329484 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.3080964446847745</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubILHSSubConstantRHS</td>
+<td>846.0000000000008 MICROS</td>
+<td>160</td>
+<td>5.287500000000005 MICROS</td>
+<td>3.0</td>
+<td>11.0</td>
+<td>1.6100756969782393</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::FoldDuplicateAwaitResources</td>
+<td>844.0000000000007 MICROS</td>
+<td>173</td>
+<td>4.87861271676301 MICROS</td>
+<td>3.0</td>
+<td>13.0</td>
+<td>1.1983873244871175</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubILHSAddConstant</td>
+<td>827.0000000000009 MICROS</td>
+<td>160</td>
+<td>5.1687500000000055 MICROS</td>
+<td>4.0</td>
+<td>12.0</td>
+<td>1.3611662049507143</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::SinkSubviewsAcrossAwaits</td>
+<td>821.0000000000005 MICROS</td>
+<td>173</td>
+<td>4.745664739884396 MICROS</td>
+<td>3.0</td>
+<td>11.0</td>
+<td>1.150042091601901</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubIRHSSubConstantRHS</td>
+<td>808.0000000000003 MICROS</td>
+<td>160</td>
+<td>5.0500000000000025 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.4949916387725877</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubIRHSSubConstantLHS</td>
+<td>799.0000000000007 MICROS</td>
+<td>160</td>
+<td>4.993750000000005 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.2869385911922568</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubILHSSubConstantLHS</td>
+<td>796.0000000000008 MICROS</td>
+<td>160</td>
+<td>4.975000000000005 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.0425329730996082</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubISubILHSRHSLHS</td>
+<td>746.0000000000003 MICROS</td>
+<td>160</td>
+<td>4.662500000000002 MICROS</td>
+<td>3.0</td>
+<td>9.0</td>
+<td>0.7736884062721374</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::EraseUnusedCallOp<mlir::iree_compiler::IREE::VM::CallOp></td>
+<td>659.0000000000008 MICROS</td>
+<td>120</td>
+<td>5.491666666666673 MICROS</td>
+<td>4.0</td>
+<td>13.0</td>
+<td>1.5491709252227233</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::HAL::(anonymous namespace)::ElideEmptyFenceAwait</td>
+<td>609.0000000000001 MICROS</td>
+<td>104</td>
+<td>5.855769230769233 MICROS</td>
+<td>4.0</td>
+<td>30.0</td>
+<td>2.7645359508728826</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::HAL::(anonymous namespace)::DeduplicateFenceAwaitFences</td>
+<td>585.0000000000008 MICROS</td>
+<td>104</td>
+<td>5.625000000000007 MICROS</td>
+<td>4.0</td>
+<td>23.0</td>
+<td>2.3129547369943255</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ChainTimepoints</td>
+<td>584.0 MICROS</td>
+<td>108</td>
+<td>5.407407407407407 MICROS</td>
+<td>4.0</td>
+<td>24.0</td>
+<td>2.54601008492459</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideImmediateBarrier</td>
+<td>557.0000000000001 MICROS</td>
+<td>108</td>
+<td>5.157407407407408 MICROS</td>
+<td>3.0</td>
+<td>25.0</td>
+<td>2.5208832852242176</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::FoldZeroConstPrimitive<mlir::IntegerAttr, mlir::iree_compiler::IREE::VM::ConstI32Op, mlir::iree_compiler::IREE::VM::ConstI32ZeroOp></td>
+<td>521.0000000000002 MICROS</td>
+<td>98</td>
+<td>5.316326530612247 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.5225980667824113</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::FoldSubviewsIntoCmdFillOp</td>
+<td>380.0000000000001 MICROS</td>
+<td>72</td>
+<td>5.2777777777777795 MICROS</td>
+<td>4.0</td>
+<td>12.0</td>
+<td>1.617802197617886</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::HAL::(anonymous namespace)::FoldCommandBufferDispatchBufferSubspan<mlir::iree_compiler::IREE::HAL::CommandBufferDispatchOp></td>
+<td>354.00000000000006 MICROS</td>
+<td>60</td>
+<td>5.9 MICROS</td>
+<td>4.0</td>
+<td>13.0</td>
+<td>2.0872629605937645</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::ParameterLoadOp></td>
+<td>342.00000000000034 MICROS</td>
+<td>64</td>
+<td>5.343750000000005 MICROS</td>
+<td>5.0</td>
+<td>9.0</td>
+<td>0.7749747979773023</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AndOfExtUI</td>
+<td>333.00000000000006 MICROS</td>
+<td>62</td>
+<td>5.370967741935485 MICROS</td>
+<td>4.0</td>
+<td>13.0</td>
+<td>1.5474627617359376</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::HAL::(anonymous namespace)::FoldBufferViewCreateSubspan</td>
+<td>332.0000000000002 MICROS</td>
+<td>60</td>
+<td>5.533333333333337 MICROS</td>
+<td>4.0</td>
+<td>14.0</td>
+<td>1.6779617264870865</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::EraseUnusedCallOp<mlir::iree_compiler::IREE::VM::CallVariadicOp></td>
+<td>328.00000000000017 MICROS</td>
+<td>60</td>
+<td>5.4666666666666694 MICROS</td>
+<td>4.0</td>
+<td>13.0</td>
+<td>1.5107025591499434</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::ConvertNonVariadicToCallOp</td>
+<td>311.00000000000006 MICROS</td>
+<td>60</td>
+<td>5.1833333333333345 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.6277967386078072</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AndOfExtSI</td>
+<td>307.0000000000002 MICROS</td>
+<td>62</td>
+<td>4.9516129032258105 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.0840101677126686</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideImmediateTimepointWait<mlir::iree_compiler::IREE::Stream::ParameterLoadOp></td>
+<td>305.99999999999983 MICROS</td>
+<td>64</td>
+<td>4.781249999999997 MICROS</td>
+<td>4.0</td>
+<td>10.0</td>
+<td>1.5048748909793206</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::FoldZeroConstPrimitive<mlir::IntegerAttr, mlir::iree_compiler::IREE::VM::ConstI64Op, mlir::iree_compiler::IREE::VM::ConstI64ZeroOp></td>
+<td>261.0000000000001 MICROS</td>
+<td>46</td>
+<td>5.673913043478263 MICROS</td>
+<td>4.0</td>
+<td>17.0</td>
+<td>2.4764486127454743</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::PassThroughChainExternal</td>
+<td>190.00000000000009 MICROS</td>
+<td>32</td>
+<td>5.937500000000003 MICROS</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>0.5555121510821961</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CombineNestedIfs</td>
+<td>137.00000000000003 MICROS</td>
+<td>26</td>
+<td>5.26923076923077 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.3172725991956713</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveUnusedResults</td>
+<td>137.00000000000003 MICROS</td>
+<td>26</td>
+<td>5.26923076923077 MICROS</td>
+<td>4.0</td>
+<td>14.0</td>
+<td>2.0858072096855786</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CombineIfs</td>
+<td>134.00000000000003 MICROS</td>
+<td>26</td>
+<td>5.153846153846155 MICROS</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>0.36080121229410206</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertTrivialIfToSelect</td>
+<td>130.00000000000006 MICROS</td>
+<td>26</td>
+<td>5.000000000000001 MICROS</td>
+<td>4.0</td>
+<td>13.0</td>
+<td>1.709700828530219</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveEmptyElseBranch</td>
+<td>130.00000000000003 MICROS</td>
+<td>26</td>
+<td>5.0 MICROS</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>0.5547001962252374</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyConstCondBranchPred</td>
+<td>126.00000000000003 MICROS</td>
+<td>24</td>
+<td>5.250000000000002 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.8085445345175573</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveStaticCondition</td>
+<td>122.00000000000001 MICROS</td>
+<td>26</td>
+<td>4.6923076923076925 MICROS</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>0.6056929133855267</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyCondBranchIdenticalSuccessors</td>
+<td>122.00000000000001 MICROS</td>
+<td>24</td>
+<td>5.083333333333334 MICROS</td>
+<td>4.0</td>
+<td>10.0</td>
+<td>1.1873172373979202</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyPassThroughCondBranch</td>
+<td>122.0 MICROS</td>
+<td>24</td>
+<td>5.083333333333334 MICROS</td>
+<td>4.0</td>
+<td>9.0</td>
+<td>0.9965217285917873</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConditionPropagation</td>
+<td>119.00000000000001 MICROS</td>
+<td>26</td>
+<td>4.5769230769230775 MICROS</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>0.5665738408713931</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyCondBranchFromCondBranchOnSameCondition</td>
+<td>118.00000000000001 MICROS</td>
+<td>24</td>
+<td>4.916666666666667 MICROS</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>0.7021791477646993</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CondBranchTruthPropagation</td>
+<td>118.00000000000001 MICROS</td>
+<td>24</td>
+<td>4.916666666666667 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.41175619550812</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ReplaceIfYieldWithConditionOrValue</td>
+<td>116.00000000000003 MICROS</td>
+<td>26</td>
+<td>4.461538461538463 MICROS</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>0.5704768066996666</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::SimplifySameTargetCondBranchOp</td>
+<td>108.0 MICROS</td>
+<td>20</td>
+<td>5.4 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.907878402833893</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::SwapInvertedCondBranchOpTargets</td>
+<td>104.00000000000001 MICROS</td>
+<td>20</td>
+<td>5.200000000000001 MICROS</td>
+<td>4.0</td>
+<td>10.0</td>
+<td>1.6911534525287755</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::SimplifyConstCondBranchPred</td>
+<td>97.0 MICROS</td>
+<td>20</td>
+<td>4.8500000000000005 MICROS</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>0.7262919523166986</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SimplifyAffineOp<mlir::affine::AffineApplyOp></td>
+<td>96.0 MICROS</td>
+<td>12</td>
+<td>8.0 MICROS</td>
+<td>5.0</td>
+<td>13.0</td>
+<td>2.6457513110645907</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::HAL::(anonymous namespace)::DeduplicateTensorBarrierSources</td>
+<td>77.0 MICROS</td>
+<td>12</td>
+<td>6.416666666666666 MICROS</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>0.6400954789890462</td>
+</tr>
+<tr>
+<td>pattern.CmpFIntToFPConst</td>
+<td>50.99999999999999 MICROS</td>
+<td>8</td>
+<td>6.374999999999999 MICROS</td>
+<td>5.0</td>
+<td>11.0</td>
+<td>1.7984368212422743</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::HAL::(anonymous namespace)::MergeExecutableConstantBlocks</td>
+<td>43.0 MICROS</td>
+<td>8</td>
+<td>5.375 MICROS</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>0.48412291827592796</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::SimplifyBrToBlockWithSinglePred</td>
+<td>29.0 MICROS</td>
+<td>6</td>
+<td>4.833333333333333 MICROS</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>0.37267799624997155</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::SimplifyPassThroughBr</td>
+<td>29.0 MICROS</td>
+<td>6</td>
+<td>4.833333333333333 MICROS</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>0.6871842709362794</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::FoldDimOp<mlir::tensor::DimOp></td>
+<td>24.0 MICROS</td>
+<td>4</td>
+<td>6.0 MICROS</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfToTensorFolder</td>
+<td>24.0 MICROS</td>
+<td>4</td>
+<td>6.0 MICROS</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldEmptyTensorWithDimOp</td>
+<td>23.000000000000004 MICROS</td>
+<td>4</td>
+<td>5.750000000000001 MICROS</td>
+<td>4.0</td>
+<td>9.0</td>
+<td>1.9202864369671502</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldDimOfExpandShape</td>
+<td>23.0 MICROS</td>
+<td>4</td>
+<td>5.75 MICROS</td>
+<td>4.0</td>
+<td>10.0</td>
+<td>2.4874685927665507</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldDimOfAllocTensorOp</td>
+<td>22.0 MICROS</td>
+<td>4</td>
+<td>5.5 MICROS</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>0.5000000000000056</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfCastOp</td>
+<td>21.000000000000004 MICROS</td>
+<td>4</td>
+<td>5.250000000000001 MICROS</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>0.4330127018922186</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldDimOfCollapseShape</td>
+<td>21.0 MICROS</td>
+<td>4</td>
+<td>5.25 MICROS</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>0.43301270189222607</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfReshapeOp</td>
+<td>21.0 MICROS</td>
+<td>4</td>
+<td>5.25 MICROS</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>0.43301270189222607</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfForallOp</td>
+<td>21.0 MICROS</td>
+<td>4</td>
+<td>5.25 MICROS</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>0.43301270189222607</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::SwapInvertedCmpOps<mlir::iree_compiler::IREE::VM::CmpEQI64Op, mlir::iree_compiler::IREE::VM::CmpNEI64Op></td>
+<td>20.0 MICROS</td>
+<td>4</td>
+<td>5.0 MICROS</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::FuseFMAOp<mlir::iree_compiler::IREE::VM::MulI64Op, mlir::iree_compiler::IREE::VM::AddI64Op, mlir::iree_compiler::IREE::VM::FMAI64Op></td>
+<td>19.0 MICROS</td>
+<td>4</td>
+<td>4.75 MICROS</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>0.4330127018922186</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfDestStyleOp</td>
+<td>18.0 MICROS</td>
+<td>4</td>
+<td>4.5 MICROS</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>0.4999999999999991</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::InlineConstGlobalInitializer</td>
+<td>12.0 MICROS</td>
+<td>2</td>
+<td>6.0 MICROS</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::VM::(anonymous namespace)::DropEmptyInitializerOp</td>
+<td>11.0 MICROS</td>
+<td>2</td>
+<td>5.5 MICROS</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>0.5000000000000056</td>
+</tr>
+</table>
+</body>
+</html>

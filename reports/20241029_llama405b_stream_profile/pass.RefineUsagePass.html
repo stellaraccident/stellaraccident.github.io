@@ -1,0 +1,195 @@
+<html>
+<head><title>Series report: pass.RefineUsagePass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>144.16163500000002 SECONDS</td>
+<td>4</td>
+<td>36.040408750000005 SECONDS</td>
+<td>0.000232</td>
+<td>141.32309</td>
+<td>60.796015326911125</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyFuncOp</td>
+<td>134.58758100002055 SECONDS</td>
+<td>175942</td>
+<td>764.9542519695158 MICROS</td>
+<td>4.0</td>
+<td>6881.0</td>
+<td>53.65082364977246</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyStreamableOp<mlir::iree_compiler::IREE::Stream::AsyncDispatchOp></td>
+<td>1.1559969999999662 SECONDS</td>
+<td>233345</td>
+<td>4.954025155884918 MICROS</td>
+<td>3.0</td>
+<td>280.0</td>
+<td>2.1334435746156775</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyStreamableOp<mlir::iree_compiler::IREE::Stream::AsyncTransferOp></td>
+<td>0.8846670000005681 SECONDS</td>
+<td>173689</td>
+<td>5.093396818454641 MICROS</td>
+<td>3.0</td>
+<td>276.0</td>
+<td>1.9339050680445475</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ElideUnusedOp<mlir::iree_compiler::IREE::Stream::AsyncTransferOp></td>
+<td>0.7854840000005149 SECONDS</td>
+<td>173689</td>
+<td>4.522358928893108 MICROS</td>
+<td>2.0</td>
+<td>271.0</td>
+<td>2.2586156084658966</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::RedundantTransferElision</td>
+<td>0.5269419999997487 SECONDS</td>
+<td>110016</td>
+<td>4.789685136705104 MICROS</td>
+<td>2.0</td>
+<td>201.0</td>
+<td>1.505298158133753</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::IntermediateTransferElision</td>
+<td>0.4273379999997915 SECONDS</td>
+<td>90640</td>
+<td>4.714673433360454 MICROS</td>
+<td>2.0</td>
+<td>274.0</td>
+<td>2.5220582129475857</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyStreamableOp<mlir::iree_compiler::IREE::Stream::AsyncAllocaOp></td>
+<td>0.18981000000010304 SECONDS</td>
+<td>39384</td>
+<td>4.819469835468795 MICROS</td>
+<td>3.0</td>
+<td>133.0</td>
+<td>1.7562490392369103</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyStreamableOp<mlir::iree_compiler::IREE::Stream::AsyncConstantOp></td>
+<td>88.90600000001142 MILLIS</td>
+<td>18192</td>
+<td>4.887093227793064 MICROS</td>
+<td>3.0</td>
+<td>74.0</td>
+<td>1.4297937292773157</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyStreamableOp<mlir::iree_compiler::IREE::Stream::AsyncUpdateOp></td>
+<td>59.405999999991295 MILLIS</td>
+<td>12144</td>
+<td>4.891798418971615 MICROS</td>
+<td>3.0</td>
+<td>19.0</td>
+<td>1.5420068649309218</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyStreamableOp<mlir::iree_compiler::IREE::Stream::AsyncCloneOp></td>
+<td>15.009000000000018 MILLIS</td>
+<td>3000</td>
+<td>5.003000000000006 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.5946758291266074</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyInitializerOp</td>
+<td>14.225000000000136 MILLIS</td>
+<td>3170</td>
+<td>4.487381703470074 MICROS</td>
+<td>3.0</td>
+<td>26.0</td>
+<td>1.2935163807130416</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyStreamableOp<mlir::iree_compiler::IREE::Stream::AsyncSplatOp></td>
+<td>1.908000000000005 MILLIS</td>
+<td>382</td>
+<td>4.994764397905772 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.6228001854429621</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyStreamableOp<mlir::iree_compiler::IREE::Stream::TensorImportOp></td>
+<td>342.0000000000002 MICROS</td>
+<td>64</td>
+<td>5.3437500000000036 MICROS</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>2.513828939585976</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyGenericOp<mlir::arith::SelectOp></td>
+<td>300.00000000000017 MICROS</td>
+<td>56</td>
+<td>5.35714285714286 MICROS</td>
+<td>3.0</td>
+<td>11.0</td>
+<td>1.5518257844571655</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyGenericOp<mlir::iree_compiler::IREE::Stream::TimepointBarrierOp></td>
+<td>276.0 MICROS</td>
+<td>56</td>
+<td>4.928571428571429 MICROS</td>
+<td>3.0</td>
+<td>11.0</td>
+<td>1.85988808089879</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyStreamableOp<mlir::iree_compiler::IREE::Stream::TensorExportOp></td>
+<td>76.0 MICROS</td>
+<td>16</td>
+<td>4.75 MICROS</td>
+<td>4.0</td>
+<td>7.0</td>
+<td>1.089724735885168</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Stream::(anonymous namespace)::ApplyGenericOp<mlir::iree_compiler::IREE::Util::CallOp></td>
+<td>23.0 MICROS</td>
+<td>4</td>
+<td>5.75 MICROS</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>0.4330127018922186</td>
+</tr>
+</table>
+</body>
+</html>

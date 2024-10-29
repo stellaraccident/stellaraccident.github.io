@@ -1,0 +1,264 @@
+<html>
+<head><title>Series report: pass.ConvertTorchToLinalg</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertElementwiseOp</td>
+<td>2.5663959999993495 SECONDS</td>
+<td>287893</td>
+<td>8.914409172850155 MICROS</td>
+<td>3.0</td>
+<td>6543.0</td>
+<td>18.640554958410394</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenScalarToTensorLike</td>
+<td>2.1852760000004503 SECONDS</td>
+<td>287893</td>
+<td>7.590584001696638 MICROS</td>
+<td>3.0</td>
+<td>3936.0000000000005</td>
+<td>14.131336863466638</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertReductionOp</td>
+<td>1.2272629999995535 SECONDS</td>
+<td>183900</td>
+<td>6.673534529633243 MICROS</td>
+<td>3.0</td>
+<td>844.0</td>
+<td>12.914314383676789</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenViewOp</td>
+<td>0.875108999999921 SECONDS</td>
+<td>63771</td>
+<td>13.722679587899217 MICROS</td>
+<td>4.0</td>
+<td>2431.0</td>
+<td>13.688945279031648</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenSliceScatterOp</td>
+<td>0.44144900000002507 SECONDS</td>
+<td>16128</td>
+<td>27.371589781747584 MICROS</td>
+<td>13.0</td>
+<td>6688.0</td>
+<td>54.592812053232585</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenSliceTensorOp</td>
+<td>0.32549799999999673 SECONDS</td>
+<td>7074</td>
+<td>46.013288097257096 MICROS</td>
+<td>21.0</td>
+<td>3363.0</td>
+<td>43.25877442803156</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenMmOp</td>
+<td>0.24951099999995469 SECONDS</td>
+<td>13120</td>
+<td>19.017606707313618 MICROS</td>
+<td>10.0</td>
+<td>330.0</td>
+<td>11.474378048039679</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenBroadcastToOp</td>
+<td>0.20649000000003673 SECONDS</td>
+<td>18399</td>
+<td>11.222892548510066 MICROS</td>
+<td>5.0</td>
+<td>563.0</td>
+<td>8.443366987913251</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenUnsqueezeOp</td>
+<td>0.15458600000001718 SECONDS</td>
+<td>17541</td>
+<td>8.812838492675287 MICROS</td>
+<td>4.0</td>
+<td>288.0</td>
+<td>9.527101662286084</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenPermuteOp</td>
+<td>0.15417000000000466 SECONDS</td>
+<td>14128</td>
+<td>10.912372593431813 MICROS</td>
+<td>6.0</td>
+<td>492.00000000000006</td>
+<td>9.844643721299974</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenTransposeIntOp</td>
+<td>0.14292900000000347 SECONDS</td>
+<td>10080</td>
+<td>14.17946428571463 MICROS</td>
+<td>6.0</td>
+<td>365.0</td>
+<td>14.699895897438093</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenFlattenUsingIntsOp</td>
+<td>0.14051899999999826 SECONDS</td>
+<td>16262</td>
+<td>8.640942073545583 MICROS</td>
+<td>4.0</td>
+<td>927.0</td>
+<td>10.968780006908954</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenBmmOp</td>
+<td>0.12235700000000012 SECONDS</td>
+<td>5040</td>
+<td>24.277182539682563 MICROS</td>
+<td>12.0</td>
+<td>3294.0</td>
+<td>48.077524564523195</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenUnflattenIntOp</td>
+<td>84.81099999999539 MILLIS</td>
+<td>11098</td>
+<td>7.642007568930924 MICROS</td>
+<td>4.0</td>
+<td>448.0</td>
+<td>9.033730149684878</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenViewAsComplexOp</td>
+<td>63.549000000000326 MILLIS</td>
+<td>4032</td>
+<td>15.761160714285795 MICROS</td>
+<td>8.0</td>
+<td>176.0</td>
+<td>8.16771430609987</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenSizeIntOp</td>
+<td>62.4320000000003 MILLIS</td>
+<td>5048</td>
+<td>12.367670364500853 MICROS</td>
+<td>5.0</td>
+<td>2081.0</td>
+<td>32.8044909780468</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenViewAsRealOp</td>
+<td>56.15799999999983 MILLIS</td>
+<td>4032</td>
+<td>13.928075396825356 MICROS</td>
+<td>6.0</td>
+<td>233.0</td>
+<td>11.700685329027257</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenMinMaxDimOp<mlir::torch::Torch::AtenMaxDimOp></td>
+<td>49.18100000000029 MILLIS</td>
+<td>2016</td>
+<td>24.395337301587443 MICROS</td>
+<td>11.0</td>
+<td>295.0</td>
+<td>13.472744314740066</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenIndexSelectOp</td>
+<td>34.72000000000018 MILLIS</td>
+<td>2016</td>
+<td>17.222222222222307 MICROS</td>
+<td>8.0</td>
+<td>236.0</td>
+<td>11.870967244318958</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenCatOp</td>
+<td>31.187999999999967 MILLIS</td>
+<td>4032</td>
+<td>7.735119047619039 MICROS</td>
+<td>4.0</td>
+<td>1856.0</td>
+<td>29.549163310774276</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenGatherOp</td>
+<td>19.419000000000054 MILLIS</td>
+<td>1008</td>
+<td>19.26488095238101 MICROS</td>
+<td>9.0</td>
+<td>271.0</td>
+<td>14.137655055277593</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenViewOpStrict</td>
+<td>15.84800000000014 MILLIS</td>
+<td>2016</td>
+<td>7.86111111111118 MICROS</td>
+<td>4.0</td>
+<td>72.0</td>
+<td>3.2321787880332784</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenArangeStartStepOp</td>
+<td>5.907999999999999 MILLIS</td>
+<td>385</td>
+<td>15.345454545454542 MICROS</td>
+<td>7.0</td>
+<td>335.0</td>
+<td>19.538111577482898</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenEmptyMemoryFormatOp</td>
+<td>2.364999999999996 MILLIS</td>
+<td>142</td>
+<td>16.65492957746476 MICROS</td>
+<td>7.0</td>
+<td>380.0</td>
+<td>39.862447606994735</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenPolarOp</td>
+<td>2.043 MILLIS</td>
+<td>127</td>
+<td>16.086614173228348 MICROS</td>
+<td>8.0</td>
+<td>195.0</td>
+<td>17.837862774971033</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenEmbeddingOp</td>
+<td>612.9999999999999 MICROS</td>
+<td>16</td>
+<td>38.31249999999999 MICROS</td>
+<td>15.0</td>
+<td>260.0</td>
+<td>61.50479529069257</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConvertAtenIndexTensorHackedTwinOp</td>
+<td>152.0 MICROS</td>
+<td>8</td>
+<td>19.0 MICROS</td>
+<td>16.0</td>
+<td>28.0</td>
+<td>4.213074886588169</td>
+</tr>
+</table>
+</body>
+</html>

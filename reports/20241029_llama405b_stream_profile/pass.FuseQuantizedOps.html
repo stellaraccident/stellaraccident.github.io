@@ -1,0 +1,87 @@
+<html>
+<head><title>Series report: pass.FuseQuantizedOps</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>3.07611 SECONDS</td>
+<td>2</td>
+<td>1.538055 SECONDS</td>
+<td>1.407532</td>
+<td>1.668578</td>
+<td>0.13052300000000025</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveUnused<mlir::torch::Torch::AtenViewOp></td>
+<td>1.5155429999996148 SECONDS</td>
+<td>86091</td>
+<td>17.6039655713096 MICROS</td>
+<td>3.0</td>
+<td>1101.0</td>
+<td>23.580952755291445</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::QuantizeOperandsPastCommutingOps<mlir::torch::Torch::AtenMmOp, 4></td>
+<td>0.2174710000000106 SECONDS</td>
+<td>13120</td>
+<td>16.575533536586175 MICROS</td>
+<td>3.0</td>
+<td>461.0</td>
+<td>18.222618002907122</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveUnused<mlir::torch::Torch::AtenTransposeIntOp></td>
+<td>0.1826160000000072 SECONDS</td>
+<td>10080</td>
+<td>18.11666666666738 MICROS</td>
+<td>3.0</td>
+<td>632.0</td>
+<td>23.725159942256777</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RemoveUnused<mlir::torch::Torch::AtenSliceTensorOp></td>
+<td>0.1563730000000028 SECONDS</td>
+<td>7074</td>
+<td>22.10531523890342 MICROS</td>
+<td>3.0</td>
+<td>698.0</td>
+<td>35.71653260298317</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::QuantizeAccumulator<mlir::torch::Torch::AtenMmOp></td>
+<td>0.15601900000001506 SECONDS</td>
+<td>13120</td>
+<td>11.89169207317188 MICROS</td>
+<td>2.0</td>
+<td>381.0</td>
+<td>15.399930448139663</td>
+</tr>
+</table>
+</body>
+</html>

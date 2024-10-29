@@ -1,0 +1,78 @@
+<html>
+<head><title>Series report: pass.SinkReshapesPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>16.921039999999998 SECONDS</td>
+<td>1031</td>
+<td>16.41225994180407 MILLIS</td>
+<td>0.009000000000000001</td>
+<td>6451.354</td>
+<td>295.012009676695</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldWithProducerReshapeOpByCollapsing</td>
+<td>10.156726999993783 SECONDS</td>
+<td>115208</td>
+<td>88.15991077003144 MICROS</td>
+<td>3.0</td>
+<td>37926.0</td>
+<td>838.2580859313568</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldEmptyTensorWithReshapeOp<mlir::tensor::CollapseShapeOp></td>
+<td>1.838174000000259 SECONDS</td>
+<td>85872</td>
+<td>21.405976336876506 MICROS</td>
+<td>3.0</td>
+<td>54005.0</td>
+<td>459.2560242430917</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldEmptyTensorWithReshapeOp<mlir::tensor::ExpandShapeOp></td>
+<td>0.9730410000000558 SECONDS</td>
+<td>52520</td>
+<td>18.527056359483165 MICROS</td>
+<td>3.0</td>
+<td>29996.0</td>
+<td>340.2308592930395</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldEmptyTensorWithExtractSliceOp</td>
+<td>0.20041500000003587 SECONDS</td>
+<td>20234</td>
+<td>9.904863101711767 MICROS</td>
+<td>3.0</td>
+<td>12898.0</td>
+<td>154.4843991059886</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,2319 @@
+<html>
+<head><title>Series report: __UNNAMED__</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Passes in Execution Order:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pass.BindSymbolicShapesPass</td>
+<td>46.916 MILLIS</td>
+<td>2</td>
+<td>23.458 MILLIS</td>
+<td>20.232</td>
+<td>26.684</td>
+<td>3.2260000000000093</td>
+</tr>
+<tr>
+<td>pass.SetStrictSymbolicShapesPass</td>
+<td>63.0 MICROS</td>
+<td>2</td>
+<td>31.5 MICROS</td>
+<td>31.0</td>
+<td>32.0</td>
+<td>0.5000000000000766</td>
+</tr>
+<tr>
+<td><a href='pass.Canonicalizer.html'>pass.Canonicalizer</a></td>
+<td>784.6061439999982 SECONDS</td>
+<td>11298</td>
+<td>69.44646344485733 MILLIS</td>
+<td>0.07200000000000001</td>
+<td>122967.89300000001</td>
+<td>1923.921282191131</td>
+</tr>
+<tr>
+<td><a href='pass.BitCastQuantTensorPass.html'>pass.BitCastQuantTensorPass</a></td>
+<td>0.265092 SECONDS</td>
+<td>2</td>
+<td>0.132546 SECONDS</td>
+<td>0.117185</td>
+<td>0.147907</td>
+<td>0.015361000000000152</td>
+</tr>
+<tr>
+<td>pass.ReduceOpVariants</td>
+<td>61.659000000000006 MILLIS</td>
+<td>2</td>
+<td>30.829500000000003 MILLIS</td>
+<td>25.593</td>
+<td>36.066</td>
+<td>5.236499999999987</td>
+</tr>
+<tr>
+<td>pass.ConvertCustomQuantOp</td>
+<td>50.612 MILLIS</td>
+<td>2</td>
+<td>25.306 MILLIS</td>
+<td>20.627</td>
+<td>29.985000000000003</td>
+<td>4.678999999999987</td>
+</tr>
+<tr>
+<td><a href='pass.DecomposeComplexOps.html'>pass.DecomposeComplexOps</a></td>
+<td>1.331797 SECONDS</td>
+<td>2</td>
+<td>0.6658985 SECONDS</td>
+<td>0.533531</td>
+<td>0.798266</td>
+<td>0.13236750000000028</td>
+</tr>
+<tr>
+<td><a href='pass.FuseQuantizedOps.html'>pass.FuseQuantizedOps</a></td>
+<td>3.1213559999999996 SECONDS</td>
+<td>2</td>
+<td>1.5606779999999998 SECONDS</td>
+<td>1.427817</td>
+<td>1.693539</td>
+<td>0.1328610000000011</td>
+</tr>
+<tr>
+<td><a href='pass.ScalarizeShapes.html'>pass.ScalarizeShapes</a></td>
+<td>3.43565 SECONDS</td>
+<td>2</td>
+<td>1.717825 SECONDS</td>
+<td>1.375906</td>
+<td>2.059744</td>
+<td>0.3419189999999997</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertTorchToTMTensor.html'>pass.ConvertTorchToTMTensor</a></td>
+<td>0.16148 SECONDS</td>
+<td>2</td>
+<td>80.74000000000001 MILLIS</td>
+<td>71.16799999999999</td>
+<td>90.312</td>
+<td>9.571999999999955</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertTMTensorToLinalgExtPass.html'>pass.ConvertTMTensorToLinalgExtPass</a></td>
+<td>0.857391 SECONDS</td>
+<td>2</td>
+<td>0.4286955 SECONDS</td>
+<td>0.378294</td>
+<td>0.479097</td>
+<td>0.05040149999999984</td>
+</tr>
+<tr>
+<td>pass.ConvertTorchToTensor</td>
+<td>87.87500000000001 MILLIS</td>
+<td>2</td>
+<td>43.93750000000001 MILLIS</td>
+<td>37.667</td>
+<td>50.208000000000006</td>
+<td>6.270499999999981</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertTorchToLinalg.html'>pass.ConvertTorchToLinalg</a></td>
+<td>22.347834 SECONDS</td>
+<td>2</td>
+<td>11.173917 SECONDS</td>
+<td>9.703958</td>
+<td>12.643876</td>
+<td>1.4699590000000058</td>
+</tr>
+<tr>
+<td>pass.CSE</td>
+<td>30.87405999999947 SECONDS</td>
+<td>21597</td>
+<td>1.4295531786822 MILLIS</td>
+<td>0.006</td>
+<td>2096.319</td>
+<td>36.7714785867934</td>
+</tr>
+<tr>
+<td>pass.ConvertTorchToSCF</td>
+<td>0.712356 SECONDS</td>
+<td>2</td>
+<td>0.356178 SECONDS</td>
+<td>0.331805</td>
+<td>0.380551</td>
+<td>0.02437299999999987</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertTorchToArith.html'>pass.ConvertTorchToArith</a></td>
+<td>0.42398899999999995 SECONDS</td>
+<td>2</td>
+<td>0.21199449999999997 SECONDS</td>
+<td>0.197593</td>
+<td>0.226396</td>
+<td>0.014401500000000355</td>
+</tr>
+<tr>
+<td>pass.ExpandOps</td>
+<td>0.453608 SECONDS</td>
+<td>2</td>
+<td>0.226804 SECONDS</td>
+<td>0.224769</td>
+<td>0.228839</td>
+<td>0.002034999999999256</td>
+</tr>
+<tr>
+<td><a href='pass.ResolveShapedTypeResultDims.html'>pass.ResolveShapedTypeResultDims</a></td>
+<td>6.2904670000000005 SECONDS</td>
+<td>2</td>
+<td>3.1452335000000002 SECONDS</td>
+<td>0.566752</td>
+<td>5.723715</td>
+<td>2.5784814999999996</td>
+</tr>
+<tr>
+<td><a href='pass.FinalizingBackendTypeConversion.html'>pass.FinalizingBackendTypeConversion</a></td>
+<td>5.205862 SECONDS</td>
+<td>4</td>
+<td>1.3014655 SECONDS</td>
+<td>0.000307</td>
+<td>2.604366</td>
+<td>1.3011316017621932</td>
+</tr>
+<tr>
+<td><a href='pass.AutoInputConversionPipelinePass.html'>pass.AutoInputConversionPipelinePass</a></td>
+<td>218.712848 SECONDS</td>
+<td>1</td>
+<td>218.712848 SECONDS</td>
+<td>218.712848</td>
+<td>218.712848</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.IREEImportPublicPass</td>
+<td>0.240672 SECONDS</td>
+<td>1</td>
+<td>0.240672 SECONDS</td>
+<td>0.240672</td>
+<td>0.240672</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ImportMLProgramPass</td>
+<td>0.147514 SECONDS</td>
+<td>1</td>
+<td>0.147514 SECONDS</td>
+<td>0.147514</td>
+<td>0.147514</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.SanitizeModuleNamesPass</td>
+<td>44.0 MICROS</td>
+<td>1</td>
+<td>44.0 MICROS</td>
+<td>44.0</td>
+<td>44.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertMeshToFlowPass.html'>pass.ConvertMeshToFlowPass</a></td>
+<td>1.035272 SECONDS</td>
+<td>1</td>
+<td>1.035272 SECONDS</td>
+<td>1.035272</td>
+<td>1.035272</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.DemoteF64ToF32Pass.html'>pass.DemoteF64ToF32Pass</a></td>
+<td>0.382588 SECONDS</td>
+<td>1</td>
+<td>0.382588 SECONDS</td>
+<td>0.382588</td>
+<td>0.382588</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::ABI::ConvertStreamableOpsPass</td>
+<td>59.724 MILLIS</td>
+<td>1</td>
+<td>59.724 MILLIS</td>
+<td>59.724</td>
+<td>59.724</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::ABI::WrapEntryPointsPass</td>
+<td>133.0 MICROS</td>
+<td>1</td>
+<td>133.0 MICROS</td>
+<td>133.0</td>
+<td>133.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.Inliner.html'>pass.Inliner</a></td>
+<td>44.13046 SECONDS</td>
+<td>2</td>
+<td>22.06523 SECONDS</td>
+<td>10.303366</td>
+<td>33.827094</td>
+<td>11.761864000000001</td>
+</tr>
+<tr>
+<td><a href='pass.mlir____detail____OpToOpPassAdaptor.html'>pass.mlir::detail::OpToOpPassAdaptor</a></td>
+<td>1477.1932969999998 SECONDS</td>
+<td>26</td>
+<td>56.8151268076923 SECONDS</td>
+<td>0.000617</td>
+<td>611.825035</td>
+<td>122.43827369247435</td>
+</tr>
+<tr>
+<td>pass.SymbolDCE</td>
+<td>0.640027 SECONDS</td>
+<td>3</td>
+<td>0.21334233333333333 SECONDS</td>
+<td>0.110734</td>
+<td>0.378864</td>
+<td>0.11815805758483934</td>
+</tr>
+<tr>
+<td>pass.AssignTargetDevicesPass</td>
+<td>221.0 MICROS</td>
+<td>1</td>
+<td>221.0 MICROS</td>
+<td>221.0</td>
+<td>221.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.MaterializeTargetDevicesPass</td>
+<td>203.0 MICROS</td>
+<td>1</td>
+<td>203.0 MICROS</td>
+<td>203.0</td>
+<td>203.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ResolveDevicePromisesPass</td>
+<td>0.279231 SECONDS</td>
+<td>1</td>
+<td>0.279231 SECONDS</td>
+<td>0.279231</td>
+<td>0.279231</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ResolveDeviceAliasesPass</td>
+<td>271.0 MICROS</td>
+<td>1</td>
+<td>271.0 MICROS</td>
+<td>271.0</td>
+<td>271.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.VerifyDevicesPass</td>
+<td>2.166402 SECONDS</td>
+<td>1</td>
+<td>2.166402 SECONDS</td>
+<td>2.166402</td>
+<td>2.166402</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.OptimizeIntArithmetic.html'>pass.OptimizeIntArithmetic</a></td>
+<td>1253.9334440000082 SECONDS</td>
+<td>12301</td>
+<td>0.10193752085196392 SECONDS</td>
+<td>9.3e-05</td>
+<td>590.784325</td>
+<td>6.353067288993363</td>
+</tr>
+<tr>
+<td><a href='pass.LinalgQuantizedConvToConvPass.html'>pass.LinalgQuantizedConvToConvPass</a></td>
+<td>0.99676 SECONDS</td>
+<td>10</td>
+<td>99.676 MILLIS</td>
+<td>0.052</td>
+<td>585.9830000000001</td>
+<td>202.8523962919837</td>
+</tr>
+<tr>
+<td><a href='pass.LinalgQuantizedMatmulToMatmulPass.html'>pass.LinalgQuantizedMatmulToMatmulPass</a></td>
+<td>2.817651 SECONDS</td>
+<td>10</td>
+<td>0.2817651 SECONDS</td>
+<td>0.000116</td>
+<td>1.498462</td>
+<td>0.5643416189180893</td>
+</tr>
+<tr>
+<td><a href='pass.CanonicalizerPass.html'>pass.CanonicalizerPass</a></td>
+<td>596.5043070000002 SECONDS</td>
+<td>12399</td>
+<td>48.10906581175903 MILLIS</td>
+<td>0.07100000000000001</td>
+<td>55187.904</td>
+<td>1122.9223111545139</td>
+</tr>
+<tr>
+<td><a href='pass.RemoveZeroExtentTensorsPass.html'>pass.RemoveZeroExtentTensorsPass</a></td>
+<td>9.522752 SECONDS</td>
+<td>10</td>
+<td>0.9522752000000001 SECONDS</td>
+<td>0.000112</td>
+<td>5.017323</td>
+<td>1.907283593188585</td>
+</tr>
+<tr>
+<td><a href='pass.DetachElementwiseFromNamedOpsPass.html'>pass.DetachElementwiseFromNamedOpsPass</a></td>
+<td>4.898579000000001 SECONDS</td>
+<td>10</td>
+<td>0.48985790000000007 SECONDS</td>
+<td>0.000128</td>
+<td>2.636607</td>
+<td>0.9827132756411149</td>
+</tr>
+<tr>
+<td><a href='pass.LinalgNamedOpConversionPass.html'>pass.LinalgNamedOpConversionPass</a></td>
+<td>0.8219509999999999 SECONDS</td>
+<td>10</td>
+<td>82.1951 MILLIS</td>
+<td>0.020999999999999998</td>
+<td>426.313</td>
+<td>164.30352622171566</td>
+</tr>
+<tr>
+<td><a href='pass.EraseUnusedLinalgOperandsPass.html'>pass.EraseUnusedLinalgOperandsPass</a></td>
+<td>7.435708 SECONDS</td>
+<td>1</td>
+<td>7.435708 SECONDS</td>
+<td>7.435708</td>
+<td>7.435708</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ExpandTensorShapesPass</td>
+<td>31.164 MILLIS</td>
+<td>1</td>
+<td>31.164 MILLIS</td>
+<td>31.164</td>
+<td>31.164</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ConvertElementwiseToLinalgPass</td>
+<td>0.23396600000000004 SECONDS</td>
+<td>10</td>
+<td>23.396600000000003 MILLIS</td>
+<td>0.012</td>
+<td>118.937</td>
+<td>46.62890415868681</td>
+</tr>
+<tr>
+<td><a href='pass.RaiseSpecialOpsPass.html'>pass.RaiseSpecialOpsPass</a></td>
+<td>50.52867299999996 SECONDS</td>
+<td>1039</td>
+<td>48.632024061597654 MILLIS</td>
+<td>0.096</td>
+<td>19557.351000000002</td>
+<td>820.4237493065257</td>
+</tr>
+<tr>
+<td><a href='pass.DecomposeConcatPass.html'>pass.DecomposeConcatPass</a></td>
+<td>1.686619 SECONDS</td>
+<td>10</td>
+<td>0.1686619 SECONDS</td>
+<td>3.4e-05</td>
+<td>0.854138</td>
+<td>0.3371833977192382</td>
+</tr>
+<tr>
+<td>pass.GeneralizeLinalgNamedOpsPass</td>
+<td>0.1754329999999999 SECONDS</td>
+<td>20</td>
+<td>8.771649999999996 MILLIS</td>
+<td>0.007</td>
+<td>50.214</td>
+<td>17.531180323284</td>
+</tr>
+<tr>
+<td><a href='pass.FoldUnitExtentDimsPass.html'>pass.FoldUnitExtentDimsPass</a></td>
+<td>67.543496 SECONDS</td>
+<td>1</td>
+<td>67.543496 SECONDS</td>
+<td>67.543496</td>
+<td>67.543496</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.DemoteContractionInputsToBF16Pass.html'>pass.DemoteContractionInputsToBF16Pass</a></td>
+<td>3.5356949999999996 SECONDS</td>
+<td>10</td>
+<td>0.3535695 SECONDS</td>
+<td>6.2e-05</td>
+<td>1.924901</td>
+<td>0.7100532762371075</td>
+</tr>
+<tr>
+<td><a href='pass.SetEncodingPass.html'>pass.SetEncodingPass</a></td>
+<td>22.602796 SECONDS</td>
+<td>10</td>
+<td>2.2602796 SECONDS</td>
+<td>7.7e-05</td>
+<td>18.229263</td>
+<td>5.480285408277058</td>
+</tr>
+<tr>
+<td><a href='pass.MaterializeEncodingIntoNopPass.html'>pass.MaterializeEncodingIntoNopPass</a></td>
+<td>8.884651 SECONDS</td>
+<td>4</td>
+<td>2.22116275 SECONDS</td>
+<td>0.000589</td>
+<td>4.515865</td>
+<td>2.2211264518595484</td>
+</tr>
+<tr>
+<td><a href='pass.MaterializeHomogeneousEncodingsPass.html'>pass.MaterializeHomogeneousEncodingsPass</a></td>
+<td>27.562173 SECONDS</td>
+<td>1</td>
+<td>27.562173 SECONDS</td>
+<td>27.562173</td>
+<td>27.562173</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.SimplifyPackUnpackPass.html'>pass.SimplifyPackUnpackPass</a></td>
+<td>0.845903 SECONDS</td>
+<td>1</td>
+<td>0.845903 SECONDS</td>
+<td>0.845903</td>
+<td>0.845903</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.DataLayoutPropagationPass.html'>pass.DataLayoutPropagationPass</a></td>
+<td>4.132009 SECONDS</td>
+<td>10</td>
+<td>0.4132009 SECONDS</td>
+<td>0.000153</td>
+<td>2.145358</td>
+<td>0.8265082375302075</td>
+</tr>
+<tr>
+<td>pass.GlobalLoopInvariantCodeMotionPass</td>
+<td>67.153 MILLIS</td>
+<td>10</td>
+<td>6.7153 MILLIS</td>
+<td>0.015000000000000001</td>
+<td>36.071</td>
+<td>13.352342536424086</td>
+</tr>
+<tr>
+<td>pass.SimplifyGlobalAccesses</td>
+<td>55.24089 SECONDS</td>
+<td>13485</td>
+<td>4.096469410456063 MILLIS</td>
+<td>0.005</td>
+<td>14606.137</td>
+<td>179.58132852114667</td>
+</tr>
+<tr>
+<td><a href='pass.ApplyPatterns.html'>pass.ApplyPatterns</a></td>
+<td>90.01538 SECONDS</td>
+<td>10</td>
+<td>9.001538 SECONDS</td>
+<td>4.383728</td>
+<td>18.909661</td>
+<td>4.564699241726339</td>
+</tr>
+<tr>
+<td><a href='pass.FoldGlobals.html'>pass.FoldGlobals</a></td>
+<td>94.43563700000001 SECONDS</td>
+<td>10</td>
+<td>9.443563700000002 SECONDS</td>
+<td>3.691406</td>
+<td>32.851104</td>
+<td>8.335200453323232</td>
+</tr>
+<tr>
+<td>pass.IPO</td>
+<td>180.34741900000003 SECONDS</td>
+<td>10</td>
+<td>18.034741900000004 SECONDS</td>
+<td>2.183761</td>
+<td>43.640706</td>
+<td>9.997720560169345</td>
+</tr>
+<tr>
+<td>pass.HoistIntoGlobals</td>
+<td>3.527571 SECONDS</td>
+<td>1</td>
+<td>3.527571 SECONDS</td>
+<td>3.527571</td>
+<td>3.527571</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.InjectTensorTracingPass</td>
+<td>0.4700760000000002 SECONDS</td>
+<td>2058</td>
+<td>228.41399416909633 MICROS</td>
+<td>5.0</td>
+<td>37223.0</td>
+<td>1133.0876602925125</td>
+</tr>
+<tr>
+<td><a href='pass.FusionPreprocessingPass.html'>pass.FusionPreprocessingPass</a></td>
+<td>24.679236 SECONDS</td>
+<td>1029</td>
+<td>23.983708454810493 MILLIS</td>
+<td>0.114</td>
+<td>13109.842999999999</td>
+<td>531.0842525266024</td>
+</tr>
+<tr>
+<td><a href='pass.ElementwiseOpFusionPass.html'>pass.ElementwiseOpFusionPass</a></td>
+<td>84.684448 SECONDS</td>
+<td>2058</td>
+<td>41.14890573372206 MILLIS</td>
+<td>0.10900000000000001</td>
+<td>26749.978</td>
+<td>938.7033485294107</td>
+</tr>
+<tr>
+<td><a href='pass.BubbleUpExpandShapesPass.html'>pass.BubbleUpExpandShapesPass</a></td>
+<td>34.842966000000004 SECONDS</td>
+<td>1029</td>
+<td>33.86099708454811 MILLIS</td>
+<td>0.063</td>
+<td>18261.199</td>
+<td>761.6177966773728</td>
+</tr>
+<tr>
+<td><a href='pass.BubbleUpExtractSlicesPass.html'>pass.BubbleUpExtractSlicesPass</a></td>
+<td>3.5593460000000006 SECONDS</td>
+<td>1029</td>
+<td>3.459034013605443 MILLIS</td>
+<td>0.024</td>
+<td>1692.133</td>
+<td>69.94943739290458</td>
+</tr>
+<tr>
+<td><a href='pass.SinkReshapesPass.html'>pass.SinkReshapesPass</a></td>
+<td>17.212274 SECONDS</td>
+<td>1029</td>
+<td>16.727185617103984 MILLIS</td>
+<td>0.032</td>
+<td>12946.706</td>
+<td>420.9605159301389</td>
+</tr>
+<tr>
+<td>pass.FuseMultiUseElementwiseProducerPass</td>
+<td>91.19900000000005 MILLIS</td>
+<td>1029</td>
+<td>88.62876579203115 MICROS</td>
+<td>5.0</td>
+<td>33031.0</td>
+<td>1365.2728366705921</td>
+</tr>
+<tr>
+<td>pass.SplitReductionPass</td>
+<td>29.170000000000027 MILLIS</td>
+<td>1029</td>
+<td>28.347910592808574 MICROS</td>
+<td>4.0</td>
+<td>1055.0</td>
+<td>81.29021213484987</td>
+</tr>
+<tr>
+<td><a href='pass.TransposeGenericOpsPass.html'>pass.TransposeGenericOpsPass</a></td>
+<td>9.936561000000001 SECONDS</td>
+<td>1029</td>
+<td>9.656521865889214 MILLIS</td>
+<td>0.043000000000000003</td>
+<td>8593.797</td>
+<td>268.790223171444</td>
+</tr>
+<tr>
+<td>pass.FormScalarDispatchesPass</td>
+<td>0.22456900000000035 SECONDS</td>
+<td>1029</td>
+<td>218.24003887269228 MICROS</td>
+<td>6.0</td>
+<td>26295.0</td>
+<td>1036.624826920777</td>
+</tr>
+<tr>
+<td>pass.FormDispatchRegionsPass</td>
+<td>0.7078759999999998 SECONDS</td>
+<td>1029</td>
+<td>687.9261418853254 MICROS</td>
+<td>9.0</td>
+<td>262075.99999999997</td>
+<td>11413.886641742201</td>
+</tr>
+<tr>
+<td>pass.CloneProducersIntoDispatchRegionsPass</td>
+<td>8.773817 SECONDS</td>
+<td>1029</td>
+<td>8.526547133138969 MILLIS</td>
+<td>0.008</td>
+<td>5037.254</td>
+<td>192.60434983051027</td>
+</tr>
+<tr>
+<td><a href='pass.CollapseDimensionsPass.html'>pass.CollapseDimensionsPass</a></td>
+<td>0.4175000000000003 SECONDS</td>
+<td>1029</td>
+<td>405.733722060253 MICROS</td>
+<td>7.0</td>
+<td>212761.0</td>
+<td>6694.207264126385</td>
+</tr>
+<tr>
+<td>pass.ConvertDispatchRegionsToWorkgroupsPass</td>
+<td>47.745908 SECONDS</td>
+<td>1029</td>
+<td>46.40029931972789 MILLIS</td>
+<td>0.007</td>
+<td>44946.409</td>
+<td>1402.7578330637891</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertTensorToFlowPass.html'>pass.ConvertTensorToFlowPass</a></td>
+<td>46.559945 SECONDS</td>
+<td>1029</td>
+<td>45.24775996112731 MILLIS</td>
+<td>0.064</td>
+<td>24251.208</td>
+<td>1011.486030943398</td>
+</tr>
+<tr>
+<td>pass.MaterializeDefaultWorkgroupCountRegionPass</td>
+<td>0.4217999999999994 SECONDS</td>
+<td>1029</td>
+<td>409.9125364431481 MICROS</td>
+<td>6.0</td>
+<td>164778.0</td>
+<td>6900.976333520482</td>
+</tr>
+<tr>
+<td>pass.CaptureDynamicDimsPass</td>
+<td>0.4313010000000006 SECONDS</td>
+<td>1029</td>
+<td>419.14577259475277 MICROS</td>
+<td>7.0</td>
+<td>162837.0</td>
+<td>7124.191607364263</td>
+</tr>
+<tr>
+<td><a href='pass.InitializeEmptyTensorsPass.html'>pass.InitializeEmptyTensorsPass</a></td>
+<td>11.700232 SECONDS</td>
+<td>1029</td>
+<td>11.37048785228377 MILLIS</td>
+<td>0.029</td>
+<td>8852.824999999999</td>
+<td>286.03270240758843</td>
+</tr>
+<tr>
+<td>pass.StripDebugOps</td>
+<td>5.8359110000011905 SECONDS</td>
+<td>77736</td>
+<td>75.07346660493454 MICROS</td>
+<td>5.0</td>
+<td>1081.0</td>
+<td>101.61868390553892</td>
+</tr>
+<tr>
+<td>pass.CleanupTensorShapesPass</td>
+<td>45.24099999999987 MILLIS</td>
+<td>1029</td>
+<td>43.965986394557696 MICROS</td>
+<td>4.0</td>
+<td>5888.0</td>
+<td>237.18049412323037</td>
+</tr>
+<tr>
+<td><a href='pass.EncodeDeviceTensorsPass.html'>pass.EncodeDeviceTensorsPass</a></td>
+<td>1.4691600000000007 SECONDS</td>
+<td>224</td>
+<td>6.5587500000000025 MILLIS</td>
+<td>0.08600000000000001</td>
+<td>101.419</td>
+<td>17.353216457979766</td>
+</tr>
+<tr>
+<td><a href='pass.EncodeHostTensorsPass.html'>pass.EncodeHostTensorsPass</a></td>
+<td>6.0865219999999995 SECONDS</td>
+<td>11</td>
+<td>0.5533201818181818 SECONDS</td>
+<td>0.000331</td>
+<td>5.623955</td>
+<td>1.6059060911258913</td>
+</tr>
+<tr>
+<td>pass.MaterializeCopyOnWritePass</td>
+<td>32.605999999999995 MILLIS</td>
+<td>11</td>
+<td>2.964181818181818 MILLIS</td>
+<td>0.015000000000000001</td>
+<td>19.371</td>
+<td>5.801779692758576</td>
+</tr>
+<tr>
+<td>pass.EmplaceAllocationsPass</td>
+<td>17.126 MILLIS</td>
+<td>11</td>
+<td>1.5569090909090912 MILLIS</td>
+<td>0.008</td>
+<td>8.229000000000001</td>
+<td>2.7175663395614382</td>
+</tr>
+<tr>
+<td><a href='pass.ScheduleExecutionPass.html'>pass.ScheduleExecutionPass</a></td>
+<td>177.779309 SECONDS</td>
+<td>11</td>
+<td>16.161755363636363 SECONDS</td>
+<td>0.001585</td>
+<td>108.371928</td>
+<td>33.140242511853586</td>
+</tr>
+<tr>
+<td>pass.ScheduleConcurrencyPass</td>
+<td>0.535804 SECONDS</td>
+<td>11</td>
+<td>48.70945454545454 MILLIS</td>
+<td>0.01</td>
+<td>413.872</td>
+<td>120.28708536388619</td>
+</tr>
+<tr>
+<td>pass.PackConstantsPass</td>
+<td>77.388 MILLIS</td>
+<td>11</td>
+<td>7.0352727272727265 MILLIS</td>
+<td>0.014</td>
+<td>42.515</td>
+<td>12.886606966437599</td>
+</tr>
+<tr>
+<td>pass.LayoutSlicesPass</td>
+<td>0.238281 SECONDS</td>
+<td>11</td>
+<td>21.661909090909088 MILLIS</td>
+<td>0.007</td>
+<td>151.796</td>
+<td>47.14474198476345</td>
+</tr>
+<tr>
+<td><a href='pass.SCFToControlFlow.html'>pass.SCFToControlFlow</a></td>
+<td>58.085 MILLIS</td>
+<td>45</td>
+<td>1.2907777777777776 MILLIS</td>
+<td>0.013</td>
+<td>25.046</td>
+<td>4.953222838107591</td>
+</tr>
+<tr>
+<td><a href='pass.ConfigureExecutablesPass.html'>pass.ConfigureExecutablesPass</a></td>
+<td>4.657 MILLIS</td>
+<td>3</td>
+<td>1.5523333333333333 MILLIS</td>
+<td>1.539</td>
+<td>1.571</td>
+<td>0.013597385369581548</td>
+</tr>
+<tr>
+<td><a href='pass.TranslateExecutablesPass.html'>pass.TranslateExecutablesPass</a></td>
+<td>45.829 MILLIS</td>
+<td>3</td>
+<td>15.276333333333335 MILLIS</td>
+<td>15.173</td>
+<td>15.348</td>
+<td>0.0748702581506142</td>
+</tr>
+<tr>
+<td>pass.ElideRedundantCommandsPass</td>
+<td>4.1259999999999994 MILLIS</td>
+<td>26</td>
+<td>158.69230769230765 MICROS</td>
+<td>8.0</td>
+<td>330.0</td>
+<td>99.67360935757706</td>
+</tr>
+<tr>
+<td><a href='pass.SerializeExecutablesPass.html'>pass.SerializeExecutablesPass</a></td>
+<td>68.72399999999999 MILLIS</td>
+<td>1</td>
+<td>68.72399999999999 MILLIS</td>
+<td>68.72399999999999</td>
+<td>68.72399999999999</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.SCFForLoopCanonicalization.html'>pass.SCFForLoopCanonicalization</a></td>
+<td>3.5449999999999995 MILLIS</td>
+<td>7</td>
+<td>506.4285714285714 MICROS</td>
+<td>157.0</td>
+<td>787.0</td>
+<td>193.20962497679423</td>
+</tr>
+<tr>
+<td>pass.LoopInvariantCodeMotion</td>
+<td>1.343 MILLIS</td>
+<td>7</td>
+<td>191.85714285714286 MICROS</td>
+<td>27.0</td>
+<td>612.0</td>
+<td>210.7825071160376</td>
+</tr>
+<tr>
+<td><a href='pass.AffineExpandIndexOps.html'>pass.AffineExpandIndexOps</a></td>
+<td>1.752 MILLIS</td>
+<td>7</td>
+<td>250.28571428571428 MICROS</td>
+<td>120.0</td>
+<td>338.0</td>
+<td>68.07289010573113</td>
+</tr>
+<tr>
+<td>pass.ConvertAffineToStandard</td>
+<td>664.0 MICROS</td>
+<td>7</td>
+<td>94.85714285714285 MICROS</td>
+<td>61.0</td>
+<td>135.0</td>
+<td>29.449368518228862</td>
+</tr>
+<tr>
+<td><a href='pass.ArithUnsignedWhenEquivalent.html'>pass.ArithUnsignedWhenEquivalent</a></td>
+<td>1.464 MILLIS</td>
+<td>7</td>
+<td>209.14285714285714 MICROS</td>
+<td>141.0</td>
+<td>294.0</td>
+<td>49.88967420054705</td>
+</tr>
+<tr>
+<td><a href='pass.JitGlobalsPass.html'>pass.JitGlobalsPass</a></td>
+<td>4.082786 SECONDS</td>
+<td>1</td>
+<td>4.082786 SECONDS</td>
+<td>4.082786</td>
+<td>4.082786</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.TensorPadToTensorInsertSlicePass.html'>pass.TensorPadToTensorInsertSlicePass</a></td>
+<td>0.856004 SECONDS</td>
+<td>1</td>
+<td>0.856004 SECONDS</td>
+<td>0.856004</td>
+<td>0.856004</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.FixedPointIterator.html'>pass.FixedPointIterator</a></td>
+<td>398.23884 SECONDS</td>
+<td>3</td>
+<td>132.74627999999998 SECONDS</td>
+<td>75.800623</td>
+<td>178.20867</td>
+<td>42.58913075996058</td>
+</tr>
+<tr>
+<td>pass.VerifyInputLegalityPass</td>
+<td>0.150141 SECONDS</td>
+<td>1</td>
+<td>0.150141 SECONDS</td>
+<td>0.150141</td>
+<td>0.150141</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.OutlineDispatchExternsPass</td>
+<td>0.105542 SECONDS</td>
+<td>1</td>
+<td>0.105542 SECONDS</td>
+<td>0.105542</td>
+<td>0.105542</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.OutlineDispatchRegionsPass</td>
+<td>1.27356 SECONDS</td>
+<td>1</td>
+<td>1.27356 SECONDS</td>
+<td>1.27356</td>
+<td>1.27356</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.AnnotateDispatchesPass</td>
+<td>0.941005 SECONDS</td>
+<td>1</td>
+<td>0.941005 SECONDS</td>
+<td>0.941005</td>
+<td>0.941005</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.DeduplicateExecutablesPass</td>
+<td>256.19398 SECONDS</td>
+<td>1</td>
+<td>256.19398 SECONDS</td>
+<td>256.19398</td>
+<td>256.19398</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.VerifyInputPass</td>
+<td>27.932 MILLIS</td>
+<td>1</td>
+<td>27.932 MILLIS</td>
+<td>27.932</td>
+<td>27.932</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.FuseGlobals</td>
+<td>7.295007 SECONDS</td>
+<td>9</td>
+<td>0.8105563333333333 SECONDS</td>
+<td>0.141443</td>
+<td>5.562453</td>
+<td>1.6814227513094708</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertToStreamPass.html'>pass.ConvertToStreamPass</a></td>
+<td>29.944715 SECONDS</td>
+<td>1</td>
+<td>29.944715 SECONDS</td>
+<td>29.944715</td>
+<td>29.944715</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.VerifyLoweringToTensorsPass</td>
+<td>32.626000000000005 MILLIS</td>
+<td>1</td>
+<td>32.626000000000005 MILLIS</td>
+<td>32.626000000000005</td>
+<td>32.626000000000005</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.CombineInitializers</td>
+<td>14.222 MILLIS</td>
+<td>1</td>
+<td>14.222 MILLIS</td>
+<td>14.222</td>
+<td>14.222</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.VerifyLoweringToAsyncResourcesPass</td>
+<td>23.961 MILLIS</td>
+<td>1</td>
+<td>23.961 MILLIS</td>
+<td>23.961</td>
+<td>23.961</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ElideAsyncCopiesPass</td>
+<td>34.277455 SECONDS</td>
+<td>1</td>
+<td>34.277455 SECONDS</td>
+<td>34.277455</td>
+<td>34.277455</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.RefineUsagePass.html'>pass.RefineUsagePass</a></td>
+<td>174.932784 SECONDS</td>
+<td>1</td>
+<td>174.932784 SECONDS</td>
+<td>174.932784</td>
+<td>174.932784</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.VerifyAsyncAccessRangesPass</td>
+<td>72.794 MILLIS</td>
+<td>1</td>
+<td>72.794 MILLIS</td>
+<td>72.794</td>
+<td>72.794</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.PropagateTimepointsPass</td>
+<td>73.19000000000001 MILLIS</td>
+<td>1</td>
+<td>73.19000000000001 MILLIS</td>
+<td>73.19000000000001</td>
+<td>73.19000000000001</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.MaterializeBuiltinsPass</td>
+<td>37.331999999999994 MILLIS</td>
+<td>1</td>
+<td>37.331999999999994 MILLIS</td>
+<td>37.331999999999994</td>
+<td>37.331999999999994</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.VerifyLoweringToAsyncPass</td>
+<td>42.691 MILLIS</td>
+<td>1</td>
+<td>42.691 MILLIS</td>
+<td>42.691</td>
+<td>42.691</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ScheduleAllocationPass</td>
+<td>0.469022 SECONDS</td>
+<td>1</td>
+<td>0.469022 SECONDS</td>
+<td>0.469022</td>
+<td>0.469022</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.PropagateSubranges</td>
+<td>0.149771 SECONDS</td>
+<td>1</td>
+<td>0.149771 SECONDS</td>
+<td>0.149771</td>
+<td>0.149771</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.VerifyLoweringToCmdPass</td>
+<td>53.174 MILLIS</td>
+<td>1</td>
+<td>53.174 MILLIS</td>
+<td>53.174</td>
+<td>53.174</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.FuseDispatchBindingsPass</td>
+<td>15.347247 SECONDS</td>
+<td>1</td>
+<td>15.347247 SECONDS</td>
+<td>15.347247</td>
+<td>15.347247</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.AnnotateDispatchArgumentsPass</td>
+<td>18.158072 SECONDS</td>
+<td>1</td>
+<td>18.158072 SECONDS</td>
+<td>18.158072</td>
+<td>18.158072</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.AnnotateDispatchAssumptionsPass</td>
+<td>0.481082 SECONDS</td>
+<td>1</td>
+<td>0.481082 SECONDS</td>
+<td>0.481082</td>
+<td>0.481082</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.PackDispatchOperandsPass</td>
+<td>15.596148 SECONDS</td>
+<td>1</td>
+<td>15.596148 SECONDS</td>
+<td>15.596148</td>
+<td>15.596148</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.FoldUniformOperandsPass</td>
+<td>14.762964 SECONDS</td>
+<td>1</td>
+<td>14.762964 SECONDS</td>
+<td>14.762964</td>
+<td>14.762964</td>
+<td>0.0</td>
+</tr>
+</table>
+<h1>Passes in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td><a href='pass.mlir____detail____OpToOpPassAdaptor.html'>pass.mlir::detail::OpToOpPassAdaptor</a></td>
+<td>1477.1932969999998 SECONDS</td>
+<td>26</td>
+<td>56.8151268076923 SECONDS</td>
+<td>0.000617</td>
+<td>611.825035</td>
+<td>122.43827369247435</td>
+</tr>
+<tr>
+<td><a href='pass.OptimizeIntArithmetic.html'>pass.OptimizeIntArithmetic</a></td>
+<td>1253.9334440000082 SECONDS</td>
+<td>12301</td>
+<td>0.10193752085196392 SECONDS</td>
+<td>9.3e-05</td>
+<td>590.784325</td>
+<td>6.353067288993363</td>
+</tr>
+<tr>
+<td><a href='pass.Canonicalizer.html'>pass.Canonicalizer</a></td>
+<td>784.6061439999982 SECONDS</td>
+<td>11298</td>
+<td>69.44646344485733 MILLIS</td>
+<td>0.07200000000000001</td>
+<td>122967.89300000001</td>
+<td>1923.921282191131</td>
+</tr>
+<tr>
+<td><a href='pass.CanonicalizerPass.html'>pass.CanonicalizerPass</a></td>
+<td>596.5043070000002 SECONDS</td>
+<td>12399</td>
+<td>48.10906581175903 MILLIS</td>
+<td>0.07100000000000001</td>
+<td>55187.904</td>
+<td>1122.9223111545139</td>
+</tr>
+<tr>
+<td><a href='pass.FixedPointIterator.html'>pass.FixedPointIterator</a></td>
+<td>398.23884 SECONDS</td>
+<td>3</td>
+<td>132.74627999999998 SECONDS</td>
+<td>75.800623</td>
+<td>178.20867</td>
+<td>42.58913075996058</td>
+</tr>
+<tr>
+<td>pass.DeduplicateExecutablesPass</td>
+<td>256.19398 SECONDS</td>
+<td>1</td>
+<td>256.19398 SECONDS</td>
+<td>256.19398</td>
+<td>256.19398</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.AutoInputConversionPipelinePass.html'>pass.AutoInputConversionPipelinePass</a></td>
+<td>218.712848 SECONDS</td>
+<td>1</td>
+<td>218.712848 SECONDS</td>
+<td>218.712848</td>
+<td>218.712848</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.IPO</td>
+<td>180.34741900000003 SECONDS</td>
+<td>10</td>
+<td>18.034741900000004 SECONDS</td>
+<td>2.183761</td>
+<td>43.640706</td>
+<td>9.997720560169345</td>
+</tr>
+<tr>
+<td><a href='pass.ScheduleExecutionPass.html'>pass.ScheduleExecutionPass</a></td>
+<td>177.779309 SECONDS</td>
+<td>11</td>
+<td>16.161755363636363 SECONDS</td>
+<td>0.001585</td>
+<td>108.371928</td>
+<td>33.140242511853586</td>
+</tr>
+<tr>
+<td><a href='pass.RefineUsagePass.html'>pass.RefineUsagePass</a></td>
+<td>174.932784 SECONDS</td>
+<td>1</td>
+<td>174.932784 SECONDS</td>
+<td>174.932784</td>
+<td>174.932784</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.FoldGlobals.html'>pass.FoldGlobals</a></td>
+<td>94.43563700000001 SECONDS</td>
+<td>10</td>
+<td>9.443563700000002 SECONDS</td>
+<td>3.691406</td>
+<td>32.851104</td>
+<td>8.335200453323232</td>
+</tr>
+<tr>
+<td><a href='pass.ApplyPatterns.html'>pass.ApplyPatterns</a></td>
+<td>90.01538 SECONDS</td>
+<td>10</td>
+<td>9.001538 SECONDS</td>
+<td>4.383728</td>
+<td>18.909661</td>
+<td>4.564699241726339</td>
+</tr>
+<tr>
+<td><a href='pass.ElementwiseOpFusionPass.html'>pass.ElementwiseOpFusionPass</a></td>
+<td>84.684448 SECONDS</td>
+<td>2058</td>
+<td>41.14890573372206 MILLIS</td>
+<td>0.10900000000000001</td>
+<td>26749.978</td>
+<td>938.7033485294107</td>
+</tr>
+<tr>
+<td><a href='pass.FoldUnitExtentDimsPass.html'>pass.FoldUnitExtentDimsPass</a></td>
+<td>67.543496 SECONDS</td>
+<td>1</td>
+<td>67.543496 SECONDS</td>
+<td>67.543496</td>
+<td>67.543496</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.SimplifyGlobalAccesses</td>
+<td>55.24089 SECONDS</td>
+<td>13485</td>
+<td>4.096469410456063 MILLIS</td>
+<td>0.005</td>
+<td>14606.137</td>
+<td>179.58132852114667</td>
+</tr>
+<tr>
+<td><a href='pass.RaiseSpecialOpsPass.html'>pass.RaiseSpecialOpsPass</a></td>
+<td>50.52867299999996 SECONDS</td>
+<td>1039</td>
+<td>48.632024061597654 MILLIS</td>
+<td>0.096</td>
+<td>19557.351000000002</td>
+<td>820.4237493065257</td>
+</tr>
+<tr>
+<td>pass.ConvertDispatchRegionsToWorkgroupsPass</td>
+<td>47.745908 SECONDS</td>
+<td>1029</td>
+<td>46.40029931972789 MILLIS</td>
+<td>0.007</td>
+<td>44946.409</td>
+<td>1402.7578330637891</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertTensorToFlowPass.html'>pass.ConvertTensorToFlowPass</a></td>
+<td>46.559945 SECONDS</td>
+<td>1029</td>
+<td>45.24775996112731 MILLIS</td>
+<td>0.064</td>
+<td>24251.208</td>
+<td>1011.486030943398</td>
+</tr>
+<tr>
+<td><a href='pass.Inliner.html'>pass.Inliner</a></td>
+<td>44.13046 SECONDS</td>
+<td>2</td>
+<td>22.06523 SECONDS</td>
+<td>10.303366</td>
+<td>33.827094</td>
+<td>11.761864000000001</td>
+</tr>
+<tr>
+<td><a href='pass.BubbleUpExpandShapesPass.html'>pass.BubbleUpExpandShapesPass</a></td>
+<td>34.842966000000004 SECONDS</td>
+<td>1029</td>
+<td>33.86099708454811 MILLIS</td>
+<td>0.063</td>
+<td>18261.199</td>
+<td>761.6177966773728</td>
+</tr>
+<tr>
+<td>pass.ElideAsyncCopiesPass</td>
+<td>34.277455 SECONDS</td>
+<td>1</td>
+<td>34.277455 SECONDS</td>
+<td>34.277455</td>
+<td>34.277455</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.CSE</td>
+<td>30.87405999999947 SECONDS</td>
+<td>21597</td>
+<td>1.4295531786822 MILLIS</td>
+<td>0.006</td>
+<td>2096.319</td>
+<td>36.7714785867934</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertToStreamPass.html'>pass.ConvertToStreamPass</a></td>
+<td>29.944715 SECONDS</td>
+<td>1</td>
+<td>29.944715 SECONDS</td>
+<td>29.944715</td>
+<td>29.944715</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.MaterializeHomogeneousEncodingsPass.html'>pass.MaterializeHomogeneousEncodingsPass</a></td>
+<td>27.562173 SECONDS</td>
+<td>1</td>
+<td>27.562173 SECONDS</td>
+<td>27.562173</td>
+<td>27.562173</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.FusionPreprocessingPass.html'>pass.FusionPreprocessingPass</a></td>
+<td>24.679236 SECONDS</td>
+<td>1029</td>
+<td>23.983708454810493 MILLIS</td>
+<td>0.114</td>
+<td>13109.842999999999</td>
+<td>531.0842525266024</td>
+</tr>
+<tr>
+<td><a href='pass.SetEncodingPass.html'>pass.SetEncodingPass</a></td>
+<td>22.602796 SECONDS</td>
+<td>10</td>
+<td>2.2602796 SECONDS</td>
+<td>7.7e-05</td>
+<td>18.229263</td>
+<td>5.480285408277058</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertTorchToLinalg.html'>pass.ConvertTorchToLinalg</a></td>
+<td>22.347834 SECONDS</td>
+<td>2</td>
+<td>11.173917 SECONDS</td>
+<td>9.703958</td>
+<td>12.643876</td>
+<td>1.4699590000000058</td>
+</tr>
+<tr>
+<td>pass.AnnotateDispatchArgumentsPass</td>
+<td>18.158072 SECONDS</td>
+<td>1</td>
+<td>18.158072 SECONDS</td>
+<td>18.158072</td>
+<td>18.158072</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.SinkReshapesPass.html'>pass.SinkReshapesPass</a></td>
+<td>17.212274 SECONDS</td>
+<td>1029</td>
+<td>16.727185617103984 MILLIS</td>
+<td>0.032</td>
+<td>12946.706</td>
+<td>420.9605159301389</td>
+</tr>
+<tr>
+<td>pass.PackDispatchOperandsPass</td>
+<td>15.596148 SECONDS</td>
+<td>1</td>
+<td>15.596148 SECONDS</td>
+<td>15.596148</td>
+<td>15.596148</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.FuseDispatchBindingsPass</td>
+<td>15.347247 SECONDS</td>
+<td>1</td>
+<td>15.347247 SECONDS</td>
+<td>15.347247</td>
+<td>15.347247</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.FoldUniformOperandsPass</td>
+<td>14.762964 SECONDS</td>
+<td>1</td>
+<td>14.762964 SECONDS</td>
+<td>14.762964</td>
+<td>14.762964</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.InitializeEmptyTensorsPass.html'>pass.InitializeEmptyTensorsPass</a></td>
+<td>11.700232 SECONDS</td>
+<td>1029</td>
+<td>11.37048785228377 MILLIS</td>
+<td>0.029</td>
+<td>8852.824999999999</td>
+<td>286.03270240758843</td>
+</tr>
+<tr>
+<td><a href='pass.TransposeGenericOpsPass.html'>pass.TransposeGenericOpsPass</a></td>
+<td>9.936561000000001 SECONDS</td>
+<td>1029</td>
+<td>9.656521865889214 MILLIS</td>
+<td>0.043000000000000003</td>
+<td>8593.797</td>
+<td>268.790223171444</td>
+</tr>
+<tr>
+<td><a href='pass.RemoveZeroExtentTensorsPass.html'>pass.RemoveZeroExtentTensorsPass</a></td>
+<td>9.522752 SECONDS</td>
+<td>10</td>
+<td>0.9522752000000001 SECONDS</td>
+<td>0.000112</td>
+<td>5.017323</td>
+<td>1.907283593188585</td>
+</tr>
+<tr>
+<td><a href='pass.MaterializeEncodingIntoNopPass.html'>pass.MaterializeEncodingIntoNopPass</a></td>
+<td>8.884651 SECONDS</td>
+<td>4</td>
+<td>2.22116275 SECONDS</td>
+<td>0.000589</td>
+<td>4.515865</td>
+<td>2.2211264518595484</td>
+</tr>
+<tr>
+<td>pass.CloneProducersIntoDispatchRegionsPass</td>
+<td>8.773817 SECONDS</td>
+<td>1029</td>
+<td>8.526547133138969 MILLIS</td>
+<td>0.008</td>
+<td>5037.254</td>
+<td>192.60434983051027</td>
+</tr>
+<tr>
+<td><a href='pass.EraseUnusedLinalgOperandsPass.html'>pass.EraseUnusedLinalgOperandsPass</a></td>
+<td>7.435708 SECONDS</td>
+<td>1</td>
+<td>7.435708 SECONDS</td>
+<td>7.435708</td>
+<td>7.435708</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.FuseGlobals</td>
+<td>7.295007 SECONDS</td>
+<td>9</td>
+<td>0.8105563333333333 SECONDS</td>
+<td>0.141443</td>
+<td>5.562453</td>
+<td>1.6814227513094708</td>
+</tr>
+<tr>
+<td><a href='pass.ResolveShapedTypeResultDims.html'>pass.ResolveShapedTypeResultDims</a></td>
+<td>6.2904670000000005 SECONDS</td>
+<td>2</td>
+<td>3.1452335000000002 SECONDS</td>
+<td>0.566752</td>
+<td>5.723715</td>
+<td>2.5784814999999996</td>
+</tr>
+<tr>
+<td><a href='pass.EncodeHostTensorsPass.html'>pass.EncodeHostTensorsPass</a></td>
+<td>6.0865219999999995 SECONDS</td>
+<td>11</td>
+<td>0.5533201818181818 SECONDS</td>
+<td>0.000331</td>
+<td>5.623955</td>
+<td>1.6059060911258913</td>
+</tr>
+<tr>
+<td>pass.StripDebugOps</td>
+<td>5.8359110000011905 SECONDS</td>
+<td>77736</td>
+<td>75.07346660493454 MICROS</td>
+<td>5.0</td>
+<td>1081.0</td>
+<td>101.61868390553892</td>
+</tr>
+<tr>
+<td><a href='pass.FinalizingBackendTypeConversion.html'>pass.FinalizingBackendTypeConversion</a></td>
+<td>5.205862 SECONDS</td>
+<td>4</td>
+<td>1.3014655 SECONDS</td>
+<td>0.000307</td>
+<td>2.604366</td>
+<td>1.3011316017621932</td>
+</tr>
+<tr>
+<td><a href='pass.DetachElementwiseFromNamedOpsPass.html'>pass.DetachElementwiseFromNamedOpsPass</a></td>
+<td>4.898579000000001 SECONDS</td>
+<td>10</td>
+<td>0.48985790000000007 SECONDS</td>
+<td>0.000128</td>
+<td>2.636607</td>
+<td>0.9827132756411149</td>
+</tr>
+<tr>
+<td><a href='pass.DataLayoutPropagationPass.html'>pass.DataLayoutPropagationPass</a></td>
+<td>4.132009 SECONDS</td>
+<td>10</td>
+<td>0.4132009 SECONDS</td>
+<td>0.000153</td>
+<td>2.145358</td>
+<td>0.8265082375302075</td>
+</tr>
+<tr>
+<td><a href='pass.JitGlobalsPass.html'>pass.JitGlobalsPass</a></td>
+<td>4.082786 SECONDS</td>
+<td>1</td>
+<td>4.082786 SECONDS</td>
+<td>4.082786</td>
+<td>4.082786</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.BubbleUpExtractSlicesPass.html'>pass.BubbleUpExtractSlicesPass</a></td>
+<td>3.5593460000000006 SECONDS</td>
+<td>1029</td>
+<td>3.459034013605443 MILLIS</td>
+<td>0.024</td>
+<td>1692.133</td>
+<td>69.94943739290458</td>
+</tr>
+<tr>
+<td><a href='pass.DemoteContractionInputsToBF16Pass.html'>pass.DemoteContractionInputsToBF16Pass</a></td>
+<td>3.5356949999999996 SECONDS</td>
+<td>10</td>
+<td>0.3535695 SECONDS</td>
+<td>6.2e-05</td>
+<td>1.924901</td>
+<td>0.7100532762371075</td>
+</tr>
+<tr>
+<td>pass.HoistIntoGlobals</td>
+<td>3.527571 SECONDS</td>
+<td>1</td>
+<td>3.527571 SECONDS</td>
+<td>3.527571</td>
+<td>3.527571</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.ScalarizeShapes.html'>pass.ScalarizeShapes</a></td>
+<td>3.43565 SECONDS</td>
+<td>2</td>
+<td>1.717825 SECONDS</td>
+<td>1.375906</td>
+<td>2.059744</td>
+<td>0.3419189999999997</td>
+</tr>
+<tr>
+<td><a href='pass.FuseQuantizedOps.html'>pass.FuseQuantizedOps</a></td>
+<td>3.1213559999999996 SECONDS</td>
+<td>2</td>
+<td>1.5606779999999998 SECONDS</td>
+<td>1.427817</td>
+<td>1.693539</td>
+<td>0.1328610000000011</td>
+</tr>
+<tr>
+<td><a href='pass.LinalgQuantizedMatmulToMatmulPass.html'>pass.LinalgQuantizedMatmulToMatmulPass</a></td>
+<td>2.817651 SECONDS</td>
+<td>10</td>
+<td>0.2817651 SECONDS</td>
+<td>0.000116</td>
+<td>1.498462</td>
+<td>0.5643416189180893</td>
+</tr>
+<tr>
+<td>pass.VerifyDevicesPass</td>
+<td>2.166402 SECONDS</td>
+<td>1</td>
+<td>2.166402 SECONDS</td>
+<td>2.166402</td>
+<td>2.166402</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.DecomposeConcatPass.html'>pass.DecomposeConcatPass</a></td>
+<td>1.686619 SECONDS</td>
+<td>10</td>
+<td>0.1686619 SECONDS</td>
+<td>3.4e-05</td>
+<td>0.854138</td>
+<td>0.3371833977192382</td>
+</tr>
+<tr>
+<td><a href='pass.EncodeDeviceTensorsPass.html'>pass.EncodeDeviceTensorsPass</a></td>
+<td>1.4691600000000007 SECONDS</td>
+<td>224</td>
+<td>6.5587500000000025 MILLIS</td>
+<td>0.08600000000000001</td>
+<td>101.419</td>
+<td>17.353216457979766</td>
+</tr>
+<tr>
+<td><a href='pass.DecomposeComplexOps.html'>pass.DecomposeComplexOps</a></td>
+<td>1.331797 SECONDS</td>
+<td>2</td>
+<td>0.6658985 SECONDS</td>
+<td>0.533531</td>
+<td>0.798266</td>
+<td>0.13236750000000028</td>
+</tr>
+<tr>
+<td>pass.OutlineDispatchRegionsPass</td>
+<td>1.27356 SECONDS</td>
+<td>1</td>
+<td>1.27356 SECONDS</td>
+<td>1.27356</td>
+<td>1.27356</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertMeshToFlowPass.html'>pass.ConvertMeshToFlowPass</a></td>
+<td>1.035272 SECONDS</td>
+<td>1</td>
+<td>1.035272 SECONDS</td>
+<td>1.035272</td>
+<td>1.035272</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.LinalgQuantizedConvToConvPass.html'>pass.LinalgQuantizedConvToConvPass</a></td>
+<td>0.99676 SECONDS</td>
+<td>10</td>
+<td>99.676 MILLIS</td>
+<td>0.052</td>
+<td>585.9830000000001</td>
+<td>202.8523962919837</td>
+</tr>
+<tr>
+<td>pass.AnnotateDispatchesPass</td>
+<td>0.941005 SECONDS</td>
+<td>1</td>
+<td>0.941005 SECONDS</td>
+<td>0.941005</td>
+<td>0.941005</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertTMTensorToLinalgExtPass.html'>pass.ConvertTMTensorToLinalgExtPass</a></td>
+<td>0.857391 SECONDS</td>
+<td>2</td>
+<td>0.4286955 SECONDS</td>
+<td>0.378294</td>
+<td>0.479097</td>
+<td>0.05040149999999984</td>
+</tr>
+<tr>
+<td><a href='pass.TensorPadToTensorInsertSlicePass.html'>pass.TensorPadToTensorInsertSlicePass</a></td>
+<td>0.856004 SECONDS</td>
+<td>1</td>
+<td>0.856004 SECONDS</td>
+<td>0.856004</td>
+<td>0.856004</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.SimplifyPackUnpackPass.html'>pass.SimplifyPackUnpackPass</a></td>
+<td>0.845903 SECONDS</td>
+<td>1</td>
+<td>0.845903 SECONDS</td>
+<td>0.845903</td>
+<td>0.845903</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.LinalgNamedOpConversionPass.html'>pass.LinalgNamedOpConversionPass</a></td>
+<td>0.8219509999999999 SECONDS</td>
+<td>10</td>
+<td>82.1951 MILLIS</td>
+<td>0.020999999999999998</td>
+<td>426.313</td>
+<td>164.30352622171566</td>
+</tr>
+<tr>
+<td>pass.ConvertTorchToSCF</td>
+<td>0.712356 SECONDS</td>
+<td>2</td>
+<td>0.356178 SECONDS</td>
+<td>0.331805</td>
+<td>0.380551</td>
+<td>0.02437299999999987</td>
+</tr>
+<tr>
+<td>pass.FormDispatchRegionsPass</td>
+<td>0.7078759999999998 SECONDS</td>
+<td>1029</td>
+<td>687.9261418853254 MICROS</td>
+<td>9.0</td>
+<td>262075.99999999997</td>
+<td>11413.886641742201</td>
+</tr>
+<tr>
+<td>pass.SymbolDCE</td>
+<td>0.640027 SECONDS</td>
+<td>3</td>
+<td>0.21334233333333333 SECONDS</td>
+<td>0.110734</td>
+<td>0.378864</td>
+<td>0.11815805758483934</td>
+</tr>
+<tr>
+<td>pass.ScheduleConcurrencyPass</td>
+<td>0.535804 SECONDS</td>
+<td>11</td>
+<td>48.70945454545454 MILLIS</td>
+<td>0.01</td>
+<td>413.872</td>
+<td>120.28708536388619</td>
+</tr>
+<tr>
+<td>pass.AnnotateDispatchAssumptionsPass</td>
+<td>0.481082 SECONDS</td>
+<td>1</td>
+<td>0.481082 SECONDS</td>
+<td>0.481082</td>
+<td>0.481082</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.InjectTensorTracingPass</td>
+<td>0.4700760000000002 SECONDS</td>
+<td>2058</td>
+<td>228.41399416909633 MICROS</td>
+<td>5.0</td>
+<td>37223.0</td>
+<td>1133.0876602925125</td>
+</tr>
+<tr>
+<td>pass.ScheduleAllocationPass</td>
+<td>0.469022 SECONDS</td>
+<td>1</td>
+<td>0.469022 SECONDS</td>
+<td>0.469022</td>
+<td>0.469022</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ExpandOps</td>
+<td>0.453608 SECONDS</td>
+<td>2</td>
+<td>0.226804 SECONDS</td>
+<td>0.224769</td>
+<td>0.228839</td>
+<td>0.002034999999999256</td>
+</tr>
+<tr>
+<td>pass.CaptureDynamicDimsPass</td>
+<td>0.4313010000000006 SECONDS</td>
+<td>1029</td>
+<td>419.14577259475277 MICROS</td>
+<td>7.0</td>
+<td>162837.0</td>
+<td>7124.191607364263</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertTorchToArith.html'>pass.ConvertTorchToArith</a></td>
+<td>0.42398899999999995 SECONDS</td>
+<td>2</td>
+<td>0.21199449999999997 SECONDS</td>
+<td>0.197593</td>
+<td>0.226396</td>
+<td>0.014401500000000355</td>
+</tr>
+<tr>
+<td>pass.MaterializeDefaultWorkgroupCountRegionPass</td>
+<td>0.4217999999999994 SECONDS</td>
+<td>1029</td>
+<td>409.9125364431481 MICROS</td>
+<td>6.0</td>
+<td>164778.0</td>
+<td>6900.976333520482</td>
+</tr>
+<tr>
+<td><a href='pass.CollapseDimensionsPass.html'>pass.CollapseDimensionsPass</a></td>
+<td>0.4175000000000003 SECONDS</td>
+<td>1029</td>
+<td>405.733722060253 MICROS</td>
+<td>7.0</td>
+<td>212761.0</td>
+<td>6694.207264126385</td>
+</tr>
+<tr>
+<td><a href='pass.DemoteF64ToF32Pass.html'>pass.DemoteF64ToF32Pass</a></td>
+<td>0.382588 SECONDS</td>
+<td>1</td>
+<td>0.382588 SECONDS</td>
+<td>0.382588</td>
+<td>0.382588</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ResolveDevicePromisesPass</td>
+<td>0.279231 SECONDS</td>
+<td>1</td>
+<td>0.279231 SECONDS</td>
+<td>0.279231</td>
+<td>0.279231</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.BitCastQuantTensorPass.html'>pass.BitCastQuantTensorPass</a></td>
+<td>0.265092 SECONDS</td>
+<td>2</td>
+<td>0.132546 SECONDS</td>
+<td>0.117185</td>
+<td>0.147907</td>
+<td>0.015361000000000152</td>
+</tr>
+<tr>
+<td>pass.IREEImportPublicPass</td>
+<td>0.240672 SECONDS</td>
+<td>1</td>
+<td>0.240672 SECONDS</td>
+<td>0.240672</td>
+<td>0.240672</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.LayoutSlicesPass</td>
+<td>0.238281 SECONDS</td>
+<td>11</td>
+<td>21.661909090909088 MILLIS</td>
+<td>0.007</td>
+<td>151.796</td>
+<td>47.14474198476345</td>
+</tr>
+<tr>
+<td>pass.ConvertElementwiseToLinalgPass</td>
+<td>0.23396600000000004 SECONDS</td>
+<td>10</td>
+<td>23.396600000000003 MILLIS</td>
+<td>0.012</td>
+<td>118.937</td>
+<td>46.62890415868681</td>
+</tr>
+<tr>
+<td>pass.FormScalarDispatchesPass</td>
+<td>0.22456900000000035 SECONDS</td>
+<td>1029</td>
+<td>218.24003887269228 MICROS</td>
+<td>6.0</td>
+<td>26295.0</td>
+<td>1036.624826920777</td>
+</tr>
+<tr>
+<td>pass.GeneralizeLinalgNamedOpsPass</td>
+<td>0.1754329999999999 SECONDS</td>
+<td>20</td>
+<td>8.771649999999996 MILLIS</td>
+<td>0.007</td>
+<td>50.214</td>
+<td>17.531180323284</td>
+</tr>
+<tr>
+<td><a href='pass.ConvertTorchToTMTensor.html'>pass.ConvertTorchToTMTensor</a></td>
+<td>0.16148 SECONDS</td>
+<td>2</td>
+<td>80.74000000000001 MILLIS</td>
+<td>71.16799999999999</td>
+<td>90.312</td>
+<td>9.571999999999955</td>
+</tr>
+<tr>
+<td>pass.VerifyInputLegalityPass</td>
+<td>0.150141 SECONDS</td>
+<td>1</td>
+<td>0.150141 SECONDS</td>
+<td>0.150141</td>
+<td>0.150141</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.PropagateSubranges</td>
+<td>0.149771 SECONDS</td>
+<td>1</td>
+<td>0.149771 SECONDS</td>
+<td>0.149771</td>
+<td>0.149771</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ImportMLProgramPass</td>
+<td>0.147514 SECONDS</td>
+<td>1</td>
+<td>0.147514 SECONDS</td>
+<td>0.147514</td>
+<td>0.147514</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.OutlineDispatchExternsPass</td>
+<td>0.105542 SECONDS</td>
+<td>1</td>
+<td>0.105542 SECONDS</td>
+<td>0.105542</td>
+<td>0.105542</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.FuseMultiUseElementwiseProducerPass</td>
+<td>91.19900000000005 MILLIS</td>
+<td>1029</td>
+<td>88.62876579203115 MICROS</td>
+<td>5.0</td>
+<td>33031.0</td>
+<td>1365.2728366705921</td>
+</tr>
+<tr>
+<td>pass.ConvertTorchToTensor</td>
+<td>87.87500000000001 MILLIS</td>
+<td>2</td>
+<td>43.93750000000001 MILLIS</td>
+<td>37.667</td>
+<td>50.208000000000006</td>
+<td>6.270499999999981</td>
+</tr>
+<tr>
+<td>pass.PackConstantsPass</td>
+<td>77.388 MILLIS</td>
+<td>11</td>
+<td>7.0352727272727265 MILLIS</td>
+<td>0.014</td>
+<td>42.515</td>
+<td>12.886606966437599</td>
+</tr>
+<tr>
+<td>pass.PropagateTimepointsPass</td>
+<td>73.19000000000001 MILLIS</td>
+<td>1</td>
+<td>73.19000000000001 MILLIS</td>
+<td>73.19000000000001</td>
+<td>73.19000000000001</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.VerifyAsyncAccessRangesPass</td>
+<td>72.794 MILLIS</td>
+<td>1</td>
+<td>72.794 MILLIS</td>
+<td>72.794</td>
+<td>72.794</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.SerializeExecutablesPass.html'>pass.SerializeExecutablesPass</a></td>
+<td>68.72399999999999 MILLIS</td>
+<td>1</td>
+<td>68.72399999999999 MILLIS</td>
+<td>68.72399999999999</td>
+<td>68.72399999999999</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.GlobalLoopInvariantCodeMotionPass</td>
+<td>67.153 MILLIS</td>
+<td>10</td>
+<td>6.7153 MILLIS</td>
+<td>0.015000000000000001</td>
+<td>36.071</td>
+<td>13.352342536424086</td>
+</tr>
+<tr>
+<td>pass.ReduceOpVariants</td>
+<td>61.659000000000006 MILLIS</td>
+<td>2</td>
+<td>30.829500000000003 MILLIS</td>
+<td>25.593</td>
+<td>36.066</td>
+<td>5.236499999999987</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::ABI::ConvertStreamableOpsPass</td>
+<td>59.724 MILLIS</td>
+<td>1</td>
+<td>59.724 MILLIS</td>
+<td>59.724</td>
+<td>59.724</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.SCFToControlFlow.html'>pass.SCFToControlFlow</a></td>
+<td>58.085 MILLIS</td>
+<td>45</td>
+<td>1.2907777777777776 MILLIS</td>
+<td>0.013</td>
+<td>25.046</td>
+<td>4.953222838107591</td>
+</tr>
+<tr>
+<td>pass.VerifyLoweringToCmdPass</td>
+<td>53.174 MILLIS</td>
+<td>1</td>
+<td>53.174 MILLIS</td>
+<td>53.174</td>
+<td>53.174</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.ConvertCustomQuantOp</td>
+<td>50.612 MILLIS</td>
+<td>2</td>
+<td>25.306 MILLIS</td>
+<td>20.627</td>
+<td>29.985000000000003</td>
+<td>4.678999999999987</td>
+</tr>
+<tr>
+<td>pass.BindSymbolicShapesPass</td>
+<td>46.916 MILLIS</td>
+<td>2</td>
+<td>23.458 MILLIS</td>
+<td>20.232</td>
+<td>26.684</td>
+<td>3.2260000000000093</td>
+</tr>
+<tr>
+<td><a href='pass.TranslateExecutablesPass.html'>pass.TranslateExecutablesPass</a></td>
+<td>45.829 MILLIS</td>
+<td>3</td>
+<td>15.276333333333335 MILLIS</td>
+<td>15.173</td>
+<td>15.348</td>
+<td>0.0748702581506142</td>
+</tr>
+<tr>
+<td>pass.CleanupTensorShapesPass</td>
+<td>45.24099999999987 MILLIS</td>
+<td>1029</td>
+<td>43.965986394557696 MICROS</td>
+<td>4.0</td>
+<td>5888.0</td>
+<td>237.18049412323037</td>
+</tr>
+<tr>
+<td>pass.VerifyLoweringToAsyncPass</td>
+<td>42.691 MILLIS</td>
+<td>1</td>
+<td>42.691 MILLIS</td>
+<td>42.691</td>
+<td>42.691</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.MaterializeBuiltinsPass</td>
+<td>37.331999999999994 MILLIS</td>
+<td>1</td>
+<td>37.331999999999994 MILLIS</td>
+<td>37.331999999999994</td>
+<td>37.331999999999994</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.VerifyLoweringToTensorsPass</td>
+<td>32.626000000000005 MILLIS</td>
+<td>1</td>
+<td>32.626000000000005 MILLIS</td>
+<td>32.626000000000005</td>
+<td>32.626000000000005</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.MaterializeCopyOnWritePass</td>
+<td>32.605999999999995 MILLIS</td>
+<td>11</td>
+<td>2.964181818181818 MILLIS</td>
+<td>0.015000000000000001</td>
+<td>19.371</td>
+<td>5.801779692758576</td>
+</tr>
+<tr>
+<td>pass.ExpandTensorShapesPass</td>
+<td>31.164 MILLIS</td>
+<td>1</td>
+<td>31.164 MILLIS</td>
+<td>31.164</td>
+<td>31.164</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.SplitReductionPass</td>
+<td>29.170000000000027 MILLIS</td>
+<td>1029</td>
+<td>28.347910592808574 MICROS</td>
+<td>4.0</td>
+<td>1055.0</td>
+<td>81.29021213484987</td>
+</tr>
+<tr>
+<td>pass.VerifyInputPass</td>
+<td>27.932 MILLIS</td>
+<td>1</td>
+<td>27.932 MILLIS</td>
+<td>27.932</td>
+<td>27.932</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.VerifyLoweringToAsyncResourcesPass</td>
+<td>23.961 MILLIS</td>
+<td>1</td>
+<td>23.961 MILLIS</td>
+<td>23.961</td>
+<td>23.961</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.EmplaceAllocationsPass</td>
+<td>17.126 MILLIS</td>
+<td>11</td>
+<td>1.5569090909090912 MILLIS</td>
+<td>0.008</td>
+<td>8.229000000000001</td>
+<td>2.7175663395614382</td>
+</tr>
+<tr>
+<td>pass.CombineInitializers</td>
+<td>14.222 MILLIS</td>
+<td>1</td>
+<td>14.222 MILLIS</td>
+<td>14.222</td>
+<td>14.222</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td><a href='pass.ConfigureExecutablesPass.html'>pass.ConfigureExecutablesPass</a></td>
+<td>4.657 MILLIS</td>
+<td>3</td>
+<td>1.5523333333333333 MILLIS</td>
+<td>1.539</td>
+<td>1.571</td>
+<td>0.013597385369581548</td>
+</tr>
+<tr>
+<td>pass.ElideRedundantCommandsPass</td>
+<td>4.1259999999999994 MILLIS</td>
+<td>26</td>
+<td>158.69230769230765 MICROS</td>
+<td>8.0</td>
+<td>330.0</td>
+<td>99.67360935757706</td>
+</tr>
+<tr>
+<td><a href='pass.SCFForLoopCanonicalization.html'>pass.SCFForLoopCanonicalization</a></td>
+<td>3.5449999999999995 MILLIS</td>
+<td>7</td>
+<td>506.4285714285714 MICROS</td>
+<td>157.0</td>
+<td>787.0</td>
+<td>193.20962497679423</td>
+</tr>
+<tr>
+<td><a href='pass.AffineExpandIndexOps.html'>pass.AffineExpandIndexOps</a></td>
+<td>1.752 MILLIS</td>
+<td>7</td>
+<td>250.28571428571428 MICROS</td>
+<td>120.0</td>
+<td>338.0</td>
+<td>68.07289010573113</td>
+</tr>
+<tr>
+<td><a href='pass.ArithUnsignedWhenEquivalent.html'>pass.ArithUnsignedWhenEquivalent</a></td>
+<td>1.464 MILLIS</td>
+<td>7</td>
+<td>209.14285714285714 MICROS</td>
+<td>141.0</td>
+<td>294.0</td>
+<td>49.88967420054705</td>
+</tr>
+<tr>
+<td>pass.LoopInvariantCodeMotion</td>
+<td>1.343 MILLIS</td>
+<td>7</td>
+<td>191.85714285714286 MICROS</td>
+<td>27.0</td>
+<td>612.0</td>
+<td>210.7825071160376</td>
+</tr>
+<tr>
+<td>pass.ConvertAffineToStandard</td>
+<td>664.0 MICROS</td>
+<td>7</td>
+<td>94.85714285714285 MICROS</td>
+<td>61.0</td>
+<td>135.0</td>
+<td>29.449368518228862</td>
+</tr>
+<tr>
+<td>pass.ResolveDeviceAliasesPass</td>
+<td>271.0 MICROS</td>
+<td>1</td>
+<td>271.0 MICROS</td>
+<td>271.0</td>
+<td>271.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.AssignTargetDevicesPass</td>
+<td>221.0 MICROS</td>
+<td>1</td>
+<td>221.0 MICROS</td>
+<td>221.0</td>
+<td>221.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.MaterializeTargetDevicesPass</td>
+<td>203.0 MICROS</td>
+<td>1</td>
+<td>203.0 MICROS</td>
+<td>203.0</td>
+<td>203.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.mlir::iree_compiler::IREE::ABI::WrapEntryPointsPass</td>
+<td>133.0 MICROS</td>
+<td>1</td>
+<td>133.0 MICROS</td>
+<td>133.0</td>
+<td>133.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pass.SetStrictSymbolicShapesPass</td>
+<td>63.0 MICROS</td>
+<td>2</td>
+<td>31.5 MICROS</td>
+<td>31.0</td>
+<td>32.0</td>
+<td>0.5000000000000766</td>
+</tr>
+<tr>
+<td>pass.SanitizeModuleNamesPass</td>
+<td>44.0 MICROS</td>
+<td>1</td>
+<td>44.0 MICROS</td>
+<td>44.0</td>
+<td>44.0</td>
+<td>0.0</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<html>
+<head><title>Series report: pass.ConvertTensorToFlowPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>26.129087 SECONDS</td>
+<td>2063</td>
+<td>12.665577799321376 MILLIS</td>
+<td>0.008</td>
+<td>10360.517</td>
+<td>288.6102894827036</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::ReplaceOpIfTensorOperandZeroElements<mlir::iree_compiler::IREE::Flow::TensorReshapeOp, 0></td>
+<td>1.3848009999991064 SECONDS</td>
+<td>255476</td>
+<td>5.420473938840073 MICROS</td>
+<td>3.0</td>
+<td>9421.0</td>
+<td>35.30249109200476</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ConvertLinalgFillPattern</td>
+<td>1.330878000000131 SECONDS</td>
+<td>44543</td>
+<td>29.878499427522417 MICROS</td>
+<td>4.0</td>
+<td>23971.0</td>
+<td>396.1200285729241</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::FlattenTensorCastLikeChain<mlir::iree_compiler::IREE::Flow::TensorReshapeOp></td>
+<td>1.3181380000003595 SECONDS</td>
+<td>255476</td>
+<td>5.159537490802891 MICROS</td>
+<td>3.0</td>
+<td>2432.0</td>
+<td>6.875346939593416</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::ReplaceOpIfTensorResultZeroElements<mlir::iree_compiler::IREE::Flow::TensorReshapeOp, 0></td>
+<td>1.3111710000010155 SECONDS</td>
+<td>255476</td>
+<td>5.132266827416334 MICROS</td>
+<td>3.0</td>
+<td>6957.0</td>
+<td>14.98083443329108</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::ReplaceOpIfTensorOperandEmpty<mlir::iree_compiler::IREE::Flow::TensorReshapeOp, 0></td>
+<td>1.2929429999998545 SECONDS</td>
+<td>255476</td>
+<td>5.060917659583893 MICROS</td>
+<td>3.0</td>
+<td>3059.0</td>
+<td>9.074168647268033</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::FoldInsertSliceWithTensorStoreOp</td>
+<td>1.053916000001682 SECONDS</td>
+<td>174624</td>
+<td>6.035344511646063 MICROS</td>
+<td>3.0</td>
+<td>755.0</td>
+<td>8.148812160257137</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ConvertTensorReshapePattern<mlir::tensor::ExpandShapeOp></td>
+<td>0.81791200000014 SECONDS</td>
+<td>31301</td>
+<td>26.13053896042107 MICROS</td>
+<td>4.0</td>
+<td>13255.0</td>
+<td>283.264435993983</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DimOfReifyRankedShapedTypeOpInterface<mlir::tensor::DimOp></td>
+<td>0.615646999999963 SECONDS</td>
+<td>70681</td>
+<td>8.710219153661704 MICROS</td>
+<td>3.0</td>
+<td>9478.0</td>
+<td>109.98014631992909</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ConvertTensorReshapePattern<mlir::tensor::CollapseShapeOp></td>
+<td>0.4626059999999892 SECONDS</td>
+<td>58568</td>
+<td>7.898613577379954 MICROS</td>
+<td>4.0</td>
+<td>6950.0</td>
+<td>40.80726935986594</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ResolveShapedDim</td>
+<td>0.3458719999999841 SECONDS</td>
+<td>59561</td>
+<td>5.8070213730458535 MICROS</td>
+<td>3.0</td>
+<td>11797.0</td>
+<td>52.39944160863279</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ConvertTensorExtractPattern</td>
+<td>0.3177049999999087 SECONDS</td>
+<td>20224</td>
+<td>15.709305775311943 MICROS</td>
+<td>3.0</td>
+<td>11775.0</td>
+<td>235.56752354505363</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IterArgsToInitArgs</td>
+<td>0.2976410000000598 SECONDS</td>
+<td>59561</td>
+<td>4.997246520375074 MICROS</td>
+<td>3.0</td>
+<td>200.0</td>
+<td>1.6541094619183556</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ConvertTensorExtractSlicePattern</td>
+<td>0.22067400000005444 SECONDS</td>
+<td>12130</td>
+<td>18.192415498767883 MICROS</td>
+<td>3.0</td>
+<td>8219.0</td>
+<td>218.15178824035652</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ConvertTensorInsertSlicePattern</td>
+<td>0.18049600000009972 SECONDS</td>
+<td>34288</td>
+<td>5.2641157256212 MICROS</td>
+<td>3.0</td>
+<td>20.0</td>
+<td>1.2560419539995407</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::FoldTensorLoadWithExtractSlice</td>
+<td>68.39800000000054 MILLIS</td>
+<td>6065</td>
+<td>11.277493816982778 MICROS</td>
+<td>9.0</td>
+<td>53.0</td>
+<td>1.8288688860799611</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Flow::(anonymous namespace)::ConvertTensorDialectReshapeOpPattern</td>
+<td>28.556000000000708 MILLIS</td>
+<td>2016</td>
+<td>14.164682539682891 MICROS</td>
+<td>6.0</td>
+<td>5356.0</td>
+<td>157.66911638179087</td>
+</tr>
+</table>
+</body>
+</html>

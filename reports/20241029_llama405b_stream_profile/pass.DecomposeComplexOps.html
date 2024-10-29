@@ -1,0 +1,258 @@
+<html>
+<head><title>Series report: pass.DecomposeComplexOps</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>1.2249949999999998 SECONDS</td>
+<td>4</td>
+<td>0.30624874999999996 SECONDS</td>
+<td>0.102929</td>
+<td>0.605953</td>
+<td>0.2043864636789519</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposePrimsConvertElementTypeOp</td>
+<td>0.1114300000000156 SECONDS</td>
+<td>16287</td>
+<td>6.841652851968785 MICROS</td>
+<td>3.0</td>
+<td>136.0</td>
+<td>6.333066515167627</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenExpandOp</td>
+<td>80.7380000000037 MILLIS</td>
+<td>14113</td>
+<td>5.7208247714875435 MICROS</td>
+<td>3.0</td>
+<td>223.0</td>
+<td>5.237220037312908</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenRepeatOp</td>
+<td>32.529999999999994 MILLIS</td>
+<td>2142</td>
+<td>15.186741363211949 MICROS</td>
+<td>5.0</td>
+<td>106.0</td>
+<td>8.398215303681118</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenCopyOp</td>
+<td>31.489000000000072 MILLIS</td>
+<td>2016</td>
+<td>15.619543650793688 MICROS</td>
+<td>4.0</td>
+<td>153.0</td>
+<td>13.682721224566576</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenMeanDimOp</td>
+<td>29.036000000000847 MILLIS</td>
+<td>4048</td>
+<td>7.172924901185979 MICROS</td>
+<td>4.0</td>
+<td>111.0</td>
+<td>6.735307398571312</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAten_SoftmaxOp</td>
+<td>28.327000000000044 MILLIS</td>
+<td>2016</td>
+<td>14.05109126984129 MICROS</td>
+<td>6.0</td>
+<td>160.0</td>
+<td>9.94612814511113</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenFlattenUsingIntsOp</td>
+<td>23.24500000000076 MILLIS</td>
+<td>4284</td>
+<td>5.426003734827442 MICROS</td>
+<td>4.0</td>
+<td>36.0</td>
+<td>1.6001825864492678</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenSizeOp</td>
+<td>14.08300000000026 MILLIS</td>
+<td>2145</td>
+<td>6.565501165501287 MICROS</td>
+<td>4.0</td>
+<td>68.0</td>
+<td>4.448988103501958</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenIndexPutLikeOp<mlir::torch::Torch::AtenIndexPutOp></td>
+<td>13.745999999999825 MILLIS</td>
+<td>2016</td>
+<td>6.818452380952294 MICROS</td>
+<td>3.0</td>
+<td>98.0</td>
+<td>6.306630485534036</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenSiluOp</td>
+<td>12.094999999999953 MILLIS</td>
+<td>2016</td>
+<td>5.999503968253944 MICROS</td>
+<td>3.0</td>
+<td>78.0</td>
+<td>4.92095250571245</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAten_UnsafeViewOp</td>
+<td>11.310999999999812 MILLIS</td>
+<td>2016</td>
+<td>5.610615079364985 MICROS</td>
+<td>3.0</td>
+<td>203.0</td>
+<td>6.506686610973749</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenExpandAsOp</td>
+<td>9.889999999999818 MILLIS</td>
+<td>2145</td>
+<td>4.610722610722525 MICROS</td>
+<td>3.0</td>
+<td>11.0</td>
+<td>1.0713373948010037</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenFloorDivideScalarOp</td>
+<td>6.441999999999912 MILLIS</td>
+<td>1008</td>
+<td>6.390873015872929 MICROS</td>
+<td>3.0</td>
+<td>226.0</td>
+<td>8.498132149566558</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenArangeStartOp</td>
+<td>1.8229999999999997 MILLIS</td>
+<td>127</td>
+<td>14.354330708661415 MICROS</td>
+<td>3.0</td>
+<td>77.0</td>
+<td>9.377916393881511</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenEmptyStridedOp</td>
+<td>1.7859999999999996 MILLIS</td>
+<td>126</td>
+<td>14.174603174603172 MICROS</td>
+<td>3.0</td>
+<td>38.0</td>
+<td>7.3008798829149235</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenArangeOp</td>
+<td>1.5590000000000002 MILLIS</td>
+<td>129</td>
+<td>12.08527131782946 MICROS</td>
+<td>4.0</td>
+<td>60.0</td>
+<td>7.956306072653028</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeConstantTensorAllocLikeOp<mlir::torch::Torch::AtenOnesLikeOp, 1></td>
+<td>1.2190000000000003 MILLIS</td>
+<td>127</td>
+<td>9.598425196850396 MICROS</td>
+<td>4.0</td>
+<td>77.0</td>
+<td>10.259053879202165</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenFullLikeOp</td>
+<td>821.0000000000009 MICROS</td>
+<td>129</td>
+<td>6.364341085271324 MICROS</td>
+<td>4.0</td>
+<td>36.0</td>
+<td>3.2965520735434057</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeConstantTensorAllocLikeOp<mlir::torch::Torch::AtenZerosLikeOp, 0></td>
+<td>68.0 MICROS</td>
+<td>2</td>
+<td>34.0 MICROS</td>
+<td>6.0</td>
+<td>62.0</td>
+<td>28.000000000000007</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenIndexTensorOp</td>
+<td>51.0 MICROS</td>
+<td>8</td>
+<td>6.375 MICROS</td>
+<td>4.0</td>
+<td>13.0</td>
+<td>2.86956007081225</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenScalarTensor</td>
+<td>27.000000000000004 MICROS</td>
+<td>2</td>
+<td>13.500000000000002 MICROS</td>
+<td>7.0</td>
+<td>20.0</td>
+<td>6.499999999999999</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenTriuOp</td>
+<td>24.0 MICROS</td>
+<td>1</td>
+<td>24.0 MICROS</td>
+<td>24.0</td>
+<td>24.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenToDtypeLayoutOp</td>
+<td>22.0 MICROS</td>
+<td>2</td>
+<td>11.0 MICROS</td>
+<td>6.0</td>
+<td>16.0</td>
+<td>5.000000000000002</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DecomposeAtenWhereScalarOtherOp</td>
+<td>10.0 MICROS</td>
+<td>1</td>
+<td>10.0 MICROS</td>
+<td>10.0</td>
+<td>10.0</td>
+<td>0.0</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<html>
+<head><title>Series report: pass.OptimizeIntArithmetic</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>107.11143600000011 SECONDS</td>
+<td>12309</td>
+<td>8.701879600292479 MILLIS</td>
+<td>0.044</td>
+<td>7242.128</td>
+<td>156.67383555900295</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::MaterializeKnownConstantValues</td>
+<td>60.1529789986037 SECONDS</td>
+<td>6356296</td>
+<td>9.463527028729263 MICROS</td>
+<td>3.0</td>
+<td>232045.0</td>
+<td>208.42824164358066</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::MulFOfNegF</td>
+<td>0.31546000000001445 SECONDS</td>
+<td>60588</td>
+<td>5.206641579190837 MICROS</td>
+<td>3.0</td>
+<td>32.0</td>
+<td>1.4688556527392798</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::(anonymous namespace)::ElideTruncOfIndexCast</td>
+<td>0.21116300000000662 SECONDS</td>
+<td>5647</td>
+<td>37.3938374358078 MICROS</td>
+<td>3.0</td>
+<td>4247.0</td>
+<td>167.49012012947205</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DivFOfNegF</td>
+<td>0.10564800000002536 SECONDS</td>
+<td>20216</td>
+<td>5.225959635933189 MICROS</td>
+<td>3.0</td>
+<td>25.0</td>
+<td>1.4439435963903768</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RedundantSelectFalse</td>
+<td>0.10145799999999477 SECONDS</td>
+<td>10461</td>
+<td>9.698690373768738 MICROS</td>
+<td>3.0</td>
+<td>13594.0</td>
+<td>167.8358609858771</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IndexCastOfIndexCast</td>
+<td>68.29400000000298 MILLIS</td>
+<td>6205</td>
+<td>11.006285253828038 MICROS</td>
+<td>3.0</td>
+<td>16672.0</td>
+<td>245.76617516111523</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AddIAddConstant</td>
+<td>61.834999999994 MILLIS</td>
+<td>11055</td>
+<td>5.593396653097603 MICROS</td>
+<td>3.0</td>
+<td>787.0</td>
+<td>13.57687566999357</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AddIMulNegativeOneRhs</td>
+<td>61.04099999999431 MILLIS</td>
+<td>11055</td>
+<td>5.521573948439106 MICROS</td>
+<td>3.0</td>
+<td>679.0</td>
+<td>10.920984264092285</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AddISubConstantRHS</td>
+<td>59.25799999999388 MILLIS</td>
+<td>11055</td>
+<td>5.360289461781446 MICROS</td>
+<td>3.0</td>
+<td>695.0</td>
+<td>7.096466317777268</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AddIMulNegativeOneLhs</td>
+<td>57.92199999999407 MILLIS</td>
+<td>11055</td>
+<td>5.23943916779684 MICROS</td>
+<td>3.0</td>
+<td>119.0</td>
+<td>1.973849951082807</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AddISubConstantLHS</td>
+<td>57.49399999999423 MILLIS</td>
+<td>11055</td>
+<td>5.200723654454476 MICROS</td>
+<td>3.0</td>
+<td>123.00000000000001</td>
+<td>2.1264332003756565</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::RedundantSelectTrue</td>
+<td>56.03799999999279 MILLIS</td>
+<td>10461</td>
+<td>5.35684924959304 MICROS</td>
+<td>3.0</td>
+<td>75.0</td>
+<td>1.5669393402518925</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SelectI1ToNot</td>
+<td>55.56499999999294 MILLIS</td>
+<td>10461</td>
+<td>5.311633687027334 MICROS</td>
+<td>3.0</td>
+<td>282.0</td>
+<td>3.0681965161032574</td>
+</tr>
+<tr>
+<td>pattern.SelectToExtUI</td>
+<td>54.92599999999303 MILLIS</td>
+<td>10461</td>
+<td>5.250549660643632 MICROS</td>
+<td>3.0</td>
+<td>134.0</td>
+<td>1.8654253183518616</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SelectNotCond</td>
+<td>54.17299999999273 MILLIS</td>
+<td>10461</td>
+<td>5.178568014529465 MICROS</td>
+<td>3.0</td>
+<td>194.0</td>
+<td>2.3615963791636814</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CmpIExtSI</td>
+<td>45.399999999997924 MILLIS</td>
+<td>8463</td>
+<td>5.364527945172861 MICROS</td>
+<td>3.0</td>
+<td>609.0</td>
+<td>6.849010769139854</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::CmpIExtUI</td>
+<td>44.02899999999788 MILLIS</td>
+<td>8463</td>
+<td>5.2025286541413065 MICROS</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>1.4035987021408007</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TruncIShrUIMulIToMulSIExtended</td>
+<td>37.45999999999908 MILLIS</td>
+<td>5647</td>
+<td>6.633610766778657 MICROS</td>
+<td>3.0</td>
+<td>2269.0</td>
+<td>50.600619480541496</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::MulIMulIConstant</td>
+<td>34.31299999999977 MILLIS</td>
+<td>1065</td>
+<td>32.21877934272278 MICROS</td>
+<td>3.0</td>
+<td>9555.0</td>
+<td>405.5313352537465</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::(anonymous namespace)::ConvertOpToUnsigned<mlir::arith::IndexCastOp, mlir::arith::IndexCastUIOp></td>
+<td>32.54400000000243 MILLIS</td>
+<td>6205</td>
+<td>5.2448025785660635 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.5967909439863675</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IndexCastOfExtSI</td>
+<td>31.46900000000302 MILLIS</td>
+<td>6205</td>
+<td>5.0715551974219215 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.324670119476457</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TruncIShrUIMulIToMulUIExtended</td>
+<td>30.914000000001757 MILLIS</td>
+<td>5647</td>
+<td>5.474411191783559 MICROS</td>
+<td>3.0</td>
+<td>1155.0</td>
+<td>15.371867968731037</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TruncIExtUIToExtUI</td>
+<td>29.619000000001865 MILLIS</td>
+<td>5647</td>
+<td>5.245085886311646 MICROS</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>1.4422844273168074</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TruncIShrSIToTrunciShrUI</td>
+<td>29.387000000001755 MILLIS</td>
+<td>5647</td>
+<td>5.204002125022447 MICROS</td>
+<td>3.0</td>
+<td>24.0</td>
+<td>1.4517192748030219</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::TruncIExtSIToExtSI</td>
+<td>29.317000000001897 MILLIS</td>
+<td>5647</td>
+<td>5.191606162564529 MICROS</td>
+<td>3.0</td>
+<td>16.0</td>
+<td>1.453529142697655</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IndexCastUIOfExtUI</td>
+<td>23.105000000000405 MILLIS</td>
+<td>2584</td>
+<td>8.941563467492418 MICROS</td>
+<td>3.0</td>
+<td>7127.0</td>
+<td>144.24637905334515</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::IndexCastUIOfIndexCastUI</td>
+<td>18.12400000000055 MILLIS</td>
+<td>2584</td>
+<td>7.0139318885451045 MICROS</td>
+<td>3.0</td>
+<td>2709.0</td>
+<td>58.16044018752496</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::(anonymous namespace)::ConvertUnsignedI64IndexCastProducerToIndex</td>
+<td>14.121000000000068 MILLIS</td>
+<td>2584</td>
+<td>5.464783281733772 MICROS</td>
+<td>3.0</td>
+<td>19.0</td>
+<td>1.5287233487039675</td>
+</tr>
+<tr>
+<td>pattern.CmpFIntToFPConst</td>
+<td>11.218999999999983 MILLIS</td>
+<td>2020</td>
+<td>5.553960396039596 MICROS</td>
+<td>3.0</td>
+<td>14.0</td>
+<td>1.4168571964965149</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubIRHSAddConstant</td>
+<td>6.797999999999988 MILLIS</td>
+<td>153</td>
+<td>44.43137254901952 MICROS</td>
+<td>3.0</td>
+<td>3276.0</td>
+<td>305.2074354002642</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubILHSSubConstantRHS</td>
+<td>884.0000000000002 MICROS</td>
+<td>153</td>
+<td>5.7777777777777795 MICROS</td>
+<td>4.0</td>
+<td>13.0</td>
+<td>1.7460402342548969</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubIRHSSubConstantRHS</td>
+<td>871.0000000000005 MICROS</td>
+<td>153</td>
+<td>5.692810457516343 MICROS</td>
+<td>3.0</td>
+<td>13.0</td>
+<td>1.626098606017472</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubILHSAddConstant</td>
+<td>859.0000000000007 MICROS</td>
+<td>153</td>
+<td>5.614379084967325 MICROS</td>
+<td>3.0</td>
+<td>13.0</td>
+<td>1.4780493372085584</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubILHSSubConstantLHS</td>
+<td>849.0000000000008 MICROS</td>
+<td>153</td>
+<td>5.549019607843142 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.3953291666397611</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubIRHSSubConstantLHS</td>
+<td>836.0000000000014 MICROS</td>
+<td>153</td>
+<td>5.464052287581708 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.1992707140724805</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::SubISubILHSRHSLHS</td>
+<td>836.000000000001 MICROS</td>
+<td>153</td>
+<td>5.464052287581706 MICROS</td>
+<td>3.0</td>
+<td>12.0</td>
+<td>1.5340413701626554</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::(anonymous namespace)::ConvertOpToUnsigned<mlir::arith::DivSIOp, mlir::arith::DivUIOp></td>
+<td>472.0 MICROS</td>
+<td>76</td>
+<td>6.2105263157894735 MICROS</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>1.592050890763594</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AndOfExtUI</td>
+<td>87.0 MICROS</td>
+<td>16</td>
+<td>5.4375 MICROS</td>
+<td>4.0</td>
+<td>10.0</td>
+<td>1.8016919131749496</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::IREE::Util::(anonymous namespace)::ConvertOpToUnsigned<mlir::arith::RemSIOp, mlir::arith::RemUIOp></td>
+<td>86.0 MICROS</td>
+<td>16</td>
+<td>5.375 MICROS</td>
+<td>4.0</td>
+<td>10.0</td>
+<td>1.8328597873268984</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::DeleteTrivialRem<mlir::arith::RemSIOp></td>
+<td>76.99999999999999 MICROS</td>
+<td>16</td>
+<td>4.812499999999999 MICROS</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>0.7261843774138975</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AndOfExtSI</td>
+<td>70.99999999999999 MICROS</td>
+<td>16</td>
+<td>4.437499999999999 MICROS</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>0.4960783708246217</td>
+</tr>
+</table>
+</body>
+</html>

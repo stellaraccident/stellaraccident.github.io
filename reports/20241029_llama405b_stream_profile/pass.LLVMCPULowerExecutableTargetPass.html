@@ -1,0 +1,213 @@
+<html>
+<head><title>Series report: pass.LLVMCPULowerExecutableTargetPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Passes in Execution Order:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pass.TileAndDistributeToWorkgroupsUsingForallOpPass</td>
+<td>49.0 MICROS</td>
+<td>3</td>
+<td>16.333333333333332 MICROS</td>
+<td>15.0</td>
+<td>18.0</td>
+<td>1.2472191289246795</td>
+</tr>
+<tr>
+<td><a href='pass.Canonicalizer.html'>pass.Canonicalizer</a></td>
+<td>3.6499999999999995 MILLIS</td>
+<td>9</td>
+<td>405.5555555555555 MICROS</td>
+<td>136.0</td>
+<td>691.0</td>
+<td>194.46914128874084</td>
+</tr>
+<tr>
+<td>pass.CSE</td>
+<td>249.00000000000003 MICROS</td>
+<td>6</td>
+<td>41.50000000000001 MICROS</td>
+<td>11.0</td>
+<td>101.0</td>
+<td>37.259227045122664</td>
+</tr>
+<tr>
+<td><a href='pass.FuseTensorPadWithConsumerPass.html'>pass.FuseTensorPadWithConsumerPass</a></td>
+<td>275.0 MICROS</td>
+<td>3</td>
+<td>91.66666666666667 MICROS</td>
+<td>73.0</td>
+<td>126.0</td>
+<td>24.30820620467272</td>
+</tr>
+<tr>
+<td><a href='pass.ConcretizePadResultShapePass.html'>pass.ConcretizePadResultShapePass</a></td>
+<td>1.3809999999999998 MILLIS</td>
+<td>3</td>
+<td>460.33333333333326 MICROS</td>
+<td>447.0</td>
+<td>473.0</td>
+<td>10.624918300341633</td>
+</tr>
+<tr>
+<td><a href='pass.EliminateEmptyTensorsPass.html'>pass.EliminateEmptyTensorsPass</a></td>
+<td>374.0 MICROS</td>
+<td>3</td>
+<td>124.66666666666667 MICROS</td>
+<td>95.0</td>
+<td>144.0</td>
+<td>21.296843793284374</td>
+</tr>
+<tr>
+<td><a href='pass.EmptyTensorToAllocTensor.html'>pass.EmptyTensorToAllocTensor</a></td>
+<td>280.00000000000006 MICROS</td>
+<td>3</td>
+<td>93.33333333333334 MICROS</td>
+<td>74.0</td>
+<td>121.0</td>
+<td>20.072092289766065</td>
+</tr>
+<tr>
+<td><a href='pass.IREEComprehensiveBufferizePass.html'>pass.IREEComprehensiveBufferizePass</a></td>
+<td>1.498 MILLIS</td>
+<td>3</td>
+<td>499.3333333333333 MICROS</td>
+<td>458.0</td>
+<td>547.0</td>
+<td>36.6090456338623</td>
+</tr>
+<tr>
+<td><a href='pass.ResolveShapedTypeResultDims.html'>pass.ResolveShapedTypeResultDims</a></td>
+<td>374.00000000000006 MICROS</td>
+<td>3</td>
+<td>124.66666666666667 MICROS</td>
+<td>74.0</td>
+<td>155.0</td>
+<td>36.058594290712726</td>
+</tr>
+<tr>
+<td><a href='pass.CleanupBufferAllocViewPass.html'>pass.CleanupBufferAllocViewPass</a></td>
+<td>1.168 MILLIS</td>
+<td>3</td>
+<td>389.3333333333333 MICROS</td>
+<td>253.00000000000003</td>
+<td>561.0</td>
+<td>128.1986306045774</td>
+</tr>
+</table>
+<h1>Passes in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td><a href='pass.Canonicalizer.html'>pass.Canonicalizer</a></td>
+<td>3.6499999999999995 MILLIS</td>
+<td>9</td>
+<td>405.5555555555555 MICROS</td>
+<td>136.0</td>
+<td>691.0</td>
+<td>194.46914128874084</td>
+</tr>
+<tr>
+<td><a href='pass.IREEComprehensiveBufferizePass.html'>pass.IREEComprehensiveBufferizePass</a></td>
+<td>1.498 MILLIS</td>
+<td>3</td>
+<td>499.3333333333333 MICROS</td>
+<td>458.0</td>
+<td>547.0</td>
+<td>36.6090456338623</td>
+</tr>
+<tr>
+<td><a href='pass.ConcretizePadResultShapePass.html'>pass.ConcretizePadResultShapePass</a></td>
+<td>1.3809999999999998 MILLIS</td>
+<td>3</td>
+<td>460.33333333333326 MICROS</td>
+<td>447.0</td>
+<td>473.0</td>
+<td>10.624918300341633</td>
+</tr>
+<tr>
+<td><a href='pass.CleanupBufferAllocViewPass.html'>pass.CleanupBufferAllocViewPass</a></td>
+<td>1.168 MILLIS</td>
+<td>3</td>
+<td>389.3333333333333 MICROS</td>
+<td>253.00000000000003</td>
+<td>561.0</td>
+<td>128.1986306045774</td>
+</tr>
+<tr>
+<td><a href='pass.ResolveShapedTypeResultDims.html'>pass.ResolveShapedTypeResultDims</a></td>
+<td>374.00000000000006 MICROS</td>
+<td>3</td>
+<td>124.66666666666667 MICROS</td>
+<td>74.0</td>
+<td>155.0</td>
+<td>36.058594290712726</td>
+</tr>
+<tr>
+<td><a href='pass.EliminateEmptyTensorsPass.html'>pass.EliminateEmptyTensorsPass</a></td>
+<td>374.0 MICROS</td>
+<td>3</td>
+<td>124.66666666666667 MICROS</td>
+<td>95.0</td>
+<td>144.0</td>
+<td>21.296843793284374</td>
+</tr>
+<tr>
+<td><a href='pass.EmptyTensorToAllocTensor.html'>pass.EmptyTensorToAllocTensor</a></td>
+<td>280.00000000000006 MICROS</td>
+<td>3</td>
+<td>93.33333333333334 MICROS</td>
+<td>74.0</td>
+<td>121.0</td>
+<td>20.072092289766065</td>
+</tr>
+<tr>
+<td><a href='pass.FuseTensorPadWithConsumerPass.html'>pass.FuseTensorPadWithConsumerPass</a></td>
+<td>275.0 MICROS</td>
+<td>3</td>
+<td>91.66666666666667 MICROS</td>
+<td>73.0</td>
+<td>126.0</td>
+<td>24.30820620467272</td>
+</tr>
+<tr>
+<td>pass.CSE</td>
+<td>249.00000000000003 MICROS</td>
+<td>6</td>
+<td>41.50000000000001 MICROS</td>
+<td>11.0</td>
+<td>101.0</td>
+<td>37.259227045122664</td>
+</tr>
+<tr>
+<td>pass.TileAndDistributeToWorkgroupsUsingForallOpPass</td>
+<td>49.0 MICROS</td>
+<td>3</td>
+<td>16.333333333333332 MICROS</td>
+<td>15.0</td>
+<td>18.0</td>
+<td>1.2472191289246795</td>
+</tr>
+</table>
+</body>
+</html>

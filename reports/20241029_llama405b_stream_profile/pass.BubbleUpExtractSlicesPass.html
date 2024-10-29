@@ -1,0 +1,87 @@
+<html>
+<head><title>Series report: pass.BubbleUpExtractSlicesPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>3.2521630000000004 SECONDS</td>
+<td>1029</td>
+<td>3.160508260447036 MILLIS</td>
+<td>0.006</td>
+<td>1649.27</td>
+<td>68.04498008413493</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldEmptyTensorWithReshapeOp<mlir::tensor::ExpandShapeOp></td>
+<td>0.8727149999997545 SECONDS</td>
+<td>25260</td>
+<td>34.54928741091665 MICROS</td>
+<td>3.0</td>
+<td>3033.0</td>
+<td>106.7463105099725</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldEmptyTensorWithReshapeOp<mlir::tensor::CollapseShapeOp></td>
+<td>0.7541679999996138 SECONDS</td>
+<td>44440</td>
+<td>16.97047704769608 MICROS</td>
+<td>3.0</td>
+<td>2304.0</td>
+<td>70.2583405149995</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::DispatchCreation::(anonymous namespace)::BubbleUpExtract</td>
+<td>0.1940560000000273 SECONDS</td>
+<td>10113</td>
+<td>19.188766933652456 MICROS</td>
+<td>4.0</td>
+<td>2399.0</td>
+<td>67.07226462765348</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::DispatchCreation::(anonymous namespace)::SwapExtractSliceOfFill</td>
+<td>71.846 MILLIS</td>
+<td>10113</td>
+<td>7.104321170770296 MICROS</td>
+<td>3.0</td>
+<td>269.0</td>
+<td>9.524681782294376</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FoldEmptyTensorWithExtractSliceOp</td>
+<td>70.89499999999943 MILLIS</td>
+<td>10113</td>
+<td>7.010283793137489 MICROS</td>
+<td>3.0</td>
+<td>2245.0</td>
+<td>23.958393948879166</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<html>
+<head><title>Series report: pass.ConvertToLLVMPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Passes in Execution Order:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td><a href='pass.mlir____detail____OpToOpPassAdaptor.html'>pass.mlir::detail::OpToOpPassAdaptor</a></td>
+<td>102.99999999999999 MICROS</td>
+<td>3</td>
+<td>34.33333333333333 MICROS</td>
+<td>12.0</td>
+<td>69.0</td>
+<td>24.850665092821078</td>
+</tr>
+</table>
+<h1>Passes in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td><a href='pass.mlir____detail____OpToOpPassAdaptor.html'>pass.mlir::detail::OpToOpPassAdaptor</a></td>
+<td>102.99999999999999 MICROS</td>
+<td>3</td>
+<td>34.33333333333333 MICROS</td>
+<td>12.0</td>
+<td>69.0</td>
+<td>24.850665092821078</td>
+</tr>
+</table>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>579.9999999999999 MICROS</td>
+<td>15</td>
+<td>38.66666666666666 MICROS</td>
+<td>9.0</td>
+<td>111.0</td>
+<td>26.955931113990907</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertHALEntryPointFuncOp</td>
+<td>725.0 MICROS</td>
+<td>3</td>
+<td>241.66666666666663 MICROS</td>
+<td>216.0</td>
+<td>274.0</td>
+<td>24.143091949642486</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::AssumeAlignmentOpLowering</td>
+<td>241.0 MICROS</td>
+<td>6</td>
+<td>40.16666666666667 MICROS</td>
+<td>8.0</td>
+<td>155.0</td>
+<td>52.540196252224085</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::ConvertHALInterfaceBindingSubspanOp</td>
+<td>217.00000000000003 MICROS</td>
+<td>6</td>
+<td>36.166666666666664 MICROS</td>
+<td>15.0</td>
+<td>78.0</td>
+<td>24.727964376839086</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConstantOpLowering</td>
+<td>104.0 MICROS</td>
+<td>6</td>
+<td>17.333333333333332 MICROS</td>
+<td>9.0</td>
+<td>35.0</td>
+<td>9.706813185707361</td>
+</tr>
+<tr>
+<td>pattern.mlir::VectorConvertToLLVMPattern<mlir::arith::SIToFPOp, mlir::LLVM::SIToFPOp></td>
+<td>98.0 MICROS</td>
+<td>2</td>
+<td>49.0 MICROS</td>
+<td>21.0</td>
+<td>77.0</td>
+<td>28.000000000000004</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::(anonymous namespace)::RewriteFuncOpABI</td>
+<td>95.99999999999999 MICROS</td>
+<td>6</td>
+<td>16.0 MICROS</td>
+<td>7.0</td>
+<td>43.0</td>
+<td>13.341664064126338</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ReturnOpLowering</td>
+<td>70.0 MICROS</td>
+<td>3</td>
+<td>23.333333333333332 MICROS</td>
+<td>9.0</td>
+<td>45.0</td>
+<td>15.584892970081283</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::StoreOpLowering</td>
+<td>28.0 MICROS</td>
+<td>3</td>
+<td>9.333333333333332 MICROS</td>
+<td>8.0</td>
+<td>12.0</td>
+<td>1.8856180831641292</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::LoadOpLowering</td>
+<td>24.999999999999996 MICROS</td>
+<td>3</td>
+<td>8.333333333333332 MICROS</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>0.4714045207910537</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::BFloat16TruncFOpConverter</td>
+<td>8.0 MICROS</td>
+<td>1</td>
+<td>8.0 MICROS</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConstrainedVectorConvertToLLVMPattern<mlir::arith::TruncFOp, mlir::LLVM::ConstrainedFPTruncIntr, true, mlir::arith::AttrConverterConstrainedFPToLLVM></td>
+<td>7.0 MICROS</td>
+<td>1</td>
+<td>7.0 MICROS</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ConstrainedVectorConvertToLLVMPattern<mlir::arith::TruncFOp, mlir::LLVM::FPTruncOp, false></td>
+<td>7.0 MICROS</td>
+<td>1</td>
+<td>7.0 MICROS</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>0.0</td>
+</tr>
+</table>
+</body>
+</html>

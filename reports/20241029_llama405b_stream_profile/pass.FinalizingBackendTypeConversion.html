@@ -1,0 +1,87 @@
+<html>
+<head><title>Series report: pass.FinalizingBackendTypeConversion</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>1.2586490000000001 SECONDS</td>
+<td>4</td>
+<td>0.31466225000000003 SECONDS</td>
+<td>3.8e-05</td>
+<td>0.63348</td>
+<td>0.314631270095945</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FinalizeMaterialization<mlir::torch::TorchConversion::FromBuiltinTensorOp></td>
+<td>1.6492779999996428 SECONDS</td>
+<td>70931</td>
+<td>23.251864488018537 MICROS</td>
+<td>3.0</td>
+<td>25508.0</td>
+<td>150.36023303772666</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FinalizeMaterialization<mlir::torch::TorchConversion::ToBuiltinTensorOp></td>
+<td>0.6226869999994892 SECONDS</td>
+<td>70931</td>
+<td>8.778770918209092 MICROS</td>
+<td>3.0</td>
+<td>19719.0</td>
+<td>136.13793867533565</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::ExtFTruncFPattern</td>
+<td>0.3456929999999814 SECONDS</td>
+<td>25234</td>
+<td>13.699492747879106 MICROS</td>
+<td>4.0</td>
+<td>123.00000000000001</td>
+<td>17.53038356239065</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FinalizeMaterialization<mlir::torch::TorchConversion::FromI64Op></td>
+<td>19.033 MILLIS</td>
+<td>5</td>
+<td>3.8066000000000004 MILLIS</td>
+<td>0.006</td>
+<td>18.904</td>
+<td>7.548716728027354</td>
+</tr>
+<tr>
+<td>pattern.(anonymous namespace)::FinalizeMaterialization<mlir::torch::TorchConversion::ToI64Op></td>
+<td>51.0 MICROS</td>
+<td>5</td>
+<td>10.200000000000001 MICROS</td>
+<td>6.0</td>
+<td>24.0</td>
+<td>6.910861017268398</td>
+</tr>
+</table>
+</body>
+</html>

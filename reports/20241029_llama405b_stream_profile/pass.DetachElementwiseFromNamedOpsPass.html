@@ -1,0 +1,69 @@
+<html>
+<head><title>Series report: pass.DetachElementwiseFromNamedOpsPass</title></head>
+<style>
+table {border-width: thin; border-spacing: 2px; border-style: none; border-color: black; border-collapse: collapse;}
+td, th { border: 1px solid black; }
+</style>
+<body>
+<h1>Iteration actions:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>GreedyPatternRewriteIteration</td>
+<td>4.7820420000000015 SECONDS</td>
+<td>10</td>
+<td>0.47820420000000013 SECONDS</td>
+<td>1e-05</td>
+<td>2.582196</td>
+<td>0.9600718910080432</td>
+</tr>
+</table>
+<h1>Patterns in descending order of duration:</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Count</th>
+<th>MEAN</th>
+<th>MIN</th>
+<th>MAX</th>
+<th>STDDEV</th>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GlobalOptimization::(anonymous namespace)::DetachElementwisePattern</td>
+<td>1.0810189999998565 SECONDS</td>
+<td>175865</td>
+<td>6.146868336507302 MICROS</td>
+<td>4.0</td>
+<td>236.0</td>
+<td>1.7701992929771495</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GlobalOptimization::(anonymous namespace)::DetachSplatConstantOutsOperands<mlir::linalg::LinalgOp></td>
+<td>1.0637230000003235 SECONDS</td>
+<td>175865</td>
+<td>6.048520171724467 MICROS</td>
+<td>4.0</td>
+<td>279.0</td>
+<td>2.0682343871105586</td>
+</tr>
+<tr>
+<td>pattern.mlir::iree_compiler::GlobalOptimization::(anonymous namespace)::DetachSplatConstantOutsOperands<mlir::iree_compiler::IREE::LinalgExt::LinalgExtOp></td>
+<td>12.828000000000129 MILLIS</td>
+<td>2016</td>
+<td>6.363095238095302 MICROS</td>
+<td>4.0</td>
+<td>14.0</td>
+<td>1.5086086117051298</td>
+</tr>
+</table>
+</body>
+</html>
